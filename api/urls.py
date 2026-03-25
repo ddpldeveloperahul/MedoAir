@@ -27,13 +27,16 @@ from .views import (
     ReportListAPIView,
 )
 
+
+from  api import views
 urlpatterns = [
+    path('index/', views.home, name='home'),  # API root endpoint for navigation
     # ========== USER CRUD ENDPOINTS ==========
-    path('api/users/', UserListAPIView.as_view(), name='user-list'),
-    path('api/users/<int:user_id>/', UserDetailAPIView.as_view(), name='user-detail'),
-    path('api/users/me/', CurrentUserAPIView.as_view(), name='current-user'),
-    path('api/users/change-password/', ChangePasswordAPIView.as_view(), name='change-password'),
-    path('api/users/profile-stats/', UserProfileStatsAPIView.as_view(), name='profile-stats'),
+    path('users/', UserListAPIView.as_view(), name='user-list'),
+    path('users/<int:user_id>/', UserDetailAPIView.as_view(), name='user-detail'),
+    path('users/me/', CurrentUserAPIView.as_view(), name='current-user'),
+    path('users/change-password/', ChangePasswordAPIView.as_view(), name='change-password'),
+    path('users/profile-stats/', UserProfileStatsAPIView.as_view(), name='profile-stats'),
     
     # ========== AUTHENTICATION ENDPOINTS ==========
     path('user/signup/', UserSignupAPIView.as_view(), name='user-signup'),
@@ -60,13 +63,13 @@ urlpatterns = [
     
     
     # ========== APPOINTMENT ENDPOINTS ==========
-    path('api/slots/', SlotAPIView.as_view()),          # GET list + POST
-    path('api/slots/<int:pk>/', SlotAPIView.as_view()),  # GET one + PUT + DELETE
+    path('slots/', SlotAPIView.as_view()),          # GET list + POST
+    path('slots/<int:pk>/', SlotAPIView.as_view()),  # GET one + PUT + DELETE
     
     
-    path('api/appointments/', AppointmentAPIView.as_view()),        # LIST + CREATE
-    path('api/appointments/<int:pk>/', AppointmentAPIView.as_view()), # DETAIL + UPDATE + DELETE
-    path('api/doctor/dashboard/', DoctorDashboardAPIView.as_view()),
+    path('appoinments/', AppointmentAPIView.as_view()),        # LIST + CREATE
+    path('appoinments/<int:pk>/', AppointmentAPIView.as_view()), # DETAIL + UPDATE + DELETE
+    path('doctor/dashboard/', DoctorDashboardAPIView.as_view()),
     
     # ========== MESSAGE/CHAT ENDPOINTS ==========
     path('api/appointments/<int:appointment_id>/messages/', MessageListAPIView.as_view(), name='message-list'),

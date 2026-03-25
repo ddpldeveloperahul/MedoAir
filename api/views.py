@@ -2,7 +2,7 @@
 Unified Views - All API views consolidated into one file using APIView pattern
 """
 
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404,render
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -22,6 +22,8 @@ from django.db.models import Q, Count
 
 
 # ============== USER CRUD VIEWS ==============
+def home(request):
+    return render(request, 'home.html')
 
 class UserListAPIView(APIView):
     """List and create users"""
