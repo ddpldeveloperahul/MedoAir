@@ -5,12 +5,12 @@ Unified URLs - All API endpoints consolidated into one app
 from django.urls import path
 from .views import (
     # User CRUD
-    AppointmentAPIView, DoctorDashboardAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView, UserListAPIView, UserDetailAPIView, CurrentUserAPIView,
+    AppointmentAPIView, DoctorDashboardAPIView, ReportAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView, UserListAPIView, UserDetailAPIView, CurrentUserAPIView,
     ChangePasswordAPIView, UserProfileStatsAPIView,
     
     # Authentication
     UserSignupAPIView, LoginAPIView, DoctorSignupAPIView,
-    ForgotPasswordAPIView, VerifyOTPAPIView, ResetPasswordAPIView, ResendOTPAPIView,
+    ForgotPasswordAPIView, ResetPasswordAPIView, ResendOTPAPIView,
     
     # Patient
     PatientProfileAPIView, PatientDetailAPIView, PatientMyProfileAPIView,
@@ -24,7 +24,7 @@ from .views import (
     MessageListAPIView,
     
     # Reports
-    ReportListAPIView,
+    ReportAPIView,
 )
 
 
@@ -43,9 +43,11 @@ urlpatterns = [
     path('doctor/signup/', DoctorSignupAPIView.as_view(), name='doctor-signup'),
     path('login/', LoginAPIView.as_view(), name='login'),
     path('forgot-password/', ForgotPasswordAPIView.as_view(), name='forgot-password'),
-    path('verify-otp/', VerifyOTPAPIView.as_view(), name='verify-otp'),
+    # path('verify-otp/', VerifyOTPAPIView.as_view(), name='verify-otp'),
     path('reset-password/', ResetPasswordAPIView.as_view(), name='reset-password'),
     path('resend-otp/', ResendOTPAPIView.as_view(), name='resend-otp'),
+    
+    
     
     # ========== PATIENT PROFILE ENDPOINTS ==========
     path('patients/', PatientProfileAPIView.as_view(), name='patient-list'),
@@ -60,8 +62,6 @@ urlpatterns = [
     path('doctors/', DoctorProfileView.as_view()),          # LIST + CREATE
     path('doctors/<int:pk>/', DoctorProfileView.as_view()), # DETAIL + UPDATE + DELETE
     
-    
-    
     # ========== APPOINTMENT ENDPOINTS ==========
     path('slots/', SlotAPIView.as_view()),          # GET list + POST
     path('slots/<int:pk>/', SlotAPIView.as_view()),  # GET one + PUT + DELETE
@@ -75,5 +75,6 @@ urlpatterns = [
     path('api/appointments/<int:appointment_id>/messages/', MessageListAPIView.as_view(), name='message-list'),
     
     # ========== REPORT ENDPOINTS ==========
-    path('api/reports/', ReportListAPIView.as_view(), name='report-list'),
+    path('reports/', ReportAPIView.as_view()),
+    path('reports/<int:report_id>/', ReportAPIView.as_view()),
 ]

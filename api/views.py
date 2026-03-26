@@ -307,8 +307,9 @@ class LoginAPIView(APIView):
         except Exception as e:
             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# 🔹 1. FORGOT PASSWORD (SEND OTP)
+
 class ForgotPasswordAPIView(APIView):
-    """Request password reset OTP"""
     permission_classes = [AllowAny]
 
     def generate_otp(self):
@@ -316,91 +317,87 @@ class ForgotPasswordAPIView(APIView):
 
     def send_otp_email(self, email, otp):
         subject = "Password Reset OTP - MedoAir"
-        message = f"Your OTP is: {otp}\n\nValid for 15 minutes only."
-        send_mail(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
+        message = f"""
+Hi,
+
+Your OTP for password reset is: {otp}
+
+This OTP is valid for 15 minutes.
+
+If you didn't request this, ignore this email.
+
+- MedoAir Team
+"""
+        send_mail(subject, message, settings.EMAIL_HOST_USER, [email])
 
     def post(self, request):
-        """Generate and send OTP"""
-        try:
-            serializer = ForgotPasswordSerializer(data=request.data)
-            if serializer.is_valid():
-                email = serializer.validated_data['email']
-                user = User.objects.get(email=email)
+        serializer = ForgotPasswordSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
 
-                otp = self.generate_otp()
-                PasswordResetOTP.objects.filter(user=user, is_used=False).delete()
-                PasswordResetOTP.objects.create(user=user, otp=otp)
+        email = serializer.validated_data['email']
+        user = User.objects.filter(email=email).first()
 
-                try:
-                    self.send_otp_email(email, otp)
-                    return Response({"message": "OTP sent to your email", "email": email}, status=status.HTTP_200_OK)
-                except Exception as e:
-                    return Response({"error": f"Failed to send OTP: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-            return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # 🔐 Security: don't reveal if user exists
+        if not user:
+            return Response({"message": "If email exists, OTP sent"})
+
+        # ⏳ Cooldown (60 sec)
+        last_otp = PasswordResetOTP.objects.filter(user=user).first()
+        if last_otp and (timezone.now() - last_otp.created_at).total_seconds() < 60:
+            return Response({"error": "Wait before requesting another OTP"}, status=429)
+
+        otp = self.generate_otp()
+
+        # Delete old unused OTP
+        PasswordResetOTP.objects.filter(user=user, is_used=False).delete()
+
+        PasswordResetOTP.objects.create(user=user, otp=otp)
+
+        self.send_otp_email(email, otp)
+
+        return Response({"message": "OTP sent successfully"})
 
 
-class VerifyOTPAPIView(APIView):
-    """Verify OTP for password reset"""
-    permission_classes = [AllowAny]
-
-    def post(self, request):
-        """Verify OTP"""
-        try:
-            email = request.data.get('email')
-            otp = request.data.get('otp')
-
-            if not email or not otp:
-                return Response({"error": "Email and OTP required"}, status=status.HTTP_400_BAD_REQUEST)
-
-            try:
-                user = User.objects.get(email=email)
-                otp_record = PasswordResetOTP.objects.get(user=user, otp=otp, is_used=False)
-
-                if (timezone.now() - otp_record.created_at).seconds > 900:
-                    return Response({"error": "OTP has expired"}, status=status.HTTP_400_BAD_REQUEST)
-
-                return Response({"message": "OTP verified successfully", "email": email}, status=status.HTTP_200_OK)
-            except PasswordResetOTP.DoesNotExist:
-                return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+# 🔹 2. RESET PASSWORD (OTP VERIFY + RESET)
 
 class ResetPasswordAPIView(APIView):
-    """Reset password using OTP"""
     permission_classes = [AllowAny]
 
     def post(self, request):
-        """Reset password"""
+        serializer = ResetPasswordSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        email = serializer.validated_data['email']
+        otp = serializer.validated_data['otp']
+        new_password = serializer.validated_data['new_password']
+
+        user = User.objects.filter(email=email).first()
+
+        if not user:
+            return Response({"error": "Invalid email or OTP"}, status=400)
+
         try:
-            serializer = ResetPasswordSerializer(data=request.data)
-            if serializer.is_valid():
-                email = request.data.get('email')
-                otp = request.data.get('otp')
-                new_password = serializer.validated_data['new_password']
+            otp_record = PasswordResetOTP.objects.get(
+                user=user,
+                otp=otp,
+                is_used=False
+            )
+        except PasswordResetOTP.DoesNotExist:
+            return Response({"error": "Invalid OTP"}, status=400)
 
-                try:
-                    user = User.objects.get(email=email)
-                    otp_record = PasswordResetOTP.objects.get(user=user, otp=otp, is_used=False)
+        # ⏳ Expiry check
+        if otp_record.is_expired():
+            return Response({"error": "OTP expired"}, status=400)
 
-                    if (timezone.now() - otp_record.created_at).seconds > 900:
-                        return Response({"error": "OTP has expired"}, status=status.HTTP_400_BAD_REQUEST)
+        # ✅ Reset password
+        user.set_password(new_password)
+        user.save()
 
-                    user.set_password(new_password)
-                    user.save()
+        # ✅ Mark OTP used
+        otp_record.is_used = True
+        otp_record.save()
 
-                    otp_record.is_used = True
-                    otp_record.save()
-
-                    return Response({"message": "Password reset successfully"}, status=status.HTTP_200_OK)
-                except PasswordResetOTP.DoesNotExist:
-                    return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
-            return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+        return Response({"message": "Password reset successful"})
 
 class ResendOTPAPIView(APIView):
     """Resend OTP for password reset"""
@@ -722,37 +719,22 @@ class PatientBulkHealthUpdateAPIView(APIView):
 
 class DoctorProfileView(APIView):
     permission_classes = [IsAuthenticated]
-    # ✅ LIST + DETAIL
-    def get(self, request, pk=None):
-        if pk:
-            doctor = get_object_or_404(DoctorProfile, pk=pk)
-            serializer = DoctorProfileSerializer(doctor)
-            return Response(serializer.data)
 
-        queryset = DoctorProfile.objects.select_related('user', 'department').all()
+    # ✅ GET → current doctor profile
+    def get(self, request):
+        try:
+            doctor = DoctorProfile.objects.select_related('user', 'department').get(user=request.user)
+        except DoctorProfile.DoesNotExist:
+            return Response({"error": "Profile not found"}, status=404)
 
-        # Optional filters
-        department = request.query_params.get('department')
-        is_online = request.query_params.get('is_online')
+        return Response(DoctorProfileSerializer(doctor).data)
 
-        if department:
-            queryset = queryset.filter(department__id=department)
-
-        if is_online:
-            queryset = queryset.filter(is_online=is_online.lower() == 'true')
-
-        serializer = DoctorProfileSerializer(queryset, many=True)
-        return Response(serializer.data)
-
-    # ✅ CREATE
+    # ✅ CREATE → only if not exists
     def post(self, request):
         user = request.user
 
-        if hasattr(user, 'doctor_profile'):
-            return Response(
-                {"error": "Doctor profile already exists"},
-                status=status.HTTP_400_BAD_REQUEST
-            )
+        if DoctorProfile.objects.filter(user=user).exists():
+            return Response({"error": "Profile already exists"}, status=400)
 
         serializer = DoctorProfileUpdateSerializer(data=request.data)
 
@@ -766,24 +748,18 @@ class DoctorProfileView(APIView):
                     doctor.department = Department.objects.get(id=dept_id)
                     doctor.save()
                 except Department.DoesNotExist:
-                    return Response(
-                        {"error": "Invalid department"},
-                        status=status.HTTP_400_BAD_REQUEST
-                    )
+                    return Response({"error": "Invalid department"}, status=400)
 
-            return Response(
-                DoctorProfileSerializer(doctor).data,
-                status=status.HTTP_201_CREATED
-            )
+            return Response(DoctorProfileSerializer(doctor).data, status=201)
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=400)
 
-    # ✅ UPDATE
-    def put(self, request, pk):
-        doctor = get_object_or_404(DoctorProfile, pk=pk)
-
-        if doctor.user != request.user:
-            return Response({"error": "Unauthorized"}, status=403)
+    # ✅ UPDATE → current user only
+    def put(self, request):
+        try:
+            doctor = DoctorProfile.objects.get(user=request.user)
+        except DoctorProfile.DoesNotExist:
+            return Response({"error": "Profile not found"}, status=404)
 
         serializer = DoctorProfileUpdateSerializer(
             doctor,
@@ -795,20 +771,108 @@ class DoctorProfileView(APIView):
             serializer.save()
             return Response(DoctorProfileSerializer(doctor).data)
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=400)
 
-    # ✅ DELETE
-    def delete(self, request, pk):
-        doctor = get_object_or_404(DoctorProfile, pk=pk)
-
-        if doctor.user != request.user:
-            return Response({"error": "Unauthorized"}, status=403)
+    # ✅ DELETE → current user only
+    def delete(self, request):
+        try:
+            doctor = DoctorProfile.objects.get(user=request.user)
+        except DoctorProfile.DoesNotExist:
+            return Response({"error": "Profile not found"}, status=404)
 
         doctor.delete()
-        return Response(
-            {"message": "Deleted successfully"},
-            status=status.HTTP_204_NO_CONTENT
-        )
+        return Response({"message": "Deleted successfully"}, status=204)
+# class DoctorProfileView(APIView):
+#     permission_classes = [IsAuthenticated]
+#     # ✅ LIST + DETAIL
+#     def get(self, request, pk=None):
+#         user = request.user
+
+#         # 👉 SINGLE (by pk)
+#         if pk:
+#             doctor = get_object_or_404(DoctorProfile, pk=pk)
+
+#             # ❌ Restrict access
+#             if doctor.user != user:
+#                 return Response({"error": "Unauthorized"}, status=403)
+
+#             serializer = DoctorProfileSerializer(doctor)
+#             return Response(serializer.data)
+
+#         # 👉 CURRENT USER PROFILE ONLY
+#         try:
+#             doctor = DoctorProfile.objects.select_related('user', 'department').get(user=user)
+#         except DoctorProfile.DoesNotExist:
+#             return Response({"error": "Doctor profile not found"}, status=404)
+
+#         serializer = DoctorProfileSerializer(doctor)
+#         return Response(serializer.data)
+
+#     # ✅ CREATE
+#     def post(self, request):
+#         user = request.user
+
+#         if hasattr(user, 'doctor_profile'):
+#             return Response(
+#                 {"error": "Doctor profile already exists"},
+#                 status=status.HTTP_400_BAD_REQUEST
+#             )
+
+#         serializer = DoctorProfileUpdateSerializer(data=request.data)
+
+#         if serializer.is_valid():
+#             dept_id = serializer.validated_data.pop('department_id', None)
+
+#             doctor = serializer.save(user=user)
+
+#             if dept_id:
+#                 try:
+#                     doctor.department = Department.objects.get(id=dept_id)
+#                     doctor.save()
+#                 except Department.DoesNotExist:
+#                     return Response(
+#                         {"error": "Invalid department"},
+#                         status=status.HTTP_400_BAD_REQUEST
+#                     )
+
+#             return Response(
+#                 DoctorProfileSerializer(doctor).data,
+#                 status=status.HTTP_201_CREATED
+#             )
+
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+#     # ✅ UPDATE
+#     def put(self, request, pk):
+#         doctor = get_object_or_404(DoctorProfile, pk=pk)
+
+#         if doctor.user != request.user:
+#             return Response({"error": "Unauthorized"}, status=403)
+
+#         serializer = DoctorProfileUpdateSerializer(
+#             doctor,
+#             data=request.data,
+#             partial=True
+#         )
+
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(DoctorProfileSerializer(doctor).data)
+
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+#     # ✅ DELETE
+#     def delete(self, request, pk):
+#         doctor = get_object_or_404(DoctorProfile, pk=pk)
+
+#         if doctor.user != request.user:
+#             return Response({"error": "Unauthorized"}, status=403)
+
+#         doctor.delete()
+#         return Response(
+#             {"message": "Deleted successfully"},
+#             status=status.HTTP_204_NO_CONTENT
+#         )
 # ============== APPOINTMENT VIEWS ==============
 # we will be check the avilable slots for the doctor and then book the appointment 
 # for the patient and doctor and also we will be update the slot is_booked to true when 
@@ -943,140 +1007,6 @@ class SlotAPIView(APIView):
     
     
 
-# class AppointmentAPIView(APIView):
-#     permission_classes = [IsAuthenticated]
-
-#     # ✅ LIST + DETAIL
-#     def get(self, request, pk=None):
-#         if pk:
-#             appointment = get_object_or_404(Appointment, pk=pk)
-#             return Response(AppointmentSerializer(appointment).data)
-
-#         if request.user.is_staff:
-#             appointments = Appointment.objects.all()
-#         else:
-#             appointments = Appointment.objects.filter(
-#                 Q(patient=request.user) | Q(doctor=request.user)
-#             )
-
-#         serializer = AppointmentSerializer(appointments, many=True)
-#         return Response(serializer.data)
-
-#     # ✅ CREATE
-#     def post(self, request):
-#         serializer = AppointmentCreateSerializer(
-#             data=request.data,
-#             context={'request': request}
-#         )
-
-#         if serializer.is_valid():
-#             appointment = serializer.save()
-#             return Response(
-#                 AppointmentSerializer(appointment).data,
-#                 status=status.HTTP_201_CREATED
-#             )
-
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-#     # ✅ UPDATE (PUT / PATCH)
-#     def put(self, request, pk):
-#         appointment = get_object_or_404(Appointment, pk=pk)
-
-#         if appointment.patient != request.user:
-#             return Response({"error": "Unauthorized"}, status=403)
-
-#         serializer = AppointmentUpdateSerializer(
-#             appointment,
-#             data=request.data,
-#             partial=True
-#         )
-
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(AppointmentSerializer(appointment).data)
-
-#         return Response(serializer.errors, status=400)
-    
-#     # ✅ PATCH → CANCEL / RESCHEDULE
-#     def patch(self, request, pk):
-#         appointment = get_object_or_404(Appointment, pk=pk)
-
-#         if appointment.patient != request.user:
-#             return Response({"error": "Unauthorized"}, status=403)
-
-#         action = request.data.get("action")
-
-#         # 🔥 CANCEL
-#         if action == "cancel":
-#             reason = request.data.get("reason", "")
-
-#             appointment.status = "cancelled"
-#             appointment.cancellation_reason = reason
-
-#             # free slot
-#             appointment.slot.is_booked = False
-#             appointment.slot.save()
-
-#             appointment.save()
-
-#             return Response({
-#                 "message": "Appointment cancelled",
-#                 "reason": reason
-#             })
-
-#         # 🔥 RESCHEDULE
-#         if action == "reschedule":
-#             new_slot_id = request.data.get("slot_id")
-
-#             if not new_slot_id:
-#                 return Response({"error": "slot_id required"}, status=400)
-
-#             try:
-#                 new_slot = Slot.objects.get(id=new_slot_id)
-#             except Slot.DoesNotExist:
-#                 return Response({"error": "Invalid slot"}, status=400)
-
-#             if new_slot.is_booked:
-#                 return Response({"error": "Slot already booked"}, status=400)
-
-#             # free old slot
-#             appointment.slot.is_booked = False
-#             appointment.slot.save()
-
-#             # assign new slot
-#             appointment.slot = new_slot
-#             appointment.doctor = new_slot.doctor
-
-#             # book new slot
-#             new_slot.is_booked = True
-#             new_slot.save()
-
-#             appointment.status = "scheduled"
-#             appointment.save()
-
-#             return Response({
-#                 "message": "Appointment rescheduled",
-#                 "new_slot_id": new_slot.id
-#             })
-
-#         return Response({"error": "Invalid action"}, status=400)
-#     # ✅ DELETE
-#     def delete(self, request, pk):
-#         appointment = get_object_or_404(Appointment, pk=pk)
-
-#         # optional: restrict delete
-#         if appointment.patient != request.user:
-#             return Response({"error": "Unauthorized"}, status=403)
-
-#         # free slot again
-#         appointment.slot.is_booked = False
-#         appointment.slot.save()
-
-#         appointment.delete()
-#         return Response(
-#             {"message": "Deleted successfully"},
-#             status=status.HTTP_204_NO_CONTENT
-#         )
 class AppointmentAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -1281,6 +1211,8 @@ class DoctorDashboardAPIView(APIView):
             "slots": slot_data,
             "appointments": appointment_data
         })
+        
+
 # ============== MESSAGE/CHAT VIEWS ==============
 
 class MessageListAPIView(APIView):
@@ -1330,33 +1262,88 @@ class MessageListAPIView(APIView):
 
 # ============== REPORT VIEWS ==============
 
-class ReportListAPIView(APIView):
-    """List and upload reports"""
+class ReportAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        """List user's reports"""
+    def get_object(self, request, report_id):
         try:
-            reports = Report.objects.filter(user=request.user)
-            serializer = ReportSerializer(reports, many=True)
-            return Response({
-                "message": "Reports retrieved",
-                "count": len(serializer.data),
-                "results": serializer.data
-            }, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Report.objects.get(id=report_id, user=request.user)
+        except Report.DoesNotExist:
+            return None
 
+    # 🔹 GET → list OR single
+    def get(self, request, report_id=None):
+        if report_id:
+            report = self.get_object(request, report_id)
+
+            if not report:
+                return Response({"error": "Report not found"}, status=404)
+
+            serializer = ReportSerializer(report, context={'request': request})
+            return Response(serializer.data)
+
+        # list all
+        reports = Report.objects.filter(user=request.user)
+        serializer = ReportSerializer(
+            reports,
+            many=True,
+            context={'request': request}
+        )
+
+        return Response({
+            "count": len(serializer.data),
+            "results": serializer.data
+        })
+
+    # 🔹 POST → create
     def post(self, request):
-        """Upload report"""
-        try:
-            serializer = ReportCreateSerializer(data=request.data)
-            if serializer.is_valid():
-                report = serializer.save(user=request.user)
-                return Response({
-                    "message": "Report uploaded successfully",
-                    "report": ReportSerializer(report).data
-                }, status=status.HTTP_201_CREATED)
-            return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        serializer = ReportCreateUpdateSerializer(
+            data=request.data,
+            context={'request': request}
+        )
+
+        if serializer.is_valid():
+            report = serializer.save()
+
+            return Response({
+                "message": "Report created",
+                "data": ReportSerializer(report, context={'request': request}).data
+            }, status=201)
+
+        return Response(serializer.errors, status=400)
+
+    # 🔹 PUT → update
+    def put(self, request, report_id=None):
+        if not report_id:
+            return Response({"error": "Report ID required"}, status=400)
+
+        report = self.get_object(request, report_id)
+
+        if not report:
+            return Response({"error": "Report not found"}, status=404)
+
+        serializer = ReportCreateUpdateSerializer(
+            report,
+            data=request.data,
+            partial=True,
+            context={'request': request}
+        )
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Report updated"})
+
+        return Response(serializer.errors, status=400)
+
+    # 🔹 DELETE → delete
+    def delete(self, request, report_id=None):
+        if not report_id:
+            return Response({"error": "Report ID required"}, status=400)
+
+        report = self.get_object(request, report_id)
+
+        if not report:
+            return Response({"error": "Report not found"}, status=404)
+
+        report.delete()
+        return Response({"message": "Report deleted"})

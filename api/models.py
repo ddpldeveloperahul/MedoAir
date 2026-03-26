@@ -2,67 +2,14 @@
 Unified Models - All models consolidated into one app
 """
 
+from datetime import timedelta
+
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.core.validators import RegexValidator
-
-# ============= USER MODELS =============
-
-# class UserManager(BaseUserManager):
-#     """Custom user manager for authentication"""
-#     def create_user(self, email, password=None, role='user', **extra_fields):
-#         if not email:
-#             raise ValueError("Email is required")
-
-#         email = self.normalize_email(email)
-#         user = self.model(email=email, role=role, **extra_fields)
-#         user.set_password(password)
-#         user.save()
-#         return user
-
-#     def create_superuser(self, email, password=None, **extra_fields):
-#         extra_fields.setdefault('is_staff', True)
-#         extra_fields.setdefault('is_superuser', True)
-#         return self.create_user(email, password, role='admin', **extra_fields)
-
-
-# class User(AbstractUser):
-#     """Custom User model with additional fields"""
-#     username = None
-
-#     email = models.EmailField(unique=True)
-#     phone = models.CharField(max_length=20, blank=True, null=True)
-#     address = models.TextField(blank=True, null=True)
-#     profile_image = models.ImageField(upload_to='profiles/', blank=True, null=True)
-#     date_of_birth = models.DateField(blank=True, null=True)
-#     gender = models.CharField(
-#         max_length=10, 
-#         choices=[('Male', 'Male'), ('Female', 'Female'), ('Other', 'Other')], 
-#         blank=True, 
-#         null=True
-#     )
-#     is_verified = models.BooleanField(default=False)
-
-#     ROLE_CHOICES = (
-#         ('user', 'User'),
-#         ('doctor', 'Doctor'),
-#         ('admin', 'Admin'),
-#     )
-#     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
-
-#     USERNAME_FIELD = 'email'
-#     REQUIRED_FIELDS = []
-
-#     objects = UserManager()
-
-#     def __str__(self):
-#         return f"{self.email} - {self.first_name}"
-
-from django.contrib.auth.models import AbstractUser, BaseUserManager
-from django.db import models
 from pydantic_core import ValidationError
 
-
+# ============= USER MODELS =============
 class UserManager(BaseUserManager):
     def create_user(self, email, username, password=None, role='user', **extra_fields):
         if not email:
@@ -132,18 +79,19 @@ class User(AbstractUser):
         return f"{self.email} ({self.username}) - {self.role}"
 
 
+
+from django.utils import timezone
 class PasswordResetOTP(models.Model):
-    """OTP model for password reset"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     otp = models.CharField(max_length=6)
     created_at = models.DateTimeField(auto_now_add=True)
     is_used = models.BooleanField(default=False)
 
-    class Meta:
-        ordering = ['-created_at']
+    def is_expired(self):
+        return timezone.now() > self.created_at + timedelta(minutes=15)
 
     def __str__(self):
-        return f"OTP for {self.user.email}"
+        return f"{self.user.email} - {self.otp}"
 
 
 # ============= PATIENT MODELS =============
@@ -277,23 +225,6 @@ class DoctorProfile(models.Model):
 
 # ============= APPOINTMENT MODELS =============
 
-# class Slot(models.Model):
-#     doctor = models.ForeignKey(User, on_delete=models.CASCADE)
-#     date = models.DateField()
-#     start_time = models.TimeField()
-#     end_time = models.TimeField()
-
-#     is_booked = models.BooleanField(default=False)
-
-#     def __str__(self):
-#         return f"{self.doctor.email} - {self.date} {self.start_time}"
-from django.db import models
-from django.contrib.auth import get_user_model
-from django.core.exceptions import ValidationError
-
-User = get_user_model()
-
-
 class Slot(models.Model):
     doctor = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField()
@@ -383,7 +314,6 @@ class Appointment(models.Model):
     def __str__(self):
         return f"{self.patient.email} → {self.doctor.email}"
 
-
 # ============= CHAT MODELS =============
 
 class Chat(models.Model):
@@ -397,6 +327,7 @@ class Chat(models.Model):
 
     def __str__(self):
         return f"Chat - {self.appointment.id}"
+    
 
 class Message(models.Model):
 

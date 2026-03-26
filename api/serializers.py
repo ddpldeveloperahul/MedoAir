@@ -6,6 +6,8 @@ from rest_framework import serializers
 from .models import User, PasswordResetOTP, PatientProfile, DoctorProfile, Department,Appointment, Message, Report
 from django.contrib.auth import get_user_model
 import re
+from django.utils import timezone
+from datetime import timedelta
 
 User = get_user_model()
 
@@ -18,7 +20,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [
-            'id', 'email', 'first_name', 'last_name',
+            'id', 'email', 'username',
             'phone', 'address', 'profile_image',
             'profile_image_url', 'date_of_birth',
             'gender', 'role'
@@ -95,9 +97,6 @@ class ForgotPasswordSerializer(serializers.Serializer):
         return value
 
 
-from django.utils import timezone
-from datetime import timedelta
-
 class VerifyOTPSerializer(serializers.Serializer):
     email = serializers.EmailField()
     otp = serializers.CharField(max_length=6)
@@ -124,9 +123,14 @@ class VerifyOTPSerializer(serializers.Serializer):
         data['user'] = user
         data['otp_record'] = otp_record
         return data
+# serializers.py
 
 
-import re
+from django.contrib.auth.password_validation import validate_password
+
+class ForgotPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+
 
 class ResetPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
@@ -135,38 +139,10 @@ class ResetPasswordSerializer(serializers.Serializer):
     confirm_password = serializers.CharField(write_only=True)
 
     def validate(self, data):
-        # password match
-        if data['new_password'] != data['confirm_password']:
+        if data["new_password"] != data["confirm_password"]:
             raise serializers.ValidationError("Passwords do not match")
 
-        # password strength
-        if len(data['new_password']) < 6:
-            raise serializers.ValidationError("Password too short")
-
-        if not re.search(r'[0-9]', data['new_password']):
-            raise serializers.ValidationError("Password must contain a number")
-
-        # user check
-        try:
-            user = User.objects.get(email=data['email'])
-        except User.DoesNotExist:
-            raise serializers.ValidationError("User not found")
-
-        # OTP check
-        otp_record = PasswordResetOTP.objects.filter(
-            user=user,
-            otp=data['otp'],
-            is_used=False
-        ).first()
-
-        if not otp_record:
-            raise serializers.ValidationError("Invalid OTP")
-
-        if timezone.now() - otp_record.created_at > timedelta(minutes=15):
-            raise serializers.ValidationError("OTP expired")
-
-        data['user'] = user
-        data['otp_record'] = otp_record
+        validate_password(data["new_password"])
         return data
 
 
@@ -271,28 +247,61 @@ class DoctorProfileSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'user', 'department_name']
         
 class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
-    department_id = serializers.IntegerField(write_only=True, required=False)
+    # 👇 USER fields
+    phone = serializers.CharField(source='user.phone', required=False)
+    address = serializers.CharField(source='user.address', required=False)
+    profile_image = serializers.ImageField(source='user.profile_image', required=False)
+    date_of_birth = serializers.DateField(source='user.date_of_birth', required=False)
+    gender = serializers.CharField(source='user.gender', required=False)
 
     class Meta:
         model = DoctorProfile
         fields = [
             'specialization',
             'experience',
-            'phone',
             'about',
+            'phone',
+            'address',
+            'profile_image',
+            'date_of_birth',
+            'gender',
             'department_id'
         ]
 
     def update(self, instance, validated_data):
-        dept_id = validated_data.pop('department_id', None)
+        user_data = validated_data.pop('user', {})
 
-        if dept_id:
-            try:
-                instance.department = Department.objects.get(id=dept_id)
-            except Department.DoesNotExist:
-                raise serializers.ValidationError({"department": "Invalid department"})
+        # 🔹 Update USER fields
+        user = instance.user
+        for attr, value in user_data.items():
+            setattr(user, attr, value)
+        user.save()
 
-        return super().update(instance, validated_data)
+        # 🔹 Update DoctorProfile fields
+        return super().update(instance, validated_data)    
+# class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
+#     department_id = serializers.IntegerField(write_only=True, required=False)
+
+#     class Meta:
+#         model = DoctorProfile
+#         fields = [
+#             'specialization',
+#             'experience',
+#             'phone',
+#             'about',
+#             'department_id'
+#         ]
+
+#     def update(self, instance, validated_data):
+#         dept_id = validated_data.pop('department_id', None)
+
+#         if dept_id:
+#             try:
+#                 instance.department = Department.objects.get(id=dept_id)
+#             except Department.DoesNotExist:
+#                 raise serializers.ValidationError({"department": "Invalid department"})
+
+#         return super().update(instance, validated_data)
 
 
 # ============== PATIENT SERIALIZERS ==============
@@ -597,6 +606,7 @@ class MessageCreateSerializer(serializers.ModelSerializer):
 
 class ReportSerializer(serializers.ModelSerializer):
     user_email = serializers.CharField(source='user.email', read_only=True)
+    file_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Report
@@ -604,18 +614,25 @@ class ReportSerializer(serializers.ModelSerializer):
             'id',
             'user_email',
             'file',
+            'file_url',
             'title',
             'uploaded_at'
         ]
-        read_only_fields = ['id', 'user_email', 'uploaded_at']
-class ReportCreateSerializer(serializers.ModelSerializer):
+        read_only_fields = ['id', 'user_email', 'uploaded_at', 'file_url']
 
+    def get_file_url(self, obj):
+        request = self.context.get('request')
+        if obj.file and request:
+            return request.build_absolute_uri(obj.file.url)
+        return None
+
+
+class ReportCreateUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Report
         fields = ['file', 'title']
 
     def validate_file(self, value):
-        # ❗ allow only PDF + images
         allowed_types = ['application/pdf', 'image/jpeg', 'image/png']
 
         if value.content_type not in allowed_types:
@@ -623,15 +640,10 @@ class ReportCreateSerializer(serializers.ModelSerializer):
 
         return value
 
-    def validate(self, data):
-        if not data.get('file'):
-            raise serializers.ValidationError("File is required")
-        return data
-
     def create(self, validated_data):
         request = self.context.get('request')
 
         return Report.objects.create(
-            user=request.user,  # ✅ auto set user
+            user=request.user,
             **validated_data
         )
