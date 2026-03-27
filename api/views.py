@@ -1380,32 +1380,53 @@ class SuperAdminDashboardAPIView(APIView):
 
 #     def get(self, request):
 #         users = User.objects.all()
-#         return Response(UserSerializer(users, many=True).data)
+
+#         # 🔥 COUNTS
+#         total_users = users.count()
+#         total_doctors = users.filter(role='doctor').count()
+#         total_patients = users.filter(role='patient').count()
+#         total_admins = users.filter(role='admin').count()
+
+#         return Response({
+#             "summary": {
+#                 "total_users": total_users,
+#                 "total_doctors": total_doctors,
+#                 "total_patients": total_patients,
+#                 "total_admins": total_admins
+#             },
+#             "users": UserSerializer(users, many=True).data
+#         })
 
 #     def delete(self, request, user_id):
 #         user = get_object_or_404(User, id=user_id)
 #         user.delete()
 #         return Response({"message": "User deleted"})
 
-
 class SuperAdminUserAPIView(APIView):
     permission_classes = [IsAuthenticated, IsSuperAdmin]
 
-    def get(self, request):
-        users = User.objects.all()
+    def get(self, request, user_id=None):
 
-        # 🔥 COUNTS
-        total_users = users.count()
-        total_doctors = users.filter(role='doctor').count()
-        total_patients = users.filter(role='patient').count()
-        total_admins = users.filter(role='admin').count()
+        # ✅ SINGLE USER
+        if user_id:
+            user = get_object_or_404(User, id=user_id)
+
+            return Response({
+                "summary": {
+                    "total_users": User.objects.count()
+                },
+                "user": UserSerializer(user).data
+            })
+
+        # ✅ ALL USERS
+        users = User.objects.all()
 
         return Response({
             "summary": {
-                "total_users": total_users,
-                "total_doctors": total_doctors,
-                "total_patients": total_patients,
-                "total_admins": total_admins
+                "total_users": users.count(),
+                "total_doctors": users.filter(role='doctor').count(),
+                "total_patients": users.filter(role='patient').count(),
+                "total_admins": users.filter(role='admin').count()
             },
             "users": UserSerializer(users, many=True).data
         })
@@ -1415,15 +1436,29 @@ class SuperAdminUserAPIView(APIView):
         user.delete()
         return Response({"message": "User deleted"})
     
+    
 class SuperAdminDoctorAPIView(APIView):
     permission_classes = [IsAuthenticated, IsSuperAdmin]
 
-    def get(self, request):
+    def get(self, request, doctor_id=None):
+
+        # ✅ SINGLE
+        if doctor_id:
+            doctor = get_object_or_404(DoctorProfile, id=doctor_id)
+
+            return Response({
+                "summary": {
+                    "total_doctors": DoctorProfile.objects.count()
+                },
+                "doctor": DoctorProfileSerializer(doctor).data
+            })
+
+        # ✅ ALL
         doctors = DoctorProfile.objects.select_related('user', 'department')
-        total_doctors = doctors.count() 
+
         return Response({
             "summary": {
-                "total_doctors": total_doctors
+                "total_doctors": doctors.count()
             },
             "doctors": DoctorProfileSerializer(doctors, many=True).data
         })
@@ -1437,20 +1472,24 @@ class SuperAdminPatientAPIView(APIView):
     permission_classes = [IsAuthenticated, IsSuperAdmin]
 
     def get(self, request, patient_id=None):
+
+        # ✅ SINGLE
         if patient_id:
             patient = get_object_or_404(PatientProfile, id=patient_id)
-            patient_count = PatientProfile.objects.count()
+
             return Response({
                 "summary": {
-                    "total_patients": patient_count
+                    "total_patients": PatientProfile.objects.count()
                 },
                 "patient": PatientProfileSerializer(patient).data
             })
 
+        # ✅ ALL
         patients = PatientProfile.objects.select_related('user')
+
         return Response({
             "summary": {
-                "total_patients": PatientProfile.objects.count()
+                "total_patients": patients.count()
             },
             "patients": PatientProfileSerializer(patients, many=True).data
         })
@@ -1478,19 +1517,64 @@ class SuperAdminPatientAPIView(APIView):
         patient.user.delete()
         return Response({"message": "Patient deleted"})
     
+# class SuperAdminAppointmentAPIView(APIView):
+#     permission_classes = [IsAuthenticated, IsSuperAdmin]
+
+#     def get(self, request):
+#         appointments = Appointment.objects.all()
+#         return Response(AppointmentSerializer(appointments, many=True).data)
+
+#     def delete(self, request, appointment_id):
+#         appointment = get_object_or_404(Appointment, id=appointment_id)
+
+#         appointment.slot.is_booked = False
+#         appointment.slot.save()
+
+#         appointment.delete()
+
+#         return Response({"message": "Appointment deleted"})
+
 class SuperAdminAppointmentAPIView(APIView):
     permission_classes = [IsAuthenticated, IsSuperAdmin]
 
-    def get(self, request):
-        appointments = Appointment.objects.all()
-        return Response(AppointmentSerializer(appointments, many=True).data)
+    # ✅ GET ALL + SINGLE
+    def get(self, request, appointment_id=None):
 
+        # 🔹 SINGLE APPOINTMENT
+        if appointment_id:
+            appointment = get_object_or_404(Appointment, id=appointment_id)
+
+            return Response({
+                "summary": {
+                    "total_appointments": Appointment.objects.count()
+                },
+                "appointment": AppointmentSerializer(appointment).data
+            })
+
+        # 🔹 ALL APPOINTMENTS
+        appointments = Appointment.objects.select_related(
+            'patient', 'doctor', 'slot'
+        )
+
+        return Response({
+            "summary": {
+                "total_appointments": appointments.count(),
+                "scheduled": appointments.filter(status='scheduled').count(),
+                "completed": appointments.filter(status='completed').count(),
+                "cancelled": appointments.filter(status='cancelled').count(),
+                "no_show": appointments.filter(status='no_show').count(),
+            },
+            "appointments": AppointmentSerializer(appointments, many=True).data
+        })
+
+    # ✅ DELETE APPOINTMENT
     def delete(self, request, appointment_id):
         appointment = get_object_or_404(Appointment, id=appointment_id)
 
+        # 🔥 free slot
         appointment.slot.is_booked = False
         appointment.slot.save()
 
         appointment.delete()
 
-        return Response({"message": "Appointment deleted"})
+        return Response({"message": "Appointment deleted successfully"})
