@@ -25,6 +25,9 @@ from .views import (
     
     # Reports
     ReportAPIView,
+    
+    # Super Admin
+    SuperAdminDashboardAPIView, SuperAdminUserAPIView, SuperAdminDoctorAPIView, SuperAdminPatientAPIView, SuperAdminAppointmentAPIView,
 )
 
 
@@ -77,4 +80,22 @@ urlpatterns = [
     # ========== REPORT ENDPOINTS ==========
     path('reports/', ReportAPIView.as_view()),
     path('reports/<int:report_id>/', ReportAPIView.as_view()),
+    
+    
+    
+    
+  # 🔥 SUPER ADMIN
+    path('admin/dashboard/', SuperAdminDashboardAPIView.as_view()),
+
+    path('admin/users/', SuperAdminUserAPIView.as_view()),
+    path('admin/users/<int:user_id>/', SuperAdminUserAPIView.as_view()),
+
+    path('admin/doctors/', SuperAdminDoctorAPIView.as_view()),
+    path('admin/doctors/<int:doctor_id>/', SuperAdminDoctorAPIView.as_view()),
+
+    path('admin/patients/', SuperAdminPatientAPIView.as_view()),
+    path('admin/patients/<int:patient_id>/', SuperAdminPatientAPIView.as_view()),
+
+    path('admin/appointments/', SuperAdminAppointmentAPIView.as_view()),
+    path('admin/appointments/<int:appointment_id>/', SuperAdminAppointmentAPIView.as_view()),
 ]
