@@ -782,97 +782,7 @@ class DoctorProfileView(APIView):
 
         doctor.delete()
         return Response({"message": "Deleted successfully"}, status=204)
-# class DoctorProfileView(APIView):
-#     permission_classes = [IsAuthenticated]
-#     # ✅ LIST + DETAIL
-#     def get(self, request, pk=None):
-#         user = request.user
 
-#         # 👉 SINGLE (by pk)
-#         if pk:
-#             doctor = get_object_or_404(DoctorProfile, pk=pk)
-
-#             # ❌ Restrict access
-#             if doctor.user != user:
-#                 return Response({"error": "Unauthorized"}, status=403)
-
-#             serializer = DoctorProfileSerializer(doctor)
-#             return Response(serializer.data)
-
-#         # 👉 CURRENT USER PROFILE ONLY
-#         try:
-#             doctor = DoctorProfile.objects.select_related('user', 'department').get(user=user)
-#         except DoctorProfile.DoesNotExist:
-#             return Response({"error": "Doctor profile not found"}, status=404)
-
-#         serializer = DoctorProfileSerializer(doctor)
-#         return Response(serializer.data)
-
-#     # ✅ CREATE
-#     def post(self, request):
-#         user = request.user
-
-#         if hasattr(user, 'doctor_profile'):
-#             return Response(
-#                 {"error": "Doctor profile already exists"},
-#                 status=status.HTTP_400_BAD_REQUEST
-#             )
-
-#         serializer = DoctorProfileUpdateSerializer(data=request.data)
-
-#         if serializer.is_valid():
-#             dept_id = serializer.validated_data.pop('department_id', None)
-
-#             doctor = serializer.save(user=user)
-
-#             if dept_id:
-#                 try:
-#                     doctor.department = Department.objects.get(id=dept_id)
-#                     doctor.save()
-#                 except Department.DoesNotExist:
-#                     return Response(
-#                         {"error": "Invalid department"},
-#                         status=status.HTTP_400_BAD_REQUEST
-#                     )
-
-#             return Response(
-#                 DoctorProfileSerializer(doctor).data,
-#                 status=status.HTTP_201_CREATED
-#             )
-
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-#     # ✅ UPDATE
-#     def put(self, request, pk):
-#         doctor = get_object_or_404(DoctorProfile, pk=pk)
-
-#         if doctor.user != request.user:
-#             return Response({"error": "Unauthorized"}, status=403)
-
-#         serializer = DoctorProfileUpdateSerializer(
-#             doctor,
-#             data=request.data,
-#             partial=True
-#         )
-
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(DoctorProfileSerializer(doctor).data)
-
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-#     # ✅ DELETE
-#     def delete(self, request, pk):
-#         doctor = get_object_or_404(DoctorProfile, pk=pk)
-
-#         if doctor.user != request.user:
-#             return Response({"error": "Unauthorized"}, status=403)
-
-#         doctor.delete()
-#         return Response(
-#             {"message": "Deleted successfully"},
-#             status=status.HTTP_204_NO_CONTENT
-#         )
 # ============== APPOINTMENT VIEWS ==============
 # we will be check the avilable slots for the doctor and then book the appointment 
 # for the patient and doctor and also we will be update the slot is_booked to true when 
@@ -1578,3 +1488,272 @@ class SuperAdminAppointmentAPIView(APIView):
         appointment.delete()
 
         return Response({"message": "Appointment deleted successfully"})
+    
+    
+# views.py
+
+# class ChatAPIView(APIView):
+#     permission_classes = [IsAuthenticated]
+
+#     # 🔹 GET MESSAGES
+#     def get(self, request, appointment_id):
+#         try:
+#             appointment = get_object_or_404(Appointment, id=appointment_id)
+
+#             if request.user != appointment.patient and request.user != appointment.doctor:
+#                 return Response({"error": "Not allowed"}, status=403)
+
+#             chat, _ = Chat.objects.get_or_create(appointment=appointment)
+
+#             messages = chat.messages.all()
+
+#             data = []
+#             for msg in messages:
+#                 data.append({
+#                     "id": msg.id,
+#                     "sender": msg.sender.email,
+#                     "receiver": msg.receiver.email,
+#                     "message": msg.message,
+#                     "type": msg.message_type,
+#                     "file": msg.file.url if msg.file else None,
+#                     "is_read": msg.is_read,
+#                     "created_at": msg.created_at
+#                 })
+
+#             return Response({
+#                 "count": len(data),
+#                 "messages": data
+#             })
+
+#         except Exception as e:
+#             return Response({"error": str(e)}, status=500)
+
+#     # 🔹 SEND MESSAGE
+#     def post(self, request, appointment_id):
+#         try:
+#             appointment = get_object_or_404(Appointment, id=appointment_id)
+
+#             if request.user == appointment.patient:
+#                 sender = appointment.patient
+#                 receiver = appointment.doctor
+#             elif request.user == appointment.doctor:
+#                 sender = appointment.doctor
+#                 receiver = appointment.patient
+#             else:
+#                 return Response({"error": "Not allowed"}, status=403)
+
+#             chat, _ = Chat.objects.get_or_create(appointment=appointment)
+
+#             message = Message.objects.create(
+#                 chat=chat,
+#                 sender=sender,
+#                 receiver=receiver,
+#                 message=request.data.get("message"),
+#                 message_type=request.data.get("message_type", "text"),
+#                 file=request.FILES.get("file")
+#             )
+
+#             return Response({
+#                 "message": "Message sent",
+#                 "data": {
+#                     "sender": sender.email,
+#                     "receiver": receiver.email,
+#                     "message": message.message
+#                 }
+#             })
+
+#         except Exception as e:
+#             return Response({"error": str(e)}, status=500)
+
+#     # 🔹 MARK AS READ
+#     def put(self, request, message_id):
+#         msg = get_object_or_404(Message, id=message_id, receiver=request.user)
+
+#         msg.is_read = True
+#         msg.save()
+
+#         return Response({"message": "Seen"})
+
+#     # 🔹 DELETE MESSAGE
+#     def delete(self, request, message_id):
+#         msg = get_object_or_404(Message, id=message_id, sender=request.user)
+#         msg.delete()
+
+#         return Response({"message": "Deleted"})
+    
+    
+class ChatAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    # 🔹 GET MESSAGES
+    def get(self, request, appointment_id):
+        try:
+            appointment = get_object_or_404(Appointment, id=appointment_id)
+
+            # ✅ Access control
+            if request.user != appointment.patient and request.user != appointment.doctor:
+                return Response({"error": "Not allowed"}, status=403)
+
+            chat, _ = Chat.objects.get_or_create(appointment=appointment)
+
+            messages = chat.messages.all()
+
+            # ✅ AUTO MARK AS READ (IMPORTANT ADD)
+            for msg in messages:
+                if msg.receiver == request.user and not msg.is_read:
+                    msg.is_read = True
+                    msg.save()
+
+            # ✅ RESPONSE
+            data = []
+            for msg in messages:
+                data.append({
+                    "id": msg.id,
+                    "sender": msg.sender.username,
+                    "receiver": msg.receiver.username,
+                    "message": msg.message,
+                    "type": msg.message_type,
+                    "file": msg.file.url if msg.file else None,
+                    "is_read": msg.is_read,
+                    "created_at": msg.created_at
+                })
+
+            return Response({
+                "count": len(data),
+                "messages": data
+            })
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=500)
+
+    # 🔹 SEND MESSAGE
+    def post(self, request, appointment_id):
+        try:
+            appointment = get_object_or_404(Appointment, id=appointment_id)
+
+            if request.user == appointment.patient:
+                sender = appointment.patient
+                receiver = appointment.doctor
+            elif request.user == appointment.doctor:
+                sender = appointment.doctor
+                receiver = appointment.patient
+            else:
+                return Response({"error": "Not allowed"}, status=403)
+
+            chat, _ = Chat.objects.get_or_create(appointment=appointment)
+
+            message = Message.objects.create(
+                chat=chat,
+                sender=sender,
+                receiver=receiver,
+                message=request.data.get("message"),
+                message_type=request.data.get("message_type", "text"),
+                file=request.FILES.get("file")
+            )
+
+            return Response({
+                "message": "Message sent",
+                "data": {
+                    "id": message.id,
+                    "sender": sender.email,
+                    "receiver": receiver.email,
+                    "message": message.message,
+                    "is_read": message.is_read
+                }
+            })
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=500)
+
+    # 🔹 MARK AS READ (manual)
+    # def put(self, request, message_id):
+    #     msg = get_object_or_404(Message, id=message_id, receiver=request.user)
+
+    #     msg.is_read = True
+    #     msg.save()
+
+    #     return Response({"message": "Seen (manual)"})
+    def put(self, request, message_id):
+        msg = get_object_or_404(Message, id=message_id)
+
+        # optional security
+        if msg.sender != request.user:
+            return Response({"error": "Only sender can edit message"}, status=403)
+
+        # 🔥 UPDATE MESSAGE TEXT
+        msg.message = request.data.get("message", msg.message)
+
+        # 🔥 OPTIONAL: mark as read
+        msg.is_read = True
+
+        msg.save()
+
+        return Response({
+            "message": "Updated successfully",
+            "data": {
+                "id": msg.id,
+                "message": msg.message,
+                "is_read": msg.is_read
+            }
+        })
+
+    # 🔹 DELETE MESSAGE
+    def delete(self, request, message_id):
+        msg = get_object_or_404(Message, id=message_id, sender=request.user)
+        msg.delete()
+
+        return Response({"message": "Deleted"})
+    
+    
+class DeleteMessageAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request, message_id):
+        try:
+            msg = Message.objects.get(id=message_id)
+
+            if request.user != msg.sender:
+                return Response({"error": "Not allowed"}, status=403)
+
+            msg.delete()
+            return Response({"message": "Deleted"})
+
+        except Message.DoesNotExist:
+            return Response({"error": "Not found"}, status=404)
+        
+        
+        
+
+
+
+
+
+class ChatHistoryAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, appointment_id):
+        appointment = get_object_or_404(Appointment, id=appointment_id)
+
+        if request.user not in [appointment.patient, appointment.doctor]:
+            return Response({"error": "Not allowed"}, status=403)
+
+        chat, _ = Chat.objects.get_or_create(appointment=appointment)
+
+        messages = chat.messages.all()
+
+        data = [
+            {
+                "id": m.id,
+                "sender": m.sender.username,
+                "receiver": m.receiver.username,
+                "message": m.message,
+                "is_read": m.is_read,
+                "created_at": m.created_at
+            }
+            for m in messages
+        ]
+
+        return Response({"messages": data})
+    
+def video_call(request):
+    return render(request, 'chat.html')

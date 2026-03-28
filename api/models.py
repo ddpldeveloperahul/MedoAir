@@ -317,14 +317,8 @@ class Appointment(models.Model):
 # ============= CHAT MODELS =============
 
 class Chat(models.Model):
-    appointment = models.OneToOneField(
-        Appointment,
-        on_delete=models.CASCADE,
-        related_name='chat'
-    )
-
+    appointment = models.OneToOneField(Appointment,on_delete=models.CASCADE,related_name='chat')
     created_at = models.DateTimeField(auto_now_add=True)
-
     def __str__(self):
         return f"Chat - {self.appointment.id}"
     
@@ -337,41 +331,17 @@ class Message(models.Model):
         ('file', 'File'),
     )
 
-    chat = models.ForeignKey(
-        Chat,
-        on_delete=models.CASCADE,
-        related_name='messages'
-    )
-
-    sender = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='sent_messages'
-    )
-
-    receiver = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-        related_name='received_messages'
-    )
-
-    message = models.TextField(blank=True)
-
-    message_type = models.CharField(
-        max_length=10,
-        choices=MESSAGE_TYPE_CHOICES,
-        default='text'
-    )
-
+    chat = models.ForeignKey(Chat,on_delete=models.CASCADE,related_name='messages')
+    sender = models.ForeignKey(User,on_delete=models.CASCADE,related_name='sent_messages')
+    receiver = models.ForeignKey(User,on_delete=models.CASCADE,related_name='received_messages')
+    message = models.TextField(blank=True, null=True)
+    message_type = models.CharField(max_length=10,choices=MESSAGE_TYPE_CHOICES,default='text')
     file = models.FileField(upload_to='chat/', null=True, blank=True)
-
     is_read = models.BooleanField(default=False)
-
     created_at = models.DateTimeField(auto_now_add=True)
-
+    
     class Meta:
         ordering = ['created_at']
-
     def __str__(self):
         return f"{self.sender.email} → {self.receiver.email}"
 

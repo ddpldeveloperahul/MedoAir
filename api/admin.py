@@ -66,7 +66,7 @@ class AppointmentAdmin(admin.ModelAdmin):
 # ================= MESSAGE =================
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'sender', 'chat', 'created_at', 'is_read']
+    list_display = ['id', 'sender',"receiver","message", 'chat', 'created_at', 'is_read']
     list_filter = ['is_read']
     search_fields = ['sender__email', 'message']
     readonly_fields = ['created_at']

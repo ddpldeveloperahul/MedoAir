@@ -1,0 +1,387 @@
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Patient Chat</title>
+</head>
+<body>
+
+<h2>Doctor-Patient Chat</h2>
+
+<!-- USER INPUT -->
+<input type="number" id="userId" placeholder="Your User ID" />
+<input type="number" id="appointmentId" placeholder="Appointment ID" />
+<button onclick="connectWS()">Connect</button>
+
+<hr>
+
+<!-- CHAT -->
+<div id="chatBox" style="border:1px solid black;height:200px;overflow:auto;"></div>
+
+<input type="text" id="messageInput" placeholder="Type message..." />
+<button onclick="sendMessage()">Send</button>
+
+<hr>
+
+<!-- VIDEO -->
+<h3>Video Call</h3>
+<video id="localVideo" autoplay muted width="200"></video>
+<video id="remoteVideo" autoplay width="200"></video>
+
+<br>
+<button onclick="startCall()">Start Call</button>
+
+<script>
+let socket;
+let userId;
+let appointmentId;
+
+let localStream;
+let peerConnection;
+
+const config = {
+    iceServers: [
+        { urls: "stun:stun.l.google.com:19302" }
+    ]
+};
+
+// 🔥 CONNECT WEBSOCKET
+function connectWS() {
+    userId = document.getElementById("userId").value;
+    appointmentId = document.getElementById("appointmentId").value;
+
+    socket = new WebSocket(`ws://127.0.0.1:8000/ws/chat/${appointmentId}/`); 
+
+    socket.onopen = () => {
+        console.log("Connected");
+    };
+
+    socket.onmessage = async (event) => {
+        const data = JSON.parse(event.data);
+
+        console.log("Received:", data);
+
+        // 🔹 CHAT MESSAGE
+        if (data.message && data.sender) {
+            addMessage(`${data.sender}: ${data.message}`);
+
+            // auto mark seen
+            socket.send(JSON.stringify({
+                type: "seen",
+                message_id: data.message_id
+            }));
+        }
+
+        // 🔹 SEEN
+        if (data.type === "seen_update") {
+            addMessage(`✔ Seen message ${data.message_id}`);
+        }
+
+        // 🔹 WEBRTC SIGNAL
+        if (data.type === "offer") {
+            await handleOffer(data.offer);
+        }
+
+        if (data.type === "answer") {
+            await peerConnection.setRemoteDescription(data.answer);
+        }
+
+        if (data.type === "candidate") {
+            await peerConnection.addIceCandidate(data.candidate);
+        }
+    };
+}
+
+// 🔥 ADD MESSAGE UI
+function addMessage(msg) {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML += `<p>${msg}</p>`;
+}
+
+// 🔥 SEND MESSAGE
+function sendMessage() {
+    const msg = document.getElementById("messageInput").value;
+
+    socket.send(JSON.stringify({
+        type: "message",
+        message: msg,
+        sender_id: parseInt(userId)
+    }));
+
+    document.getElementById("messageInput").value = "";
+}
+
+// ================= VIDEO CALL =================
+
+// 🔥 START CALL
+async function startCall() {
+    await initMedia();
+    createPeerConnection();
+
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+
+    socket.send(JSON.stringify({
+        type: "offer",
+        offer: offer
+    }));
+}
+
+// 🔥 INIT CAMERA
+async function initMedia() {
+    localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+    document.getElementById("localVideo").srcObject = localStream;
+}
+
+// 🔥 PEER CONNECTION
+function createPeerConnection() {
+    peerConnection = new RTCPeerConnection(config);
+
+    // send ICE
+    peerConnection.onicecandidate = (event) => {
+        if (event.candidate) {
+            socket.send(JSON.stringify({
+                type: "candidate",
+                candidate: event.candidate
+            }));
+        }
+    };
+
+    // receive stream
+    peerConnection.ontrack = (event) => {
+        document.getElementById("remoteVideo").srcObject = event.streams[0];
+    };
+
+    // add local tracks
+    localStream.getTracks().forEach(track => {
+        peerConnection.addTrack(track, localStream);
+    });
+}
+
+// 🔥 HANDLE OFFER
+async function handleOffer(offer) {
+    await initMedia();
+    createPeerConnection();
+
+    await peerConnection.setRemoteDescription(offer);
+
+    const answer = await peerConnection.createAnswer();
+    await peerConnection.setLocalDescription(answer);
+
+    socket.send(JSON.stringify({
+        type: "answer",
+        answer: answer
+    }));
+}
+
+</script>
+
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Patient Chat</title>
+</head>
+<body>
+
+<h2>Doctor-Patient Chat</h2>
+
+<!-- USER INPUT -->
+<input type="number" id="userId" placeholder="Your User ID" />
+<input type="number" id="appointmentId" placeholder="Appointment ID" />
+<button onclick="connectWS()">Connect</button>
+
+<hr>
+
+<!-- CHAT -->
+<div id="chatBox" style="border:1px solid black;height:200px;overflow:auto;"></div>
+
+<input type="text" id="messageInput" placeholder="Type message..." />
+<button onclick="sendMessage()">Send</button>
+
+<hr>
+
+<!-- VIDEO -->
+<h3>Video Call</h3>
+<video id="localVideo" autoplay muted width="200"></video>
+<video id="remoteVideo" autoplay width="200"></video>
+
+<br>
+<button onclick="startCall()">Start Call</button>
+
+<script>
+let socket;
+let userId;
+let appointmentId;
+
+let localStream;
+let peerConnection;
+
+const config = {
+    iceServers: [
+        { urls: "stun:stun.l.google.com:19302" }
+    ]
+};
+
+// 🔥 CONNECT WEBSOCKET
+function connectWS() {
+    userId = document.getElementById("userId").value;
+    appointmentId = document.getElementById("appointmentId").value;
+
+    socket = new WebSocket(`ws://127.0.0.1:8000/ws/chat/${appointmentId}/`);
+
+    socket.onopen = () => {
+        console.log("✅ WebSocket Connected");
+    };
+
+    socket.onerror = (err) => {
+        console.log("❌ WebSocket Error:", err);
+    };
+
+    socket.onclose = () => {
+        console.log("⚠️ WebSocket Closed");
+    };
+
+    socket.onmessage = async (event) => {
+        const data = JSON.parse(event.data);
+        console.log("📩 Received:", data);
+
+        // 🔹 CHAT MESSAGE
+        if (data.message && data.sender) {
+            addMessage(`${data.sender}: ${data.message}`);
+
+            // auto seen
+            socket.send(JSON.stringify({
+                type: "seen",
+                message_id: data.message_id
+            }));
+        }
+
+        // 🔹 SEEN
+        if (data.type === "seen_update") {
+            addMessage(`✔ Seen message ${data.message_id}`);
+        }
+
+        // 🔹 WEBRTC SIGNALS
+        if (data.type === "offer") {
+            await handleOffer(data.offer);
+        }
+
+        if (data.type === "answer") {
+            if (peerConnection) {
+                await peerConnection.setRemoteDescription(data.answer);
+            }
+        }
+
+        if (data.type === "candidate") {
+            if (peerConnection && data.candidate) {
+                await peerConnection.addIceCandidate(data.candidate);
+            }
+        }
+    };
+}
+
+// 🔥 ADD MESSAGE UI
+function addMessage(msg) {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML += `<p>${msg}</p>`;
+    chatBox.scrollTop = chatBox.scrollHeight; // auto scroll
+}
+
+// 🔥 SEND MESSAGE
+function sendMessage() {
+    if (!socket || socket.readyState !== 1) {
+        alert("WebSocket not connected");
+        return;
+    }
+
+    const msg = document.getElementById("messageInput").value;
+
+    socket.send(JSON.stringify({
+        type: "message",
+        message: msg,
+        sender_id: parseInt(userId)
+    }));
+
+    addMessage(`You: ${msg}`);
+
+    document.getElementById("messageInput").value = "";
+}
+
+// ================= VIDEO CALL =================
+
+// 🔥 START CALL
+async function startCall() {
+    if (!socket || socket.readyState !== 1) {
+        alert("Connect WebSocket first");
+        return;
+    }
+
+    await initMedia();
+    createPeerConnection();
+
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+
+    socket.send(JSON.stringify({
+        type: "offer",
+        offer: offer
+    }));
+}
+
+// 🔥 INIT CAMERA
+async function initMedia() {
+    localStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true
+    });
+
+    document.getElementById("localVideo").srcObject = localStream;
+}
+
+// 🔥 PEER CONNECTION
+function createPeerConnection() {
+    peerConnection = new RTCPeerConnection(config);
+
+    // ICE candidates
+    peerConnection.onicecandidate = (event) => {
+        if (event.candidate) {
+            socket.send(JSON.stringify({
+                type: "candidate",
+                candidate: event.candidate
+            }));
+        }
+    };
+
+    // Remote stream
+    peerConnection.ontrack = (event) => {
+        document.getElementById("remoteVideo").srcObject = event.streams[0];
+    };
+
+    // Add local tracks
+    localStream.getTracks().forEach(track => {
+        peerConnection.addTrack(track, localStream);
+    });
+}
+
+// 🔥 HANDLE OFFER
+async function handleOffer(offer) {
+    await initMedia();
+    createPeerConnection();
+
+    await peerConnection.setRemoteDescription(offer);
+
+    const answer = await peerConnection.createAnswer();
+    await peerConnection.setLocalDescription(answer);
+
+    socket.send(JSON.stringify({
+        type: "answer",
+        answer: answer
+    }));
+}
+</script>
+
+</body>
+</html>

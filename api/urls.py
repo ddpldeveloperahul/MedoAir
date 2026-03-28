@@ -5,7 +5,7 @@ Unified URLs - All API endpoints consolidated into one app
 from django.urls import path
 from .views import (
     # User CRUD
-    AppointmentAPIView, DoctorDashboardAPIView, ReportAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView, UserListAPIView, UserDetailAPIView, CurrentUserAPIView,
+    AppointmentAPIView, ChatAPIView, ChatHistoryAPIView, DeleteMessageAPIView, DoctorDashboardAPIView, ReportAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView, UserListAPIView, UserDetailAPIView, CurrentUserAPIView,
     ChangePasswordAPIView, UserProfileStatsAPIView,
     
     # Authentication
@@ -70,8 +70,8 @@ urlpatterns = [
     path('slots/<int:pk>/', SlotAPIView.as_view()),  # GET one + PUT + DELETE
     
     
-    path('appoinments/', AppointmentAPIView.as_view()),        # LIST + CREATE
-    path('appoinments/<int:pk>/', AppointmentAPIView.as_view()), # DETAIL + UPDATE + DELETE
+    path('appointments/', AppointmentAPIView.as_view()),        # LIST + CREATE
+    path('appointments/<int:pk>/', AppointmentAPIView.as_view()), # DETAIL + UPDATE + DELETE
     path('doctor/dashboard/', DoctorDashboardAPIView.as_view()),
     
     # ========== MESSAGE/CHAT ENDPOINTS ==========
@@ -98,4 +98,15 @@ urlpatterns = [
 
     path('admin/appointments/', SuperAdminAppointmentAPIView.as_view()),
     path('admin/appointments/<int:appointment_id>/', SuperAdminAppointmentAPIView.as_view()),
+    
+    
+    path('chat/<int:appointment_id>/', ChatAPIView.as_view()),
+    path('chat/message/<int:message_id>/', ChatAPIView.as_view()),
+    path("chat2/<int:appointment_id>/", ChatHistoryAPIView.as_view()),
+    path('video_call/', views.video_call, name='video_call'),
+    
+    
+    path('messages/<int:message_id>/', DeleteMessageAPIView.as_view()),
+    
+    
 ]
