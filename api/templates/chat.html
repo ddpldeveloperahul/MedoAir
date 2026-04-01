@@ -179,7 +179,7 @@ async function handleOffer(offer) {
 </html> {% endcomment %}
 
 
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html>
 <head>
     <title>Doctor Patient Chat</title>
@@ -381,6 +381,289 @@ async function handleOffer(offer) {
         answer: answer
     }));
 }
+</script>
+
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Patient Chat</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #chatBox {
+            border: 1px solid black;
+            height: 250px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .msg {
+            margin: 5px 0;
+        }
+
+        .me {
+            text-align: right;
+            color: blue;
+        }
+
+        .other {
+            text-align: left;
+        }
+
+        .tick {
+            font-size: 12px;
+            margin-left: 5px;
+            color: gray;
+        }
+
+        #connectBtn {
+            padding: 6px 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        video {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Doctor-Patient Chat</h2>
+
+<!-- USER INPUT -->
+<input type="number" id="userId" placeholder="Your User ID" />
+<input type="number" id="appointmentId" placeholder="Appointment ID" />
+<button id="connectBtn" onclick="connectWS()">Connect</button>
+
+<hr>
+
+<!-- CHAT -->
+<div id="chatBox"></div>
+
+<input type="text" id="messageInput" placeholder="Type message..." />
+<button onclick="sendMessage()">Send</button>
+
+<hr>
+
+<!-- VIDEO -->
+<h3>Video Call</h3>
+
+<video id="localVideo" autoplay muted width="200"></video>
+<video id="remoteVideo" autoplay width="200"></video>
+
+<br><br>
+<button onclick="startCall()">Start Call</button>
+
+<script>
+
+let socket;
+let userId;
+let appointmentId;
+
+let localStream;
+let peerConnection;
+
+const config = {
+    iceServers: [
+        { urls: "stun:stun.l.google.com:19302" }
+    ]
+};
+
+// ================= CONNECT =================
+function connectWS() {
+    userId = parseInt(document.getElementById("userId").value);
+    appointmentId = document.getElementById("appointmentId").value;
+
+    const btn = document.getElementById("connectBtn");
+
+    socket = new WebSocket(`ws://127.0.0.1:8000/ws/chat/${appointmentId}/`);
+
+    // 🟡 connecting
+    btn.innerText = "Connecting...";
+    btn.style.backgroundColor = "orange";
+
+    socket.onopen = () => {
+        console.log("✅ Connected");
+
+        btn.innerText = "Connected";
+        btn.style.backgroundColor = "green";
+        btn.style.color = "white";
+    };
+
+    socket.onerror = () => {
+        console.log("❌ Error");
+
+        btn.innerText = "Error";
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+    };
+
+    socket.onclose = () => {
+        console.log("⚠ Disconnected");
+
+        btn.innerText = "Connect";
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+    };
+
+    socket.onmessage = async (event) => {
+        const data = JSON.parse(event.data);
+
+        console.log("📩 Received:", data);
+
+        // 🔹 MESSAGE
+        if (data.message && data.sender) {
+            const isMe = data.sender_id == userId;
+
+            addMessage(
+                data.message,
+                data.message_id,
+                isMe,
+                data.sender
+            );
+
+            // auto seen
+            socket.send(JSON.stringify({
+                type: "seen",
+                message_id: data.message_id
+            }));
+        }
+
+        // 🔹 SEEN TICK
+        if (data.type === "seen_update") {
+            const msg = document.getElementById(`msg-${data.message_id}`);
+            if (msg) {
+                const tick = msg.querySelector(".tick");
+                if (tick) tick.innerText = "✔✔";
+            }
+        }
+
+        // 🔹 VIDEO SIGNAL
+        if (data.type === "offer") {
+            await handleOffer(data.offer);
+        }
+
+        if (data.type === "answer") {
+            await peerConnection.setRemoteDescription(data.answer);
+        }
+
+        if (data.type === "candidate") {
+            await peerConnection.addIceCandidate(data.candidate);
+        }
+    };
+}
+
+// ================= UI =================
+function addMessage(message, id, isMe, senderName) {
+    const chatBox = document.getElementById("chatBox");
+
+    const className = isMe ? "me" : "other";
+    const tick = isMe ? "✔" : "";
+
+    const html = `
+        <div id="msg-${id}" class="msg ${className}">
+            <b>${isMe ? "You" : senderName}:</b> ${message}
+            <span class="tick">${tick}</span>
+        </div>
+    `;
+
+    chatBox.innerHTML += html;
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// ================= SEND =================
+function sendMessage() {
+    const input = document.getElementById("messageInput");
+    const msg = input.value;
+
+    if (!msg) return;
+
+    const tempId = Date.now();
+
+    addMessage(msg, tempId, true, "You");
+
+    socket.send(JSON.stringify({
+        type: "message",
+        message: msg,
+        sender_id: userId
+    }));
+
+    input.value = "";
+}
+
+// ================= VIDEO =================
+
+// start call
+async function startCall() {
+    await initMedia();
+    createPeerConnection();
+
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+
+    socket.send(JSON.stringify({
+        type: "offer",
+        offer: offer
+    }));
+}
+
+// camera
+async function initMedia() {
+    localStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true
+    });
+
+    document.getElementById("localVideo").srcObject = localStream;
+}
+
+// peer
+function createPeerConnection() {
+    peerConnection = new RTCPeerConnection(config);
+
+    peerConnection.onicecandidate = (event) => {
+        if (event.candidate) {
+            socket.send(JSON.stringify({
+                type: "candidate",
+                candidate: event.candidate
+            }));
+        }
+    };
+
+    peerConnection.ontrack = (event) => {
+        document.getElementById("remoteVideo").srcObject = event.streams[0];
+    };
+
+    localStream.getTracks().forEach(track => {
+        peerConnection.addTrack(track, localStream);
+    });
+}
+
+// handle offer
+async function handleOffer(offer) {
+    await initMedia();
+    createPeerConnection();
+
+    await peerConnection.setRemoteDescription(offer);
+
+    const answer = await peerConnection.createAnswer();
+    await peerConnection.setLocalDescription(answer);
+
+    socket.send(JSON.stringify({
+        type: "answer",
+        answer: answer
+    }));
+}
+
 </script>
 
 </body>
