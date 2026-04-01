@@ -5,9 +5,7 @@ Unified URLs - All API endpoints consolidated into one app
 from django.urls import path
 from .views import (
     # User CRUD
-    AppointmentAPIView, ChatAPIView, ChatHistoryAPIView, DeleteMessageAPIView, DoctorDashboardAPIView, ReportAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView, UserListAPIView, UserDetailAPIView, CurrentUserAPIView,
-    ChangePasswordAPIView, UserProfileStatsAPIView,
-    
+    AppointmentAPIView, ChatAPIView, ChatHistoryAPIView, CompletedPatientsView, DeleteMessageAPIView, DoctorDashboardAPIView, ReportAPIView, SlotAPIView, DoctorProfileView, PatientProfileAPIView,
     # Authentication
     UserSignupAPIView, LoginAPIView, DoctorSignupAPIView,
     ForgotPasswordAPIView, ResetPasswordAPIView, ResendOTPAPIView,
@@ -35,11 +33,11 @@ from  api import views
 urlpatterns = [
     path('index/', views.home, name='home'),  # API root endpoint for navigation
     # ========== USER CRUD ENDPOINTS ==========
-    path('users/', UserListAPIView.as_view(), name='user-list'),
-    path('users/<int:user_id>/', UserDetailAPIView.as_view(), name='user-detail'),
-    path('users/me/', CurrentUserAPIView.as_view(), name='current-user'),
-    path('users/change-password/', ChangePasswordAPIView.as_view(), name='change-password'),
-    path('users/profile-stats/', UserProfileStatsAPIView.as_view(), name='profile-stats'),
+    # path('users/', UserListAPIView.as_view(), name='user-list'),
+    # path('users/<int:user_id>/', UserDetailAPIView.as_view(), name='user-detail'),
+    # path('users/me/', CurrentUserAPIView.as_view(), name='current-user'),
+    # path('users/change-password/', ChangePasswordAPIView.as_view(), name='change-password'),
+    # path('users/profile-stats/', UserProfileStatsAPIView.as_view(), name='profile-stats'),
     
     # ========== AUTHENTICATION ENDPOINTS ==========
     path('user/signup/', UserSignupAPIView.as_view(), name='user-signup'),
@@ -55,6 +53,8 @@ urlpatterns = [
     # ========== PATIENT PROFILE ENDPOINTS ==========
     path('patients/', PatientProfileAPIView.as_view(), name='patient-list'),
     path('patients/<int:patient_id>/', PatientDetailAPIView.as_view(), name='patient-detail'),
+    
+    
     path('patients/me/', PatientMyProfileAPIView.as_view(), name='patient-my-profile'),
     path('patients/health-summary/', PatientHealthSummaryAPIView.as_view(), name='patient-health-summary'),
     path('patients/<int:patient_id>/health-metrics/', PatientHealthMetricsAPIView.as_view(), name='patient-health-metrics'),
@@ -64,6 +64,7 @@ urlpatterns = [
     #====================== APPOINTMENT ENDPOINTS ==========
     path('doctors/', DoctorProfileView.as_view()),          # LIST + CREATE
     path('doctors/<int:pk>/', DoctorProfileView.as_view()), # DETAIL + UPDATE + DELETE
+    path('doctor/completed-patients/', CompletedPatientsView.as_view()),
     
     # ========== APPOINTMENT ENDPOINTS ==========
     path('slots/', SlotAPIView.as_view()),          # GET list + POST

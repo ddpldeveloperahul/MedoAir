@@ -647,3 +647,18 @@ class ReportCreateUpdateSerializer(serializers.ModelSerializer):
             user=request.user,
             **validated_data
         )
+        
+        
+class CompletedPatientSerializer(serializers.ModelSerializer):
+    last_visit = serializers.DateTimeField()
+    total_visits = serializers.IntegerField()
+
+    class Meta:
+        model = User
+        fields = [
+            'id',
+            'username',
+            'email',
+            'last_visit',
+            'total_visits'
+        ]

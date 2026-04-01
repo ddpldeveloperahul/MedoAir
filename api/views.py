@@ -21,209 +21,213 @@ from django.db.models import Q, Count
 
 from .permissions import IsSuperAdmin
 
-# ============== USER CRUD VIEWS ==============
+
+
 def home(request):
     return render(request, 'home.html')
 
-class UserListAPIView(APIView):
-    """List and create users"""
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        """List all users"""
-        try:
-            users = User.objects.all()
-            serializer = UserSerializer(users, many=True, context={'request': request})
-            return Response({
-                "message": "Users retrieved successfully",
-                "count": len(serializer.data),
-                "results": serializer.data
-            }, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({
-                "error": f"Failed to retrieve users: {str(e)}"
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-    def post(self, request):
-        """Create new user"""
-        try:
-            serializer = UserSignupSerializer(data=request.data)
-            if serializer.is_valid():
-                user = serializer.save()
-                return Response({
-                    "message": "User created successfully",
-                    "user": {
-                        "id": user.id,
-                        "name": user.first_name,
-                        "email": user.email,
-                        "role": user.role
-                    }
-                }, status=status.HTTP_201_CREATED)
-            return Response({
-                "message": "Validation failed",
-                "errors": serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({
-                "error": f"Failed to create user: {str(e)}"
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+# ============== USER CRUD VIEWS ==============
 
 
-class UserDetailAPIView(APIView):
-    """Retrieve, update, or delete specific user"""
-    permission_classes = [IsAuthenticated]
+# class UserListAPIView(APIView):
+#     """List and create users"""
+#     permission_classes = [IsAuthenticated]
 
-    def get_user_or_404(self, user_id):
-        try:
-            return User.objects.get(id=user_id)
-        except User.DoesNotExist:
-            return None
+#     def get(self, request):
+#         """List all users"""
+#         try:
+#             users = User.objects.all()
+#             serializer = UserSerializer(users, many=True, context={'request': request})
+#             return Response({
+#                 "message": "Users retrieved successfully",
+#                 "count": len(serializer.data),
+#                 "results": serializer.data
+#             }, status=status.HTTP_200_OK)
+#         except Exception as e:
+#             return Response({
+#                 "error": f"Failed to retrieve users: {str(e)}"
+#             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def check_permission(self, request, user):
-        if user.id != request.user.id and not request.user.is_staff:
-            return False
-        return True
+#     def post(self, request):
+#         """Create new user"""
+#         try:
+#             serializer = UserSignupSerializer(data=request.data)
+#             if serializer.is_valid():
+#                 user = serializer.save()
+#                 return Response({
+#                     "message": "User created successfully",
+#                     "user": {
+#                         "id": user.id,
+#                         "name": user.first_name,
+#                         "email": user.email,
+#                         "role": user.role
+#                     }
+#                 }, status=status.HTTP_201_CREATED)
+#             return Response({
+#                 "message": "Validation failed",
+#                 "errors": serializer.errors
+#             }, status=status.HTTP_400_BAD_REQUEST)
+#         except Exception as e:
+#             return Response({
+#                 "error": f"Failed to create user: {str(e)}"
+#             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def get(self, request, user_id):
-        """Get user details"""
-        user = self.get_user_or_404(user_id)
-        if not user:
-            return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+
+# class UserDetailAPIView(APIView):
+#     """Retrieve, update, or delete specific user"""
+#     permission_classes = [IsAuthenticated]
+
+#     def get_user_or_404(self, user_id):
+#         try:
+#             return User.objects.get(id=user_id)
+#         except User.DoesNotExist:
+#             return None
+
+#     def check_permission(self, request, user):
+#         if user.id != request.user.id and not request.user.is_staff:
+#             return False
+#         return True
+
+#     def get(self, request, user_id):
+#         """Get user details"""
+#         user = self.get_user_or_404(user_id)
+#         if not user:
+#             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
         
-        if not self.check_permission(request, user):
-            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+#         if not self.check_permission(request, user):
+#             return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
         
-        try:
-            serializer = UserSerializer(user, context={'request': request})
-            return Response({
-                "message": "User retrieved successfully",
-                "user": serializer.data
-            }, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         try:
+#             serializer = UserSerializer(user, context={'request': request})
+#             return Response({
+#                 "message": "User retrieved successfully",
+#                 "user": serializer.data
+#             }, status=status.HTTP_200_OK)
+#         except Exception as e:
+#             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def put(self, request, user_id):
-        """Update user (full update)"""
-        user = self.get_user_or_404(user_id)
-        if not user:
-            return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+#     def put(self, request, user_id):
+#         """Update user (full update)"""
+#         user = self.get_user_or_404(user_id)
+#         if not user:
+#             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
         
-        if not self.check_permission(request, user):
-            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+#         if not self.check_permission(request, user):
+#             return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
         
-        try:
-            serializer = UserUpdateSerializer(user, data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response({
-                    "message": "User updated successfully",
-                    "user": UserSerializer(user, context={'request': request}).data
-                }, status=status.HTTP_200_OK)
-            return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         try:
+#             serializer = UserUpdateSerializer(user, data=request.data)
+#             if serializer.is_valid():
+#                 serializer.save()
+#                 return Response({
+#                     "message": "User updated successfully",
+#                     "user": UserSerializer(user, context={'request': request}).data
+#                 }, status=status.HTTP_200_OK)
+#             return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+#         except Exception as e:
+#             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def patch(self, request, user_id):
-        """Update user (partial update)"""
-        user = self.get_user_or_404(user_id)
-        if not user:
-            return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+#     def patch(self, request, user_id):
+#         """Update user (partial update)"""
+#         user = self.get_user_or_404(user_id)
+#         if not user:
+#             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
         
-        if not self.check_permission(request, user):
-            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+#         if not self.check_permission(request, user):
+#             return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
         
-        try:
-            serializer = UserUpdateSerializer(user, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response({
-                    "message": "User updated successfully",
-                    "user": UserSerializer(user, context={'request': request}).data
-                }, status=status.HTTP_200_OK)
-            return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         try:
+#             serializer = UserUpdateSerializer(user, data=request.data, partial=True)
+#             if serializer.is_valid():
+#                 serializer.save()
+#                 return Response({
+#                     "message": "User updated successfully",
+#                     "user": UserSerializer(user, context={'request': request}).data
+#                 }, status=status.HTTP_200_OK)
+#             return Response({"message": "Validation failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+#         except Exception as e:
+#             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def delete(self, request, user_id):
-        """Delete user"""
-        user = self.get_user_or_404(user_id)
-        if not user:
-            return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+#     def delete(self, request, user_id):
+#         """Delete user"""
+#         user = self.get_user_or_404(user_id)
+#         if not user:
+#             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
         
-        if not self.check_permission(request, user):
-            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+#         if not self.check_permission(request, user):
+#             return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
         
-        try:
-            user_email = user.email
-            user.delete()
-            return Response({"message": f"User {user_email} deleted successfully"}, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         try:
+#             user_email = user.email
+#             user.delete()
+#             return Response({"message": f"User {user_email} deleted successfully"}, status=status.HTTP_200_OK)
+#         except Exception as e:
+#             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class CurrentUserAPIView(APIView):
-    """Get current logged-in user"""
-    permission_classes = [IsAuthenticated]
+# class CurrentUserAPIView(APIView):
+#     """Get current logged-in user"""
+#     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        """Get current user details"""
-        serializer = UserSerializer(request.user, context={'request': request})
-        return Response({
-            "message": "Current user retrieved",
-            "user": serializer.data
-        }, status=status.HTTP_200_OK)
-
-
-class ChangePasswordAPIView(APIView):
-    """Change user password"""
-    permission_classes = [IsAuthenticated]
-
-    def post(self, request):
-        """Change user password"""
-        user = request.user
-        old_password = request.data.get('old_password')
-        new_password = request.data.get('new_password')
-        confirm_password = request.data.get('confirm_password')
-
-        if not all([old_password, new_password, confirm_password]):
-            return Response({"error": "All fields required"}, status=status.HTTP_400_BAD_REQUEST)
-
-        if not user.check_password(old_password):
-            return Response({"error": "Old password is incorrect"}, status=status.HTTP_400_BAD_REQUEST)
-
-        if new_password != confirm_password:
-            return Response({"error": "Passwords do not match"}, status=status.HTTP_400_BAD_REQUEST)
-
-        if len(new_password) < 6:
-            return Response({"error": "Password too short"}, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            user.set_password(new_password)
-            user.save()
-            return Response({"message": "Password changed successfully"}, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#     def get(self, request):
+#         """Get current user details"""
+#         serializer = UserSerializer(request.user, context={'request': request})
+#         return Response({
+#             "message": "Current user retrieved",
+#             "user": serializer.data
+#         }, status=status.HTTP_200_OK)
 
 
-class UserProfileStatsAPIView(APIView):
-    """Get user profile statistics"""
-    permission_classes = [IsAuthenticated]
+# class ChangePasswordAPIView(APIView):
+#     """Change user password"""
+#     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        """Get user profile statistics"""
-        user = request.user
-        return Response({
-            "message": "Profile statistics retrieved",
-            "stats": {
-                "user_id": user.id,
-                "email": user.email,
-                "full_name": f"{user.first_name} {user.last_name}".strip(),
-                "role": user.role,
-                "is_verified": user.is_verified,
-                "last_login": user.last_login,
-                "account_age_days": (timezone.now() - user.date_joined).days if user.date_joined else 0
-            }
-        }, status=status.HTTP_200_OK)
+#     def post(self, request):
+#         """Change user password"""
+#         user = request.user
+#         old_password = request.data.get('old_password')
+#         new_password = request.data.get('new_password')
+#         confirm_password = request.data.get('confirm_password')
+
+#         if not all([old_password, new_password, confirm_password]):
+#             return Response({"error": "All fields required"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         if not user.check_password(old_password):
+#             return Response({"error": "Old password is incorrect"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         if new_password != confirm_password:
+#             return Response({"error": "Passwords do not match"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         if len(new_password) < 6:
+#             return Response({"error": "Password too short"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         try:
+#             user.set_password(new_password)
+#             user.save()
+#             return Response({"message": "Password changed successfully"}, status=status.HTTP_200_OK)
+#         except Exception as e:
+#             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# class UserProfileStatsAPIView(APIView):
+#     """Get user profile statistics"""
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request):
+#         """Get user profile statistics"""
+#         user = request.user
+#         return Response({
+#             "message": "Profile statistics retrieved",
+#             "stats": {
+#                 "user_id": user.id,
+#                 "email": user.email,
+#                 "full_name": f"{user.first_name} {user.last_name}".strip(),
+#                 "role": user.role,
+#                 "is_verified": user.is_verified,
+#                 "last_login": user.last_login,
+#                 "account_age_days": (timezone.now() - user.date_joined).days if user.date_joined else 0
+#             }
+#         }, status=status.HTTP_200_OK)
 
 
 # ============== AUTHENTICATION VIEWS ==============
@@ -1754,6 +1758,44 @@ class ChatHistoryAPIView(APIView):
         ]
 
         return Response({"messages": data})
-    
+
+
+from .pagination import StandardPagination
+from django.db.models import Max, Count, Q
+
+class CompletedPatientsView(APIView):
+    permission_classes = [IsAuthenticated]
+    pagination_class = StandardPagination
+
+    def get(self, request):
+        doctor = request.user
+        search = request.GET.get('search')
+
+        # ✅ Step 1: filter completed appointments
+        queryset = User.objects.filter(
+            patient_appointments__doctor=doctor,
+            patient_appointments__status='completed'
+        ).annotate(
+            last_visit=Max('patient_appointments__created_at'),
+            total_visits=Count('patient_appointments')
+        ).distinct().order_by('-last_visit')
+
+        # ✅ Step 2: search
+        if search:
+            queryset = queryset.filter(
+                Q(username__icontains=search) |
+                Q(email__icontains=search)
+            )
+
+        # ✅ Step 3: pagination
+        paginator = self.pagination_class()
+        page = paginator.paginate_queryset(queryset, request)
+
+        serializer = CompletedPatientSerializer(page, many=True)
+        return paginator.get_paginated_response(serializer.data)
+
+
 def video_call(request):
     return render(request, 'chat.html')
+
+
