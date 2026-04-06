@@ -2,7 +2,7 @@
 Unified Serializers - All serializers consolidated into one file
 """
 
-from rest_framework import serializers
+from rest_framework import serializers # type: ignore
 from .models import User, PasswordResetOTP, PatientProfile, DoctorProfile, Department,Appointment, Message, Report
 from django.contrib.auth import get_user_model
 import re
@@ -242,6 +242,7 @@ class DoctorProfileSerializer(serializers.ModelSerializer):
             'about',
             'department',
             'department_name',
+            "available_days",
             'is_online'
         ]
         read_only_fields = ['id', 'user', 'department_name']
@@ -253,7 +254,7 @@ class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
     profile_image = serializers.ImageField(source='user.profile_image', required=False)
     date_of_birth = serializers.DateField(source='user.date_of_birth', required=False)
     gender = serializers.CharField(source='user.gender', required=False)
-
+    available_days = serializers.CharField(required=False)
     class Meta:
         model = DoctorProfile
         fields = [
@@ -265,7 +266,10 @@ class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
             'profile_image',
             'date_of_birth',
             'gender',
-            'department_id'
+            'department_id',
+            "available_days",
+            'is_online'
+
         ]
 
     def update(self, instance, validated_data):
@@ -276,9 +280,9 @@ class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
         for attr, value in user_data.items():
             setattr(user, attr, value)
         user.save()
-
         # 🔹 Update DoctorProfile fields
-        return super().update(instance, validated_data)    
+        return super().update(instance, validated_data)  
+
 # class DoctorProfileUpdateSerializer(serializers.ModelSerializer):
 #     department_id = serializers.IntegerField(write_only=True, required=False)
 

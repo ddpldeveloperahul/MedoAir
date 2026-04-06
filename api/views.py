@@ -4,12 +4,12 @@ Unified Views - All API views consolidated into one file using APIView pattern
 
 from django.shortcuts import get_object_or_404,render
 
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, AllowAny
-from rest_framework import status
+from rest_framework.views import APIView # type: ignore
+from rest_framework.response import Response # type: ignore
+from rest_framework.permissions import IsAuthenticated, AllowAny # type: ignore
+from rest_framework import status # type: ignore
 from django.contrib.auth import authenticate
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.tokens import RefreshToken # type: ignore
 from django.utils import timezone
 from django.core.mail import send_mail
 from django.conf import settings
