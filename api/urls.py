@@ -5,6 +5,9 @@ Unified URLs - All API endpoints consolidated into one app
 from django.urls import path
 from .views import (
     # Home
+    # DoctorDashboardSerializer,
+    UserDashboardAPIView,
+    # UserDashboardAPIView,
     home,
     ai_assistant_page,
 
@@ -98,7 +101,7 @@ urlpatterns = [
     path('patients/health-summary/', PatientHealthSummaryAPIView.as_view(), name='patient-health-summary'),
     path('patients/<int:patient_id>/health-metrics/', PatientHealthMetricsAPIView.as_view(), name='patient-health-metrics'),
     path('patients/health-update/', PatientBulkHealthUpdateAPIView.as_view(), name='patient-health-update'),
-    
+    path('patients/doctors/', UserDashboardAPIView.as_view(), name='user-dashboard'),
     # ========== DOCTOR PROFILE ENDPOINTS ==========
     path('doctors/', DoctorProfileView.as_view(), name='doctor-list'),
     path('doctors/<int:pk>/', DoctorProfileView.as_view(), name='doctor-detail'),

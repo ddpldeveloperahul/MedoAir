@@ -943,3 +943,46 @@ class MedicationDoseStatusSerializer(serializers.Serializer):
     dose_date = serializers.DateField(required=False)
     timing = serializers.ChoiceField(choices=MedicationSchedule.TIMING_CHOICES)
     status = serializers.ChoiceField(choices=MedicationDoseLog.STATUS_CHOICES)
+
+
+
+
+from rest_framework import serializers
+from .models import DoctorProfile
+
+
+class DoctorDashboardSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(source='user.username')
+    experience_display = serializers.SerializerMethodField()
+    fee_display = serializers.SerializerMethodField()
+    status = serializers.SerializerMethodField()
+    dot_color = serializers.SerializerMethodField()
+
+    class Meta:
+        model = DoctorProfile
+        fields = [
+            "id",
+            "name",
+            "specialization",
+            "experience_display",
+            "fee_display",
+            "status",
+            "dot_color"
+        ]
+
+    def get_experience_display(self, obj):
+        return f"{obj.experience} yrs"
+
+    def get_fee_display(self, obj):
+        return f"{obj.consultation_fee} INR"
+
+    def get_status(self, obj):
+        user = self.context['request'].user
+
+        return "Booked" if obj.user.doctor_appointments.filter(
+            patient=user,
+            status="scheduled"
+        ).exists() else "Not Booked"
+
+    def get_dot_color(self, obj):
+        return "green" if obj.is_online else "red"

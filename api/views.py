@@ -2002,3 +2002,21 @@ def video_call(request):
     return render(request, 'chat.html')
 
 
+
+
+
+
+class UserDashboardAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        doctors = DoctorProfile.objects.select_related('user').all().order_by('user__username')
+        serializer = DoctorDashboardSerializer(
+            doctors,
+            many=True,
+            context={'request': request}
+        )
+        return Response({
+            "count": len(serializer.data),
+            "results": serializer.data
+        }, status=status.HTTP_200_OK)
