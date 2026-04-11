@@ -8,6 +8,11 @@
 <body>
     <h1>Welcome to the Home Page</h1>
     <p>This is the home page of the application.</p>
+    <p><a href="{% url 'ai-assistant-page' %}">Open AI Assistant</a></p>
+    <p><a href="{% url 'ai-daily-dashboard-page' %}">Open AI Daily Dashboard</a></p>
+    <p><a href="{% url 'ai-medicines-page' %}">Open AI Medicines Tracker</a></p>
+    <p><a href="{% url 'ai-weekly-report-page' %}">Open AI Weekly Report</a></p>
+    <p><a href="{% url 'ai-patient-timeline-page' %}">Open AI Patient Timeline</a></p>
     <p><a href="/api/doctor/completed-patients/">View Completed Patients</a></p>
     <a href="/api/video_call/">Go to Video Call</a>
 </body>

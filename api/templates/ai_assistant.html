@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir AI Assistant</title>
+    <style>
+        :root {
+            --text: #18323d;
+            --muted: #5f7781;
+            --line: rgba(24, 50, 61, 0.12);
+            --brand: #0f7a7a;
+            --brand-deep: #0a4f5e;
+            --accent: #ee7b52;
+            --surface: rgba(255, 252, 247, 0.9);
+            --surface-strong: #fffdfa;
+            --shadow: 0 24px 54px rgba(15, 53, 65, 0.14);
+            --radius: 24px;
+            --radius-sm: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI Variable Display", "Aptos", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(238, 123, 82, 0.2), transparent 28%),
+                radial-gradient(circle at top right, rgba(15, 122, 122, 0.18), transparent 24%),
+                linear-gradient(140deg, #f7f1e8 0%, #efe4d4 52%, #e8f1ef 100%);
+        }
+
+        .page {
+            width: min(980px, calc(100vw - 24px));
+            margin: 12px auto;
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 20px 22px 16px;
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(255, 253, 250, 0.92), rgba(255, 247, 239, 0.82)),
+                linear-gradient(135deg, rgba(15, 122, 122, 0.08), rgba(238, 123, 82, 0.08));
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(15, 122, 122, 0.1);
+            color: var(--brand-deep);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .badge::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand), var(--accent));
+            box-shadow: 0 0 0 6px rgba(15, 122, 122, 0.08);
+        }
+
+        .header h1 {
+            margin: 14px 0 6px;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+
+        .header p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .nav a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.76);
+            border: 1px solid var(--line);
+        }
+
+        .content {
+            padding: 18px 22px 22px;
+            display: grid;
+            gap: 16px;
+        }
+
+        .messages {
+            min-height: 320px;
+            max-height: 56vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 6px 2px;
+        }
+
+        .message {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+            flex: 0 0 auto;
+        }
+
+        .message.user .avatar {
+            order: 2;
+            background: linear-gradient(135deg, var(--accent), #d85f39);
+        }
+
+        .bubble {
+            max-width: min(720px, 88%);
+            padding: 14px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(24, 50, 61, 0.08);
+            background: var(--surface-strong);
+            box-shadow: 0 12px 30px rgba(15, 53, 65, 0.08);
+        }
+
+        .message.user .bubble {
+            color: white;
+            background: linear-gradient(135deg, #18323d, #20515f);
+        }
+
+        .bubble p {
+            margin: 0;
+            line-height: 1.65;
+            white-space: pre-wrap;
+        }
+
+        .meta {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .message.user .meta {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .result-grid,
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .result-grid {
+            margin-top: 12px;
+        }
+
+        .result-card,
+        .chip {
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        .result-card {
+            min-width: 160px;
+            flex: 1 1 180px;
+            padding: 12px;
+        }
+
+        .result-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .result-value {
+            margin-top: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .section-title {
+            margin-top: 16px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .chip-row {
+            margin-top: 10px;
+        }
+
+        .chip {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
+
+        .chip.warn {
+            background: rgba(238, 123, 82, 0.12);
+        }
+
+        .prediction-list {
+            margin-top: 14px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .prediction-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(15, 122, 122, 0.06);
+            border: 1px solid rgba(15, 122, 122, 0.1);
+        }
+
+        .prediction-name {
+            font-weight: 700;
+        }
+
+        .prediction-score {
+            font-weight: 700;
+            color: var(--brand-deep);
+        }
+
+        .composer {
+            display: grid;
+            gap: 12px;
+            padding: 14px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(15, 122, 122, 0.12);
+            background: var(--surface-strong);
+        }
+
+        .message-box {
+            width: 100%;
+            min-height: 120px;
+            resize: vertical;
+            border: 0;
+            outline: none;
+            background: transparent;
+            color: var(--text);
+            font: inherit;
+            line-height: 1.65;
+        }
+
+        .message-box::placeholder {
+            color: #7b929a;
+        }
+
+        .upload-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .upload-label {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .file-input {
+            font: inherit;
+            color: var(--text);
+        }
+
+        .composer-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-link {
+            border: 0;
+            border-radius: 16px;
+            font: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 11px 16px;
+        }
+
+        .primary-btn {
+            color: white;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+            box-shadow: 0 14px 28px rgba(10, 79, 94, 0.2);
+        }
+
+        .primary-btn:disabled {
+            opacity: 0.74;
+            cursor: wait;
+        }
+
+        .secondary-link {
+            color: var(--text);
+            background: rgba(242, 232, 220, 0.9);
+        }
+
+        .typing {
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .typing span {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--brand);
+            animation: pulse 1s infinite ease-in-out;
+        }
+
+        .typing span:nth-child(2) {
+            animation-delay: 0.18s;
+        }
+
+        .typing span:nth-child(3) {
+            animation-delay: 0.34s;
+        }
+
+        @keyframes pulse {
+            0%, 80%, 100% {
+                transform: scale(0.75);
+                opacity: 0.45;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                width: min(100vw - 14px, 100%);
+                margin: 7px auto;
+            }
+
+            .content,
+            .header {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .bubble {
+                max-width: 100%;
+            }
+
+            .composer-actions {
+                align-items: stretch;
+            }
+
+            .actions {
+                width: 100%;
+            }
+
+            .primary-btn,
+            .secondary-link {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="header">
+            <div class="badge">Dataset powered</div>
+            <h1>MedoAir AI Assistant</h1>
+            <p>Just describe your problem. The assistant will use your dataset to suggest the possible issue, symptoms, care, and medicines.</p>
+            <div class="nav">
+                <a href="{% url 'ai-daily-dashboard-page' %}">Daily dashboard</a>
+                <a href="{% url 'ai-medicines-page' %}">Medicines</a>
+                <a href="{% url 'ai-weekly-report-page' %}">Weekly report</a>
+                <a href="{% url 'ai-patient-timeline-page' %}">Doctor timeline</a>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="messages" id="messages">
+                <div class="message assistant">
+                    <div class="avatar">AI</div>
+                    <div class="bubble">
+                        <p>Describe your problem in normal language. Example: I have fever and headache, or I have cough and sore throat.</p>
+                        <div class="meta">AI assistant</div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="assistantForm" class="composer">
+                <textarea
+                    id="messageInput"
+                    class="message-box"
+                    placeholder="Describe your problem here..."
+                ></textarea>
+                <div class="upload-row">
+                    <div class="upload-label">Add prescription/report:</div>
+                    <input id="attachmentInput" class="file-input" type="file" accept=".pdf,image/png,image/jpeg">
+                </div>
+                <div class="composer-actions">
+                    <div class="status" id="statusText">Ready to analyze</div>
+                    <div class="actions">
+                        <button class="primary-btn" id="sendButton" type="submit">Analyze problem</button>
+                        <a class="secondary-link" href="{% url 'home' %}">Back to home</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById("assistantForm");
+        const input = document.getElementById("messageInput");
+        const attachmentInput = document.getElementById("attachmentInput");
+        const sendButton = document.getElementById("sendButton");
+        const messages = document.getElementById("messages");
+        const statusText = document.getElementById("statusText");
+        const endpoint = "/api/ai/assistant/message/";
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const message = input.value.trim();
+            const attachment = attachmentInput.files[0];
+            if (!message && !attachment) {
+                return;
+            }
+
+            appendMessage("user", buildUserPrompt(message, attachment));
+            setBusy(true);
+            const typingId = appendTyping();
+
+            try {
+                const formData = new FormData();
+                formData.append("message", message);
+                formData.append("top_k", "3");
+                if (attachment) {
+                    formData.append("attachment", attachment);
+                }
+
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    body: formData
+                });
+
+                const payload = await response.json();
+                removeTyping(typingId);
+
+                if (!response.ok) {
+                    const errorText = payload.error || flattenErrors(payload.errors) || "Something went wrong while analyzing your symptoms.";
+                    appendMessage("assistant", errorText, true);
+                    setBusy(false, "Needs another try");
+                    return;
+                }
+
+                appendStructuredAssistantMessage(payload.data);
+                input.value = "";
+                attachmentInput.value = "";
+                setBusy(false, "Analysis complete");
+            } catch (error) {
+                removeTyping(typingId);
+                appendMessage("assistant", "Network error. Please try again in a moment.", true);
+                setBusy(false, "Connection issue");
+            }
+        });
+
+        input.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                form.requestSubmit();
+            }
+        });
+
+        function setBusy(isBusy, label) {
+            sendButton.disabled = isBusy;
+            sendButton.textContent = isBusy ? "Analyzing..." : "Analyze problem";
+            statusText.textContent = label || (isBusy ? "Reviewing your problem" : "Ready to analyze");
+        }
+
+        function appendMessage(role, text, isError = false) {
+            const wrapper = document.createElement("div");
+            wrapper.className = `message ${role}`;
+
+            const avatar = document.createElement("div");
+            avatar.className = "avatar";
+            avatar.textContent = role === "assistant" ? "AI" : "You";
+
+            const bubble = document.createElement("div");
+            bubble.className = "bubble";
+
+            if (isError) {
+                bubble.style.borderColor = "rgba(216, 95, 57, 0.26)";
+                bubble.style.background = "rgba(255, 242, 238, 0.95)";
+            }
+
+            const content = document.createElement("p");
+            content.textContent = text;
+            bubble.appendChild(content);
+
+            const meta = document.createElement("div");
+            meta.className = "meta";
+            meta.textContent = role === "assistant" ? "AI assistant" : "You";
+            bubble.appendChild(meta);
+
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(bubble);
+            messages.appendChild(wrapper);
+            scrollToBottom();
+        }
+
+        function appendTyping() {
+            const id = `typing-${Date.now()}`;
+            const wrapper = document.createElement("div");
+            wrapper.className = "message assistant";
+            wrapper.id = id;
+
+            const avatar = document.createElement("div");
+            avatar.className = "avatar";
+            avatar.textContent = "AI";
+
+            const bubble = document.createElement("div");
+            bubble.className = "bubble";
+            bubble.innerHTML = `
+                <div class="typing" aria-label="Assistant is typing">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="meta">Analyzing your problem and reading the attachment</div>
+            `;
+
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(bubble);
+            messages.appendChild(wrapper);
+            scrollToBottom();
+            return id;
+        }
+
+        function removeTyping(id) {
+            const node = document.getElementById(id);
+            if (node) {
+                node.remove();
+            }
+        }
+
+        function appendStructuredAssistantMessage(data) {
+            const labels = getResultLabels(data.response_language || "english");
+            const wrapper = document.createElement("div");
+            wrapper.className = "message assistant";
+
+            const avatar = document.createElement("div");
+            avatar.className = "avatar";
+            avatar.textContent = "AI";
+
+            const bubble = document.createElement("div");
+            bubble.className = "bubble";
+
+            const intro = document.createElement("p");
+            intro.textContent = data.assistant_response;
+            bubble.appendChild(intro);
+
+            const resultGrid = document.createElement("div");
+            resultGrid.className = "result-grid";
+            resultGrid.innerHTML = `
+                <div class="result-card">
+                    <div class="result-label">${escapeHtml(labels.detectedProblem)}</div>
+                    <div class="result-value">${escapeHtml(data.detected_problem || data.prediction.predicted_display_name)}</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">${escapeHtml(labels.riskProbability)}</div>
+                    <div class="result-value">${escapeHtml(String(data.risk_probability ?? data.prediction.confidence))}%</div>
+                </div>
+                
+            `;
+            bubble.appendChild(resultGrid);
+
+            bubble.appendChild(buildChipSection(labels.matchedSymptoms, data.matched_symptoms, "", labels.noMatchedSymptoms));
+            bubble.appendChild(buildChipSection(labels.recommendedTests, data.recommended_tests, "", labels.noRecommendedTests));
+            bubble.appendChild(buildChipSection(labels.careGuidance, data.care_guidance, "", labels.noCareGuidance));
+            bubble.appendChild(buildChipSection(labels.treatment, data.medicine_guidance, "", labels.noTreatment));
+            bubble.appendChild(buildChipSection(labels.warningSigns, data.warning_signs, "warn", labels.noWarningSigns));
+            if (data.attachment_context && data.attachment_context.filename) {
+                bubble.appendChild(buildAttachmentSection(labels.attachmentRead, data.attachment_context));
+                if ((data.attachment_analysis && data.attachment_analysis.medicines || []).length) {
+                    bubble.appendChild(buildAttachmentMedicinesSection(labels.extractedMedicines, data.attachment_analysis.medicines));
+                }
+                if ((data.attachment_analysis && data.attachment_analysis.report_metrics || []).length) {
+                    bubble.appendChild(buildAttachmentMetricsSection(labels.reportMetrics, data.attachment_analysis.report_metrics));
+                }
+            }
+            bubble.appendChild(buildPredictionList(labels.otherMatches, data.prediction.top_predictions));
+
+            const note = document.createElement("div");
+            note.className = "meta";
+            note.textContent = data.note;
+            bubble.appendChild(note);
+
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(bubble);
+            messages.appendChild(wrapper);
+            scrollToBottom();
+        }
+
+        function buildChipSection(label, items, extraClass, emptyText) {
+            const section = document.createElement("div");
+
+            const title = document.createElement("div");
+            title.className = "section-title";
+            title.textContent = label;
+            section.appendChild(title);
+
+            const row = document.createElement("div");
+            row.className = "chip-row";
+
+            if (!(items || []).length) {
+                const chip = document.createElement("div");
+                chip.className = `chip ${extraClass}`.trim();
+                chip.textContent = emptyText;
+                row.appendChild(chip);
+            }
+
+            (items || []).forEach((item) => {
+                const chip = document.createElement("div");
+                chip.className = `chip ${extraClass}`.trim();
+                chip.textContent = item;
+                row.appendChild(chip);
+            });
+
+            section.appendChild(row);
+            return section;
+        }
+
+        function buildAttachmentSection(label, attachment) {
+            const section = document.createElement("div");
+
+            const title = document.createElement("div");
+            title.className = "section-title";
+            title.textContent = label;
+            section.appendChild(title);
+
+            const row = document.createElement("div");
+            row.className = "chip-row";
+
+            const fileChip = document.createElement("div");
+            fileChip.className = "chip";
+            fileChip.textContent = attachment.filename;
+            row.appendChild(fileChip);
+
+            const statusChip = document.createElement("div");
+            statusChip.className = `chip ${attachment.has_text ? "" : "warn"}`.trim();
+            statusChip.textContent = attachment.has_text ? "Text extracted" : "Could not read clear text";
+            row.appendChild(statusChip);
+            section.appendChild(row);
+
+            if (attachment.preview) {
+                const preview = document.createElement("div");
+                preview.className = "meta";
+                preview.style.marginTop = "10px";
+                preview.textContent = `Preview: ${attachment.preview}`;
+                section.appendChild(preview);
+            }
+
+            return section;
+        }
+
+        function buildAttachmentMedicinesSection(label, medicines) {
+            const section = document.createElement("div");
+            const title = document.createElement("div");
+            title.className = "section-title";
+            title.textContent = label;
+            section.appendChild(title);
+
+            const list = document.createElement("div");
+            list.className = "prediction-list";
+
+            medicines.forEach((item) => {
+                const row = document.createElement("div");
+                row.className = "prediction-item";
+                row.innerHTML = `
+                    <div>
+                        <div class="prediction-name">${escapeHtml(item.name)}</div>
+                        <div class="meta">${escapeHtml(item.dose || "Dose not found")} | ${escapeHtml(String(item.duration_days || 0))} days | ${escapeHtml((item.timings || []).join(", ") || "No timing found")}</div>
+                    </div>
+                `;
+                list.appendChild(row);
+            });
+
+            section.appendChild(list);
+            return section;
+        }
+
+        function buildAttachmentMetricsSection(label, metrics) {
+            const section = document.createElement("div");
+            const title = document.createElement("div");
+            title.className = "section-title";
+            title.textContent = label;
+            section.appendChild(title);
+
+            const row = document.createElement("div");
+            row.className = "chip-row";
+            metrics.forEach((item) => {
+                const chip = document.createElement("div");
+                chip.className = `chip ${item.status && item.status !== "Normal" ? "warn" : ""}`.trim();
+                chip.textContent = `${item.parameter}: ${item.value}${item.unit ? ` ${item.unit}` : ""} (${item.status})`;
+                row.appendChild(chip);
+            });
+            section.appendChild(row);
+            return section;
+        }
+
+        function buildPredictionList(label, predictions) {
+            const section = document.createElement("div");
+
+            const title = document.createElement("div");
+            title.className = "section-title";
+            title.textContent = label;
+            section.appendChild(title);
+
+            const list = document.createElement("div");
+            list.className = "prediction-list";
+
+            (predictions || []).forEach((item) => {
+                const row = document.createElement("div");
+                row.className = "prediction-item";
+                row.innerHTML = `
+                    <div>
+                        <div class="prediction-name">${escapeHtml(item.display_name)}</div>
+                        <div class="meta">${escapeHtml((item.sample_symptoms || []).slice(0, 3).join(", "))}</div>
+                    </div>
+                    <div class="prediction-score">${escapeHtml(String(item.confidence))}%</div>
+                `;
+                list.appendChild(row);
+            });
+
+            section.appendChild(list);
+            return section;
+        }
+
+        function getResultLabels(language) {
+            if (language === "hinglish") {
+                return {
+                    detectedProblem: "Detected problem",
+                    riskProbability: "Risk probability",
+                    model: "Model",
+                    attachmentRead: "Attachment reviewed",
+                    matchedSymptoms: "Matched symptoms",
+                    noMatchedSymptoms: "No matched symptoms extracted.",
+                    recommendedTests: "Recommended tests",
+                    noRecommendedTests: "No recommended tests available.",
+                    careGuidance: "Care guidance",
+                    noCareGuidance: "No care guidance available.",
+                    treatment: "Medicines / treatment",
+                    noTreatment: "No medicine guidance available.",
+                    warningSigns: "Warning signs",
+                    noWarningSigns: "No urgent warning signs listed.",
+                    extractedMedicines: "Medicines found in attachment",
+                    reportMetrics: "Report metrics found",
+                    otherMatches: "Other possible matches",
+                };
+            }
+
+            return {
+                detectedProblem: "Detected problem",
+                riskProbability: "Risk probability",
+                model: "Model",
+                attachmentRead: "Attachment reviewed",
+                matchedSymptoms: "Matched symptoms",
+                noMatchedSymptoms: "No matched symptoms extracted.",
+                recommendedTests: "Recommended tests",
+                noRecommendedTests: "No recommended tests available.",
+                careGuidance: "Care guidance",
+                noCareGuidance: "No care guidance available.",
+                treatment: "Medicines / treatment",
+                noTreatment: "No medicine guidance available.",
+                warningSigns: "Warning signs",
+                noWarningSigns: "No urgent warning signs listed.",
+                extractedMedicines: "Medicines found in attachment",
+                reportMetrics: "Report metrics found",
+                otherMatches: "Other possible matches",
+            };
+        }
+
+        function flattenErrors(value) {
+            if (!value) return "";
+            if (Array.isArray(value)) {
+                return value.map((item) => flattenErrors(item)).filter(Boolean).join(" ");
+            }
+            if (typeof value === "object") {
+                return Object.entries(value)
+                    .map(([key, item]) => {
+                        const text = flattenErrors(item);
+                        return text ? `${key}: ${text}` : "";
+                    })
+                    .filter(Boolean)
+                    .join(" | ");
+            }
+            return String(value);
+        }
+
+        function escapeHtml(value) {
+            return String(value)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#39;");
+        }
+
+        function scrollToBottom() {
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function buildUserPrompt(message, attachment) {
+            const parts = [];
+            if (message) {
+                parts.push(message);
+            }
+            if (attachment) {
+                parts.push(`Attachment: ${attachment.name}`);
+            }
+            return parts.join("\n");
+        }
+    </script>
+</body>
+</html>

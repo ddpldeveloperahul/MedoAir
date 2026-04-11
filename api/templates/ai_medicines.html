@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir AI Medicines</title>
+    <style>
+        :root { --panel: rgba(255,252,248,0.92); --card: rgba(255,255,255,0.84); --text:#17333f; --muted:#657b84; --line:rgba(23,51,63,0.12); --brand:#126d78; --brand-deep:#0c4e5b; --shadow:0 20px 44px rgba(14,54,65,0.12); }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family:"Segoe UI Variable Display","Aptos",sans-serif; font-size:15px; color:var(--text); background:linear-gradient(160deg,#f5efe7 0%,#efe4d6 55%,#e9f2ef 100%); }
+        .wrap { width:min(1180px,calc(100vw - 20px)); margin:10px auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:14px; }
+        .side,.main { background:var(--panel); border:1px solid rgba(255,255,255,0.55); box-shadow:var(--shadow); backdrop-filter:blur(10px); }
+        .side { border-radius:24px; padding:18px; display:flex; flex-direction:column; gap:14px; }
+        .main { border-radius:26px; overflow:hidden; min-height:calc(100vh - 20px); }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.ghost,button,input { font:inherit; }
+        .nav a,.ghost { text-decoration:none; color:var(--text); padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.76); border:1px solid var(--line); }
+        .hero { padding:18px 22px; border-bottom:1px solid var(--line); background:linear-gradient(135deg,rgba(255,255,255,0.5),rgba(18,109,120,0.06)); }
+        .hero h1 { margin:0; } .hero p { margin:8px 0 0; color:var(--muted); }
+        .content { padding:18px 22px 22px; display:grid; gap:14px; }
+        .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+        .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; }
+        input { width:100%; border:1px solid var(--line); border-radius:12px; padding:10px 12px; background:white; }
+        .primary { border:0; background:linear-gradient(135deg,var(--brand),var(--brand-deep)); color:white; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:700; }
+        .timings,.actions { display:flex; flex-wrap:wrap; gap:10px; }
+        .timings label,.pill { padding:8px 10px; border-radius:999px; border:1px solid var(--line); background:white; }
+        .medicine { display:grid; gap:10px; padding:12px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,0.82); }
+        .row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+        .preview-grid { display:grid; gap:10px; }
+        .preview-item { display:grid; gap:10px; padding:12px; border-radius:16px; border:1px solid var(--line); background:white; }
+        .muted { color:var(--muted); }
+        @media (max-width:960px){ .wrap{grid-template-columns:1fr;} }
+        @media (max-width:720px){ .grid{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <aside class="side">
+            <div>
+                <h2 style="margin:0;font:700 2.3rem Georgia,serif;">Medicine tracker.</h2>
+                <p class="muted">Add medicines, mark doses, and support the reminder flow from the PDF.</p>
+            </div>
+            <div class="nav">
+                <a href="{% url 'ai-assistant-page' %}">Assistant</a>
+                <a href="{% url 'ai-daily-dashboard-page' %}">Dashboard</a>
+                <a href="{% url 'ai-medicines-page' %}">Medicines</a>
+                <a href="{% url 'ai-weekly-report-page' %}">Weekly report</a>
+                <a href="{% url 'ai-patient-timeline-page' %}">Doctor timeline</a>
+            </div>
+            <div class="card">
+                <label for="tokenInput">JWT Access Token</label>
+                <input id="tokenInput" placeholder="Paste access token">
+                <button class="ghost" id="saveTokenBtn" type="button" style="margin-top:10px;">Save token locally</button>
+            </div>
+            <div class="card">
+                <h3 style="margin-top:0;">Quick instructions</h3>
+                <p class="muted">Add medicine with timings like morning and night. Then use the action buttons to mark dose status.</p>
+            </div>
+        </aside>
+        <section class="main">
+            <div class="hero">
+                <h1>AI Medicine Tracking</h1>
+                <p>Create medicine schedules manually or upload a prescription to extract medicines, then record taken or missed doses for the daily dashboard.</p>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h3 style="margin-top:0;">Add medicine</h3>
+                    <div class="grid">
+                        <input id="nameInput" placeholder="Medicine name">
+                        <input id="doseInput" placeholder="Dose e.g. 1 tablet">
+                        <input id="durationInput" type="number" min="1" max="365" placeholder="Duration days">
+                        <input id="startDateInput" type="date">
+                    </div>
+                    <div class="timings" style="margin-top:12px;">
+                        <label><input type="checkbox" value="morning"> Morning</label>
+                        <label><input type="checkbox" value="afternoon"> Afternoon</label>
+                        <label><input type="checkbox" value="night"> Night</label>
+                    </div>
+                    <div style="margin-top:14px;"><button class="primary" id="createMedicineBtn" type="button">Create medicine schedule</button></div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top:0;">Upload prescription</h3>
+                    <div class="grid">
+                        <input id="prescriptionFileInput" type="file" accept=".pdf,image/png,image/jpeg">
+                        <button class="primary" id="extractPrescriptionBtn" type="button">Extract medicines</button>
+                    </div>
+                    <p class="muted" id="prescriptionPreviewText" style="margin-bottom:0;">Upload a PDF or image prescription to auto-read medicine details.</p>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <h3 style="margin:0;">Extracted prescription preview</h3>
+                        <button class="ghost" id="saveExtractedBtn" type="button">Save extracted medicines</button>
+                    </div>
+                    <div id="extractedMedicineList" class="preview-grid" style="margin-top:12px;"></div>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <h3 style="margin:0;">Current medicines</h3>
+                        <button class="ghost" id="refreshBtn" type="button">Refresh list</button>
+                    </div>
+                    <div id="medicineList" style="display:grid;gap:12px;margin-top:12px;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const tokenInput = document.getElementById("tokenInput");
+        const nameInput = document.getElementById("nameInput");
+        const doseInput = document.getElementById("doseInput");
+        const durationInput = document.getElementById("durationInput");
+        const startDateInput = document.getElementById("startDateInput");
+        const medicineList = document.getElementById("medicineList");
+        const prescriptionFileInput = document.getElementById("prescriptionFileInput");
+        const prescriptionPreviewText = document.getElementById("prescriptionPreviewText");
+        const extractedMedicineList = document.getElementById("extractedMedicineList");
+        let extractedMedicines = [];
+        tokenInput.value = localStorage.getItem("medoair_access_token") || "";
+        startDateInput.value = new Date().toISOString().slice(0, 10);
+        document.getElementById("saveTokenBtn").addEventListener("click", () => localStorage.setItem("medoair_access_token", tokenInput.value.trim()));
+        document.getElementById("createMedicineBtn").addEventListener("click", createMedicine);
+        document.getElementById("extractPrescriptionBtn").addEventListener("click", extractPrescription);
+        document.getElementById("saveExtractedBtn").addEventListener("click", saveExtractedMedicines);
+        document.getElementById("refreshBtn").addEventListener("click", loadMedicines);
+        async function apiFetch(url, options = {}) {
+            const token = tokenInput.value.trim();
+            const headers = Object.assign({}, options.headers || {}, token ? { Authorization: `Bearer ${token}` } : {});
+            const response = await fetch(url, Object.assign({}, options, { headers }));
+            const payload = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(payload.error || payload.detail || "Request failed");
+            return payload;
+        }
+        async function createMedicine() {
+            const timings = Array.from(document.querySelectorAll('.timings input:checked')).map((node) => node.value);
+            try {
+                await apiFetch("/api/ai/medicines/", { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify({ name:nameInput.value.trim(), dose:doseInput.value.trim(), duration_days:Number(durationInput.value || 1), timings, start_date:startDateInput.value, source:"manual" }) });
+                nameInput.value = ""; doseInput.value = ""; durationInput.value = ""; document.querySelectorAll('.timings input').forEach((node) => node.checked = false); loadMedicines();
+            } catch (error) { alert(error.message); }
+        }
+        async function extractPrescription() {
+            const file = prescriptionFileInput.files[0];
+            if (!file) {
+                alert("Please choose a prescription file first.");
+                return;
+            }
+            try {
+                const formData = new FormData();
+                formData.append("attachment", file);
+                const payload = await apiFetch("/api/ai/medicines/prescription-extract/", { method:"POST", body:formData });
+                extractedMedicines = payload.data?.medicines || [];
+                prescriptionPreviewText.textContent = payload.data?.extracted_text_preview || "No readable prescription text found.";
+                renderExtractedMedicines();
+            } catch (error) { alert(error.message); }
+        }
+        async function saveExtractedMedicines() {
+            if (!extractedMedicines.length) {
+                alert("No extracted medicines to save.");
+                return;
+            }
+            try {
+                const normalized = Array.from(document.querySelectorAll('[data-extracted-index]')).map((node) => {
+                    const index = Number(node.dataset.extractedIndex);
+                    return {
+                        name: node.querySelector('[data-field=\"name\"]').value.trim(),
+                        dose: node.querySelector('[data-field=\"dose\"]').value.trim(),
+                        duration_days: Number(node.querySelector('[data-field=\"duration\"]')?.value || 5),
+                        timings: node.querySelector('[data-field=\"timings\"]').value.split(",").map((item) => item.trim()).filter(Boolean),
+                        instructions: extractedMedicines[index]?.instructions || "",
+                    };
+                }).filter((item) => item.name);
+                await apiFetch("/api/ai/medicines/prescription-save/", {
+                    method:"POST",
+                    headers:{ "Content-Type":"application/json" },
+                    body:JSON.stringify({ start_date:startDateInput.value, medicines: normalized })
+                });
+                extractedMedicines = [];
+                extractedMedicineList.innerHTML = '<div class="muted">Prescription medicines saved successfully.</div>';
+                prescriptionFileInput.value = "";
+                prescriptionPreviewText.textContent = "Upload a PDF or image prescription to auto-read medicine details.";
+                loadMedicines();
+            } catch (error) { alert(error.message); }
+        }
+        async function loadMedicines() {
+            try { renderMedicines((await apiFetch("/api/ai/medicines/")).data || []); } catch (error) { alert(error.message); }
+        }
+        function renderExtractedMedicines() {
+            extractedMedicineList.innerHTML = "";
+            if (!extractedMedicines.length) {
+                extractedMedicineList.innerHTML = '<div class="muted">No medicines detected from the prescription yet.</div>';
+                return;
+            }
+            extractedMedicines.forEach((item, index) => {
+                extractedMedicineList.innerHTML += `
+                    <div class="preview-item" data-extracted-index="${index}">
+                        <div class="grid">
+                            <input data-field="name" value="${escapeHtml(item.name || "")}" placeholder="Medicine name">
+                            <input data-field="dose" value="${escapeHtml(item.dose || "")}" placeholder="Dose">
+                            <input data-field="duration" type="number" min="1" max="365" value="${escapeHtml(String(item.duration_days || 5))}" placeholder="Duration days">
+                            <input data-field="timings" value="${escapeHtml((item.timings || []).join(", "))}" placeholder="Timings e.g. morning, night">
+                        </div>
+                        <div class="muted">${escapeHtml(item.instructions || "No extra instructions found in the prescription.")}</div>
+                    </div>
+                `;
+            });
+        }
+        function renderMedicines(items) {
+            medicineList.innerHTML = "";
+            if (!items.length) { medicineList.innerHTML = '<div class="muted">No medicines yet.</div>'; return; }
+            items.forEach((item) => {
+                const timings = (item.timings || []).map((timing) => `<span class="pill">${escapeHtml(timing)}</span>`).join("");
+                const actionButtons = (item.timings || []).map((timing) => `<button class="ghost" type="button" onclick="markDose(${item.id}, '${timing}', 'taken')">${timing} taken</button><button class="ghost" type="button" onclick="markDose(${item.id}, '${timing}', 'missed')">${timing} missed</button>`).join("");
+                medicineList.innerHTML += `<div class="medicine"><div class="row"><strong>${escapeHtml(item.name)}</strong><span class="muted">${escapeHtml(item.is_active ? "active" : "inactive")}</span></div><div class="muted">${escapeHtml(item.dose || "Dose not specified")} | ${escapeHtml(String(item.duration_days))} days</div><div class="actions">${timings}</div><div class="actions">${actionButtons}</div></div>`;
+            });
+        }
+        async function markDose(medicationId, timing, status) {
+            try { const payload = await apiFetch(`/api/ai/medicines/${medicationId}/dose/`, { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify({ timing, status }) }); alert(payload.message); loadMedicines(); } catch (error) { alert(error.message); }
+        }
+        function escapeHtml(value) { return String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
+        window.markDose = markDose;
+        loadMedicines();
+    </script>
+</body>
+</html>

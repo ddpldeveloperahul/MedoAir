@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir Patient Timeline</title>
+    <style>
+        :root { --panel: rgba(255,252,248,0.92); --card: rgba(255,255,255,0.84); --text:#183640; --muted:#6b8189; --line:rgba(24,54,64,0.12); --brand:#146f73; --brand-deep:#0c4f5c; --shadow:0 24px 50px rgba(14,51,60,0.12); }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:"Segoe UI Variable Display","Aptos",sans-serif; font-size:15px; color:var(--text); background:linear-gradient(160deg,#f6efe7 0%,#eee3d6 45%,#e8f3ef 100%); }
+        .shell { width:min(1180px,calc(100vw - 20px)); margin:10px auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:14px; }
+        .side,.main { background:var(--panel); border:1px solid rgba(255,255,255,0.55); box-shadow:var(--shadow); backdrop-filter:blur(12px); }
+        .side { border-radius:24px; padding:18px; display:flex; flex-direction:column; gap:14px; }
+        .main { border-radius:26px; overflow:hidden; min-height:calc(100vh - 20px); }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.ghost,button,input { font:inherit; }
+        .nav a,.ghost { text-decoration:none; color:var(--text); padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.76); border:1px solid var(--line); }
+        .hero { padding:18px 22px; border-bottom:1px solid var(--line); background:linear-gradient(135deg,rgba(255,255,255,0.5),rgba(20,111,115,0.07)); }
+        .hero h1 { margin:0; } .hero p { margin:8px 0 0; color:var(--muted); }
+        .toolbar,.content { padding:16px 22px; }
+        .toolbar { border-bottom:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1fr) minmax(160px,220px) auto; gap:10px; }
+        input { width:100%; border:1px solid var(--line); border-radius:12px; background:white; padding:10px 12px; }
+        .primary { border:0; background:linear-gradient(135deg,var(--brand),var(--brand-deep)); color:white; border-radius:12px; padding:10px 14px; cursor:pointer; font-weight:700; }
+        .content { display:grid; gap:14px; }
+        .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; }
+        .timeline { display:grid; gap:12px; }
+        .entry { padding:12px; border-radius:14px; background:white; border:1px solid var(--line); }
+        .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+        .chip { padding:7px 10px; border-radius:999px; background:rgba(20,111,115,0.09); border:1px solid rgba(20,111,115,0.12); }
+        .muted { color:var(--muted); }
+        @media (max-width:1000px) { .shell { grid-template-columns:1fr; } }
+        @media (max-width:760px) { .toolbar { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <aside class="side">
+            <div>
+                <h2 style="margin:0;font:700 2.3rem Georgia,serif;">Doctor timeline.</h2>
+                <p class="muted">Daily symptom history, food habits, medicines, and reports in one doctor-facing page.</p>
+            </div>
+            <div class="nav">
+                <a href="{% url 'ai-assistant-page' %}">Assistant</a>
+                <a href="{% url 'ai-daily-dashboard-page' %}">Dashboard</a>
+                <a href="{% url 'ai-medicines-page' %}">Medicines</a>
+                <a href="{% url 'ai-weekly-report-page' %}">Weekly report</a>
+                <a href="{% url 'ai-patient-timeline-page' %}">Doctor timeline</a>
+            </div>
+            <div class="card">
+                <label for="tokenInput">JWT Access Token</label>
+                <input id="tokenInput" placeholder="Paste doctor or allowed user token">
+                <button class="ghost" id="saveTokenBtn" type="button" style="margin-top:10px;">Save token locally</button>
+            </div>
+            <div class="card">
+                <p class="muted" style="margin:0;">Enter a patient id. Access is allowed for the patient, staff, or linked doctor.</p>
+            </div>
+        </aside>
+        <section class="main">
+            <div class="hero">
+                <h1>AI Patient Timeline</h1>
+                <p>Structured timeline intended for doctor review and follow-up discussion.</p>
+            </div>
+            <div class="toolbar">
+                <input id="patientIdInput" placeholder="Patient id">
+                <input id="patientLabel" placeholder="Loaded patient email" disabled>
+                <button class="primary" id="loadBtn" type="button">Load timeline</button>
+            </div>
+            <div class="content">
+                <div class="card"><h3>Daily symptom history</h3><div class="timeline" id="history"></div></div>
+                <div class="card"><h3>Food and lifestyle history</h3><div class="timeline" id="foodHabits"></div></div>
+                <div class="card"><h3>Medicines</h3><div class="timeline" id="medicines"></div></div>
+                <div class="card"><h3>Reports</h3><div class="timeline" id="reports"></div></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const tokenInput = document.getElementById("tokenInput");
+        const patientIdInput = document.getElementById("patientIdInput");
+        const patientLabel = document.getElementById("patientLabel");
+        tokenInput.value = localStorage.getItem("medoair_access_token") || "";
+        document.getElementById("saveTokenBtn").addEventListener("click", () => localStorage.setItem("medoair_access_token", tokenInput.value.trim()));
+        document.getElementById("loadBtn").addEventListener("click", loadTimeline);
+        async function apiFetch(url) {
+            const token = tokenInput.value.trim();
+            const response = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+            const payload = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(payload.error || payload.detail || "Request failed");
+            return payload;
+        }
+        async function loadTimeline() {
+            const patientId = patientIdInput.value.trim();
+            if (!patientId) { alert("Enter patient id first."); return; }
+            try {
+                const payload = await apiFetch(`/api/ai/patient-timeline/${patientId}/`);
+                renderTimeline(payload.data);
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+        function renderTimeline(data) {
+            patientLabel.value = data.patient_email || "";
+            renderHistory("history", data.daily_symptom_history || [], (item) => `
+                <div class="entry">
+                    <strong>${escapeHtml(item.date)}</strong>
+                    <div class="chips">${(item.symptoms || []).map((symptom) => `<span class="chip">${escapeHtml(symptom)}</span>`).join("") || '<span class="muted">No symptoms logged</span>'}</div>
+                    <div class="muted" style="margin-top:8px;">${escapeHtml(item.symptoms_text || item.notes || "No extra notes")}</div>
+                </div>
+            `);
+            renderHistory("foodHabits", data.food_habits || [], (item) => `
+                <div class="entry">
+                    <strong>${escapeHtml(item.date)}</strong>
+                    <div class="muted">Food: ${escapeHtml(item.food_type)} | Water: ${escapeHtml(String(item.water_intake_glasses))} glasses | Sleep: ${escapeHtml(String(item.sleep_hours))}</div>
+                    <div class="chips">
+                        <span class="chip">Stress: ${escapeHtml(item.stress_level)}</span>
+                        <span class="chip">Energy: ${escapeHtml(item.energy_level)}</span>
+                    </div>
+                </div>
+            `);
+            renderHistory("medicines", data.medicines || [], (item) => `
+                <div class="entry">
+                    <strong>${escapeHtml(item.name)}</strong>
+                    <div class="muted">${escapeHtml(item.dose || "Dose not specified")} | ${escapeHtml(item.status)}</div>
+                    <div class="chips">${(item.timings || []).map((timing) => `<span class="chip">${escapeHtml(timing)}</span>`).join("")}</div>
+                    <div class="muted" style="margin-top:8px;">Compliance: ${escapeHtml(String(item.compliance?.compliance_percent || 0))}%</div>
+                </div>
+            `);
+            renderHistory("reports", data.reports || [], (item) => `
+                <div class="entry">
+                    <strong>${escapeHtml(item.title)}</strong>
+                    <div class="muted">${escapeHtml(item.uploaded_at)}</div>
+                </div>
+            `, "No reports found.");
+        }
+        function renderHistory(id, items, renderer, emptyText = "No timeline data available.") {
+            const target = document.getElementById(id);
+            target.innerHTML = "";
+            if (!items.length) { target.innerHTML = `<div class="muted">${emptyText}</div>`; return; }
+            items.forEach((item) => { target.innerHTML += renderer(item); });
+        }
+        function escapeHtml(value) { return String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
+    </script>
+</body>
+</html>

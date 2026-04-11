@@ -1,0 +1,2672 @@
+﻿Record,Section,Field,Value
+1,Disease,Name,Tuberculosis
+1,Disease,Abbreviation,TB
+1,Disease,Causative Agent,Mycobacterium tuberculosis
+1,Disease,Disease Type,Chronic infectious bacterial disease
+1,Disease,Primary Affected Organs 1,Lungs
+1,Disease,Other Affected Organs 1,Lymph nodes
+1,Disease,Other Affected Organs 2,Bones
+1,Disease,Other Affected Organs 3,Joints
+1,Disease,Other Affected Organs 4,Brain
+1,Disease,Other Affected Organs 5,Kidneys
+1,Disease,Other Affected Organs 6,Spine
+1,Disease,Human Reservoir,True
+1,Key Facts,Global Significance,One of the top infectious killers worldwide
+1,Key Facts,Preventable,True
+1,Key Facts,Curable,True
+1,Key Facts,Airborne Transmission,True
+1,Key Facts,Drug Resistance,Major global health concern
+1,Overview,Description,"Tuberculosis is a contagious disease caused by Mycobacterium tuberculosis, most commonly affecting the lungs (pulmonary TB) but can affect other organs (extrapulmonary TB)."
+1,Overview,Infection Process 1,Inhalation of airborne TB bacteria
+1,Overview,Infection Process 2,Bacteria reach lungs
+1,Overview,Infection Process 3,Immune system response
+1,Overview,Infection Process 4,Latent or active infection develops
+1,Transmission,Mode,Airborne
+1,Transmission,Spread Mechanism 1,Coughing
+1,Transmission,Spread Mechanism 2,Sneezing
+1,Transmission,Spread Mechanism 3,Speaking
+1,Transmission,Spread Mechanism 4,Singing
+1,Transmission,Not Spread By 1,Handshakes
+1,Transmission,Not Spread By 2,Sharing food
+1,Transmission,Not Spread By 3,Touching surfaces
+1,Transmission,Not Spread By 4,Sexual contact
+1,Transmission,Infectious Period,When active pulmonary TB is untreated
+1,Types Of Tb > Latent Tb Infection,Description,TB bacteria present but inactive
+1,Types Of Tb > Latent Tb Infection,Symptoms,None
+1,Types Of Tb > Latent Tb Infection,Infectious,False
+1,Types Of Tb > Latent Tb Infection,Risk,Can progress to active TB
+1,Types Of Tb > Active Tb Disease,Description,TB bacteria actively multiplying
+1,Types Of Tb > Active Tb Disease,Symptoms,Present
+1,Types Of Tb > Active Tb Disease,Infectious,True
+1,Types Of Tb > Pulmonary Tb,Affected Area,Lungs
+1,Types Of Tb > Pulmonary Tb,Most Common,True
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 1,Lymph nodes
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 2,Pleura
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 3,Bones
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 4,Joints
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 5,Brain
+1,Types Of Tb > Extrapulmonary Tb,Affected Areas 6,Kidneys
+1,Symptoms,General Symptoms 1,Persistent cough (more than 2–3 weeks)
+1,Symptoms,General Symptoms 2,Fever
+1,Symptoms,General Symptoms 3,Night sweats
+1,Symptoms,General Symptoms 4,Weight loss
+1,Symptoms,General Symptoms 5,Fatigue
+1,Symptoms,General Symptoms 6,Loss of appetite
+1,Symptoms,Pulmonary Symptoms 1,Chest pain
+1,Symptoms,Pulmonary Symptoms 2,Coughing up blood (hemoptysis)
+1,Symptoms,Pulmonary Symptoms 3,Shortness of breath
+1,Symptoms,Extrapulmonary Symptoms 1,Swollen lymph nodes
+1,Symptoms,Extrapulmonary Symptoms 2,Bone or joint pain
+1,Symptoms,Extrapulmonary Symptoms 3,Headache
+1,Symptoms,Extrapulmonary Symptoms 4,Confusion (TB meningitis)
+1,Symptoms,Extrapulmonary Symptoms 5,Back pain (spinal TB)
+1,Risk Factors,Medical 1,HIV infection
+1,Risk Factors,Medical 2,Diabetes
+1,Risk Factors,Medical 3,Malnutrition
+1,Risk Factors,Medical 4,Silicosis
+1,Risk Factors,Medical 5,Chronic kidney disease
+1,Risk Factors,Social 1,Poverty
+1,Risk Factors,Social 2,Overcrowding
+1,Risk Factors,Social 3,Poor ventilation
+1,Risk Factors,Social 4,Smoking
+1,Risk Factors,Social 5,Alcohol use
+1,Risk Factors,High Risk Groups 1,Children
+1,Risk Factors,High Risk Groups 2,Elderly
+1,Risk Factors,High Risk Groups 3,Healthcare workers
+1,Risk Factors,High Risk Groups 4,People living with HIV
+1,Risk Factors,High Risk Groups 5,Close contacts of TB patients
+1,Diagnosis,Screening Tests 1,Tuberculin Skin Test (TST)
+1,Diagnosis,Screening Tests 2,Interferon-Gamma Release Assay (IGRA)
+1,Diagnosis > Diagnostic Tests > Sputum Smear Microscopy,Purpose,Detect acid-fast bacilli
+1,Diagnosis > Diagnostic Tests > Sputum Smear Microscopy,Limitations,Low sensitivity
+1,Diagnosis > Diagnostic Tests > Cbnaat Gene Xpert,Purpose,Detect TB and rifampicin resistance
+1,Diagnosis > Diagnostic Tests > Cbnaat Gene Xpert,Advantage,Rapid and accurate
+1,Diagnosis > Diagnostic Tests > Culture,Gold Standard,True
+1,Diagnosis > Diagnostic Tests > Culture,Time Required,2–8 weeks
+1,Diagnosis > Diagnostic Tests,Imaging 1,Chest X-ray
+1,Diagnosis > Diagnostic Tests,Imaging 2,CT scan
+1,Treatment > Standard Drug Sensitive Tb,Duration,6 months
+1,Treatment > Standard Drug Sensitive Tb,Intensive Phase 1,Isoniazid
+1,Treatment > Standard Drug Sensitive Tb,Intensive Phase 2,Rifampicin
+1,Treatment > Standard Drug Sensitive Tb,Intensive Phase 3,Pyrazinamide
+1,Treatment > Standard Drug Sensitive Tb,Intensive Phase 4,Ethambutol
+1,Treatment > Standard Drug Sensitive Tb,Continuation Phase 1,Isoniazid
+1,Treatment > Standard Drug Sensitive Tb,Continuation Phase 2,Rifampicin
+1,Treatment > Drug Resistant Tb,Types 1,MDR-TB
+1,Treatment > Drug Resistant Tb,Types 2,XDR-TB
+1,Treatment > Drug Resistant Tb,Treatment Duration,9–20 months
+1,Treatment > Drug Resistant Tb,Complexity,More toxic and expensive
+1,Treatment,Treatment Principles 1,Complete full course
+1,Treatment,Treatment Principles 2,Directly Observed Treatment (DOT)
+1,Treatment,Treatment Principles 3,Regular follow-up
+1,Drug Resistance,Causes 1,Incomplete treatment
+1,Drug Resistance,Causes 2,Incorrect drug use
+1,Drug Resistance,Causes 3,Poor adherence
+1,Drug Resistance,Causes 4,Interrupted drug supply
+1,Drug Resistance,Public Health Threat,True
+1,Prevention,Infection Control 1,Early diagnosis
+1,Prevention,Infection Control 2,Complete treatment
+1,Prevention,Infection Control 3,Isolation of infectious cases
+1,Prevention,Environmental Measures 1,Good ventilation
+1,Prevention,Environmental Measures 2,Sunlight
+1,Prevention,Environmental Measures 3,Reduced overcrowding
+1,Prevention,Personal Protection 1,Mask use
+1,Prevention,Personal Protection 2,Respiratory hygiene
+1,Vaccination > Bcg Vaccine,Full Name,Bacillus Calmette–Guérin
+1,Vaccination > Bcg Vaccine,Target Group,Infants
+1,Vaccination > Bcg Vaccine,Effectiveness 1,Prevents severe TB in children
+1,Vaccination > Bcg Vaccine,Effectiveness 2,Limited protection against adult pulmonary TB
+1,Vaccination > Bcg Vaccine,Status,Part of routine immunization in many countries
+1,Tb And Hiv,Relationship,TB is the leading cause of death among people with HIV
+1,Tb And Hiv,Management 1,Routine TB screening in HIV patients
+1,Tb And Hiv,Management 2,Integrated TB-HIV care
+1,Who Response > End Tb Strategy,Goal,End TB epidemic
+1,Who Response > End Tb Strategy,Target Year,2035
+1,Who Response > End Tb Strategy,Key Pillars 1,Integrated patient-centered care
+1,Who Response > End Tb Strategy,Key Pillars 2,Bold policies and supportive systems
+1,Who Response > End Tb Strategy,Key Pillars 3,Intensified research and innovation
+1,Who Response,Global Actions 1,Expanded access to diagnostics
+1,Who Response,Global Actions 2,Improved treatment regimens
+1,Who Response,Global Actions 3,Support for drug-resistant TB management
+1,Patient Guidance,Do 1,Take medicines regularly
+1,Patient Guidance,Do 2,Cover mouth when coughing
+1,Patient Guidance,Do 3,Attend follow-up visits
+1,Patient Guidance,Do Not 1,Stop medicines early
+1,Patient Guidance,Do Not 2,Skip doses
+1,Patient Guidance,Do Not 3,Ignore symptoms
+1,General,Chatbot Use Cases 1,TB symptom checker
+1,General,Chatbot Use Cases 2,Latent vs active TB education
+1,General,Chatbot Use Cases 3,Treatment adherence support
+1,General,Chatbot Use Cases 4,Drug-resistant TB awareness
+1,General,Chatbot Use Cases 5,Public health education
+1,General,Chatbot Use Cases 6,WHO End TB awareness
+2,Disease,Name,Tuberculosis
+2,Disease,Variant,Drug-Resistant Tuberculosis
+2,Disease,Abbreviation,DR-TB
+2,Disease,Causative Agent,Mycobacterium tuberculosis
+2,Disease,Disease Type,Airborne infectious bacterial disease
+2,Disease,Primary Affected Organs 1,Lungs
+2,Disease,Human Reservoir,True
+2,Definitions,Drug Resistant Tb,Tuberculosis caused by Mycobacterium tuberculosis strains resistant to one or more anti-TB drugs
+2,Definitions > Mdr Tb,Full Form,Multidrug-Resistant Tuberculosis
+2,Definitions > Mdr Tb,Definition,Resistance to at least isoniazid and rifampicin
+2,Definitions > Xdr Tb,Full Form,Extensively Drug-Resistant Tuberculosis
+2,Definitions > Xdr Tb,Definition,MDR-TB with resistance to fluoroquinolones and at least one additional Group A drug
+2,Key Facts,Global Threat,True
+2,Key Facts,Treatment Complexity,"More difficult, longer, costlier and more toxic than drug-sensitive TB"
+2,Key Facts,Public Health Impact,Major obstacle to TB elimination
+2,Key Facts,Preventable,True
+2,Key Facts,Curable,True
+2,Causes Of Drug Resistance,Biological 1,Genetic mutations in TB bacteria
+2,Causes Of Drug Resistance,Programmatic 1,Incorrect prescription
+2,Causes Of Drug Resistance,Programmatic 2,Poor-quality medicines
+2,Causes Of Drug Resistance,Programmatic 3,Interrupted drug supply
+2,Causes Of Drug Resistance,Programmatic 4,Inadequate treatment duration
+2,Causes Of Drug Resistance,Patient Related 1,Poor adherence to treatment
+2,Causes Of Drug Resistance,Patient Related 2,Stopping treatment early
+2,Causes Of Drug Resistance,Patient Related 3,Missed doses
+2,Transmission,Mode,Airborne
+2,Transmission,Spread Mechanism 1,Coughing
+2,Transmission,Spread Mechanism 2,Sneezing
+2,Transmission,Spread Mechanism 3,Speaking
+2,Transmission,Spread Mechanism 4,Singing
+2,Transmission,Note,Drug-resistant TB spreads the same way as drug-sensitive TB
+2,Symptoms,General Tb Symptoms 1,Persistent cough
+2,Symptoms,General Tb Symptoms 2,Fever
+2,Symptoms,General Tb Symptoms 3,Night sweats
+2,Symptoms,General Tb Symptoms 4,Weight loss
+2,Symptoms,General Tb Symptoms 5,Fatigue
+2,Symptoms,Advanced Or Severe 1,Coughing up blood
+2,Symptoms,Advanced Or Severe 2,Chest pain
+2,Symptoms,Advanced Or Severe 3,Severe weakness
+2,Risk Factors,Medical 1,Previous TB treatment
+2,Risk Factors,Medical 2,HIV infection
+2,Risk Factors,Medical 3,Diabetes
+2,Risk Factors,Social 1,Poverty
+2,Risk Factors,Social 2,Overcrowding
+2,Risk Factors,Social 3,Malnutrition
+2,Risk Factors,High Risk Groups 1,Previously treated TB patients
+2,Risk Factors,High Risk Groups 2,Close contacts of DR-TB patients
+2,Risk Factors,High Risk Groups 3,Healthcare workers
+2,Diagnosis,Importance,Early detection is critical to prevent transmission
+2,Diagnosis > Rapid Molecular Tests > Cbnaat Gene Xpert,Detects 1,TB bacteria
+2,Diagnosis > Rapid Molecular Tests > Cbnaat Gene Xpert,Detects 2,Rifampicin resistance
+2,Diagnosis > Rapid Molecular Tests > Cbnaat Gene Xpert,Advantage,Results within hours
+2,Diagnosis > Rapid Molecular Tests > Line Probe Assay,Detects 1,Resistance to first-line and second-line drugs
+2,Diagnosis > Culture And Dst,Description,Culture with drug susceptibility testing
+2,Diagnosis > Culture And Dst,Gold Standard,True
+2,Diagnosis > Culture And Dst,Time Required,Several weeks
+2,Diagnosis,Imaging 1,Chest X-ray
+2,Diagnosis,Imaging 2,CT scan
+2,Treatment,General Principles 1,Individualized treatment based on drug susceptibility
+2,Treatment,General Principles 2,Longer treatment duration
+2,Treatment,General Principles 3,Strict adherence required
+2,Treatment,General Principles 4,Regular monitoring for side effects
+2,Treatment > Who Recommended Regimens > Shorter All Oral Regimen,Duration,9–12 months
+2,Treatment > Who Recommended Regimens > Shorter All Oral Regimen,Features 1,All oral drugs
+2,Treatment > Who Recommended Regimens > Shorter All Oral Regimen,Features 2,No injectable agents
+2,Treatment > Who Recommended Regimens > Longer Regimen,Duration,18–20 months
+2,Treatment > Who Recommended Regimens > Longer Regimen,Used When,Resistance to key drugs present
+2,Treatment > Drug Groups,Group A 1,Bedaquiline
+2,Treatment > Drug Groups,Group A 2,Levofloxacin or Moxifloxacin
+2,Treatment > Drug Groups,Group A 3,Linezolid
+2,Treatment > Drug Groups,Group B 1,Clofazimine
+2,Treatment > Drug Groups,Group B 2,Cycloserine
+2,Treatment > Drug Groups,Group C 1,Ethambutol
+2,Treatment > Drug Groups,Group C 2,Delamanid
+2,Treatment > Drug Groups,Group C 3,Pyrazinamide
+2,Treatment > Drug Groups,Group C 4,Imipenem-cilastatin
+2,Treatment > Drug Groups,Group C 5,Amikacin
+2,Treatment Challenges,Side Effects 1,Hearing loss
+2,Treatment Challenges,Side Effects 2,Peripheral neuropathy
+2,Treatment Challenges,Side Effects 3,Psychiatric symptoms
+2,Treatment Challenges,Side Effects 4,QT prolongation
+2,Treatment Challenges,Economic 1,High treatment cost
+2,Treatment Challenges,Economic 2,Loss of income
+2,Treatment Challenges,Adherence Issues 1,Long duration
+2,Treatment Challenges,Adherence Issues 2,Drug toxicity
+2,Prevention,Primary Prevention 1,Early diagnosis
+2,Prevention,Primary Prevention 2,Appropriate TB treatment
+2,Prevention,Primary Prevention 3,Infection control
+2,Prevention,Programmatic Measures 1,Directly Observed Treatment (DOT)
+2,Prevention,Programmatic Measures 2,Uninterrupted drug supply
+2,Prevention,Programmatic Measures 3,Quality-assured medicines
+2,Prevention,Infection Control Measures 1,Ventilation
+2,Prevention,Infection Control Measures 2,Respiratory hygiene
+2,Prevention,Infection Control Measures 3,Use of masks
+2,Tb Hiv Coinfection,Risk,Higher risk of DR-TB
+2,Tb Hiv Coinfection,Management 1,Integrated TB-HIV services
+2,Tb Hiv Coinfection,Management 2,Early antiretroviral therapy
+2,Who Response,Global Strategy,End TB Strategy
+2,Who Response,Key Actions 1,Universal access to rapid diagnostics
+2,Who Response,Key Actions 2,All-oral DR-TB regimens
+2,Who Response,Key Actions 3,Patient-centered care
+2,Who Response,Key Actions 4,Surveillance of drug resistance
+2,Who Response,Goals 1,Reduce TB deaths
+2,Who Response,Goals 2,Reduce TB incidence
+2,Who Response,Goals 3,Eliminate catastrophic costs
+2,Patient Guidance,Do 1,Take medicines exactly as prescribed
+2,Patient Guidance,Do 2,Attend all follow-up visits
+2,Patient Guidance,Do 3,Report side effects early
+2,Patient Guidance,Do Not 1,Skip doses
+2,Patient Guidance,Do Not 2,Stop treatment early
+2,Patient Guidance,Do Not 3,Share medicines
+2,General,Chatbot Use Cases 1,DR-TB education chatbot
+2,General,Chatbot Use Cases 2,Symptom screening assistant
+2,General,Chatbot Use Cases 3,Treatment adherence support
+2,General,Chatbot Use Cases 4,Side-effect monitoring bot
+2,General,Chatbot Use Cases 5,Public health awareness chatbot
+2,General,Chatbot Use Cases 6,WHO End TB campaign chatbot
+3,Disease,Name,Tuberculosis
+3,Disease,Abbreviation,TB
+3,Disease,Causative Agent,Mycobacterium tuberculosis
+3,Disease,Mycobacterium Complex 1,Mycobacterium tuberculosis
+3,Disease,Mycobacterium Complex 2,Mycobacterium bovis
+3,Disease,Mycobacterium Complex 3,Mycobacterium africanum
+3,Disease,Mycobacterium Complex 4,Mycobacterium canettii
+3,Disease,Mycobacterium Complex 5,Mycobacterium microti
+3,Disease,Disease Type,Airborne infectious disease
+3,Disease,Primary Affected Organs 1,Lungs
+3,Disease,Other Affected Organs 1,Lymph nodes
+3,Disease,Other Affected Organs 2,Bones
+3,Disease,Other Affected Organs 3,Joints
+3,Disease,Other Affected Organs 4,Brain
+3,Disease,Other Affected Organs 5,Kidneys
+3,Disease,Human Reservoir,True
+3,Introduction,Context,"TB is a major public health disease requiring coordinated laboratory, clinical and public health action"
+3,Introduction,Laboratory Role,Microbacteriology laboratories are frontline in TB control and elimination
+3,Global Burden,Estimated Latent Infections,2000000000
+3,Global Burden,Global Population Fraction,Approximately one-third
+3,Global Burden,New Cases 2011,8700000
+3,Global Burden,Tb Hiv Coinfection Percentage,13
+3,Global Burden,Tb Deaths 2011,1400000
+3,Global Burden,High Burden Regions 1,Sub-Saharan Africa
+3,Global Burden,High Burden Regions 2,South-East Asia
+3,Global Burden > Case Distribution,Resource Limited Countries,Over 95%
+3,Global Burden > Case Distribution,Top 22 Countries Share,80% of global cases
+3,Transmission,Mode,Airborne
+3,Transmission > Infectious Particles,Type,Droplet nuclei
+3,Transmission > Infectious Particles,Size Microns,1–5
+3,Transmission,Spread Mechanism 1,Coughing
+3,Transmission,Spread Mechanism 2,Sneezing
+3,Transmission,Spread Mechanism 3,Shouting
+3,Transmission,Spread Mechanism 4,Singing
+3,Transmission,Airborne Persistence,Droplet nuclei remain airborne long after infected person leaves the room
+3,Transmission,Site Of Infection,Alveoli of lungs
+3,Tb Infection Vs Disease > Latent Tb Infection,Abbreviation,LTBI
+3,Tb Infection Vs Disease > Latent Tb Infection,Bacteria Status,Alive but inactive
+3,Tb Infection Vs Disease > Latent Tb Infection,Symptoms,None
+3,Tb Infection Vs Disease > Latent Tb Infection,Infectious,False
+3,Tb Infection Vs Disease > Latent Tb Infection,Afb Smear,Negative
+3,Tb Infection Vs Disease > Latent Tb Infection,Culture,Negative
+3,Tb Infection Vs Disease > Latent Tb Infection,Isolation Required,False
+3,Tb Infection Vs Disease > Latent Tb Infection,Treatment,Recommended but voluntary
+3,Tb Infection Vs Disease > Active Tb Disease,Bacteria Status,Actively multiplying
+3,Tb Infection Vs Disease > Active Tb Disease,Symptoms,Present
+3,Tb Infection Vs Disease > Active Tb Disease,Infectious,True
+3,Tb Infection Vs Disease > Active Tb Disease,Afb Smear,May be positive
+3,Tb Infection Vs Disease > Active Tb Disease,Culture,May be positive
+3,Tb Infection Vs Disease > Active Tb Disease,Isolation Required,True
+3,Tb Infection Vs Disease > Active Tb Disease,Public Health Reporting,True
+3,Risk Factors For Infection,Environmental 1,Crowded living conditions
+3,Risk Factors For Infection,Environmental 2,Prisons
+3,Risk Factors For Infection,Environmental 3,Homeless shelters
+3,Risk Factors For Infection,Environmental 4,Long-term care facilities
+3,Risk Factors For Infection,Geographic 1,Residence in high TB incidence countries
+3,Risk Factors For Infection,Geographic 2,Travel to TB endemic areas
+3,Risk Factors For Infection,Occupational 1,Healthcare workers
+3,Risk Factors For Infection,Occupational 2,Laboratory workers
+3,Risk Of Progression,Highest Risk Period,First 2 years after infection
+3,Risk Of Progression > Progression Statistics,First 2 Years,≈5%
+3,Risk Of Progression > Progression Statistics,Later Life,≈5%
+3,Risk Of Progression > Progression Statistics,Lifetime Risk,≈10% if untreated
+3,Risk Of Progression,Increased Risk Conditions 1,Diabetes
+3,Risk Of Progression,Increased Risk Conditions 2,HIV
+3,Risk Of Progression,Increased Risk Conditions 3,Other immunocompromising conditions
+3,Signs And Symptoms,General 1,Fever
+3,Signs And Symptoms,General 2,Weight loss
+3,Signs And Symptoms,General 3,Night sweats
+3,Signs And Symptoms,General 4,Fatigue
+3,Signs And Symptoms,Pulmonary Tb 1,Cough lasting more than 2 weeks
+3,Signs And Symptoms,Pulmonary Tb 2,Productive cough
+3,Signs And Symptoms,Pulmonary Tb 3,Hemoptysis (bloody sputum)
+3,Signs And Symptoms,Pulmonary Tb 4,Chest pain
+3,Signs And Symptoms > Extrapulmonary Tb,Symptoms Vary By Site,True
+3,Diagnosis,Diagnostic Approach 1,Clinical symptoms
+3,Diagnosis,Diagnostic Approach 2,Chest X-ray
+3,Diagnosis,Diagnostic Approach 3,Clinical judgment
+3,Diagnosis,Diagnostic Approach 4,Laboratory testing
+3,Diagnosis > Laboratory Tests > Afb Smear Microscopy,Purpose,Detect acid-fast bacilli
+3,Diagnosis > Laboratory Tests > Naat,Full Form,Nucleic Acid Amplification Test
+3,Diagnosis > Laboratory Tests > Naat,Purpose,Rapid detection of TB
+3,Diagnosis > Laboratory Tests > Culture And Identification,Importance,Gold standard for confirmation
+3,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Abbreviation,DST
+3,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Purpose,Guide effective treatment
+3,Diagnosis > Us Statistics,Culture Confirmed Cases,≈75%
+3,Diagnosis > Us Statistics,Clinical Diagnosis Without Confirmation,Allowed and treated empirically
+3,Treatment > Latent Tb Infection,Regimens 1,9 months isoniazid
+3,Treatment > Latent Tb Infection,Regimens 2,4 months rifampin
+3,Treatment > Latent Tb Infection,Regimens 3,3 months isoniazid + rifapentine (DOT)
+3,Treatment > Latent Tb Infection,Effectiveness,All regimens equally effective
+3,Treatment > Drug Susceptible Tb,Total Duration,6 months
+3,Treatment > Drug Susceptible Tb > Intensive Phase,Duration,2 months
+3,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 1,Isoniazid
+3,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 2,Rifampin
+3,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 3,Ethambutol
+3,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 4,Pyrazinamide
+3,Treatment > Drug Susceptible Tb > Continuation Phase,Duration,4 months
+3,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 1,Isoniazid
+3,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 2,Rifampin
+3,Drug Resistant Tb > Mdr Tb,Definition,Resistance to isoniazid and rifampin
+3,Drug Resistant Tb > Mdr Tb,Global New Cases Percentage,3.7%
+3,Drug Resistant Tb > Mdr Tb,Previously Treated Cases Percentage,20%
+3,Drug Resistant Tb > Xdr Tb,Definition,MDR-TB plus resistance to fluoroquinolones and second-line injectables
+3,Drug Resistant Tb > Xdr Tb,Second Line Injectables 1,Amikacin
+3,Drug Resistant Tb > Xdr Tb,Second Line Injectables 2,Kanamycin
+3,Drug Resistant Tb > Xdr Tb,Second Line Injectables 3,Capreomycin
+3,Drug Resistant Tb,High Burden Countries 1,India
+3,Drug Resistant Tb,High Burden Countries 2,China
+3,Mdr Tb Treatment,Duration,At least 2 years
+3,Mdr Tb Treatment,Drug Type,Second-line drugs
+3,Mdr Tb Treatment,Challenges 1,High cost
+3,Mdr Tb Treatment,Challenges 2,Limited availability
+3,Mdr Tb Treatment,Challenges 3,Severe adverse effects
+3,Mdr Tb Treatment,Challenges 4,Poor tolerance
+3,Mdr Tb Treatment,Resistance Causes 1,Inappropriate drug use
+3,Mdr Tb Treatment,Resistance Causes 2,Poor adherence
+3,Mdr Tb Treatment,Resistance Causes 3,Poor-quality medicines
+3,Directly Observed Therapy,Abbreviation,DOT
+3,Directly Observed Therapy,Description,Patient observed taking every dose
+3,Directly Observed Therapy,Benefits 1,Improved treatment success
+3,Directly Observed Therapy,Benefits 2,Early detection of side effects
+3,Directly Observed Therapy,Benefits 3,Reduced resistance
+3,Directly Observed Therapy,Limitations,Resource intensive
+3,Laboratory Importance,Roles 1,Early detection of MTBC
+3,Laboratory Importance,Roles 2,Preventing transmission
+3,Laboratory Importance,Roles 3,Drug susceptibility testing
+3,Laboratory Importance,Roles 4,Monitoring treatment response
+3,Laboratory Importance,Public Health Impact,Essential for TB control and elimination
+3,Epidemiology Us,Case Rate 2009,"3.6 per 100,000"
+3,Epidemiology Us,Case Rate 2011,"3.4 per 100,000"
+3,Epidemiology Us > Foreign Born Cases,1993,29%
+3,Epidemiology Us > Foreign Born Cases,2011,62%
+3,Epidemiology Us > Foreign Born Cases,Top Countries 1,Mexico
+3,Epidemiology Us > Foreign Born Cases,Top Countries 2,Philippines
+3,Epidemiology Us > Foreign Born Cases,Top Countries 3,India
+3,Epidemiology Us > Foreign Born Cases,Top Countries 4,Vietnam
+3,Epidemiology Us > Foreign Born Cases,Top Countries 5,China
+3,General,Chatbot Use Cases 1,TB education chatbot
+3,General,Chatbot Use Cases 2,LTBI vs TB disease explanation
+3,General,Chatbot Use Cases 3,Symptom screening assistant
+3,General,Chatbot Use Cases 4,Laboratory diagnostics education
+3,General,Chatbot Use Cases 5,MDR/XDR-TB awareness
+3,General,Chatbot Use Cases 6,Public health training chatbot
+3,General,Chatbot Use Cases 7,Student MCQ practice bot
+4,Disease,Name,Tuberculosis
+4,Disease,Aliases 1,TB
+4,Disease,Type,Infectious disease
+4,Disease > Causative Agent,Primary,Mycobacterium tuberculosis
+4,Disease > Causative Agent,Other Species 1,Mycobacterium bovis
+4,Disease > Causative Agent,Other Species 2,Mycobacterium africanum
+4,Disease > Causative Agent,Other Species 3,Non-tuberculous mycobacteria (environmental mycobacteria)
+4,Disease > Transmission,Mode,Airborne
+4,Disease > Transmission,How It Spreads 1,Coughing
+4,Disease > Transmission,How It Spreads 2,Talking
+4,Disease > Transmission,How It Spreads 3,Sneezing
+4,Disease > Transmission,Infectious Sources 1,Smear-positive pulmonary TB patients
+4,Disease > Transmission,Non Significant Sources 1,Urine
+4,Disease > Transmission,Non Significant Sources 2,Non-aerosol body fluids
+4,Disease > Transmission,Non Significant Sources 3,Most children with TB
+4,Disease > Transmission,Infectious Period,Usually reduces within 2 weeks of effective treatment
+4,Global Burden,Annual Cases Estimate,Approximately 9 million
+4,Global Burden,Annual Deaths Estimate,1.7 million (WHO 2004)
+4,Global Burden,High Burden Regions 1,Africa
+4,Global Burden,High Burden Regions 2,South-East Asia
+4,Global Burden,High Burden Regions 3,Western Pacific
+4,Global Burden,High Burden Regions 4,Eastern Europe
+4,Global Burden,High Burden Regions 5,Former Soviet Union
+4,Global Burden,Key Drivers 1,HIV infection
+4,Global Burden,Key Drivers 2,Poverty
+4,Global Burden,Key Drivers 3,Malnutrition
+4,Global Burden,Key Drivers 4,Overcrowding
+4,Global Burden,Key Drivers 5,Weak health systems
+4,Symptoms,General 1,Prolonged cough (more than 3 weeks)
+4,Symptoms,General 2,Fever
+4,Symptoms,General 3,Fatigue
+4,Symptoms,General 4,Weight loss
+4,Symptoms,General 5,Night sweats
+4,Symptoms,Respiratory 1,Chest pain
+4,Symptoms,Respiratory 2,Coughing up blood (hemoptysis)
+4,Symptoms > Extra Pulmonary,Common Sites 1,Lymph nodes
+4,Symptoms > Extra Pulmonary,Common Sites 2,Bones and joints
+4,Symptoms > Extra Pulmonary,Common Sites 3,Brain and spinal cord
+4,Symptoms > Extra Pulmonary,Common Sites 4,Genitourinary system
+4,Symptoms > Extra Pulmonary,Common Sites 5,Abdomen
+4,Symptoms > Extra Pulmonary,Common Sites 6,Skin
+4,Symptoms > Extra Pulmonary,Common Sites 7,Eye
+4,Symptoms,Children Specific 1,Failure to thrive
+4,Symptoms,Children Specific 2,Persistent fever
+4,Symptoms,Children Specific 3,Lymph node swelling
+4,Symptoms,Children Specific 4,Meningitis symptoms
+4,Risk Factors,Biological 1,HIV infection
+4,Risk Factors,Biological 2,Young age (<2 years)
+4,Risk Factors,Biological 3,Old age
+4,Risk Factors,Biological 4,Immunosuppression
+4,Risk Factors,Social 1,Poverty
+4,Risk Factors,Social 2,Overcrowding
+4,Risk Factors,Social 3,Malnutrition
+4,Risk Factors,Social 4,Smoking
+4,Risk Factors,Medical 1,Diabetes
+4,Risk Factors,Medical 2,Cancer
+4,Risk Factors,Medical 3,Immunosuppressive drugs
+4,Diagnosis,Primary Method,Sputum smear microscopy
+4,Diagnosis,Recommended Tests 1,Sputum smear (AFB)
+4,Diagnosis,Recommended Tests 2,Chest X-ray
+4,Diagnosis,Recommended Tests 3,Culture (where available)
+4,Diagnosis,Recommended Tests 4,Tuberculin skin test (limited use)
+4,Diagnosis,Recommended Tests 5,Molecular tests (where available)
+4,Diagnosis,Diagnostic Rules 1,Never treat TB without sputum examination
+4,Diagnosis,Diagnostic Rules 2,X-ray alone is insufficient
+4,Diagnosis,Diagnostic Rules 3,Children may require clinical diagnosis
+4,Treatment,Curability,Tuberculosis is curable
+4,Treatment > Standard Regimens > New Cases,Duration,6–8 months
+4,Treatment > Standard Regimens > New Cases,Core Drugs 1,Isoniazid
+4,Treatment > Standard Regimens > New Cases,Core Drugs 2,Rifampicin
+4,Treatment > Standard Regimens > New Cases,Core Drugs 3,Pyrazinamide
+4,Treatment > Standard Regimens > New Cases,Core Drugs 4,Ethambutol
+4,Treatment > Standard Regimens > Retreatment Cases,Applies To 1,Relapse
+4,Treatment > Standard Regimens > Retreatment Cases,Applies To 2,Treatment failure
+4,Treatment > Standard Regimens > Retreatment Cases,Applies To 3,Treatment after default
+4,Treatment > Standard Regimens > Retreatment Cases,Note,Different standardized retreatment regimen required
+4,Treatment,Key Rules 1,Never use a single drug alone
+4,Treatment,Key Rules 2,Never add one drug to a failing regimen
+4,Treatment,Key Rules 3,Treatment must be completed fully
+4,Treatment,Key Rules 4,Directly observed therapy is essential
+4,Treatment > Drug Resistance,Causes 1,Incomplete treatment
+4,Treatment > Drug Resistance,Causes 2,Incorrect drug combinations
+4,Treatment > Drug Resistance,Causes 3,Poor supervision
+4,Treatment > Drug Resistance,Types 1,Mono-resistant TB
+4,Treatment > Drug Resistance,Types 2,Multidrug-resistant TB (MDR-TB)
+4,Prevention,Primary Measures 1,Early diagnosis
+4,Prevention,Primary Measures 2,Complete treatment of infectious cases
+4,Prevention > Vaccination,Name,BCG
+4,Prevention > Vaccination,Target Group,Infants in high-burden countries
+4,Prevention > Vaccination,Protection 1,Tuberculous meningitis
+4,Prevention > Vaccination,Protection 2,Miliary tuberculosis
+4,Prevention > Vaccination,Limitations 1,Limited effect on adult pulmonary TB
+4,Prevention > Vaccination,Limitations 2,No benefit from repeat vaccination
+4,Prevention,Environmental 1,Improved ventilation
+4,Prevention,Environmental 2,Reduced overcrowding
+4,Prevention,Environmental 3,Sunlight exposure
+4,Prevention,Environmental 4,Smoking reduction
+4,Infection Control,Patient Guidance 1,Cover mouth when coughing
+4,Infection Control,Patient Guidance 2,Avoid close contact during early treatment
+4,Infection Control,Patient Guidance 3,Dispose sputum safely
+4,Infection Control > Disinfection,Effective Methods 1,Sunlight
+4,Infection Control > Disinfection,Effective Methods 2,Heat (>60°C)
+4,Infection Control > Disinfection,Effective Methods 3,Bleach (1% hypochlorite)
+4,Special Populations > Children,Notes 1,Often smear-negative
+4,Special Populations > Children,Notes 2,Higher risk of severe forms
+4,Special Populations > Children,Notes 3,BCG strongly recommended
+4,Special Populations > Hiv Coinfection,Impact 1,Higher TB risk
+4,Special Populations > Hiv Coinfection,Impact 2,Atypical presentation
+4,Special Populations > Hiv Coinfection,Impact 3,Increased mortality
+4,Special Populations > Hiv Coinfection,Management 1,Integrated TB-HIV care
+4,Special Populations > Hiv Coinfection,Management 2,Antiretroviral therapy
+4,Special Populations > Hiv Coinfection,Management 3,Careful drug interaction monitoring
+4,National Tb Programme,Core Components 1,Sputum-based case finding
+4,National Tb Programme,Core Components 2,Standardized treatment
+4,National Tb Programme,Core Components 3,Directly observed therapy
+4,National Tb Programme,Core Components 4,Drug supply assurance
+4,National Tb Programme,Core Components 5,Recording and reporting
+4,National Tb Programme,Core Components 6,Contact tracing
+4,National Tb Programme,Core Components 7,BCG vaccination
+4,National Tb Programme,Objectives 1,Reduce transmission
+4,National Tb Programme,Objectives 2,Cure patients
+4,National Tb Programme,Objectives 3,Prevent drug resistance
+4,Chatbot Use Cases,Education,True
+4,Chatbot Use Cases,Symptom Checker,True
+4,Chatbot Use Cases,Treatment Adherence Support,True
+4,Chatbot Use Cases,Myth Busting,True
+4,Chatbot Use Cases,Public Health Awareness,True
+4,General,Key Messages 1,Tuberculosis is curable
+4,General,Key Messages 2,Incomplete treatment causes drug resistance
+4,General,Key Messages 3,Early diagnosis saves lives
+4,General,Key Messages 4,Good treatment is the best prevention
+5,Knowledge Base,Domain,Public Health
+5,Knowledge Base,Disease Name,Tuberculosis
+5,Knowledge Base,Short Name,TB
+5,Knowledge Base,Category,Communicable disease
+5,Knowledge Base,Who Priority Disease,True
+5,Etiology > Causative Agent,Primary Species,Mycobacterium tuberculosis
+5,Etiology > Causative Agent,Mycobacterium Tuberculosis Complex 1,Mycobacterium tuberculosis
+5,Etiology > Causative Agent,Mycobacterium Tuberculosis Complex 2,Mycobacterium bovis
+5,Etiology > Causative Agent,Mycobacterium Tuberculosis Complex 3,Mycobacterium africanum
+5,Etiology > Causative Agent,Mycobacterium Tuberculosis Complex 4,Mycobacterium microti
+5,Etiology > Causative Agent,Mycobacterium Tuberculosis Complex 5,Mycobacterium canettii
+5,Etiology > Causative Agent,Reservoir,Humans
+5,Etiology > Causative Agent,Acid Fast,True
+5,Transmission,Mode,Airborne
+5,Transmission,Infectious Particles,Droplet nuclei
+5,Transmission,Particle Size Microns,1–5
+5,Transmission,Generated By 1,Coughing
+5,Transmission,Generated By 2,Sneezing
+5,Transmission,Generated By 3,Talking
+5,Transmission,Generated By 4,Shouting
+5,Transmission,Generated By 5,Singing
+5,Transmission,Entry Site,Lung alveoli
+5,Transmission,Non Transmission Routes 1,Food
+5,Transmission,Non Transmission Routes 2,Water
+5,Transmission,Non Transmission Routes 3,Touch
+5,Transmission,Non Transmission Routes 4,Sexual contact
+5,Global Epidemiology,Latent Infection Estimate,≈2 billion people
+5,Global Epidemiology,Annual New Cases,≈9 million
+5,Global Epidemiology,Annual Deaths,≈1.4–1.7 million
+5,Global Epidemiology,Hiv Coinfection Rate,≈13%
+5,Global Epidemiology,High Burden Regions 1,Africa
+5,Global Epidemiology,High Burden Regions 2,South-East Asia
+5,Global Epidemiology,High Burden Regions 3,Western Pacific
+5,Global Epidemiology,High Burden Countries 1,India
+5,Global Epidemiology,High Burden Countries 2,China
+5,Global Epidemiology,High Burden Countries 3,Indonesia
+5,Global Epidemiology,High Burden Countries 4,Philippines
+5,Global Epidemiology,High Burden Countries 5,Pakistan
+5,Global Epidemiology,High Burden Countries 6,Nigeria
+5,Global Epidemiology,High Burden Countries 7,South Africa
+5,Pathogenesis,Initial Infection,Inhalation of MTB into alveoli
+5,Pathogenesis,Immune Response,Granuloma formation
+5,Pathogenesis,Possible Outcomes 1,Latent TB infection
+5,Pathogenesis,Possible Outcomes 2,Primary progressive TB
+5,Pathogenesis,Possible Outcomes 3,Reactivation TB
+5,Tb Classification > Latent Tb Infection,Abbreviation,LTBI
+5,Tb Classification > Latent Tb Infection,Bacteria Status,Alive but dormant
+5,Tb Classification > Latent Tb Infection,Symptoms,False
+5,Tb Classification > Latent Tb Infection,Infectious,False
+5,Tb Classification > Latent Tb Infection,Smear Positive,False
+5,Tb Classification > Latent Tb Infection,Culture Positive,False
+5,Tb Classification > Latent Tb Infection,Treatment Needed,True
+5,Tb Classification > Active Tb Disease,Symptoms,True
+5,Tb Classification > Active Tb Disease,Infectious,True
+5,Tb Classification > Active Tb Disease,Public Health Notification,True
+5,Tb Classification > Active Tb Disease,Isolation Required,True
+5,Risk Factors,Environmental 1,Overcrowding
+5,Risk Factors,Environmental 2,Poor ventilation
+5,Risk Factors,Environmental 3,Prisons
+5,Risk Factors,Environmental 4,Shelters
+5,Risk Factors,Medical 1,HIV
+5,Risk Factors,Medical 2,Diabetes
+5,Risk Factors,Medical 3,Malnutrition
+5,Risk Factors,Medical 4,Cancer
+5,Risk Factors,Medical 5,Chronic kidney disease
+5,Risk Factors,Medical 6,Immunosuppressive therapy
+5,Risk Factors,Social 1,Poverty
+5,Risk Factors,Social 2,Smoking
+5,Risk Factors,Social 3,Alcohol use
+5,Clinical Features,General Symptoms 1,Fever
+5,Clinical Features,General Symptoms 2,Weight loss
+5,Clinical Features,General Symptoms 3,Night sweats
+5,Clinical Features,General Symptoms 4,Fatigue
+5,Clinical Features,Pulmonary Tb 1,Cough >2–3 weeks
+5,Clinical Features,Pulmonary Tb 2,Sputum production
+5,Clinical Features,Pulmonary Tb 3,Hemoptysis
+5,Clinical Features,Pulmonary Tb 4,Chest pain
+5,Clinical Features > Extrapulmonary Tb,Sites 1,Lymph nodes
+5,Clinical Features > Extrapulmonary Tb,Sites 2,Bones
+5,Clinical Features > Extrapulmonary Tb,Sites 3,Joints
+5,Clinical Features > Extrapulmonary Tb,Sites 4,Brain
+5,Clinical Features > Extrapulmonary Tb,Sites 5,Spine
+5,Clinical Features > Extrapulmonary Tb,Sites 6,Kidneys
+5,Clinical Features > Extrapulmonary Tb,Sites 7,Genital tract
+5,Diagnosis,Clinical Tools 1,Symptom screening
+5,Diagnosis,Clinical Tools 2,Chest X-ray
+5,Diagnosis > Laboratory Tests > Afb Smear Microscopy,Purpose,Detect acid-fast bacilli
+5,Diagnosis > Laboratory Tests > Afb Smear Microscopy,Limitations,Low sensitivity
+5,Diagnosis > Laboratory Tests > Culture,Gold Standard,True
+5,Diagnosis > Laboratory Tests > Culture,Time Required,2–8 weeks
+5,Diagnosis > Laboratory Tests > Molecular Tests,Examples 1,Xpert MTB/RIF
+5,Diagnosis > Laboratory Tests > Molecular Tests,Examples 2,NAAT
+5,Diagnosis > Laboratory Tests > Molecular Tests,Advantages 1,Rapid detection
+5,Diagnosis > Laboratory Tests > Molecular Tests,Advantages 2,Drug resistance detection
+5,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Abbreviation,DST
+5,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Importance,Guides therapy
+5,Treatment,Curability,True
+5,Treatment > Drug Susceptible Tb,Total Duration,6 months
+5,Treatment > Drug Susceptible Tb > Intensive Phase,Duration,2 months
+5,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 1,Isoniazid
+5,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 2,Rifampicin
+5,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 3,Pyrazinamide
+5,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 4,Ethambutol
+5,Treatment > Drug Susceptible Tb > Continuation Phase,Duration,4 months
+5,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 1,Isoniazid
+5,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 2,Rifampicin
+5,Treatment > Latent Tb Infection,Regimens 1,6–9 months Isoniazid
+5,Treatment > Latent Tb Infection,Regimens 2,4 months Rifampicin
+5,Treatment > Latent Tb Infection,Regimens 3,3 months Isoniazid + Rifapentine
+5,Drug Resistant Tb,Mono Resistant Tb,Resistance to one first-line drug
+5,Drug Resistant Tb > Mdr Tb,Definition,Resistance to Isoniazid and Rifampicin
+5,Drug Resistant Tb > Mdr Tb > Global Prevalence,New Cases,≈3–4%
+5,Drug Resistant Tb > Mdr Tb > Global Prevalence,Previously Treated,≈20%
+5,Drug Resistant Tb > Xdr Tb,Definition,MDR-TB + resistance to fluoroquinolones and injectable second-line drugs
+5,Drug Resistant Tb > Xdr Tb,Injectables 1,Amikacin
+5,Drug Resistant Tb > Xdr Tb,Injectables 2,Kanamycin
+5,Drug Resistant Tb > Xdr Tb,Injectables 3,Capreomycin
+5,Mdr Tb Management,Treatment Duration,18–24 months
+5,Mdr Tb Management,Challenges 1,High cost
+5,Mdr Tb Management,Challenges 2,Severe side effects
+5,Mdr Tb Management,Challenges 3,Limited drug availability
+5,Mdr Tb Management,Resistance Causes 1,Poor adherence
+5,Mdr Tb Management,Resistance Causes 2,Incorrect regimens
+5,Mdr Tb Management,Resistance Causes 3,Substandard drugs
+5,Directly Observed Therapy,Abbreviation,DOT
+5,Directly Observed Therapy,Definition,Observed intake of every dose
+5,Directly Observed Therapy,Benefits 1,Improved adherence
+5,Directly Observed Therapy,Benefits 2,Reduced resistance
+5,Directly Observed Therapy,Benefits 3,Better outcomes
+5,Prevention,Primary Prevention 1,Early detection
+5,Prevention,Primary Prevention 2,Complete treatment
+5,Prevention > Vaccination,Name,BCG
+5,Prevention > Vaccination,Target,Infants
+5,Prevention > Vaccination,Protects Against 1,TB meningitis
+5,Prevention > Vaccination,Protects Against 2,Miliary TB
+5,Prevention > Vaccination,Limitations 1,Limited adult pulmonary protection
+5,Prevention,Infection Control 1,Ventilation
+5,Prevention,Infection Control 2,Respiratory hygiene
+5,Prevention,Infection Control 3,Mask use
+5,Prevention,Infection Control 4,Sunlight exposure
+5,Special Populations > Children,Features 1,Often smear-negative
+5,Special Populations > Children,Features 2,Higher risk of severe TB
+5,Special Populations > Hiv Tb,Impact 1,Higher progression risk
+5,Special Populations > Hiv Tb,Impact 2,Atypical presentation
+5,Special Populations > Hiv Tb,Impact 3,Higher mortality
+5,Public Health Importance,Notification Required,True
+5,Public Health Importance,Contact Tracing,True
+5,Public Health Importance,Surveillance,True
+5,Public Health Importance,Laboratory Role 1,Case detection
+5,Public Health Importance,Laboratory Role 2,Resistance monitoring
+5,Public Health Importance,Laboratory Role 3,Treatment follow-up
+5,Chatbot Capabilities,Education,True
+5,Chatbot Capabilities,Symptom Assessment,True
+5,Chatbot Capabilities,Risk Screening,True
+5,Chatbot Capabilities,Treatment Guidance,True
+5,Chatbot Capabilities,Adherence Support,True
+5,Chatbot Capabilities,Myth Busting,True
+5,General,Key Messages 1,Tuberculosis is curable
+5,General,Key Messages 2,Early diagnosis saves lives
+5,General,Key Messages 3,Incomplete treatment causes drug resistance
+5,General,Key Messages 4,Treatment is the best prevention
+6,Meta,Knowledge Type,Medical / Public Health
+6,Meta,Disease,Tuberculosis
+6,Meta,Abbreviation,TB
+6,Meta,Version,1.0
+6,Meta,Source Type 1,Medical textbooks
+6,Meta,Source Type 2,WHO guidelines
+6,Meta,Source Type 3,TB training modules
+6,Meta,Source Type 4,Public health manuals
+6,Basic Information,Definition,"Tuberculosis is a chronic infectious disease caused by Mycobacterium tuberculosis, primarily affecting the lungs but capable of involving almost any organ."
+6,Basic Information,Disease Category,Communicable disease
+6,Basic Information,Notifiable Disease,True
+6,Basic Information,Curable,True
+6,Basic Information,Preventable,True
+6,Etiology > Causative Agent,Name,Mycobacterium tuberculosis
+6,Etiology > Causative Agent,Family,Mycobacteriaceae
+6,Etiology > Causative Agent,Characteristics 1,Acid-fast bacillus
+6,Etiology > Causative Agent,Characteristics 2,Aerobic
+6,Etiology > Causative Agent,Characteristics 3,Slow growing
+6,Etiology > Causative Agent,Characteristics 4,Obligate human pathogen
+6,Etiology,Mtb Complex 1,M. tuberculosis
+6,Etiology,Mtb Complex 2,M. bovis
+6,Etiology,Mtb Complex 3,M. africanum
+6,Etiology,Mtb Complex 4,M. microti
+6,Etiology,Mtb Complex 5,M. canettii
+6,Etiology,Reservoir,Humans
+6,Transmission,Mode,Airborne
+6,Transmission,Infectious Unit,Droplet nuclei
+6,Transmission,Particle Size,1–5 microns
+6,Transmission,Generation Activities 1,Coughing
+6,Transmission,Generation Activities 2,Sneezing
+6,Transmission,Generation Activities 3,Talking
+6,Transmission,Generation Activities 4,Singing
+6,Transmission,Generation Activities 5,Shouting
+6,Transmission > Environmental Survival,Air,Several hours
+6,Transmission > Environmental Survival,Sunlight,Rapidly kills bacilli
+6,Transmission > Environmental Survival,Heat,Killed above 60°C
+6,Transmission,Not Transmitted By 1,Food
+6,Transmission,Not Transmitted By 2,Water
+6,Transmission,Not Transmitted By 3,Touch
+6,Transmission,Not Transmitted By 4,Sexual contact
+6,Transmission,Not Transmitted By 5,Blood
+6,Natural History,Infection Process 1,Inhalation of MTB
+6,Natural History,Infection Process 2,Deposition in alveoli
+6,Natural History,Infection Process 3,Macrophage ingestion
+6,Natural History,Infection Process 4,Granuloma formation
+6,Natural History,Possible Outcomes 1,Latent TB infection
+6,Natural History,Possible Outcomes 2,Primary TB disease
+6,Natural History,Possible Outcomes 3,Reactivation TB
+6,Tb Types > Latent Tb Infection,Abbreviation,LTBI
+6,Tb Types > Latent Tb Infection,Symptoms,False
+6,Tb Types > Latent Tb Infection,Infectious,False
+6,Tb Types > Latent Tb Infection,Diagnostic Status 1,TST positive
+6,Tb Types > Latent Tb Infection,Diagnostic Status 2,IGRA positive
+6,Tb Types > Latent Tb Infection,Treatment Required,True
+6,Tb Types > Active Tb Disease,Symptoms,True
+6,Tb Types > Active Tb Disease,Infectious,True
+6,Tb Types > Active Tb Disease,Public Health Action 1,Isolation
+6,Tb Types > Active Tb Disease,Public Health Action 2,Contact tracing
+6,Tb Types > Active Tb Disease,Public Health Action 3,Notification
+6,Risk Factors,Biological 1,HIV infection
+6,Risk Factors,Biological 2,Young children
+6,Risk Factors,Biological 3,Elderly
+6,Risk Factors,Biological 4,Malnutrition
+6,Risk Factors,Medical 1,Diabetes mellitus
+6,Risk Factors,Medical 2,Chronic kidney disease
+6,Risk Factors,Medical 3,Cancer
+6,Risk Factors,Medical 4,Steroid therapy
+6,Risk Factors,Medical 5,Organ transplantation
+6,Risk Factors,Social Environmental 1,Overcrowding
+6,Risk Factors,Social Environmental 2,Poor ventilation
+6,Risk Factors,Social Environmental 3,Poverty
+6,Risk Factors,Social Environmental 4,Smoking
+6,Risk Factors,Social Environmental 5,Alcohol abuse
+6,Risk Factors,Occupational 1,Healthcare workers
+6,Risk Factors,Occupational 2,Laboratory staff
+6,Risk Factors,Occupational 3,Prison workers
+6,Clinical Manifestations,General Symptoms 1,Fever
+6,Clinical Manifestations,General Symptoms 2,Night sweats
+6,Clinical Manifestations,General Symptoms 3,Weight loss
+6,Clinical Manifestations,General Symptoms 4,Fatigue
+6,Clinical Manifestations,General Symptoms 5,Loss of appetite
+6,Clinical Manifestations,Pulmonary Tb 1,Persistent cough (>2 weeks)
+6,Clinical Manifestations,Pulmonary Tb 2,Sputum production
+6,Clinical Manifestations,Pulmonary Tb 3,Hemoptysis
+6,Clinical Manifestations,Pulmonary Tb 4,Chest pain
+6,Clinical Manifestations,Pulmonary Tb 5,Breathlessness
+6,Clinical Manifestations > Extrapulmonary Tb,Lymph Node Tb 1,Painless swelling
+6,Clinical Manifestations > Extrapulmonary Tb,Bone Joint Tb 1,Back pain
+6,Clinical Manifestations > Extrapulmonary Tb,Bone Joint Tb 2,Joint swelling
+6,Clinical Manifestations > Extrapulmonary Tb,Tb Meningitis 1,Headache
+6,Clinical Manifestations > Extrapulmonary Tb,Tb Meningitis 2,Vomiting
+6,Clinical Manifestations > Extrapulmonary Tb,Tb Meningitis 3,Neck stiffness
+6,Clinical Manifestations > Extrapulmonary Tb,Genitourinary Tb 1,Dysuria
+6,Clinical Manifestations > Extrapulmonary Tb,Genitourinary Tb 2,Infertility
+6,Clinical Manifestations > Extrapulmonary Tb,Abdominal Tb 1,Abdominal pain
+6,Clinical Manifestations > Extrapulmonary Tb,Abdominal Tb 2,Ascites
+6,Diagnosis,Screening 1,Symptom screening
+6,Diagnosis,Screening 2,Chest X-ray
+6,Diagnosis > Laboratory Diagnosis > Sputum Smear,Method,Ziehl–Neelsen / Fluorescent microscopy
+6,Diagnosis > Laboratory Diagnosis > Sputum Smear,Advantage,Simple and cheap
+6,Diagnosis > Laboratory Diagnosis > Sputum Smear,Limitation,Low sensitivity
+6,Diagnosis > Laboratory Diagnosis > Molecular Tests > Xpert Mtb Rif,Detects 1,MTB
+6,Diagnosis > Laboratory Diagnosis > Molecular Tests > Xpert Mtb Rif,Detects 2,Rifampicin resistance
+6,Diagnosis > Laboratory Diagnosis > Molecular Tests > Xpert Mtb Rif,Turnaround Time,2 hours
+6,Diagnosis > Laboratory Diagnosis > Culture,Gold Standard,True
+6,Diagnosis > Laboratory Diagnosis > Culture,Media 1,Lowenstein-Jensen
+6,Diagnosis > Laboratory Diagnosis > Culture,Media 2,Liquid culture
+6,Diagnosis > Laboratory Diagnosis > Culture,Time,2–8 weeks
+6,Diagnosis > Laboratory Diagnosis > Drug Susceptibility Testing,Purpose,Detect drug resistance
+6,Treatment,Principles 1,Combination therapy
+6,Treatment,Principles 2,Adequate duration
+6,Treatment,Principles 3,Strict adherence
+6,Treatment,Principles 4,Never monotherapy
+6,Treatment > Drug Susceptible Tb,Total Duration,6 months
+6,Treatment > Drug Susceptible Tb > Intensive Phase,Duration,2 months
+6,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 1,H
+6,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 2,R
+6,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 3,Z
+6,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 4,E
+6,Treatment > Drug Susceptible Tb > Continuation Phase,Duration,4 months
+6,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 1,H
+6,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 2,R
+6,Treatment > Latent Tb,Recommended Regimens 1,Isoniazid 6–9 months
+6,Treatment > Latent Tb,Recommended Regimens 2,Rifampicin 4 months
+6,Treatment > Latent Tb,Recommended Regimens 3,INH + Rifapentine 3 months
+6,Drug Resistant Tb,Mono Resistant,Resistance to one first-line drug
+6,Drug Resistant Tb > Mdr Tb,Definition,Resistance to isoniazid and rifampicin
+6,Drug Resistant Tb > Xdr Tb,Definition,MDR-TB plus resistance to fluoroquinolones and second-line injectables
+6,Drug Resistant Tb,Causes 1,Incomplete treatment
+6,Drug Resistant Tb,Causes 2,Incorrect regimens
+6,Drug Resistant Tb,Causes 3,Poor-quality drugs
+6,Mdr Tb Treatment,Duration,18–24 months
+6,Mdr Tb Treatment,Drug Classes 1,Fluoroquinolones
+6,Mdr Tb Treatment,Drug Classes 2,Bedaquiline
+6,Mdr Tb Treatment,Drug Classes 3,Linezolid
+6,Mdr Tb Treatment,Drug Classes 4,Clofazimine
+6,Mdr Tb Treatment,Challenges 1,Toxicity
+6,Mdr Tb Treatment,Challenges 2,High cost
+6,Mdr Tb Treatment,Challenges 3,Adherence difficulty
+6,Prevention,Primary Prevention 1,Early diagnosis
+6,Prevention,Primary Prevention 2,Effective treatment
+6,Prevention > Vaccination,Name,BCG
+6,Prevention > Vaccination,Given At,Birth
+6,Prevention > Vaccination,Protects Against 1,TB meningitis
+6,Prevention > Vaccination,Protects Against 2,Miliary TB
+6,Prevention,Infection Control 1,Ventilation
+6,Prevention,Infection Control 2,Masks
+6,Prevention,Infection Control 3,Cough etiquette
+6,Prevention,Infection Control 4,Sunlight
+6,Public Health Actions,Contact Tracing,True
+6,Public Health Actions,Case Notification,True
+6,Public Health Actions,Surveillance,True
+6,Public Health Actions,Recording Reporting,True
+6,Patient Education,Do 1,Complete full treatment
+6,Patient Education,Do 2,Attend follow-ups
+6,Patient Education,Do 3,Cover mouth when coughing
+6,Patient Education,Dont 1,Stop medicines early
+6,Patient Education,Dont 2,Miss doses
+6,Patient Education,Dont 3,Self-medicate
+6,Chatbot Features Supported,Faq,True
+6,Chatbot Features Supported,Symptom Checker,True
+6,Chatbot Features Supported,Risk Assessment,True
+6,Chatbot Features Supported,Treatment Explainer,True
+6,Chatbot Features Supported,Adherence Reminders,True
+6,Chatbot Features Supported,Myth Busting,True
+6,Chatbot Features Supported,Training Support,True
+6,General,Core Messages 1,TB is curable
+6,General,Core Messages 2,Incomplete treatment causes drug resistance
+6,General,Core Messages 3,Early diagnosis prevents spread
+6,General,Core Messages 4,Treatment is the best prevention
+7,Disease Profile,Name,Tuberculosis
+7,Disease Profile,Short Name,TB
+7,Disease Profile,Disease Type,Communicable infectious disease
+7,Disease Profile,Notifiable,True
+7,Disease Profile,Curable,True
+7,Disease Profile,Preventable,True
+7,Disease Profile,Who Priority Disease,True
+7,Causative Agent,Primary Agent,Mycobacterium tuberculosis
+7,Causative Agent,Organism Type,Bacterium
+7,Causative Agent,Family,Mycobacteriaceae
+7,Causative Agent,Characteristics 1,Acid-fast bacillus
+7,Causative Agent,Characteristics 2,Aerobic
+7,Causative Agent,Characteristics 3,Slow-growing
+7,Causative Agent,Characteristics 4,Intracellular pathogen
+7,Causative Agent,Mtb Complex 1,Mycobacterium tuberculosis
+7,Causative Agent,Mtb Complex 2,Mycobacterium bovis
+7,Causative Agent,Mtb Complex 3,Mycobacterium africanum
+7,Causative Agent,Mtb Complex 4,Mycobacterium microti
+7,Causative Agent,Mtb Complex 5,Mycobacterium canettii
+7,Causative Agent,Reservoir,Humans
+7,Transmission,Mode,Airborne
+7,Transmission,Infectious Unit,Droplet nuclei
+7,Transmission,Particle Size Microns,1–5
+7,Transmission,Generated By 1,Coughing
+7,Transmission,Generated By 2,Sneezing
+7,Transmission,Generated By 3,Talking
+7,Transmission,Generated By 4,Singing
+7,Transmission,Generated By 5,Shouting
+7,Transmission > Environmental Survival,Air,Several hours
+7,Transmission > Environmental Survival,Sunlight,Rapidly kills bacilli
+7,Transmission > Environmental Survival,Heat,Destroyed above 60°C
+7,Transmission,Not Transmitted By 1,Food
+7,Transmission,Not Transmitted By 2,Water
+7,Transmission,Not Transmitted By 3,Touch
+7,Transmission,Not Transmitted By 4,Sexual contact
+7,Transmission,Not Transmitted By 5,Blood transfusion
+7,Epidemiology > Global Burden,Latent Infection,≈2 billion people
+7,Epidemiology > Global Burden,Annual Incidence,≈9 million cases
+7,Epidemiology > Global Burden,Annual Deaths,≈1.4–1.7 million
+7,Epidemiology > Global Burden,Hiv Coinfection Rate,≈13%
+7,Epidemiology,High Burden Regions 1,Africa
+7,Epidemiology,High Burden Regions 2,South-East Asia
+7,Epidemiology,High Burden Regions 3,Western Pacific
+7,Epidemiology,High Burden Countries 1,India
+7,Epidemiology,High Burden Countries 2,China
+7,Epidemiology,High Burden Countries 3,Indonesia
+7,Epidemiology,High Burden Countries 4,Philippines
+7,Epidemiology,High Burden Countries 5,Pakistan
+7,Epidemiology,High Burden Countries 6,Nigeria
+7,Epidemiology,High Burden Countries 7,South Africa
+7,Natural History,Infection Process 1,Inhalation of MTB
+7,Natural History,Infection Process 2,Deposition in alveoli
+7,Natural History,Infection Process 3,Macrophage ingestion
+7,Natural History,Infection Process 4,Granuloma formation
+7,Natural History,Outcomes 1,Latent TB infection
+7,Natural History,Outcomes 2,Primary TB disease
+7,Natural History,Outcomes 3,Reactivation TB
+7,Classification > Latent Tb Infection,Abbreviation,LTBI
+7,Classification > Latent Tb Infection,Symptoms,False
+7,Classification > Latent Tb Infection,Infectious,False
+7,Classification > Latent Tb Infection,Diagnostic Tests 1,TST positive
+7,Classification > Latent Tb Infection,Diagnostic Tests 2,IGRA positive
+7,Classification > Latent Tb Infection,Treatment Recommended,True
+7,Classification > Active Tb Disease,Symptoms,True
+7,Classification > Active Tb Disease,Infectious,True
+7,Classification > Active Tb Disease,Public Health Actions 1,Isolation
+7,Classification > Active Tb Disease,Public Health Actions 2,Notification
+7,Classification > Active Tb Disease,Public Health Actions 3,Contact tracing
+7,Risk Factors,Biological 1,HIV infection
+7,Risk Factors,Biological 2,Young children
+7,Risk Factors,Biological 3,Elderly
+7,Risk Factors,Biological 4,Malnutrition
+7,Risk Factors,Medical 1,Diabetes mellitus
+7,Risk Factors,Medical 2,Chronic kidney disease
+7,Risk Factors,Medical 3,Cancer
+7,Risk Factors,Medical 4,Steroid therapy
+7,Risk Factors,Medical 5,Organ transplantation
+7,Risk Factors,Social Environmental 1,Overcrowding
+7,Risk Factors,Social Environmental 2,Poor ventilation
+7,Risk Factors,Social Environmental 3,Poverty
+7,Risk Factors,Social Environmental 4,Smoking
+7,Risk Factors,Social Environmental 5,Alcohol abuse
+7,Risk Factors,Occupational 1,Healthcare workers
+7,Risk Factors,Occupational 2,Laboratory staff
+7,Risk Factors,Occupational 3,Prison staff
+7,Clinical Features,General Symptoms 1,Fever
+7,Clinical Features,General Symptoms 2,Night sweats
+7,Clinical Features,General Symptoms 3,Weight loss
+7,Clinical Features,General Symptoms 4,Fatigue
+7,Clinical Features,General Symptoms 5,Loss of appetite
+7,Clinical Features,Pulmonary Tb 1,Cough >2–3 weeks
+7,Clinical Features,Pulmonary Tb 2,Sputum production
+7,Clinical Features,Pulmonary Tb 3,Hemoptysis
+7,Clinical Features,Pulmonary Tb 4,Chest pain
+7,Clinical Features,Pulmonary Tb 5,Breathlessness
+7,Clinical Features > Extrapulmonary Tb,Common Sites 1,Lymph nodes
+7,Clinical Features > Extrapulmonary Tb,Common Sites 2,Bones
+7,Clinical Features > Extrapulmonary Tb,Common Sites 3,Joints
+7,Clinical Features > Extrapulmonary Tb,Common Sites 4,Spine
+7,Clinical Features > Extrapulmonary Tb,Common Sites 5,Brain
+7,Clinical Features > Extrapulmonary Tb,Common Sites 6,Kidneys
+7,Clinical Features > Extrapulmonary Tb,Common Sites 7,Genital tract
+7,Diagnosis,Screening Tools 1,Symptom screening
+7,Diagnosis,Screening Tools 2,Chest X-ray
+7,Diagnosis > Laboratory Tests > Sputum Smear Microscopy,Method,Ziehl–Neelsen / Fluorescent microscopy
+7,Diagnosis > Laboratory Tests > Sputum Smear Microscopy,Advantages 1,Low cost
+7,Diagnosis > Laboratory Tests > Sputum Smear Microscopy,Advantages 2,Rapid
+7,Diagnosis > Laboratory Tests > Sputum Smear Microscopy,Limitations 1,Low sensitivity
+7,Diagnosis > Laboratory Tests > Molecular Tests > Xpert Mtb Rif,Detects 1,Mycobacterium tuberculosis
+7,Diagnosis > Laboratory Tests > Molecular Tests > Xpert Mtb Rif,Detects 2,Rifampicin resistance
+7,Diagnosis > Laboratory Tests > Molecular Tests > Xpert Mtb Rif,Turnaround Time,≈2 hours
+7,Diagnosis > Laboratory Tests > Culture,Gold Standard,True
+7,Diagnosis > Laboratory Tests > Culture,Media 1,Lowenstein–Jensen
+7,Diagnosis > Laboratory Tests > Culture,Media 2,Liquid culture
+7,Diagnosis > Laboratory Tests > Culture,Time Required,2–8 weeks
+7,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Purpose,Detect drug resistance
+7,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Mandatory For 1,Treatment failure
+7,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Mandatory For 2,Relapse
+7,Diagnosis > Laboratory Tests > Drug Susceptibility Testing,Mandatory For 3,MDR suspicion
+7,Treatment,Principles 1,Combination therapy
+7,Treatment,Principles 2,Adequate duration
+7,Treatment,Principles 3,Strict adherence
+7,Treatment,Principles 4,Never monotherapy
+7,Treatment > Drug Susceptible Tb,Total Duration,6 months
+7,Treatment > Drug Susceptible Tb > Intensive Phase,Duration,2 months
+7,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 1,Isoniazid
+7,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 2,Rifampicin
+7,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 3,Pyrazinamide
+7,Treatment > Drug Susceptible Tb > Intensive Phase,Drugs 4,Ethambutol
+7,Treatment > Drug Susceptible Tb > Continuation Phase,Duration,4 months
+7,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 1,Isoniazid
+7,Treatment > Drug Susceptible Tb > Continuation Phase,Drugs 2,Rifampicin
+7,Treatment > Latent Tb Infection,Recommended Regimens 1,Isoniazid 6–9 months
+7,Treatment > Latent Tb Infection,Recommended Regimens 2,Rifampicin 4 months
+7,Treatment > Latent Tb Infection,Recommended Regimens 3,Isoniazid + Rifapentine 3 months
+7,Drug Resistant Tb,Mono Resistant Tb,Resistance to one first-line drug
+7,Drug Resistant Tb > Mdr Tb,Definition,Resistance to isoniazid and rifampicin
+7,Drug Resistant Tb > Xdr Tb,Definition,MDR-TB plus resistance to fluoroquinolones and second-line injectable drugs
+7,Drug Resistant Tb,Causes 1,Incomplete treatment
+7,Drug Resistant Tb,Causes 2,Incorrect regimens
+7,Drug Resistant Tb,Causes 3,Poor adherence
+7,Drug Resistant Tb,Causes 4,Substandard drugs
+7,Mdr Tb Management,Treatment Duration,18–24 months
+7,Mdr Tb Management,Key Drugs 1,Fluoroquinolones
+7,Mdr Tb Management,Key Drugs 2,Bedaquiline
+7,Mdr Tb Management,Key Drugs 3,Linezolid
+7,Mdr Tb Management,Key Drugs 4,Clofazimine
+7,Mdr Tb Management,Challenges 1,High cost
+7,Mdr Tb Management,Challenges 2,Drug toxicity
+7,Mdr Tb Management,Challenges 3,Adherence difficulty
+7,Prevention,Primary Prevention 1,Early case detection
+7,Prevention,Primary Prevention 2,Effective treatment
+7,Prevention > Vaccination,Name,BCG
+7,Prevention > Vaccination,Given At,Birth
+7,Prevention > Vaccination,Protects Against 1,TB meningitis
+7,Prevention > Vaccination,Protects Against 2,Miliary TB
+7,Prevention > Vaccination,Limitations 1,Limited protection against adult pulmonary TB
+7,Prevention,Infection Control 1,Adequate ventilation
+7,Prevention,Infection Control 2,Respiratory hygiene
+7,Prevention,Infection Control 3,Mask use
+7,Prevention,Infection Control 4,Sunlight exposure
+7,Public Health Actions,Case Notification,True
+7,Public Health Actions,Contact Tracing,True
+7,Public Health Actions,Surveillance,True
+7,Public Health Actions,Recording And Reporting,True
+7,Patient Education,Do 1,Complete full treatment
+7,Patient Education,Do 2,Attend follow-up visits
+7,Patient Education,Do 3,Cover mouth when coughing
+7,Patient Education,Do Not 1,Stop medicines early
+7,Patient Education,Do Not 2,Miss doses
+7,Patient Education,Do Not 3,Self-medicate
+7,Chatbot Capabilities,Faq Support,True
+7,Chatbot Capabilities,Symptom Checker,True
+7,Chatbot Capabilities,Risk Assessment,True
+7,Chatbot Capabilities,Diagnosis Explainer,True
+7,Chatbot Capabilities,Treatment Guidance,True
+7,Chatbot Capabilities,Adherence Support,True
+7,Chatbot Capabilities,Myth Busting,True
+7,Chatbot Capabilities,Training And Exam Support,True
+7,General,Core Health Messages 1,Tuberculosis is curable
+7,General,Core Health Messages 2,Incomplete treatment causes drug resistance
+7,General,Core Health Messages 3,Early diagnosis prevents spread
+7,General,Core Health Messages 4,Treatment is the best prevention
+8,Metadata,Document Title,National Tuberculosis (TB) Guidelines for Ireland 2024
+8,Metadata,Chapter,Chapter 3 – Tuberculosis (TB) Disease
+8,Metadata,Version,V1.1
+8,Metadata,Publisher,"HSE Public Health, National Health Protection Office"
+8,Metadata,Year,2024
+8,Metadata,Scope,"Diagnosis, management, treatment, and special populations for TB disease"
+8,Tb Overview > Definition,Tb Disease,Active infection with Mycobacterium tuberculosis complex causing symptoms and signs
+8,Tb Overview > Definition,Latent Tb,Inactive mycobacteria present without symptoms
+8,Tb Overview > Diagnosis Basis,Culture Confirmed,75–85% cases
+8,Tb Overview > Diagnosis Basis,Clinical Diagnosis,"15–25% based on clinical, radiological, pathological features and treatment response"
+8,Tb Overview,High Risk Groups 1,People from high TB incidence countries
+8,Tb Overview,High Risk Groups 2,Immunosuppressed individuals
+8,Tb Overview,High Risk Groups 3,People living with HIV
+8,Tb Overview,High Risk Groups 4,"Underserved populations (homeless, refugees, Roma, Travellers)"
+8,Symptoms,Common 1,Chronic cough > 3 weeks
+8,Symptoms,Common 2,Unexplained weight loss
+8,Symptoms,Common 3,Loss of appetite
+8,Symptoms,Common 4,Night sweats
+8,Diagnostic Guidelines,General Principles 1,Always obtain microbiological samples before starting treatment if possible
+8,Diagnostic Guidelines,General Principles 2,GeneXpert MTB/RIF Ultra and TB cultures recommended
+8,Diagnostic Guidelines,General Principles 3,All TB patients must be tested for HIV
+8,Diagnostic Guidelines > Pulmonary Tb,Initial Test,Chest X-ray
+8,Diagnostic Guidelines > Pulmonary Tb > Samples,Sputum,At least 3 deep cough sputum samples
+8,Diagnostic Guidelines > Pulmonary Tb > Samples,Alternatives 1,Induced sputum with hypertonic saline
+8,Diagnostic Guidelines > Pulmonary Tb > Samples,Alternatives 2,Bronchoscopy and lavage
+8,Diagnostic Guidelines > Pulmonary Tb > Samples,Alternatives 3,CT Thorax if sputum negative or unobtainable
+8,Diagnostic Guidelines > Pulmonary Tb,Notes 1,Laryngeal TB may occur with normal chest X-ray
+8,Diagnostic Guidelines > Pulmonary Tb,Notes 2,IGRA tests have limited diagnostic utility for active TB
+8,Diagnostic Guidelines > Extrapulmonary Tb,General 1,Offer chest X-ray to all suspected cases
+8,Diagnostic Guidelines > Extrapulmonary Tb,General 2,Do not place samples in formalin for TB culture
+8,Diagnostic Guidelines > Extrapulmonary Tb,General 3,"Rapid tests have low sensitivity in fluids (CSF, pleural, ascitic)"
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Pleural Tb,Tests 1,Chest X-ray
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Pleural Tb,Tests 2,CT Thorax
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Pleural Tb,Tests 3,Ultrasound-guided pleural fluid analysis
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Pleural Tb,Tests 4,ADA measurement
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Pleural Tb,Tests 5,Pleural biopsy if non-diagnostic
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Lymph Node Tb,Diagnostics 1,Ultrasound / EBUS
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Lymph Node Tb,Diagnostics 2,CT / MRI
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Lymph Node Tb,Diagnostics 3,Biopsy or aspiration
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Diagnostics 1,X-ray
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Diagnostics 2,CT
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Diagnostics 3,MRI
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Diagnostics 4,Joint aspiration or biopsy
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Special Notes 1,TB drugs are first-line
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Bone Joint Tb,Special Notes 2,Surgery only if spinal instability or cord compression
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Cns Tb,Diagnostics 1,CT / MRI brain
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Cns Tb,Diagnostics 2,CSF analysis
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Cns Tb,Diagnostics 3,Tuberculoma biopsy
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Cns Tb,Treatment Note,Start treatment even if GeneXpert is negative when clinical suspicion is high
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Disseminated Tb,Tests 1,"CT head, thorax, abdomen, pelvis"
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Disseminated Tb,Tests 2,Bone marrow aspirate
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Disseminated Tb,Tests 3,Blood culture for TB
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Genitourinary Tb,Tests 1,3 early morning urine samples over 3 days
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Genitourinary Tb,Tests 2,Ultrasound
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Genitourinary Tb,Tests 3,IV urography
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Genitourinary Tb,Tests 4,Biopsy if needed
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Skin Tb,Tests 1,Skin biopsy
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Skin Tb,Tests 2,GeneXpert
+8,Diagnostic Guidelines > Extrapulmonary Tb > Types > Skin Tb,Tests 3,Culture and histology
+8,Management,Referral,Refer to TB specialist clinician
+8,Management,Care Model 1,Multidisciplinary TB team
+8,Management,Care Model 2,Dedicated TB nurse
+8,Management,Care Model 3,"Psychosocial support (housing, welfare, education)"
+8,Management > Treatment Adherence,Methods 1,DOTS (Directly Observed Therapy)
+8,Management > Treatment Adherence,Methods 2,VOTS (Video Observed Therapy)
+8,Management > Treatment Adherence,Priority Groups 1,Drug-resistant TB
+8,Management > Treatment Adherence,Priority Groups 2,Poor adherence risk
+8,Drug Regimens > Standard Therapy > Intensive Phase,Duration,2 months
+8,Drug Regimens > Standard Therapy > Intensive Phase,Drugs 1,Rifampicin
+8,Drug Regimens > Standard Therapy > Intensive Phase,Drugs 2,Isoniazid + Pyridoxine
+8,Drug Regimens > Standard Therapy > Intensive Phase,Drugs 3,Pyrazinamide
+8,Drug Regimens > Standard Therapy > Intensive Phase,Drugs 4,Ethambutol
+8,Drug Regimens > Standard Therapy > Continuation Phase,Duration,4 months
+8,Drug Regimens > Standard Therapy > Continuation Phase,Drugs 1,Rifampicin
+8,Drug Regimens > Standard Therapy > Continuation Phase,Drugs 2,Isoniazid + Pyridoxine
+8,Drug Regimens > Extended Therapy,Cns Tb,Total 12 months
+8,Drug Regimens > Extended Therapy,Bone Or Spinal Tb,9–12 months
+8,Drug Regimens > Extended Therapy,Cavitary Tb,9 months total
+8,Special Populations > Pregnancy Breastfeeding,Guidance 1,Do not delay TB treatment
+8,Special Populations > Pregnancy Breastfeeding,Guidance 2,Standard regimen is safe
+8,Special Populations > Pregnancy Breastfeeding,Guidance 3,Breastfeeding encouraged if non-infectious
+8,Special Populations > Pregnancy Breastfeeding,Guidance 4,Give pyridoxine to mother and infant
+8,Special Populations > Hiv Coinfection,Key Points 1,Start ART early except in CNS TB
+8,Special Populations > Hiv Coinfection,Key Points 2,High risk of IRIS
+8,Special Populations > Hiv Coinfection,Key Points 3,Delay ART 4–8 weeks in CNS TB
+8,Special Populations > Liver Disease,Management 1,Monitor liver enzymes closely
+8,Special Populations > Liver Disease,Management 2,Avoid pyrazinamide if severe hepatotoxicity
+8,Special Populations > Liver Disease,Management 3,Interrupt treatment if ALT >5x ULN
+8,Special Populations > Renal Disease,Management 1,Increase dosing intervals
+8,Special Populations > Renal Disease,Management 2,Post-dialysis dosing preferred
+8,Special Populations > Renal Disease,Management 3,Therapeutic drug monitoring if needed
+8,Adjunctive Therapy > Corticosteroids,Indications 1,CNS TB
+8,Adjunctive Therapy > Corticosteroids,Indications 2,Selected pericardial TB cases
+8,Adjunctive Therapy > Corticosteroids,Drugs 1,Dexamethasone
+8,Adjunctive Therapy > Corticosteroids,Drugs 2,Prednisolone
+8,Adjunctive Therapy > Corticosteroids,Duration,4–8 weeks taper
+8,General,Chatbot Intents 1,tb_symptom_check
+8,General,Chatbot Intents 2,tb_diagnosis_guidance
+8,General,Chatbot Intents 3,pulmonary_tb_workup
+8,General,Chatbot Intents 4,extrapulmonary_tb_types
+8,General,Chatbot Intents 5,tb_treatment_plan
+8,General,Chatbot Intents 6,drug_dosing_info
+8,General,Chatbot Intents 7,tb_in_pregnancy
+8,General,Chatbot Intents 8,tb_hiv_coinfection
+8,General,Chatbot Intents 9,tb_side_effects
+8,General,Chatbot Intents 10,tb_duration_of_therapy
+9,Metadata,Document,National Tuberculosis Guidelines – Tuber09
+9,Metadata,Domain,Infectious Diseases
+9,Metadata,Condition,Tuberculosis (TB)
+9,Metadata,Audience 1,Clinicians
+9,Metadata,Audience 2,Students
+9,Metadata,Audience 3,Public Health
+9,Metadata,Audience 4,Chatbot Users
+9,Metadata,Country Context,Ireland
+9,Metadata,Year,2024
+9,Tb Classification,Types 1,Pulmonary TB
+9,Tb Classification,Types 2,Extrapulmonary TB
+9,Tb Classification,Types 3,Drug-Sensitive TB
+9,Tb Classification,Types 4,Drug-Resistant TB
+9,Tb Classification,Types 5,Latent TB Infection (LTBI)
+9,Tb Classification > Infectious Status,Infectious,Pulmonary and laryngeal TB
+9,Tb Classification > Infectious Status,Non Infectious,Most extrapulmonary TB
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 1,Cough > 3 weeks
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 2,Hemoptysis
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 3,Fever
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 4,Night sweats
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 5,Weight loss
+9,Diagnostic Workflow > Initial Assessment,Trigger Symptoms 6,Fatigue
+9,Diagnostic Workflow > Initial Assessment,Risk Factors 1,HIV
+9,Diagnostic Workflow > Initial Assessment,Risk Factors 2,Immunosuppression
+9,Diagnostic Workflow > Initial Assessment,Risk Factors 3,Previous TB treatment
+9,Diagnostic Workflow > Initial Assessment,Risk Factors 4,Close contact with TB patient
+9,Diagnostic Workflow > Initial Assessment,Risk Factors 5,Origin from high TB incidence country
+9,Diagnostic Workflow,Testing Sequence 1,Chest X-ray
+9,Diagnostic Workflow,Testing Sequence 2,GeneXpert MTB/RIF Ultra
+9,Diagnostic Workflow,Testing Sequence 3,Sputum microscopy and culture
+9,Diagnostic Workflow,Testing Sequence 4,Drug susceptibility testing
+9,Diagnostic Workflow,Testing Sequence 5,HIV testing
+9,Drug Resistant Tb > Definitions,Rr Tb,Rifampicin-resistant TB
+9,Drug Resistant Tb > Definitions,Mdr Tb,Resistance to rifampicin and isoniazid
+9,Drug Resistant Tb > Definitions,Xdr Tb,MDR-TB with fluoroquinolone resistance
+9,Drug Resistant Tb,When To Suspect 1,Previous TB treatment
+9,Drug Resistant Tb,When To Suspect 2,Treatment failure
+9,Drug Resistant Tb,When To Suspect 3,Persistent sputum positivity
+9,Drug Resistant Tb,When To Suspect 4,Known contact with MDR-TB case
+9,Drug Resistant Tb,Diagnostic Tools 1,GeneXpert resistance detection
+9,Drug Resistant Tb,Diagnostic Tools 2,Line probe assays
+9,Drug Resistant Tb,Diagnostic Tools 3,Phenotypic drug susceptibility testing
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 1,Duration,2 months
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 1,Drugs 1,Rifampicin
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 1,Drugs 2,Isoniazid
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 1,Drugs 3,Pyrazinamide
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 1,Drugs 4,Ethambutol
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 2,Duration,4 months
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 2,Drugs 1,Rifampicin
+9,Treatment Protocols > Drug Sensitive Tb > Standard Regimen > Phase 2,Drugs 2,Isoniazid
+9,Treatment Protocols > Drug Resistant Tb,Principles 1,Individualized regimen
+9,Treatment Protocols > Drug Resistant Tb,Principles 2,Avoid monotherapy
+9,Treatment Protocols > Drug Resistant Tb,Principles 3,Use at least 4 effective drugs
+9,Treatment Protocols > Drug Resistant Tb,Principles 4,Longer duration (9–20 months)
+9,Monitoring And Followup,Clinical 1,Symptom resolution
+9,Monitoring And Followup,Clinical 2,Weight gain
+9,Monitoring And Followup,Clinical 3,Adherence checks
+9,Monitoring And Followup,Laboratory 1,Monthly sputum smear/culture
+9,Monitoring And Followup,Laboratory 2,Liver function tests
+9,Monitoring And Followup,Laboratory 3,Renal function tests
+9,Monitoring And Followup,Imaging 1,Repeat chest X-ray if indicated
+9,Adverse Effects,Rifampicin 1,Hepatotoxicity
+9,Adverse Effects,Rifampicin 2,Orange discoloration of body fluids
+9,Adverse Effects,Rifampicin 3,Drug interactions
+9,Adverse Effects,Isoniazid 1,Peripheral neuropathy
+9,Adverse Effects,Isoniazid 2,Hepatitis
+9,Adverse Effects,Pyrazinamide 1,Hyperuricemia
+9,Adverse Effects,Pyrazinamide 2,Hepatotoxicity
+9,Adverse Effects,Ethambutol 1,Optic neuritis
+9,Adverse Effects,Ethambutol 2,Visual acuity loss
+9,Special Populations > Pregnancy,Guidance 1,Do not delay TB treatment
+9,Special Populations > Pregnancy,Guidance 2,Avoid streptomycin
+9,Special Populations > Pregnancy,Guidance 3,Give pyridoxine supplementation
+9,Special Populations > Children,Notes 1,Weight-based dosing
+9,Special Populations > Children,Notes 2,Difficulty obtaining sputum
+9,Special Populations > Children,Notes 3,Higher risk of disseminated TB
+9,Special Populations > Elderly,Considerations 1,Drug interactions
+9,Special Populations > Elderly,Considerations 2,Comorbidities
+9,Special Populations > Elderly,Considerations 3,Renal function monitoring
+9,Infection Control > Isolation,Required For 1,Smear-positive pulmonary TB
+9,Infection Control > Isolation,Required For 2,Suspected drug-resistant TB
+9,Infection Control,Duration,Until non-infectious status confirmed
+9,Public Health Actions,Notification,Mandatory TB notification
+9,Public Health Actions,Contact Tracing 1,Household contacts
+9,Public Health Actions,Contact Tracing 2,Close workplace contacts
+9,Public Health Actions,Screening Tools 1,IGRA
+9,Public Health Actions,Screening Tools 2,Tuberculin Skin Test
+9,Chatbot Intents,Primary 1,tb_symptom_checker
+9,Chatbot Intents,Primary 2,tb_diagnosis_steps
+9,Chatbot Intents,Primary 3,tb_treatment_duration
+9,Chatbot Intents,Primary 4,tb_drug_side_effects
+9,Chatbot Intents,Primary 5,drug_resistant_tb_info
+9,Chatbot Intents,Primary 6,tb_in_pregnancy
+9,Chatbot Intents,Primary 7,tb_hiv_coinfection
+9,Chatbot Intents,Secondary 1,tb_prevention
+9,Chatbot Intents,Secondary 2,tb_contact_tracing
+9,Chatbot Intents,Secondary 3,tb_followup_schedule
+9,Disclaimer,Medical Use,This chatbot does not replace professional medical advice
+9,Disclaimer,Emergency,Refer urgently if severe symptoms or neurological signs
+10,Kb Meta,Domain,Medical
+10,Kb Meta,Topic,Tuberculosis
+10,Kb Meta,Guideline Source,National TB Guidelines
+10,Kb Meta,Documents Used 1,Tuber08.pdf
+10,Kb Meta,Documents Used 2,Tuber09.pdf
+10,Kb Meta,Documents Used 3,Tuber10.pdf
+10,Kb Meta,Version,Chatbot-KB-v3.0
+10,Kb Meta,Last Updated,2026-02-01
+10,Core Knowledge > What Is Tb,Definition,"Tuberculosis is an infectious disease caused by Mycobacterium tuberculosis complex, primarily affecting the lungs but capable of involving any organ system."
+10,Core Knowledge > What Is Tb,Transmission,Airborne droplets from infectious pulmonary or laryngeal TB cases
+10,Core Knowledge > What Is Tb,Infectious Forms 1,Pulmonary TB
+10,Core Knowledge > What Is Tb,Infectious Forms 2,Laryngeal TB
+10,Core Knowledge > What Is Tb,Non Infectious Forms 1,Extrapulmonary TB without lung involvement
+10,Core Knowledge > Tb Types,Pulmonary Tb,TB involving lungs or airways
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 1,Pleural TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 2,Lymph node TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 3,Bone and joint TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 4,Spinal TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 5,CNS TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 6,Genitourinary TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 7,Abdominal TB
+10,Core Knowledge > Tb Types,Extrapulmonary Tb 8,Skin TB
+10,Core Knowledge > Tb Types,Disseminated Tb,TB affecting two or more non-contiguous organ systems
+10,Symptom Engine,General Symptoms 1,Fever
+10,Symptom Engine,General Symptoms 2,Night sweats
+10,Symptom Engine,General Symptoms 3,Weight loss
+10,Symptom Engine,General Symptoms 4,Fatigue
+10,Symptom Engine,General Symptoms 5,Loss of appetite
+10,Symptom Engine,Pulmonary Symptoms 1,Persistent cough > 3 weeks
+10,Symptom Engine,Pulmonary Symptoms 2,Hemoptysis
+10,Symptom Engine,Pulmonary Symptoms 3,Chest pain
+10,Symptom Engine,Pulmonary Symptoms 4,Shortness of breath
+10,Symptom Engine > Site Specific Symptoms,Cns Tb 1,Headache
+10,Symptom Engine > Site Specific Symptoms,Cns Tb 2,Vomiting
+10,Symptom Engine > Site Specific Symptoms,Cns Tb 3,Seizures
+10,Symptom Engine > Site Specific Symptoms,Cns Tb 4,Altered consciousness
+10,Symptom Engine > Site Specific Symptoms,Spinal Tb 1,Back pain
+10,Symptom Engine > Site Specific Symptoms,Spinal Tb 2,Weakness in limbs
+10,Symptom Engine > Site Specific Symptoms,Spinal Tb 3,Spinal deformity
+10,Symptom Engine > Site Specific Symptoms,Genitourinary Tb 1,Hematuria
+10,Symptom Engine > Site Specific Symptoms,Genitourinary Tb 2,Flank pain
+10,Symptom Engine > Site Specific Symptoms,Genitourinary Tb 3,Infertility
+10,Risk Assessment Engine,Risk Factors 1,Recent TB contact
+10,Risk Assessment Engine,Risk Factors 2,HIV infection
+10,Risk Assessment Engine,Risk Factors 3,Immunosuppressive therapy
+10,Risk Assessment Engine,Risk Factors 4,Diabetes
+10,Risk Assessment Engine,Risk Factors 5,Malnutrition
+10,Risk Assessment Engine,Risk Factors 6,Smoking
+10,Risk Assessment Engine,Risk Factors 7,Alcohol dependence
+10,Risk Assessment Engine,High Risk Populations 1,Migrants from high TB burden countries
+10,Risk Assessment Engine,High Risk Populations 2,Homeless individuals
+10,Risk Assessment Engine,High Risk Populations 3,Prison population
+10,Risk Assessment Engine,High Risk Populations 4,Healthcare workers
+10,Diagnostic Decision Tree,Initial Steps 1,Assess symptoms
+10,Diagnostic Decision Tree,Initial Steps 2,Assess TB risk
+10,Diagnostic Decision Tree,Initial Steps 3,Order chest X-ray
+10,Diagnostic Decision Tree,Initial Steps 4,Collect microbiological samples
+10,Diagnostic Decision Tree > Microbiology,Preferred Tests 1,GeneXpert MTB/RIF Ultra
+10,Diagnostic Decision Tree > Microbiology,Preferred Tests 2,AFB smear microscopy
+10,Diagnostic Decision Tree > Microbiology,Preferred Tests 3,TB culture
+10,Diagnostic Decision Tree > Microbiology,Rules 1,Collect samples before treatment
+10,Diagnostic Decision Tree > Microbiology,Rules 2,Negative GeneXpert does not rule out TB
+10,Diagnostic Decision Tree > Microbiology,Rules 3,Culture is gold standard
+10,Diagnostic Decision Tree > Pulmonary Tb Workflow,Steps 1,Chest X-ray
+10,Diagnostic Decision Tree > Pulmonary Tb Workflow,Steps 2,3 sputum samples
+10,Diagnostic Decision Tree > Pulmonary Tb Workflow,Steps 3,GeneXpert + culture
+10,Diagnostic Decision Tree > Pulmonary Tb Workflow,Steps 4,CT chest if inconclusive
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow,General Rules 1,Always evaluate lungs
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow,General Rules 2,Never use formalin for TB samples
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Pleural Tb 1,Pleural fluid analysis
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Pleural Tb 2,ADA testing
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Pleural Tb 3,Pleural biopsy
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Cns Tb 1,MRI brain
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Cns Tb 2,CSF analysis
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Cns Tb 3,Empirical treatment if high suspicion
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Bone Joint Tb 1,MRI preferred
+10,Diagnostic Decision Tree > Extrapulmonary Tb Workflow > Site Specific,Bone Joint Tb 2,Biopsy or aspiration
+10,Treatment Engine > Standard Regimen > Intensive Phase,Duration,2 months
+10,Treatment Engine > Standard Regimen > Intensive Phase,Drugs 1,Rifampicin
+10,Treatment Engine > Standard Regimen > Intensive Phase,Drugs 2,Isoniazid
+10,Treatment Engine > Standard Regimen > Intensive Phase,Drugs 3,Pyrazinamide
+10,Treatment Engine > Standard Regimen > Intensive Phase,Drugs 4,Ethambutol
+10,Treatment Engine > Standard Regimen > Intensive Phase,Support 1,Pyridoxine supplementation
+10,Treatment Engine > Standard Regimen > Intensive Phase,Support 2,Adherence counseling
+10,Treatment Engine > Standard Regimen > Continuation Phase,Duration,4 months
+10,Treatment Engine > Standard Regimen > Continuation Phase,Drugs 1,Rifampicin
+10,Treatment Engine > Standard Regimen > Continuation Phase,Drugs 2,Isoniazid
+10,Treatment Engine > Extended Regimens,Cns Tb,12 months
+10,Treatment Engine > Extended Regimens,Spinal Tb,9–12 months
+10,Treatment Engine > Extended Regimens,Cavitary Tb,9 months
+10,Monitoring And Safety,Baseline Tests 1,Liver function tests
+10,Monitoring And Safety,Baseline Tests 2,Renal function tests
+10,Monitoring And Safety,Baseline Tests 3,Vision test (Ethambutol)
+10,Monitoring And Safety,Baseline Tests 4,HIV test
+10,Monitoring And Safety,Hepatotoxicity Rules 1,Stop drugs if ALT >5x ULN
+10,Monitoring And Safety,Hepatotoxicity Rules 2,Reintroduce drugs sequentially
+10,Special Conditions > Pregnancy,Guidance 1,Do not delay TB treatment
+10,Special Conditions > Pregnancy,Guidance 2,Avoid streptomycin
+10,Special Conditions > Pregnancy,Guidance 3,Pyridoxine mandatory
+10,Special Conditions > Hiv Tb,Rules 1,Start ART early
+10,Special Conditions > Hiv Tb,Rules 2,Delay ART in CNS TB
+10,Special Conditions > Hiv Tb,Rules 3,Monitor IRIS
+10,Special Conditions > Renal Failure,Rules 1,Dose adjustment required
+10,Special Conditions > Renal Failure,Rules 2,Post-dialysis dosing
+10,Public Health Actions,Notification,All TB cases must be notified to public health authorities
+10,Public Health Actions,Contact Tracing 1,Household contacts
+10,Public Health Actions,Contact Tracing 2,Close contacts
+10,Public Health Actions,Contact Tracing 3,Healthcare exposure
+10,Public Health Actions,Infection Control 1,Respiratory isolation
+10,Public Health Actions,Infection Control 2,Mask usage
+10,Public Health Actions,Infection Control 3,Ventilation
+10,Chatbot Intents,User Level 1,Do I have TB?
+10,Chatbot Intents,User Level 2,What are TB symptoms?
+10,Chatbot Intents,User Level 3,Is TB contagious?
+10,Chatbot Intents,User Level 4,How long is TB treatment?
+10,Chatbot Intents,Clinical Level 1,TB diagnostic workflow
+10,Chatbot Intents,Clinical Level 2,TB drug regimen
+10,Chatbot Intents,Clinical Level 3,TB in pregnancy
+10,Chatbot Intents,Clinical Level 4,TB with HIV
+10,Chatbot Intents,Clinical Level 5,Side effect management
+10,Chatbot Intents,System Level 1,TB notification rules
+10,Chatbot Intents,System Level 2,Contact tracing guidance
+10,Chatbot Intents,System Level 3,Isolation duration
+10,Response Modes,Patient Friendly,True
+10,Response Modes,Clinical Expert,True
+10,Response Modes,Emergency Flagging,True
+11,Kb Header,Topic,Tuberculosis (TB)
+11,Kb Header,Domain,Healthcare
+11,Kb Header,Guidelines,National TB Guidelines
+11,Kb Header,Documents Ingested 1,tuber08.pdf
+11,Kb Header,Documents Ingested 2,tuber09.pdf
+11,Kb Header,Documents Ingested 3,tuber10.pdf
+11,Kb Header,Documents Ingested 4,tuber11.pdf
+11,Kb Header,Audience 1,Patients
+11,Kb Header,Audience 2,Clinicians
+11,Kb Header,Audience 3,Public Health
+11,Kb Header,Chatbot Ready,True
+11,Kb Header,Version,4.0
+11,Tb Basics,Definition,"Tuberculosis is a chronic infectious disease caused by Mycobacterium tuberculosis complex, primarily transmitted via airborne droplets."
+11,Tb Basics,Causative Agents 1,Mycobacterium tuberculosis
+11,Tb Basics,Causative Agents 2,Mycobacterium bovis
+11,Tb Basics,Causative Agents 3,Mycobacterium africanum
+11,Tb Basics > Transmission,Mode,Airborne
+11,Tb Basics > Transmission,Infectious Sources 1,Pulmonary TB
+11,Tb Basics > Transmission,Infectious Sources 2,Laryngeal TB
+11,Tb Basics > Transmission,Non Infectious 1,Extrapulmonary TB without lung involvement
+11,Tb Classification > By Site,Pulmonary Tb,Involves lungs or airways
+11,Tb Classification > By Site,Extrapulmonary Tb 1,Pleural
+11,Tb Classification > By Site,Extrapulmonary Tb 2,Lymph node
+11,Tb Classification > By Site,Extrapulmonary Tb 3,Bone and joint
+11,Tb Classification > By Site,Extrapulmonary Tb 4,Spinal
+11,Tb Classification > By Site,Extrapulmonary Tb 5,Central nervous system
+11,Tb Classification > By Site,Extrapulmonary Tb 6,Genitourinary
+11,Tb Classification > By Site,Extrapulmonary Tb 7,Abdominal
+11,Tb Classification > By Site,Extrapulmonary Tb 8,Cutaneous
+11,Tb Classification > By Site,Disseminated Tb,Involvement of two or more non-contiguous organ systems
+11,Tb Classification,By Confirmation 1,Microbiologically confirmed TB
+11,Tb Classification,By Confirmation 2,Clinically diagnosed TB
+11,Symptom Engine,Constitutional 1,Fever
+11,Symptom Engine,Constitutional 2,Night sweats
+11,Symptom Engine,Constitutional 3,Weight loss
+11,Symptom Engine,Constitutional 4,Fatigue
+11,Symptom Engine,Constitutional 5,Loss of appetite
+11,Symptom Engine,Respiratory 1,Cough > 3 weeks
+11,Symptom Engine,Respiratory 2,Hemoptysis
+11,Symptom Engine,Respiratory 3,Chest pain
+11,Symptom Engine,Respiratory 4,Breathlessness
+11,Symptom Engine > Site Specific,Cns Tb 1,Headache
+11,Symptom Engine > Site Specific,Cns Tb 2,Vomiting
+11,Symptom Engine > Site Specific,Cns Tb 3,Seizures
+11,Symptom Engine > Site Specific,Cns Tb 4,Confusion
+11,Symptom Engine > Site Specific,Spinal Tb 1,Persistent back pain
+11,Symptom Engine > Site Specific,Spinal Tb 2,Limb weakness
+11,Symptom Engine > Site Specific,Spinal Tb 3,Spinal deformity
+11,Symptom Engine > Site Specific,Genitourinary Tb 1,Blood in urine
+11,Symptom Engine > Site Specific,Genitourinary Tb 2,Flank pain
+11,Symptom Engine > Site Specific,Genitourinary Tb 3,Infertility
+11,Risk Assessment,Individual Risk Factors 1,HIV infection
+11,Risk Assessment,Individual Risk Factors 2,Immunosuppressive therapy
+11,Risk Assessment,Individual Risk Factors 3,Diabetes mellitus
+11,Risk Assessment,Individual Risk Factors 4,Malnutrition
+11,Risk Assessment,Individual Risk Factors 5,Smoking
+11,Risk Assessment,Individual Risk Factors 6,Alcohol misuse
+11,Risk Assessment,Individual Risk Factors 7,Chronic kidney disease
+11,Risk Assessment,Population Risk Groups 1,Migrants from high TB incidence countries
+11,Risk Assessment,Population Risk Groups 2,Homeless individuals
+11,Risk Assessment,Population Risk Groups 3,Prison population
+11,Risk Assessment,Population Risk Groups 4,Healthcare workers
+11,Risk Assessment,Population Risk Groups 5,Close contacts of TB patients
+11,Diagnostic Logic,Core Rules 1,Always attempt microbiological confirmation
+11,Diagnostic Logic,Core Rules 2,Do not delay treatment in life-threatening TB
+11,Diagnostic Logic,Core Rules 3,Negative tests do not exclude TB
+11,Diagnostic Logic,Initial Workup 1,Symptom assessment
+11,Diagnostic Logic,Initial Workup 2,Risk assessment
+11,Diagnostic Logic,Initial Workup 3,Chest X-ray
+11,Diagnostic Logic,Initial Workup 4,Sample collection
+11,Diagnostic Logic > Microbiology,Tests 1,GeneXpert MTB/RIF Ultra
+11,Diagnostic Logic > Microbiology,Tests 2,AFB smear microscopy
+11,Diagnostic Logic > Microbiology,Tests 3,Mycobacterial culture
+11,Diagnostic Logic > Microbiology,Gold Standard,Culture
+11,Diagnostic Logic > Microbiology,Important Notes 1,Do not use formalin for TB samples
+11,Diagnostic Logic > Microbiology,Important Notes 2,GeneXpert sensitivity is lower in extrapulmonary TB
+11,Diagnostic Logic > Pulmonary Tb Pathway,Steps 1,Chest X-ray
+11,Diagnostic Logic > Pulmonary Tb Pathway,Steps 2,Collect 3 sputum samples
+11,Diagnostic Logic > Pulmonary Tb Pathway,Steps 3,GeneXpert + culture
+11,Diagnostic Logic > Pulmonary Tb Pathway,Steps 4,CT chest if inconclusive
+11,Diagnostic Logic > Extrapulmonary Tb Pathway,General 1,Always evaluate lungs
+11,Diagnostic Logic > Extrapulmonary Tb Pathway,General 2,Use imaging to guide biopsy
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Pleural Tb 1,Pleural fluid analysis
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Pleural Tb 2,ADA testing
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Pleural Tb 3,Pleural biopsy if needed
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Lymph Node Tb 1,Ultrasound or CT
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Lymph Node Tb 2,Fine needle aspiration or biopsy
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Cns Tb 1,MRI brain
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Cns Tb 2,CSF analysis
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Cns Tb 3,Start empirical treatment if high suspicion
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Bone Joint Tb 1,MRI preferred
+11,Diagnostic Logic > Extrapulmonary Tb Pathway > Site Specific,Bone Joint Tb 2,Biopsy for confirmation
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Duration,2 months
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Drugs 1,Rifampicin
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Drugs 2,Isoniazid
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Drugs 3,Pyrazinamide
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Drugs 4,Ethambutol
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Mandatory Support 1,Pyridoxine supplementation
+11,Treatment Engine > Standard Tb Regimen > Intensive Phase,Mandatory Support 2,Adherence counseling
+11,Treatment Engine > Standard Tb Regimen > Continuation Phase,Duration,4 months
+11,Treatment Engine > Standard Tb Regimen > Continuation Phase,Drugs 1,Rifampicin
+11,Treatment Engine > Standard Tb Regimen > Continuation Phase,Drugs 2,Isoniazid
+11,Treatment Engine > Extended Treatment Indications,Cns Tb,12 months
+11,Treatment Engine > Extended Treatment Indications,Spinal Or Bone Tb,9–12 months
+11,Treatment Engine > Extended Treatment Indications,Cavitary Pulmonary Tb,9 months
+11,Monitoring And Safety,Baseline Tests 1,Liver function tests
+11,Monitoring And Safety,Baseline Tests 2,Renal function tests
+11,Monitoring And Safety,Baseline Tests 3,Visual acuity (Ethambutol)
+11,Monitoring And Safety,Baseline Tests 4,HIV test
+11,Monitoring And Safety > Hepatotoxicity Management,Stop Drugs If,ALT > 5x upper limit of normal
+11,Monitoring And Safety > Hepatotoxicity Management,Rechallenge,Sequential reintroduction after recovery
+11,Special Populations > Pregnancy,Rules 1,Do not delay TB treatment
+11,Special Populations > Pregnancy,Rules 2,Avoid streptomycin
+11,Special Populations > Pregnancy,Rules 3,Give pyridoxine
+11,Special Populations > Breastfeeding,Rules 1,Allowed if mother is non-infectious
+11,Special Populations > Breastfeeding,Rules 2,Infant pyridoxine supplementation
+11,Special Populations > Hiv Coinfection,Rules 1,Start ART early
+11,Special Populations > Hiv Coinfection,Rules 2,Delay ART 4–8 weeks in CNS TB
+11,Special Populations > Hiv Coinfection,Rules 3,Monitor for IRIS
+11,Special Populations > Renal Failure,Rules 1,Dose adjustment required
+11,Special Populations > Renal Failure,Rules 2,Post-dialysis dosing
+11,Adherence Support,Methods 1,Directly Observed Therapy (DOT)
+11,Adherence Support,Methods 2,Video Observed Therapy (VOT)
+11,Adherence Support,Priority Groups 1,Drug-resistant TB
+11,Adherence Support,Priority Groups 2,Poor adherence risk
+11,Adherence Support,Priority Groups 3,Socially vulnerable patients
+11,Public Health Module,Notification,All TB cases must be legally notified
+11,Public Health Module,Contact Tracing 1,Household contacts
+11,Public Health Module,Contact Tracing 2,Close contacts
+11,Public Health Module,Contact Tracing 3,Workplace and healthcare exposure
+11,Public Health Module,Infection Control 1,Respiratory isolation
+11,Public Health Module,Infection Control 2,Mask usage
+11,Public Health Module,Infection Control 3,Adequate ventilation
+11,Chatbot Intents,Patient Intents 1,Do I have TB?
+11,Chatbot Intents,Patient Intents 2,What are TB symptoms?
+11,Chatbot Intents,Patient Intents 3,Is TB contagious?
+11,Chatbot Intents,Patient Intents 4,How long is TB treatment?
+11,Chatbot Intents,Patient Intents 5,Can TB be cured?
+11,Chatbot Intents,Clinical Intents 1,TB diagnosis workflow
+11,Chatbot Intents,Clinical Intents 2,TB treatment regimen
+11,Chatbot Intents,Clinical Intents 3,TB in pregnancy
+11,Chatbot Intents,Clinical Intents 4,TB with HIV
+11,Chatbot Intents,Clinical Intents 5,TB drug side effects
+11,Chatbot Intents,Public Health Intents 1,TB notification rules
+11,Chatbot Intents,Public Health Intents 2,Contact tracing process
+11,Chatbot Intents,Public Health Intents 3,Isolation duration
+11,Response Capabilities,Triage,True
+11,Response Capabilities,Follow Up Questions,True
+11,Response Capabilities,Risk Flagging,True
+11,Response Capabilities,Patient Friendly Language,True
+11,Response Capabilities,Clinical Depth,True
+12,Kb Metadata,Source Document,Preventive Medicine and Health Care – Chapter 7: Tuberculosis
+12,Kb Metadata,Ebook Isbn,978-93-7020-716-5
+12,Kb Metadata,Topic,Tuberculosis
+12,Kb Metadata,Chatbot Version,TB-KB-v5.0
+12,Kb Metadata,Intended Use 1,Medical chatbot
+12,Kb Metadata,Intended Use 2,Public health assistant
+12,Kb Metadata,Intended Use 3,Student learning bot
+12,Kb Metadata,Intended Use 4,Clinical decision support
+12,Tb Overview,Definition,"Tuberculosis (TB) is a chronic infectious disease caused by Mycobacterium tuberculosis, primarily affecting the lungs but capable of spreading to other organs."
+12,Tb Overview,Causative Agent,Mycobacterium tuberculosis
+12,Tb Overview,Transmission,"Airborne droplet infection during coughing, sneezing, or speaking"
+12,Tb Overview,Primary Forms 1,Pulmonary TB (PTB)
+12,Tb Overview,Primary Forms 2,Extrapulmonary TB (EPTB)
+12,Historical Context,Ancient History 1,Evidence found in Egyptian mummies (2400 BCE)
+12,Historical Context,Ancient History 2,Known as 'phthisis' by Hippocrates
+12,Historical Context,Ancient History 3,Referred to as 'Yakshma' in Atharvaveda
+12,Historical Context > Scientific Milestone,Discovery,Mycobacterium tuberculosis discovered by Robert Koch
+12,Historical Context > Scientific Milestone,Year,1882
+12,Historical Context > Scientific Milestone,Award,Nobel Prize in Physiology or Medicine
+12,Global Epidemiology,Global Status,Declared a global emergency by WHO in 1993
+12,Global Epidemiology,Latent Infection,Approximately 25% of global population infected
+12,Global Epidemiology,Active Tb Risk,5–15% lifetime risk among infected individuals
+12,Global Epidemiology > Global Cases 2022,Total,10.6 million
+12,Global Epidemiology > Global Cases 2022,Men,5.8 million
+12,Global Epidemiology > Global Cases 2022,Women,3.5 million
+12,Global Epidemiology > Global Cases 2022,Children,1.3 million
+12,Global Epidemiology,Major Risk Contributors 1,Malnutrition
+12,Global Epidemiology,Major Risk Contributors 2,HIV infection
+12,Global Epidemiology,Major Risk Contributors 3,Alcohol consumption
+12,Global Epidemiology,Major Risk Contributors 4,Smoking
+12,Global Epidemiology,Major Risk Contributors 5,Diabetes
+12,India Specific Data,Global Share,India contributes ~25% of global TB cases
+12,India Specific Data,India Cases 2022,2.5 million
+12,India Specific Data,India Deaths 2022,0.5 million
+12,India Specific Data,Burden Factors 1,Overcrowding
+12,India Specific Data,Burden Factors 2,Poverty
+12,India Specific Data,Burden Factors 3,Malnutrition
+12,India Specific Data,Burden Factors 4,HIV co-infection
+12,Pathophysiology,Infection Process 1,Inhalation of airborne Mtb
+12,Pathophysiology,Infection Process 2,Uptake by alveolar macrophages
+12,Pathophysiology,Infection Process 3,Intracellular survival of bacteria
+12,Pathophysiology,Infection Process 4,Granuloma formation
+12,Pathophysiology,Latent Tb,Bacteria contained within granulomas without symptoms
+12,Pathophysiology,Reactivation Triggers 1,Immunosuppression
+12,Pathophysiology,Reactivation Triggers 2,HIV infection
+12,Pathophysiology,Reactivation Triggers 3,Steroid therapy
+12,Pathophysiology,Reactivation Triggers 4,Chronic illness
+12,Clinical Classification,Pulmonary Tb Types 1,Primary TB (Ghon complex)
+12,Clinical Classification,Pulmonary Tb Types 2,Laryngeal TB
+12,Clinical Classification,Pulmonary Tb Types 3,Cavitary TB
+12,Clinical Classification,Pulmonary Tb Types 4,Miliary TB
+12,Clinical Classification,Pulmonary Tb Types 5,Tuberculous pleurisy
+12,Clinical Classification,Extrapulmonary Tb Types 1,Lymph node TB
+12,Clinical Classification,Extrapulmonary Tb Types 2,Peritoneal TB
+12,Clinical Classification,Extrapulmonary Tb Types 3,Pericardial TB
+12,Clinical Classification,Extrapulmonary Tb Types 4,Bone and spinal TB
+12,Clinical Classification,Extrapulmonary Tb Types 5,Renal and genitourinary TB
+12,Clinical Classification,Extrapulmonary Tb Types 6,Adrenal TB
+12,Clinical Classification,Extrapulmonary Tb Types 7,TB meningitis
+12,Symptom Engine,General Symptoms 1,Chronic fever
+12,Symptom Engine,General Symptoms 2,Night sweats
+12,Symptom Engine,General Symptoms 3,Weight loss
+12,Symptom Engine,General Symptoms 4,Fatigue
+12,Symptom Engine,General Symptoms 5,Loss of appetite
+12,Symptom Engine,Pulmonary Symptoms 1,Persistent cough
+12,Symptom Engine,Pulmonary Symptoms 2,Hemoptysis
+12,Symptom Engine,Pulmonary Symptoms 3,Chest pain
+12,Symptom Engine,Pulmonary Symptoms 4,Shortness of breath
+12,Symptom Engine > Extrapulmonary Symptoms,Spinal Tb 1,Back pain
+12,Symptom Engine > Extrapulmonary Symptoms,Spinal Tb 2,Vertebral collapse
+12,Symptom Engine > Extrapulmonary Symptoms,Renal Tb 1,Sterile pyuria
+12,Symptom Engine > Extrapulmonary Symptoms,Renal Tb 2,Infertility
+12,Symptom Engine > Extrapulmonary Symptoms,Tb Meningitis 1,Headache
+12,Symptom Engine > Extrapulmonary Symptoms,Tb Meningitis 2,Vomiting
+12,Symptom Engine > Extrapulmonary Symptoms,Tb Meningitis 3,Neurological deficits
+12,Diagnostic Tools > Immunological Tests > Tst Mantoux,Purpose,Detect TB exposure
+12,Diagnostic Tools > Immunological Tests > Tst Mantoux,Limitation,Cannot differentiate latent vs active TB
+12,Diagnostic Tools > Immunological Tests > Igra,Examples 1,QuantiFERON-TB Gold
+12,Diagnostic Tools > Immunological Tests > Igra,Use,Latent TB detection
+12,Diagnostic Tools,Radiological Tests 1,Chest X-ray
+12,Diagnostic Tools,Radiological Tests 2,CT scan
+12,Diagnostic Tools,Radiological Tests 3,MRI (for CNS and spinal TB)
+12,Diagnostic Tools > Microbiological Tests > Smear Microscopy,Method,Ziehl-Neelsen staining
+12,Diagnostic Tools > Microbiological Tests > Smear Microscopy,Advantages,"Rapid, low-cost"
+12,Diagnostic Tools > Microbiological Tests > Smear Microscopy,Limitations,Low sensitivity
+12,Diagnostic Tools > Microbiological Tests > Culture,Medium,Lowenstein-Jensen
+12,Diagnostic Tools > Microbiological Tests > Culture,Time,Up to 6 weeks
+12,Diagnostic Tools > Microbiological Tests > Culture,Status,Gold standard
+12,Diagnostic Tools > Molecular Diagnostics > Cbnaat Xpert,Detects 1,Mtb
+12,Diagnostic Tools > Molecular Diagnostics > Cbnaat Xpert,Detects 2,Rifampicin resistance
+12,Diagnostic Tools > Molecular Diagnostics > Cbnaat Xpert,Time,≈2 hours
+12,Diagnostic Tools > Molecular Diagnostics > Lpa,Detects 1,INH resistance
+12,Diagnostic Tools > Molecular Diagnostics > Lpa,Detects 2,RIF resistance
+12,Diagnostic Tools > Molecular Diagnostics > Lpa,Requirement,AFB-positive sputum
+12,Diagnostic Tools > Molecular Diagnostics > Wgs,Accuracy,≈96%
+12,Diagnostic Tools > Molecular Diagnostics > Wgs,Use,Comprehensive drug resistance profiling
+12,Diagnostic Tools > Ai Based Tools > Cad4Tb,Sensitivity,90–100%
+12,Diagnostic Tools > Ai Based Tools > Cad4Tb,Specificity,23–45%
+12,Diagnostic Tools > Ai Based Tools > Cad4Tb,Use,Automated chest X-ray analysis
+12,Treatment Protocols > First Line Drugs,Isoniazid,Inhibits mycolic acid synthesis
+12,Treatment Protocols > First Line Drugs,Rifampicin,Inhibits RNA polymerase
+12,Treatment Protocols > First Line Drugs,Pyrazinamide,Disrupts bacterial energy metabolism
+12,Treatment Protocols > First Line Drugs,Ethambutol,Inhibits cell wall synthesis
+12,Treatment Protocols > Standard Regimen > Intensive Phase,Duration,2 months
+12,Treatment Protocols > Standard Regimen > Intensive Phase,Drugs 1,INH
+12,Treatment Protocols > Standard Regimen > Intensive Phase,Drugs 2,RIF
+12,Treatment Protocols > Standard Regimen > Intensive Phase,Drugs 3,PZA
+12,Treatment Protocols > Standard Regimen > Intensive Phase,Drugs 4,EMB
+12,Treatment Protocols > Standard Regimen > Continuation Phase,Duration,4 months
+12,Treatment Protocols > Standard Regimen > Continuation Phase,Drugs 1,INH
+12,Treatment Protocols > Standard Regimen > Continuation Phase,Drugs 2,RIF
+12,Drug Resistant Tb,Types 1,MDR-TB
+12,Drug Resistant Tb,Types 2,XDR-TB
+12,Drug Resistant Tb,Second Line Drugs 1,Amikacin
+12,Drug Resistant Tb,Second Line Drugs 2,Levofloxacin
+12,Drug Resistant Tb,Novel Drugs 1,Bedaquiline
+12,Drug Resistant Tb,Novel Drugs 2,Delamanid
+12,Drug Resistant Tb,Novel Drugs 3,Pretomanid
+12,Drug Resistant Tb,Treatment Duration,18–24 months
+12,Prevention And Control > Vaccine,Name,BCG
+12,Prevention And Control > Vaccine,Type,Live attenuated Mycobacterium bovis
+12,Prevention And Control > Vaccine,Limitation,Limited adult protection
+12,Prevention And Control,Infection Control 1,Isolation
+12,Prevention And Control,Infection Control 2,Ventilation
+12,Prevention And Control,Infection Control 3,PPE usage
+12,India Tb Programs,Ntp,National Tuberculosis Programme (1962)
+12,India Tb Programs,Rntcp,Revised National TB Control Programme (1997)
+12,India Tb Programs > Ntep,Launched,2020
+12,India Tb Programs > Ntep,Goal,Eliminate TB by 2025
+12,India Tb Programs > Schemes,Nikshay Poshan Yojana,₹500/month dietary support
+12,India Tb Programs > Schemes,Treatment Incentives 1,₹1000 for treatment completion
+12,India Tb Programs > Schemes,Treatment Incentives 2,₹5000 for MDR-TB supporter
+12,General,Chatbot Intents 1,tb_basic_education
+12,General,Chatbot Intents 2,tb_symptom_checker
+12,General,Chatbot Intents 3,tb_diagnosis_explainer
+12,General,Chatbot Intents 4,tb_treatment_explainer
+12,General,Chatbot Intents 5,drug_resistance_info
+12,General,Chatbot Intents 6,india_tb_schemes
+12,General,Chatbot Intents 7,tb_prevention_guidance
+12,General,Chatbot Intents 8,student_learning_mode
+13,Kb Metadata,Source,National Tuberculosis Program Manual – Kingdom of Saudi Arabia (2021)
+13,Kb Metadata,Publisher,"Ministry of Health, Kingdom of Saudi Arabia"
+13,Kb Metadata,Document Type,National TB Policy & Clinical Manual
+13,Kb Metadata,Year,2021
+13,Kb Metadata,Chatbot Version,KSA-TB-NTP-KB-v1.0
+13,Kb Metadata,Intended Users 1,Public health chatbot
+13,Kb Metadata,Intended Users 2,Clinical decision support bot
+13,Kb Metadata,Intended Users 3,Medical student assistant
+13,Kb Metadata,Intended Users 4,Policy & program guidance bot
+13,Tb Basics,Definition,"Tuberculosis (TB) is a serious infectious disease caused by organisms of the Mycobacterium tuberculosis complex (MTBC), most commonly Mycobacterium tuberculosis."
+13,Tb Basics,Causative Agents 1,Mycobacterium tuberculosis
+13,Tb Basics,Causative Agents 2,Mycobacterium bovis
+13,Tb Basics,Causative Agents 3,Mycobacterium africanum
+13,Tb Basics,Causative Agents 4,Mycobacterium microti
+13,Tb Basics,Causative Agents 5,Mycobacterium canetti
+13,Tb Basics,Causative Agents 6,Mycobacterium caprae
+13,Tb Basics,Causative Agents 7,Mycobacterium orygis
+13,Tb Basics,Causative Agents 8,Mycobacterium pinnipedii
+13,Tb Basics,Causative Agents 9,Mycobacterium mungi
+13,Tb Basics,Ntm Note,Non-tuberculous mycobacteria (NTM) are generally opportunistic pathogens and less likely to cause TB in humans.
+13,Transmission And Infection,Mode Of Transmission,Airborne droplet nuclei inhaled during coughing or sneezing
+13,Transmission And Infection,Most Infectious Forms 1,Cavitary pulmonary TB
+13,Transmission And Infection,Most Infectious Forms 2,Laryngeal TB
+13,Transmission And Infection,Non Infectious Forms 1,Latent TB infection
+13,Transmission And Infection,Non Infectious Forms 2,Most extrapulmonary TB
+13,Transmission And Infection,Risk Factors For Transmission 1,Duration of exposure
+13,Transmission And Infection,Risk Factors For Transmission 2,Physical proximity
+13,Transmission And Infection,Risk Factors For Transmission 3,Mycobacterial load in sputum
+13,Transmission And Infection,Risk Factors For Transmission 4,"Immune status of contact (HIV, diabetes, malnutrition)"
+13,Transmission And Infection,Risk Factors For Transmission 5,Immunosuppressive therapy
+13,Transmission And Infection,Risk Factors For Transmission 6,BCG vaccination status
+13,Transmission And Infection > Latent Tb Progression,Latent Rate,≈90% remain latent
+13,Transmission And Infection > Latent Tb Progression,Active Progression,≈10% progress to active TB
+13,Transmission And Infection > Latent Tb Progression,High Risk Groups 1,Children
+13,Transmission And Infection > Latent Tb Progression,High Risk Groups 2,Immunocompromised individuals
+13,Transmission And Infection > Latent Tb Progression,High Risk Groups 3,PLHIV
+13,Epidemiology > Global,Who Status,TB is among top 10 causes of death worldwide
+13,Epidemiology > Global,Global Cases 2019,≈10 million
+13,Epidemiology > Global > Global Deaths 2019,Hiv Negative,1.2 million
+13,Epidemiology > Global > Global Deaths 2019,Hiv Positive,"208,000"
+13,Epidemiology > Ksa,Incidence 2019,"8.7 per 100,000 population"
+13,Epidemiology > Ksa,Total Cases 2019,3004
+13,Epidemiology > Ksa,Treatment Success Rate,89.9%
+13,Epidemiology > Ksa,Higher Risk Groups 1,Non-nationals
+13,Epidemiology > Ksa,Higher Risk Groups 2,Migrant workers
+13,Epidemiology > Ksa,Higher Risk Groups 3,Young adults (<45 years)
+13,Epidemiology > Ksa,Higher Risk Groups 4,Males
+13,Epidemiology > Ksa > Case Distribution,Male Percentage,≈71%
+13,Epidemiology > Ksa > Case Distribution,Pulmonary Confirmed,≈86%
+13,Epidemiology > Ksa > Case Distribution,Non Nationals Share,≈47–48%
+13,End Tb Strategy,Adopted By Ksa,2016
+13,End Tb Strategy,Vision,"Zero TB deaths, zero new cases, zero catastrophic costs"
+13,End Tb Strategy > Targets 2035,Mortality Reduction,95%
+13,End Tb Strategy > Targets 2035,Incidence Reduction,90%
+13,End Tb Strategy > Targets 2035,Catastrophic Costs,0%
+13,End Tb Strategy,Pillars 1,Integrated patient-centered care and prevention
+13,End Tb Strategy,Pillars 2,Bold policies and supportive systems
+13,End Tb Strategy,Pillars 3,Intensified research and innovation
+13,National Tb Program,Program Name,National Tuberculosis Program (NTP)
+13,National Tb Program,Core Elements 1,Early case detection
+13,National Tb Program,Core Elements 2,Treatment
+13,National Tb Program,Core Elements 3,Surveillance
+13,National Tb Program,Major Policies 1,Free TB diagnosis and treatment for all residents
+13,National Tb Program,Major Policies 2,Passive and active case finding
+13,National Tb Program,Major Policies 3,Systematic screening of high-risk groups
+13,National Tb Program,Major Policies 4,Standardized treatment regimens
+13,National Tb Program,Major Policies 5,Patient-centered care
+13,National Tb Program,Major Policies 6,Universal drug susceptibility testing
+13,National Tb Program,Major Policies 7,Public–private mix approach
+13,Organizational Structure > Levels,Central,NTP Central Unit (Ministry level)
+13,Organizational Structure > Levels,Intermediate,Regional TB Coordinators
+13,Organizational Structure > Levels,Peripheral,"Hospitals, PHCCs, TB clinics"
+13,Organizational Structure,Central Functions 1,Policy development
+13,Organizational Structure,Central Functions 2,Surveillance and monitoring
+13,Organizational Structure,Central Functions 3,Training and education
+13,Organizational Structure,Central Functions 4,Research and innovation
+13,Organizational Structure,Central Functions 5,National reporting
+13,Organizational Structure,Regional Functions 1,District TB planning
+13,Organizational Structure,Regional Functions 2,Patient registration
+13,Organizational Structure,Regional Functions 3,Adherence monitoring
+13,Organizational Structure,Regional Functions 4,Contact screening
+13,Organizational Structure,Regional Functions 5,Program supervision
+13,Organizational Structure,Peripheral Functions 1,TB suspect identification
+13,Organizational Structure,Peripheral Functions 2,Diagnosis and referral
+13,Organizational Structure,Peripheral Functions 3,Treatment follow-up
+13,Organizational Structure,Peripheral Functions 4,Defaulter tracing
+13,Organizational Structure,Peripheral Functions 5,Health education
+13,Diagnostic Algorithms > Algorithm 1,Name,Universal access to rapid TB testing
+13,Diagnostic Algorithms > Algorithm 1,Primary Test,Xpert MTB/RIF or Xpert Ultra
+13,Diagnostic Algorithms > Algorithm 1,Detects 1,Mycobacterium tuberculosis
+13,Diagnostic Algorithms > Algorithm 1,Detects 2,Rifampicin resistance
+13,Diagnostic Algorithms > Algorithm 1,Specimen Types 1,Sputum
+13,Diagnostic Algorithms > Algorithm 1,Specimen Types 2,CSF
+13,Diagnostic Algorithms > Algorithm 1,Specimen Types 3,Lymph node
+13,Diagnostic Algorithms > Algorithm 1,Specimen Types 4,Tissue samples
+13,Diagnostic Algorithms > Algorithm 1,Not For,Treatment monitoring
+13,Diagnostic Algorithms > Algorithm 1,Follow Up Tests 1,Smear microscopy
+13,Diagnostic Algorithms > Algorithm 1,Follow Up Tests 2,Culture
+13,Diagnostic Algorithms > Algorithm 1,Follow Up Tests 3,DST
+13,Laboratory Services > Levels,Peripheral 1,Smear microscopy
+13,Laboratory Services > Levels,Peripheral 2,Xpert MTB/RIF
+13,Laboratory Services > Levels,Peripheral 3,Sample handling
+13,Laboratory Services > Levels,Intermediate 1,Culture (solid & liquid)
+13,Laboratory Services > Levels,Intermediate 2,MTBC identification
+13,Laboratory Services > Levels,Intermediate 3,Molecular DST
+13,Laboratory Services > Levels,Central Reference 1,Advanced DST
+13,Laboratory Services > Levels,Central Reference 2,Whole genome sequencing
+13,Laboratory Services > Levels,Central Reference 3,Quality assurance
+13,Laboratory Services > Levels,Central Reference 4,Research
+13,Treatment > Drug Susceptible Tb,First Line Drugs 1,Isoniazid
+13,Treatment > Drug Susceptible Tb,First Line Drugs 2,Rifampicin
+13,Treatment > Drug Susceptible Tb,First Line Drugs 3,Pyrazinamide
+13,Treatment > Drug Susceptible Tb,First Line Drugs 4,Ethambutol
+13,Treatment > Drug Susceptible Tb,Principles 1,Standardized regimens
+13,Treatment > Drug Susceptible Tb,Principles 2,Adherence support
+13,Treatment > Drug Susceptible Tb,Principles 3,Patient-centered care
+13,Treatment > Drug Resistant Tb,Types 1,RR-TB
+13,Treatment > Drug Resistant Tb,Types 2,MDR-TB
+13,Treatment > Drug Resistant Tb,Types 3,XDR-TB
+13,Treatment > Drug Resistant Tb,Management 1,Second-line regimens
+13,Treatment > Drug Resistant Tb,Management 2,Extended duration
+13,Treatment > Drug Resistant Tb,Management 3,Close monitoring
+13,Special Populations > Children,Diagnosis 1,History and symptoms
+13,Special Populations > Children,Diagnosis 2,Growth assessment
+13,Special Populations > Children,Diagnosis 3,TST
+13,Special Populations > Children,Diagnosis 4,Bacteriological confirmation when possible
+13,Special Populations > Children,Treatment,Weight-based regimens
+13,Special Populations > Tb Hiv,Principles 1,Early TB diagnosis
+13,Special Populations > Tb Hiv,Principles 2,ART initiation
+13,Special Populations > Tb Hiv,Principles 3,Cotrimoxazole prophylaxis
+13,Special Populations > Tb Hiv,Principles 4,Collaborative TB/HIV services
+13,Special Populations > Pregnancy,Care,Special regimen considerations and monitoring
+13,Latent Tb,Definition,TB infection without clinical disease
+13,Latent Tb,Diagnosis 1,TST
+13,Latent Tb,Diagnosis 2,IGRA
+13,Latent Tb,Management 1,Preventive therapy
+13,Latent Tb,Management 2,High-risk group monitoring
+13,Contact Tracing,Steps 1,Index case assessment
+13,Contact Tracing,Steps 2,Identification of contacts
+13,Contact Tracing,Steps 3,Screening and investigation
+13,Contact Tracing,Steps 4,Preventive treatment
+13,Contact Tracing,Steps 5,Monitoring and evaluation
+13,Contact Tracing,High Priority Contacts 1,Household contacts
+13,Contact Tracing,High Priority Contacts 2,Children
+13,Contact Tracing,High Priority Contacts 3,PLHIV
+13,Infection Control,Administrative 1,Early detection
+13,Infection Control,Administrative 2,Isolation
+13,Infection Control,Administrative 3,Policy enforcement
+13,Infection Control,Environmental 1,Ventilation
+13,Infection Control,Environmental 2,Airflow control
+13,Infection Control,Personal Protection 1,Masks
+13,Infection Control,Personal Protection 2,Respirators
+13,Patient Centered Care,Dot,Directly Observed Therapy
+13,Patient Centered Care,Models 1,Home DOTS
+13,Patient Centered Care,Models 2,Facility-based DOT
+13,Patient Centered Care,Models 3,Video Observed Therapy (VOT)
+13,Patient Centered Care,Support Elements 1,Education
+13,Patient Centered Care,Support Elements 2,Social support
+13,Patient Centered Care,Support Elements 3,Adherence monitoring
+13,Recording And Reporting,System,HESN – Electronic TB Surveillance
+13,Recording And Reporting,Data Elements 1,Case definitions
+13,Recording And Reporting,Data Elements 2,Treatment outcomes
+13,Recording And Reporting,Data Elements 3,Drug resistance status
+13,Recording And Reporting,Use 1,Cohort analysis
+13,Recording And Reporting,Use 2,Program evaluation
+13,Recording And Reporting,Use 3,National reporting
+13,General,Chatbot Intents 1,tb_policy_explainer
+13,General,Chatbot Intents 2,tb_diagnosis_guidance
+13,General,Chatbot Intents 3,tb_treatment_explainer
+13,General,Chatbot Intents 4,drug_resistance_support
+13,General,Chatbot Intents 5,tb_hiv_guidance
+13,General,Chatbot Intents 6,childhood_tb_support
+13,General,Chatbot Intents 7,contact_tracing_guidance
+13,General,Chatbot Intents 8,infection_control_advice
+13,General,Chatbot Intents 9,student_learning_mode
+14,Kb Metadata,Source Document,Management of Tuberculosis in Children – A Health Worker Guide
+14,Kb Metadata,Publisher,Ministry of Health
+14,Kb Metadata,Year,2015
+14,Kb Metadata,Target Age Group,0–14 years
+14,Kb Metadata,Chatbot Version,CHILD-TB-KB-v1.0
+14,Kb Metadata,Intended Users 1,Health worker chatbot
+14,Kb Metadata,Intended Users 2,Clinical decision support system
+14,Kb Metadata,Intended Users 3,Medical student assistant
+14,Kb Metadata,Intended Users 4,Public health education bot
+14,Tb Definition,Disease,Tuberculosis (TB)
+14,Tb Definition,Causative Agent,Mycobacterium tuberculosis (Mtb)
+14,Tb Definition,Transmission,"Airborne spread from adults, older children, or adolescents with pulmonary TB"
+14,Tb Definition,Affected Organs 1,Lungs (Pulmonary TB)
+14,Tb Definition,Affected Organs 2,Lymph nodes
+14,Tb Definition,Affected Organs 3,Brain
+14,Tb Definition,Affected Organs 4,Abdomen
+14,Tb Definition,Affected Organs 5,Bones
+14,Tb Definition,Affected Organs 6,Spine
+14,Tb Definition,Affected Organs 7,Heart
+14,Importance Of Tb In Children,High Risk 1,Higher risk of progression from infection to disease
+14,Importance Of Tb In Children,High Risk 2,Higher risk of severe TB forms
+14,Importance Of Tb In Children,High Risk 3,Higher TB-related mortality
+14,Importance Of Tb In Children > Case Detection Gap,Reported Children Cases,≈8%
+14,Importance Of Tb In Children > Case Detection Gap,Expected Cases,15–20%
+14,Importance Of Tb In Children > Case Detection Gap,Issue,More than half of childhood TB cases are missed
+14,Stages Of Tb In Children,Exposure,Child spends time with a person who has pulmonary TB
+14,Stages Of Tb In Children,Infection,TB bacteria inhaled but remain dormant; child has no symptoms
+14,Stages Of Tb In Children,Disease,Child develops symptoms and signs of active TB
+14,Risk Factors,Tb Infection 1,Contact with pulmonary TB patient
+14,Risk Factors,Tb Infection 2,Lack of BCG vaccination
+14,Risk Factors,Tb Infection 3,Living in high TB burden settings
+14,Risk Factors,Tb Disease 1,Young age (<2 years)
+14,Risk Factors,Tb Disease 2,HIV infection
+14,Risk Factors,Tb Disease 3,Malnutrition
+14,Risk Factors,Tb Disease 4,Immunosuppressive conditions
+14,Risk Factors,Tb Disease 5,Diabetes
+14,Risk Factors,Tb Disease 6,Post-measles illness
+14,Risk Factors,Severe Tb 1,Young age
+14,Risk Factors,Severe Tb 2,HIV infection
+14,Risk Factors,Severe Tb 3,Severe malnutrition
+14,General,Entry Points For Identification 1,Postnatal clinic
+14,General,Entry Points For Identification 2,Antenatal clinic
+14,General,Entry Points For Identification 3,HIV/ART clinic
+14,General,Entry Points For Identification 4,Mother-baby care point
+14,General,Entry Points For Identification 5,TB clinic
+14,General,Entry Points For Identification 6,Young child clinic
+14,General,Entry Points For Identification 7,Nutrition unit
+14,General,Entry Points For Identification 8,Outpatient department
+14,General,Entry Points For Identification 9,Inpatient ward
+14,General,Entry Points For Identification 10,Community
+14,Screening Algorithm,Tool,Intensified TB Case Finding (ICF) Guide
+14,Screening Algorithm,Presumptive Tb Criteria 1,Persistent cough ≥ 2 weeks
+14,Screening Algorithm,Presumptive Tb Criteria 2,Persistent fever ≥ 2 weeks
+14,Screening Algorithm,Presumptive Tb Criteria 3,Poor weight gain ≥ 1 month
+14,Screening Algorithm,Presumptive Tb Criteria 4,History of TB contact
+14,Screening Algorithm,Presumptive Tb Criteria 5,"Painless swellings (neck, armpit, groin)"
+14,Screening Algorithm,Special Note,Assess cough of any duration in HIV-positive children
+14,Screening Algorithm,Mandatory Test,HIV test for all presumptive and diagnosed TB cases
+14,Symptoms By Age > Neonates 0 28 Days,Ptb 1,Poor feeding
+14,Symptoms By Age > Neonates 0 28 Days,Ptb 2,Lethargy
+14,Symptoms By Age > Neonates 0 28 Days,Ptb 3,Low birth weight
+14,Symptoms By Age > Neonates 0 28 Days,Ptb 4,Non-resolving pneumonia
+14,Symptoms By Age > Neonates 0 28 Days,Eptb 1,TB meningitis
+14,Symptoms By Age > Neonates 0 28 Days,Eptb 2,Convulsions
+14,Symptoms By Age > Neonates 0 28 Days,Eptb 3,Bulging fontanelle
+14,Symptoms By Age > Neonates 0 28 Days,Eptb 4,Reduced consciousness
+14,Symptoms By Age > Under 5 Years,Ptb 1,Persistent cough
+14,Symptoms By Age > Under 5 Years,Ptb 2,Persistent fever
+14,Symptoms By Age > Under 5 Years,Ptb 3,Poor weight gain
+14,Symptoms By Age > Under 5 Years,Ptb 4,TB contact history
+14,Symptoms By Age > Under 5 Years,Eptb 1,TB adenitis
+14,Symptoms By Age > Under 5 Years,Eptb 2,TB meningitis
+14,Symptoms By Age > Under 5 Years,Eptb 3,Miliary TB
+14,Symptoms By Age > Under 5 Years,Eptb 4,Abdominal TB
+14,Symptoms By Age > Under 5 Years,Eptb 5,TB spine
+14,Symptoms By Age > Under 5 Years,Eptb 6,Bone and joint TB
+14,Symptoms By Age > Under 5 Years,Eptb 7,Pericardial TB
+14,Symptoms By Age > Above 5 Years,Additional Features 1,Night sweats
+14,Symptoms By Age > Above 5 Years,Additional Features 2,Hemoptysis
+14,Symptoms By Age > Above 5 Years,Additional Features 3,Chest pain
+14,Clinical Examination,General 1,Temperature
+14,Clinical Examination,General 2,Level of consciousness
+14,Clinical Examination,General 3,Developmental milestones
+14,Clinical Examination,General 4,Painless lymph node swellings
+14,Clinical Examination,Nutritional Assessment 1,Weight
+14,Clinical Examination,Nutritional Assessment 2,Height
+14,Clinical Examination,Nutritional Assessment 3,MUAC
+14,Clinical Examination,Nutritional Assessment 4,Nutrition classification
+14,Clinical Examination > Systemic Examination,Respiratory 1,Chest indrawing
+14,Clinical Examination > Systemic Examination,Respiratory 2,Crepitations
+14,Clinical Examination > Systemic Examination,Respiratory 3,Unilateral wheeze
+14,Clinical Examination > Systemic Examination,Lymph Nodes,"Painless, grouped, asymmetrical nodes"
+14,Clinical Examination > Systemic Examination,Musculoskeletal 1,Joint swelling
+14,Clinical Examination > Systemic Examination,Musculoskeletal 2,Spinal deformity (Gibbus)
+14,Clinical Examination > Systemic Examination,Musculoskeletal 3,Lower limb weakness
+14,Clinical Examination > Systemic Examination,Cns 1,Neck stiffness
+14,Clinical Examination > Systemic Examination,Cns 2,Convulsions
+14,Clinical Examination > Systemic Examination,Cns 3,Photophobia
+14,Diagnostic Investigations > Gene Xpert,Preferred Test,True
+14,Diagnostic Investigations > Gene Xpert,Detects 1,TB bacteria
+14,Diagnostic Investigations > Gene Xpert,Detects 2,Rifampicin resistance
+14,Diagnostic Investigations > Gene Xpert,Samples 1,Sputum
+14,Diagnostic Investigations > Gene Xpert,Samples 2,Gastric aspirate
+14,Diagnostic Investigations > Gene Xpert,Samples 3,Lymph node aspirate
+14,Diagnostic Investigations > Gene Xpert,Samples 4,CSF
+14,Diagnostic Investigations > Gene Xpert,Note,Negative result does NOT exclude TB
+14,Diagnostic Investigations > Microscopy,Use,Where GeneXpert unavailable
+14,Diagnostic Investigations > Microscopy,Limitation,Low sensitivity
+14,Diagnostic Investigations > Radiology,Cxr Findings 1,Hilar adenopathy
+14,Diagnostic Investigations > Radiology,Cxr Findings 2,Miliary pattern
+14,Diagnostic Investigations > Radiology,Cxr Findings 3,Cavitation
+14,Diagnostic Investigations > Radiology,Cxr Findings 4,Extensive parenchymal disease
+14,Diagnostic Investigations > Mantoux Test > Positive Cutoff,Hiv Or Malnourished,≥5 mm
+14,Diagnostic Investigations > Mantoux Test > Positive Cutoff,Others,≥10 mm
+14,Diagnostic Investigations > Mantoux Test,Note,Negative test does NOT exclude TB
+14,Treatment Regimens > New Tb Cases,All Forms Except Meningitis Bone,2RHZE / 4RH
+14,Treatment Regimens > New Tb Cases,Tb Meningitis Bone Tb,2RHZE / 10RH
+14,Treatment Regimens > Previously Treated Children,Approach 1,Assess adherence
+14,Treatment Regimens > Previously Treated Children,Approach 2,Perform GeneXpert
+14,Treatment Regimens > Previously Treated Children,Approach 3,Refer MDR-TB if rifampicin resistant
+14,Treatment Regimens > Previously Treated Children,Note,Streptomycin is NOT recommended
+14,Drug Dosages Mg Per Kg,Isoniazid,10 mg/kg
+14,Drug Dosages Mg Per Kg,Rifampicin,15 mg/kg
+14,Drug Dosages Mg Per Kg,Pyrazinamide,35 mg/kg
+14,Drug Dosages Mg Per Kg,Ethambutol,20 mg/kg
+14,Tb Hiv Management,Principles 1,Start TB treatment immediately
+14,Tb Hiv Management,Principles 2,Initiate ART within 2–8 weeks
+14,Tb Hiv Management,Principles 3,Modify ART regimens as per age
+14,Tb Hiv Management > Adjunct Therapy > Pyridoxine,Under 5,12.5 mg/day
+14,Tb Hiv Management > Adjunct Therapy > Pyridoxine,Above 5,25 mg/day
+14,Tb Hiv Management > Adjunct Therapy,Prednisolone,2 mg/kg/day for TB meningitis
+14,Monitoring Schedule,Monitoring Parameters 1,Symptoms
+14,Monitoring Schedule,Monitoring Parameters 2,Clinical signs
+14,Monitoring Schedule,Monitoring Parameters 3,Side effects
+14,Monitoring Schedule,Monitoring Parameters 4,Adherence
+14,Monitoring Schedule,Monitoring Parameters 5,Smear microscopy
+14,Monitoring Schedule,Monitoring Parameters 6,HIV testing
+14,Monitoring Schedule,Monitoring Parameters 7,Chest X-ray if needed
+14,Monitoring Schedule,Note,GeneXpert is NOT for follow-up monitoring
+14,Side Effects Management,Peripheral Neuropathy,Give pyridoxine
+14,Side Effects Management,Hepatotoxicity,Stop drugs and refer
+14,Side Effects Management,Skin Rash,Antihistamine or stop drugs
+14,Side Effects Management,Visual Problems,Stop ethambutol and refer
+14,Prevention Strategies,Bcg,Given at birth
+14,Prevention Strategies,Contact Screening,Systematic household screening
+14,Prevention Strategies > Ipt,Eligible Children 1,Under 5 TB contacts
+14,Prevention Strategies > Ipt,Eligible Children 2,HIV-positive children
+14,Prevention Strategies > Ipt,Dose,INH 10 mg/kg/day for 6 months
+14,Prevention Strategies,Infection Control 1,Administrative controls
+14,Prevention Strategies,Infection Control 2,Environmental ventilation
+14,Prevention Strategies,Infection Control 3,PPE (N95 masks)
+14,Service Integration,Integration Points 1,ANC
+14,Service Integration,Integration Points 2,PNC
+14,Service Integration,Integration Points 3,OPD
+14,Service Integration,Integration Points 4,IPD
+14,Service Integration,Integration Points 5,HIV clinics
+14,Service Integration,Integration Points 6,Nutrition units
+14,Service Integration,Benefits 1,Early detection
+14,Service Integration,Benefits 2,Reduced loss to follow-up
+14,Service Integration,Benefits 3,Improved prevention
+14,General,Chatbot Intents 1,child_tb_screening
+14,General,Chatbot Intents 2,child_tb_symptoms_by_age
+14,General,Chatbot Intents 3,child_tb_diagnosis
+14,General,Chatbot Intents 4,child_tb_treatment
+14,General,Chatbot Intents 5,tb_hiv_child_management
+14,General,Chatbot Intents 6,ipt_guidance
+14,General,Chatbot Intents 7,tb_prevention_child
+14,General,Chatbot Intents 8,health_worker_decision_support
+14,General,Chatbot Intents 9,student_learning_mode
+15,Kb Metadata,Source Document,Pathogens Journal – Mycobacterium tuberculosis Review
+15,Kb Metadata,Journal,Pathogens
+15,Kb Metadata,Article Id,15-00142
+15,Kb Metadata,Publisher,MDPI
+15,Kb Metadata,Document Type,Peer-reviewed scientific review
+15,Kb Metadata,Focus Level,Advanced / Research
+15,Kb Metadata,Chatbot Version,TB-PATHOGENS-KB-v1.0
+15,Kb Metadata,Intended Users 1,Medical research chatbot
+15,Kb Metadata,Intended Users 2,Postgraduate study assistant
+15,Kb Metadata,Intended Users 3,Clinical decision support bot
+15,Kb Metadata,Intended Users 4,Drug resistance analysis bot
+15,Mycobacterium Tuberculosis > Taxonomy,Family,Mycobacteriaceae
+15,Mycobacterium Tuberculosis > Taxonomy,Genus,Mycobacterium
+15,Mycobacterium Tuberculosis > Taxonomy,Species,Mycobacterium tuberculosis
+15,Mycobacterium Tuberculosis > Taxonomy,Complex,Mycobacterium tuberculosis complex (MTBC)
+15,Mycobacterium Tuberculosis > Cell Structure,Cell Wall 1,Mycolic acids
+15,Mycobacterium Tuberculosis > Cell Structure,Cell Wall 2,Arabinogalactan
+15,Mycobacterium Tuberculosis > Cell Structure,Cell Wall 3,Peptidoglycan
+15,Mycobacterium Tuberculosis > Cell Structure,Cell Wall 4,Lipoarabinomannan (LAM)
+15,Mycobacterium Tuberculosis > Cell Structure,Properties 1,Acid-fast
+15,Mycobacterium Tuberculosis > Cell Structure,Properties 2,Slow-growing
+15,Mycobacterium Tuberculosis > Cell Structure,Properties 3,Highly resistant to environmental stress
+15,Mycobacterium Tuberculosis > Cell Structure,Properties 4,Hydrophobic cell envelope
+15,Pathogenesis,Entry,Inhalation of aerosolized droplet nuclei
+15,Pathogenesis,Initial Site,Alveolar macrophages
+15,Pathogenesis,Early Events 1,Phagocytosis by macrophages
+15,Pathogenesis,Early Events 2,Inhibition of phagosome–lysosome fusion
+15,Pathogenesis,Early Events 3,Intracellular survival
+15,Pathogenesis > Granuloma Formation,Purpose 1,Containment of bacteria
+15,Pathogenesis > Granuloma Formation,Purpose 2,Host-pathogen equilibrium
+15,Pathogenesis > Granuloma Formation,Cell Types 1,Macrophages
+15,Pathogenesis > Granuloma Formation,Cell Types 2,Epithelioid cells
+15,Pathogenesis > Granuloma Formation,Cell Types 3,Langhans giant cells
+15,Pathogenesis > Granuloma Formation,Cell Types 4,CD4+ T cells
+15,Pathogenesis > Granuloma Formation,Cell Types 5,CD8+ T cells
+15,Pathogenesis > Granuloma Formation,Cell Types 6,B cells
+15,Pathogenesis,Outcomes 1,Latent TB infection
+15,Pathogenesis,Outcomes 2,Active TB disease
+15,Pathogenesis,Outcomes 3,Disseminated TB
+15,Immune Response > Innate Immunity,Cells 1,Macrophages
+15,Immune Response > Innate Immunity,Cells 2,Dendritic cells
+15,Immune Response > Innate Immunity,Cells 3,Neutrophils
+15,Immune Response > Innate Immunity,Pattern Recognition Receptors 1,TLR2
+15,Immune Response > Innate Immunity,Pattern Recognition Receptors 2,TLR4
+15,Immune Response > Innate Immunity,Pattern Recognition Receptors 3,NOD2
+15,Immune Response > Innate Immunity,Pattern Recognition Receptors 4,C-type lectins
+15,Immune Response > Adaptive Immunity > Cd4 T Cells,Role,IFN-γ production and macrophage activation
+15,Immune Response > Adaptive Immunity > Cd4 T Cells,Importance,Critical for TB control
+15,Immune Response > Adaptive Immunity > Cd8 T Cells,Role,Cytotoxic killing of infected cells
+15,Immune Response > Adaptive Immunity,Cytokines 1,IFN-γ
+15,Immune Response > Adaptive Immunity,Cytokines 2,TNF-α
+15,Immune Response > Adaptive Immunity,Cytokines 3,IL-12
+15,Immune Response > Adaptive Immunity,Cytokines 4,IL-10
+15,Immune Response,Immune Evasion Mechanisms 1,Inhibition of antigen presentation
+15,Immune Response,Immune Evasion Mechanisms 2,Suppression of macrophage apoptosis
+15,Immune Response,Immune Evasion Mechanisms 3,Induction of regulatory T cells
+15,Immune Response,Immune Evasion Mechanisms 4,Resistance to reactive oxygen and nitrogen species
+15,Latency And Reactivation,Latency Definition,Persistent viable M. tuberculosis without clinical disease
+15,Latency And Reactivation,Bacterial State 1,Metabolic dormancy
+15,Latency And Reactivation,Bacterial State 2,Low replication rate
+15,Latency And Reactivation,Reactivation Triggers 1,HIV infection
+15,Latency And Reactivation,Reactivation Triggers 2,Malnutrition
+15,Latency And Reactivation,Reactivation Triggers 3,Diabetes
+15,Latency And Reactivation,Reactivation Triggers 4,Immunosuppressive therapy
+15,Latency And Reactivation,Reactivation Triggers 5,Aging
+15,Virulence Factors > Esx 1 Secretion System,Function,Phagosomal rupture and immune modulation
+15,Virulence Factors > Esx 1 Secretion System,Key Proteins 1,ESAT-6
+15,Virulence Factors > Esx 1 Secretion System,Key Proteins 2,CFP-10
+15,Virulence Factors,Lipids 1,Phthiocerol dimycocerosates (PDIM)
+15,Virulence Factors,Lipids 2,Phenolic glycolipids (PGL)
+15,Virulence Factors,Stress Response Systems 1,DosR regulon
+15,Virulence Factors,Stress Response Systems 2,Sigma factors
+15,Drug Resistance,Mechanisms 1,Spontaneous chromosomal mutations
+15,Drug Resistance,Mechanisms 2,No plasmid-mediated resistance
+15,Drug Resistance > First Line Drug Resistance,Isoniazid 1,katG mutations
+15,Drug Resistance > First Line Drug Resistance,Isoniazid 2,inhA promoter mutations
+15,Drug Resistance > First Line Drug Resistance,Rifampicin 1,rpoB mutations
+15,Drug Resistance > First Line Drug Resistance,Ethambutol 1,embB mutations
+15,Drug Resistance > First Line Drug Resistance,Pyrazinamide 1,pncA mutations
+15,Drug Resistance,Classification 1,Mono-resistant TB
+15,Drug Resistance,Classification 2,Poly-resistant TB
+15,Drug Resistance,Classification 3,MDR-TB
+15,Drug Resistance,Classification 4,XDR-TB
+15,Diagnostic Advances,Molecular Tests 1,Xpert MTB/RIF
+15,Diagnostic Advances,Molecular Tests 2,Xpert MTB/RIF Ultra
+15,Diagnostic Advances,Molecular Tests 3,Line Probe Assays (LPA)
+15,Diagnostic Advances,Molecular Tests 4,Whole Genome Sequencing (WGS)
+15,Diagnostic Advances,Advantages 1,Rapid detection
+15,Diagnostic Advances,Advantages 2,Drug resistance identification
+15,Diagnostic Advances,Advantages 3,High sensitivity
+15,Diagnostic Advances,Limitations 1,Cost
+15,Diagnostic Advances,Limitations 2,Infrastructure needs
+15,Diagnostic Advances,Limitations 3,Limited access in low-resource settings
+15,Treatment Challenges,Bacterial Persistence,Presence of non-replicating persisters
+15,Treatment Challenges,Drug Penetration,Poor drug diffusion into granulomas
+15,Treatment Challenges,Host Factors 1,Immunosuppression
+15,Treatment Challenges,Host Factors 2,Comorbidities
+15,Treatment Challenges,Treatment Duration,Long-term therapy required
+15,Vaccines > Bcg,Status,Only licensed TB vaccine
+15,Vaccines > Bcg,Effectiveness 1,Protects against severe childhood TB
+15,Vaccines > Bcg,Effectiveness 2,Limited protection against adult pulmonary TB
+15,Vaccines,New Vaccine Strategies 1,Subunit vaccines
+15,Vaccines,New Vaccine Strategies 2,Viral-vectored vaccines
+15,Vaccines,New Vaccine Strategies 3,mRNA-based vaccines
+15,Vaccines,New Vaccine Strategies 4,Therapeutic vaccines
+15,Research And Future Directions,Focus Areas 1,Host-directed therapies
+15,Research And Future Directions,Focus Areas 2,New drug targets
+15,Research And Future Directions,Focus Areas 3,Shorter treatment regimens
+15,Research And Future Directions,Focus Areas 4,Improved vaccines
+15,Research And Future Directions,Emerging Tools 1,CRISPR screening
+15,Research And Future Directions,Emerging Tools 2,Systems biology
+15,Research And Future Directions,Emerging Tools 3,Artificial intelligence in TB research
+15,Public Health Implications,Global Challenges 1,Drug resistance
+15,Public Health Implications,Global Challenges 2,HIV co-infection
+15,Public Health Implications,Global Challenges 3,Delayed diagnosis
+15,Public Health Implications,Control Strategies 1,Early detection
+15,Public Health Implications,Control Strategies 2,Effective treatment
+15,Public Health Implications,Control Strategies 3,Vaccination
+15,Public Health Implications,Control Strategies 4,Research investment
+15,General,Chatbot Intents 1,tb_pathogenesis_explainer
+15,General,Chatbot Intents 2,immune_response_tb
+15,General,Chatbot Intents 3,drug_resistance_mechanisms
+15,General,Chatbot Intents 4,advanced_tb_diagnostics
+15,General,Chatbot Intents 5,tb_vaccine_research
+15,General,Chatbot Intents 6,postgraduate_learning_mode
+15,General,Chatbot Intents 7,research_assistant_mode
+16,Document Metadata,Title,Definitions and Reporting Framework for Tuberculosis
+16,Document Metadata,Organization,World Health Organization
+16,Document Metadata,Original Year,2013
+16,Document Metadata,Updates 1,2014-12
+16,Document Metadata,Updates 2,2020-01
+16,Document Metadata,Document Code,WHO/HTM/TB/2013.2
+16,Document Metadata,Isbn,9789241505345
+16,Document Metadata,Scope 1,TB case definitions
+16,Document Metadata,Scope 2,Drug-resistant TB
+16,Document Metadata,Scope 3,Treatment outcomes
+16,Document Metadata,Scope 4,Recording and reporting systems
+16,Key Terms,Tb,Tuberculosis
+16,Key Terms,Ptb,Pulmonary Tuberculosis
+16,Key Terms,Eptb,Extrapulmonary Tuberculosis
+16,Key Terms,Rr-Tb,Rifampicin-resistant Tuberculosis
+16,Key Terms,Mdr-Tb,Multidrug-resistant Tuberculosis
+16,Key Terms,Xdr-Tb,Extensively drug-resistant Tuberculosis
+16,Key Terms,Wrd,WHO-approved Rapid Diagnostics
+16,Key Terms,Dst,Drug Susceptibility Testing
+16,Key Terms,Bmu,Basic Management Unit
+16,Key Terms,Art,Antiretroviral Therapy
+16,Key Terms,Cpt,Co-trimoxazole Preventive Therapy
+16,Tb Case Definitions > Presumptive Tb,Definition,Patient presenting with symptoms or signs suggestive of TB
+16,Tb Case Definitions > Bacteriologically Confirmed Tb,Definition,"Biological specimen positive by smear microscopy, culture, or WRD (e.g., Xpert MTB/RIF)"
+16,Tb Case Definitions > Bacteriologically Confirmed Tb,Notification Required,True
+16,Tb Case Definitions > Clinically Diagnosed Tb,Definition,TB diagnosed by a clinician without bacteriological confirmation but treated as active TB
+16,Tb Case Definitions > Clinically Diagnosed Tb,Diagnostic Basis 1,X-ray abnormalities
+16,Tb Case Definitions > Clinically Diagnosed Tb,Diagnostic Basis 2,Suggestive histology
+16,Tb Case Definitions > Clinically Diagnosed Tb,Diagnostic Basis 3,Extrapulmonary TB without lab confirmation
+16,Tb Case Definitions > Clinically Diagnosed Tb,Reclassification Rule,Reclassify if later bacteriologically confirmed
+16,Classification Dimensions > Anatomical Site > Pulmonary Tb,Definition,TB involving lung parenchyma or tracheobronchial tree
+16,Classification Dimensions > Anatomical Site > Pulmonary Tb,Includes 1,Miliary TB
+16,Classification Dimensions > Anatomical Site > Pulmonary Tb,Rule,If pulmonary and extrapulmonary present → classify as PTB
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Definition,TB involving organs other than lungs
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 1,Pleura
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 2,Lymph nodes
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 3,Abdomen
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 4,Genitourinary tract
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 5,Skin
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 6,Bones
+16,Classification Dimensions > Anatomical Site > Extrapulmonary Tb,Examples 7,Meninges
+16,Classification Dimensions > Previous Treatment History,New,Never treated or treated < 1 month
+16,Classification Dimensions > Previous Treatment History,Relapse,"Previously cured or completed treatment, now TB again"
+16,Classification Dimensions > Previous Treatment History,Treatment After Failure,Previously treated and treatment failed
+16,Classification Dimensions > Previous Treatment History,Treatment After Loss To Follow Up,Previously treated and lost to follow-up
+16,Classification Dimensions > Previous Treatment History,Other Previously Treated,Treatment history known but outcome unknown
+16,Classification Dimensions > Previous Treatment History,Unknown History,No reliable treatment history
+16,Classification Dimensions > Hiv Status,Positive,Confirmed HIV infection or enrolled in HIV care
+16,Classification Dimensions > Hiv Status,Negative,Negative HIV test at TB diagnosis
+16,Classification Dimensions > Hiv Status,Unknown,No HIV test result or documentation
+16,Classification Dimensions > Hiv Status,Reclassification Rule,Update status if later confirmed
+16,Classification Dimensions > Drug Resistance,Monoresistant,Resistance to one first-line anti-TB drug
+16,Classification Dimensions > Drug Resistance,Polydrug Resistant,Resistance to more than one first-line drug (not H + R)
+16,Classification Dimensions > Drug Resistance,Multidrug Resistant,Resistance to at least isoniazid and rifampicin
+16,Classification Dimensions > Drug Resistance > Extensively Drug Resistant,Definition,MDR-TB plus resistance to any fluoroquinolone and ≥1 second-line injectable
+16,Classification Dimensions > Drug Resistance > Extensively Drug Resistant,Injectables 1,Amikacin
+16,Classification Dimensions > Drug Resistance > Extensively Drug Resistant,Injectables 2,Kanamycin
+16,Classification Dimensions > Drug Resistance > Extensively Drug Resistant,Injectables 3,Capreomycin
+16,Classification Dimensions > Drug Resistance > Rifampicin Resistant,Definition,Resistance to rifampicin with or without resistance to other drugs
+16,Classification Dimensions > Drug Resistance > Rifampicin Resistant,Note,Includes MDR-TB and XDR-TB
+16,Treatment Outcomes > Drug Susceptible Tb,Cured,Smear/culture negative in last month and at least once before
+16,Treatment Outcomes > Drug Susceptible Tb,Treatment Completed,Completed treatment without failure but missing final bacteriology
+16,Treatment Outcomes > Drug Susceptible Tb,Treatment Failed,Smear or culture positive at month 5 or later
+16,Treatment Outcomes > Drug Susceptible Tb,Died,Death before or during treatment
+16,Treatment Outcomes > Drug Susceptible Tb,Lost To Follow Up,Treatment interrupted for ≥2 consecutive months
+16,Treatment Outcomes > Drug Susceptible Tb,Not Evaluated,No outcome assigned or transferred out
+16,Treatment Outcomes > Drug Susceptible Tb,Treatment Success,Cured + Treatment completed
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Cured,Treatment completed with ≥3 consecutive negative cultures ≥30 days apart
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Treatment Completed,Completed without failure but insufficient culture evidence
+16,Treatment Outcomes > Drug Resistant Tb Second Line > Treatment Failed,Conditions 1,No culture conversion by end of intensive phase
+16,Treatment Outcomes > Drug Resistant Tb Second Line > Treatment Failed,Conditions 2,Culture reversion in continuation phase
+16,Treatment Outcomes > Drug Resistant Tb Second Line > Treatment Failed,Conditions 3,Additional drug resistance
+16,Treatment Outcomes > Drug Resistant Tb Second Line > Treatment Failed,Conditions 4,Severe adverse drug reactions
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Died,Death during treatment
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Lost To Follow Up,Interrupted treatment ≥2 months
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Not Evaluated,Outcome unknown or transferred out
+16,Treatment Outcomes > Drug Resistant Tb Second Line,Treatment Success,Cured + Treatment completed
+16,Laboratory Diagnostics > Smear Microscopy,Result Scale 1,0
+16,Laboratory Diagnostics > Smear Microscopy,Result Scale 2,1-9
+16,Laboratory Diagnostics > Smear Microscopy,Result Scale 3,+
+16,Laboratory Diagnostics > Smear Microscopy,Result Scale 4,++
+16,Laboratory Diagnostics > Smear Microscopy,Result Scale 5,+++
+16,Laboratory Diagnostics > Xpert Mtb Rif,Mtb Results 1,Detected
+16,Laboratory Diagnostics > Xpert Mtb Rif,Mtb Results 2,Not detected
+16,Laboratory Diagnostics > Xpert Mtb Rif,Mtb Results 3,Invalid
+16,Laboratory Diagnostics > Xpert Mtb Rif,Rifampicin Resistance 1,Detected
+16,Laboratory Diagnostics > Xpert Mtb Rif,Rifampicin Resistance 2,Not detected
+16,Laboratory Diagnostics > Xpert Mtb Rif,Rifampicin Resistance 3,Indeterminate
+16,Laboratory Diagnostics > Culture,Results 1,Negative
+16,Laboratory Diagnostics > Culture,Results 2,1-9 colonies
+16,Laboratory Diagnostics > Culture,Results 3,+
+16,Laboratory Diagnostics > Culture,Results 4,++
+16,Laboratory Diagnostics > Culture,Results 5,+++
+16,Laboratory Diagnostics > Culture,Results 6,NTM
+16,Laboratory Diagnostics > Culture,Results 7,Contaminated
+16,Laboratory Diagnostics > Dst Results > Codes,R,Resistant
+16,Laboratory Diagnostics > Dst Results > Codes,S,Susceptible
+16,Laboratory Diagnostics > Dst Results > Codes,C,Contaminated
+16,Laboratory Diagnostics > Dst Results > Codes,-,Not done
+16,Recording And Reporting > Bmu Register,Purpose,Monitor TB cases and outcomes at district level
+16,Recording And Reporting > Bmu Register,Includes 1,All diagnosed TB cases
+16,Recording And Reporting > Bmu Register,Includes 2,RR-TB and MDR-TB cases
+16,Recording And Reporting > Bmu Register,Includes 3,Treatment started or not
+16,Recording And Reporting > Second Line Register,Purpose,Track patients started on second-line regimens
+16,Recording And Reporting > Second Line Register,Excludes,Patients not started on second-line treatment
+16,Recording And Reporting > Reporting Frequency,Case Registration,Quarterly
+16,Recording And Reporting > Reporting Frequency,Treatment Outcomes,Quarterly
+16,Recording And Reporting > Reporting Frequency,Combined Outcomes,Annually
+16,Business Rules For Chatbots,If Rr Or Mdr Detected,Move patient to second-line treatment cohort
+16,Business Rules For Chatbots,If Second Line Started,Exclude from first-line outcome calculations
+16,Business Rules For Chatbots,If Hiv Status Updated,Reclassify patient immediately
+16,Business Rules For Chatbots,Incident Cases 1,New
+16,Business Rules For Chatbots,Incident Cases 2,Relapse
+17,Document Metadata,Title,Treatment of Tuberculosis: Guidelines
+17,Document Metadata,Edition,Fourth Edition
+17,Document Metadata,Publisher,World Health Organization
+17,Document Metadata,Year,2010
+17,Document Metadata,Isbn,978-92-4-154783-3
+17,Document Metadata,Document Id,WHO/HTM/TB/2009.420
+17,Document Metadata,Scope,Treatment of active tuberculosis in adults
+17,Document Metadata,Expiry Policy,Subject to revision as new evidence emerges
+17,General,Target Audience 1,National TB Programme managers
+17,General,Target Audience 2,Clinicians (public and private sector)
+17,General,Target Audience 3,TB programme staff
+17,General,Target Audience 4,Public health policymakers
+17,Core Concepts,Tb Types 1,Pulmonary TB
+17,Core Concepts,Tb Types 2,Extrapulmonary TB
+17,Core Concepts,Tb Types 3,MDR-TB
+17,Core Concepts,Tb Types 4,XDR-TB
+17,Core Concepts,Patient Groups 1,New patients
+17,Core Concepts,Patient Groups 2,Previously treated - relapse
+17,Core Concepts,Patient Groups 3,Previously treated - default
+17,Core Concepts,Patient Groups 4,Previously treated - failure
+17,Core Concepts,Patient Groups 5,TB patients living with HIV
+17,Core Concepts > Key Drugs,H,Isoniazid
+17,Core Concepts > Key Drugs,R,Rifampicin
+17,Core Concepts > Key Drugs,Z,Pyrazinamide
+17,Core Concepts > Key Drugs,E,Ethambutol
+17,Core Concepts > Key Drugs,S,Streptomycin
+17,Standard Treatment Regimens > New Patients > Preferred Regimen,Intensive Phase,2 months HRZE
+17,Standard Treatment Regimens > New Patients > Preferred Regimen,Continuation Phase,4 months HR
+17,Standard Treatment Regimens > New Patients > Preferred Regimen,Total Duration Months,6
+17,Standard Treatment Regimens > New Patients > Preferred Regimen,Recommendation Strength,Strong
+17,Standard Treatment Regimens > New Patients > High Isoniazid Resistance Alternative,Continuation Phase,4 months HRE
+17,Standard Treatment Regimens > New Patients > High Isoniazid Resistance Alternative,Recommendation Strength,Weak
+17,Standard Treatment Regimens > New Patients > High Isoniazid Resistance Alternative,Note,Used where INH DST is unavailable
+17,Standard Treatment Regimens > Previously Treated Patients,General Rule,Obtain culture and DST before or at treatment start
+17,Standard Treatment Regimens > Previously Treated Patients > Failure Cases,Empirical Regimen,MDR-TB regimen
+17,Standard Treatment Regimens > Previously Treated Patients > Failure Cases,Reason,High likelihood of MDR-TB
+17,Standard Treatment Regimens > Previously Treated Patients > Relapse Or Default,Regimen,2HRZES/1HRZE/5HRE
+17,Standard Treatment Regimens > Previously Treated Patients > Relapse Or Default,Condition,Only if MDR prevalence is low or unknown
+17,Dosing Frequency Guidelines,Optimal,Daily dosing throughout treatment
+17,Dosing Frequency Guidelines,Acceptable Alternatives 1,Daily intensive + thrice weekly continuation (DOT required)
+17,Dosing Frequency Guidelines,Acceptable Alternatives 2,"Thrice weekly throughout (DOT required, HIV-negative only)"
+17,Dosing Frequency Guidelines,Not Recommended 1,Twice weekly dosing (except in formal research)
+17,Hiv Tb Coinfection,Testing Policy,Provider-initiated HIV testing for all TB patients
+17,Hiv Tb Coinfection > Treatment Rules,Intensive Phase,Daily dosing mandatory
+17,Hiv Tb Coinfection > Treatment Rules,Continuation Phase,"Daily preferred, thrice weekly acceptable"
+17,Hiv Tb Coinfection > Treatment Rules,Duration,Same as HIV-negative TB patients
+17,Hiv Tb Coinfection,Additional Care 1,Cotrimoxazole preventive therapy
+17,Hiv Tb Coinfection,Additional Care 2,Early initiation of ART
+17,Hiv Tb Coinfection,Additional Care 3,DST at treatment start
+17,Monitoring And Followup > Sputum Monitoring,Month 2,Smear microscopy (conditional)
+17,Monitoring And Followup > Sputum Monitoring,Month 3 If Positive,Repeat smear
+17,Monitoring And Followup > Sputum Monitoring,Persistent Positive,Culture + DST
+17,Monitoring And Followup > Sputum Monitoring,Months 5 And 6,Mandatory smear for initially positive patients
+17,Monitoring And Followup > Treatment Extension,Policy,Do NOT extend intensive phase for positive smear at month 2
+17,Drug Resistant Tb,Mdr Definition,Resistance to at least isoniazid and rifampicin
+17,Drug Resistant Tb,Core Principles 1,Early detection via DST
+17,Drug Resistant Tb,Core Principles 2,Use standardized or individualized MDR regimens
+17,Drug Resistant Tb,Core Principles 3,Never use first-line retreatment regimen for confirmed MDR-TB
+17,Drug Resistant Tb,Programmatic Requirements 1,MDR-TB register
+17,Drug Resistant Tb,Programmatic Requirements 2,Cohort outcome analysis
+17,Drug Resistant Tb,Programmatic Requirements 3,Green Light Committee alignment
+17,Special Situations > Extrapulmonary Tb,General Rule,Same regimen as pulmonary TB
+17,Special Situations > Extrapulmonary Tb,Exceptions 1,TB meningitis – longer duration suggested
+17,Special Situations > Extrapulmonary Tb,Exceptions 2,Bone/joint TB – longer duration suggested
+17,Special Situations > Renal Failure,Regimen,HRZE with adjusted dosing
+17,Special Situations > Renal Failure,Streptomycin,Discouraged
+17,Special Situations > Liver Disease,Approach,Use regimens with reduced hepatotoxic drugs
+17,General,Treatment Outcomes 1,Cured
+17,General,Treatment Outcomes 2,Treatment completed
+17,General,Treatment Outcomes 3,Treatment failed
+17,General,Treatment Outcomes 4,Died
+17,General,Treatment Outcomes 5,Lost to follow-up
+17,General,Treatment Outcomes 6,Not evaluated
+17,Chatbot Intent Mapping,Regimen Selection 1,What is the standard TB treatment?
+17,Chatbot Intent Mapping,Regimen Selection 2,Which regimen is used for new TB patients?
+17,Chatbot Intent Mapping,Regimen Selection 3,How is MDR-TB treated?
+17,Chatbot Intent Mapping,Monitoring 1,When should sputum be tested?
+17,Chatbot Intent Mapping,Monitoring 2,What if smear is positive after 2 months?
+17,Chatbot Intent Mapping,Hiv Tb 1,How is TB treated in HIV patients?
+17,Chatbot Intent Mapping,Hiv Tb 2,Can intermittent dosing be used in HIV?
+17,Chatbot Intent Mapping,Drug Resistance 1,When to suspect MDR-TB?
+17,Chatbot Intent Mapping,Drug Resistance 2,What is DST?
+17,Chatbot Intent Mapping,Special Cases 1,TB treatment in renal failure
+17,Chatbot Intent Mapping,Special Cases 2,Treatment of extrapulmonary TB
+17,Safety And Disclaimers,Clinical Use,For guidance only. Final decisions must be made by qualified clinicians.
+17,Safety And Disclaimers,Updates,Guidelines may be updated as new evidence emerges
+18,Document Metadata,Title,Transmission and Pathogenesis of Tuberculosis
+18,Document Metadata,Chapter,2
+18,Document Metadata,Source,CDC Tuberculosis Training Module
+18,Document Metadata,Domain,Public Health / Infectious Diseases
+18,Document Metadata,Pathogen,Mycobacterium tuberculosis
+18,Document Metadata,Last Verified,2011-2012 CDC references
+18,Core Definitions > Tuberculosis,Definition,An airborne infectious disease caused by Mycobacterium tuberculosis.
+18,Core Definitions > Tuberculosis,Common Name,TB
+18,Core Definitions > Tuberculosis,Transmission Mode,Airborne
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 1,M. tuberculosis
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 2,M. bovis
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 3,M. africanum
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 4,M. microti
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 5,M. caprae
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 6,M. pinnipedii
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 7,M. canetti
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Species 8,M. mungi
+18,Core Definitions > Mycobacterium Tuberculosis Complex,Human Pathogenicity,Most species can cause disease in humans
+18,Core Definitions > Tubercle Bacilli,Definition,Mycobacterium tuberculosis organisms
+18,Transmission,Mechanism,Person-to-person airborne transmission
+18,Transmission > Infectious Particles,Name,Droplet nuclei
+18,Transmission > Infectious Particles,Size Microns,1–5
+18,Transmission > Infectious Particles,Generated By 1,Coughing
+18,Transmission > Infectious Particles,Generated By 2,Sneezing
+18,Transmission > Infectious Particles,Generated By 3,Shouting
+18,Transmission > Infectious Particles,Generated By 4,Singing
+18,Transmission > Infectious Particles,Survival,Remain suspended in air for several hours
+18,Transmission,Not Transmitted By 1,Touching surfaces
+18,Transmission,Not Transmitted By 2,Sharing utensils
+18,Transmission,Not Transmitted By 3,Insect bites
+18,Transmission,Entry Path 1,Inhalation
+18,Transmission,Entry Path 2,Upper respiratory tract
+18,Transmission,Entry Path 3,Bronchi
+18,Transmission,Entry Path 4,Alveoli
+18,Factors Affecting Transmission > Susceptibility,Description,Immune status of exposed individual
+18,Factors Affecting Transmission > Infectiousness,Description,Number of tubercle bacilli expelled
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 1,Cough ≥ 3 weeks
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 2,Laryngeal involvement
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 3,Cavitary chest X-ray
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 4,Positive sputum smear
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 5,Positive culture
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 6,Inadequate treatment
+18,Factors Affecting Transmission > Infectiousness,High Risk Indicators 7,Aerosol-generating procedures
+18,Factors Affecting Transmission,Environmental Factors 1,Small enclosed spaces
+18,Factors Affecting Transmission,Environmental Factors 2,Poor ventilation
+18,Factors Affecting Transmission,Environmental Factors 3,Air recirculation
+18,Factors Affecting Transmission,Environmental Factors 4,Improper specimen handling
+18,Factors Affecting Transmission,Environmental Factors 5,Positive air pressure rooms
+18,Factors Affecting Transmission,Exposure Factors 1,Duration of exposure
+18,Factors Affecting Transmission,Exposure Factors 2,Frequency of exposure
+18,Factors Affecting Transmission,Exposure Factors 3,Physical proximity
+18,Pathogenesis > Initial Infection,Process,Inhalation of droplet nuclei into alveoli
+18,Pathogenesis > Initial Infection,Cellular Response,Ingestion by alveolar macrophages
+18,Pathogenesis > Dissemination,Routes 1,Lymphatic system
+18,Pathogenesis > Dissemination,Routes 2,Bloodstream
+18,Pathogenesis > Dissemination,Common Sites 1,Lungs
+18,Pathogenesis > Dissemination,Common Sites 2,Lymph nodes
+18,Pathogenesis > Dissemination,Common Sites 3,Brain
+18,Pathogenesis > Dissemination,Common Sites 4,Kidneys
+18,Pathogenesis > Dissemination,Common Sites 5,Bones
+18,Pathogenesis > Dissemination,Common Sites 6,Spine
+18,Pathogenesis > Dissemination,Common Sites 7,Larynx
+18,Pathogenesis > Immune Response > Granuloma,Definition,Barrier formed by immune cells to contain bacilli
+18,Pathogenesis > Immune Response > Granuloma,Outcome,Latent Tuberculosis Infection (LTBI)
+18,Pathogenesis > Progression Failure,Description,Breakdown of granuloma leads to TB disease
+18,Latent Tb Infection,Abbreviation,LTBI
+18,Latent Tb Infection > Characteristics,Infectious,False
+18,Latent Tb Infection > Characteristics,Symptoms,False
+18,Latent Tb Infection > Characteristics,Bacilli State,Alive but inactive
+18,Latent Tb Infection,Diagnosis 1,Tuberculin Skin Test (TST)
+18,Latent Tb Infection,Diagnosis 2,Interferon-Gamma Release Assay (IGRA)
+18,Latent Tb Infection,Immune Response Time,2–8 weeks post-infection
+18,Tb Disease,Infectious,True
+18,Tb Disease,Symptoms 1,Cough
+18,Tb Disease,Symptoms 2,Fever
+18,Tb Disease,Symptoms 3,Weight loss
+18,Tb Disease,Symptoms 4,Night sweats
+18,Tb Disease > Diagnosis,Confirmation,Positive culture for M. tuberculosis
+18,Tb Disease > Diagnosis,Tests 1,AFB smear
+18,Tb Disease > Diagnosis,Tests 2,Culture
+18,Tb Disease > Diagnosis,Tests 3,Chest radiograph
+18,Ltbi Vs Tb Disease > Ltbi,Infectious,False
+18,Ltbi Vs Tb Disease > Ltbi,Radiograph,Normal
+18,Ltbi Vs Tb Disease > Ltbi,Smear Culture,Negative
+18,Ltbi Vs Tb Disease > Ltbi,Treatment Goal,Prevent TB disease
+18,Ltbi Vs Tb Disease > Tb Disease,Infectious,True
+18,Ltbi Vs Tb Disease > Tb Disease,Radiograph,Abnormal
+18,Ltbi Vs Tb Disease > Tb Disease,Smear Culture,May be positive
+18,Ltbi Vs Tb Disease > Tb Disease,Treatment Goal,Cure disease
+18,Risk Of Progression > General Population,Lifetime Risk,~10%
+18,Risk Of Progression,High Risk Groups 1,HIV-positive individuals
+18,Risk Of Progression,High Risk Groups 2,Children < 5 years
+18,Risk Of Progression,High Risk Groups 3,Recent infection (<2 years)
+18,Risk Of Progression,High Risk Groups 4,Immunosuppressive therapy
+18,Risk Of Progression,High Risk Groups 5,Diabetes
+18,Risk Of Progression,High Risk Groups 6,Chronic renal failure
+18,Risk Of Progression,High Risk Groups 7,Silicosis
+18,Risk Of Progression,High Risk Groups 8,Cancer
+18,Risk Of Progression,High Risk Groups 9,Underweight individuals
+18,Risk Of Progression,High Risk Groups 10,Substance abuse
+18,Risk Of Progression,High Risk Groups 11,Low-income populations
+18,Risk Of Progression > Risk Statistics,Hiv Coinfection,7–10% per year
+18,Risk Of Progression > Risk Statistics,Diabetes,~30% lifetime
+18,Forms Of Tb > Pulmonary Tb,Most Common,True
+18,Forms Of Tb > Pulmonary Tb,Infectious,True
+18,Forms Of Tb > Extrapulmonary Tb,Sites 1,Lymph nodes
+18,Forms Of Tb > Extrapulmonary Tb,Sites 2,Pleura
+18,Forms Of Tb > Extrapulmonary Tb,Sites 3,Brain
+18,Forms Of Tb > Extrapulmonary Tb,Sites 4,Kidneys
+18,Forms Of Tb > Extrapulmonary Tb,Sites 5,Bones
+18,Forms Of Tb > Extrapulmonary Tb,Sites 6,Joints
+18,Forms Of Tb > Extrapulmonary Tb,Usually Infectious,False
+18,Forms Of Tb > Miliary Tb,Description,Disseminated TB via bloodstream
+18,Forms Of Tb > Miliary Tb,Risk Groups 1,Children < 5 years
+18,Forms Of Tb > Miliary Tb,Risk Groups 2,Immunocompromised persons
+18,Forms Of Tb > Miliary Tb,Fatal If Untreated,True
+18,Forms Of Tb > Tb Meningitis,Symptoms 1,Headache
+18,Forms Of Tb > Tb Meningitis,Symptoms 2,Neck stiffness
+18,Forms Of Tb > Tb Meningitis,Symptoms 3,Altered consciousness
+18,Drug Resistant Tb > General,Transmission,Same as drug-susceptible TB
+18,Drug Resistant Tb > General,Infectiousness,Not more infectious
+18,Drug Resistant Tb > Mdr Tb,Definition,Resistance to isoniazid and rifampin
+18,Drug Resistant Tb > Xdr Tb,Definition,MDR TB plus resistance to fluoroquinolones and injectable second-line drugs
+18,Drug Resistant Tb > Resistance Types,Primary,Infected with resistant strain
+18,Drug Resistant Tb > Resistance Types,Secondary,Developed during inadequate treatment
+18,Tb Classification System,Class 0,"No TB exposure, not infected"
+18,Tb Classification System,Class 1,"TB exposure, no infection"
+18,Tb Classification System,Class 2,"TB infection, no disease"
+18,Tb Classification System,Class 3,Clinically active TB
+18,Tb Classification System,Class 4,"Previous TB, not active"
+18,Tb Classification System,Class 5,TB suspected
+18,Reporting Guidelines,Mandatory Reporting 1,Class 3 TB
+18,Reporting Guidelines,Mandatory Reporting 2,Class 5 TB suspected
+18,Reporting Guidelines,Time Limit Class 5,Maximum 3 months
+18,General,Chatbot Ready Intents 1,What is TB?
+18,General,Chatbot Ready Intents 2,How is TB transmitted?
+18,General,Chatbot Ready Intents 3,Difference between LTBI and TB disease
+18,General,Chatbot Ready Intents 4,Who is at high risk for TB?
+18,General,Chatbot Ready Intents 5,What is MDR and XDR TB?
+18,General,Chatbot Ready Intents 6,Is latent TB contagious?
+18,General,Chatbot Ready Intents 7,TB classification explanation
+18,General,Chatbot Ready Intents 8,Symptoms of TB disease
+18,General,Chatbot Ready Intents 9,How TB spreads in the body
+19,Document Metadata,Title,Questions and Answers About Tuberculosis
+19,Document Metadata,Year,2025
+19,Document Metadata,Publisher,Centers for Disease Control and Prevention (CDC)
+19,Document Metadata,Division,Division of Tuberculosis Elimination
+19,Document Metadata,Intended Audience 1,General public
+19,Document Metadata,Intended Audience 2,People at risk for TB
+19,Document Metadata,Intended Audience 3,Healthcare workers
+19,Document Metadata,Intended Audience 4,Correctional officers
+19,Document Metadata,Intended Audience 5,Homeless shelter workers
+19,Document Metadata,Intended Audience 6,Emergency responders
+19,Document Metadata,Geographic Focus,United States
+19,Document Metadata,Source File,tuber19.pdf
+19,Disease Overview,Name,Tuberculosis
+19,Disease Overview,Abbreviation,TB
+19,Disease Overview > Causative Agent,Name,Mycobacterium tuberculosis
+19,Disease Overview > Causative Agent,Type,Bacterium
+19,Disease Overview,Primary Organs Affected 1,Lungs
+19,Disease Overview,Possible Other Sites 1,Kidneys
+19,Disease Overview,Possible Other Sites 2,Spine
+19,Disease Overview,Possible Other Sites 3,Brain
+19,Disease Overview,Possible Other Sites 4,Larynx
+19,Disease Overview,Treatable,True
+19,Disease Overview,Curable,True
+19,Why Tb Remains A Problem,Global Status,One of the world’s leading infectious disease killers
+19,Why Tb Remains A Problem > Us Status,Incidence,Low compared to global rates
+19,Why Tb Remains A Problem > Us Status,Continued Impact,Thousands affected annually
+19,Why Tb Remains A Problem > Health Disparities,Higher Risk Groups 1,Racial minorities
+19,Why Tb Remains A Problem > Health Disparities,Higher Risk Groups 2,Ethnic minorities
+19,Why Tb Remains A Problem > Health Disparities,Reason,Higher prevalence of TB risk factors
+19,Transmission,Mode,Airborne
+19,Transmission,Spread From 1,Person with infectious TB disease of lungs
+19,Transmission,Spread From 2,Person with infectious TB disease of throat
+19,Transmission,Activities Causing Spread 1,Coughing
+19,Transmission,Activities Causing Spread 2,Speaking
+19,Transmission,Activities Causing Spread 3,Singing
+19,Transmission,Infection Process 1,TB germs enter air
+19,Transmission,Infection Process 2,Nearby people inhale germs
+19,Transmission,Infection Process 3,Germs settle in lungs
+19,Transmission,Infection Process 4,Germs may spread via bloodstream
+19,Transmission,Not Spread By 1,Handshakes
+19,Transmission,Not Spread By 2,Sharing dishes
+19,Transmission,Not Spread By 3,Toilet seats
+19,Risk Of Infection,Anyone Can Get Tb,True
+19,Risk Of Infection > Higher Risk Groups 1,Group,Close contacts
+19,Risk Of Infection > Higher Risk Groups 1,Description,People who spent time with someone with infectious TB disease
+19,Risk Of Infection > Higher Risk Groups 2,Group,People from TB-endemic countries
+19,Risk Of Infection > Higher Risk Groups 2,Regions 1,Asia
+19,Risk Of Infection > Higher Risk Groups 2,Regions 2,Africa
+19,Risk Of Infection > Higher Risk Groups 2,Regions 3,Latin America
+19,Risk Of Infection > Higher Risk Groups 3,Group,High-risk settings
+19,Risk Of Infection > Higher Risk Groups 3,Examples 1,Homeless shelters
+19,Risk Of Infection > Higher Risk Groups 3,Examples 2,Jails
+19,Risk Of Infection > Higher Risk Groups 3,Examples 3,Prisons
+19,Risk Of Infection > Higher Risk Groups 3,Examples 4,Nursing homes
+19,Risk Of Infection > Higher Risk Groups 4,Group,Healthcare workers
+19,Latent Tb Infection,Name,Latent Tuberculosis Infection
+19,Latent Tb Infection,Abbreviation,LTBI
+19,Latent Tb Infection,Definition,TB germs are present but inactive
+19,Latent Tb Infection,Symptoms,False
+19,Latent Tb Infection,Feels Sick,False
+19,Latent Tb Infection,Infectious,False
+19,Latent Tb Infection > Test Results,Tb Skin Test,Usually positive
+19,Latent Tb Infection > Test Results,Tb Blood Test,Usually positive
+19,Latent Tb Infection,Risk Without Treatment,May progress to TB disease
+19,Latent Tb Infection,Public Health Importance,Treating LTBI is essential to TB control
+19,Tb Disease,Definition,Active multiplication of TB germs causing illness
+19,Tb Disease,Infectious When 1,Lung TB
+19,Tb Disease,Infectious When 2,Throat TB
+19,Tb Disease,Non Infectious When 1,Kidney TB
+19,Tb Disease,Non Infectious When 2,Spine TB
+19,Tb Disease,Non Infectious When 3,Brain TB
+19,Tb Disease,Time Of Onset 1,Weeks after infection
+19,Tb Disease,Time Of Onset 2,Years later when immunity weakens
+19,Tb Disease > Treatment Duration Months,Minimum,4
+19,Tb Disease > Treatment Duration Months,Possible 1,6
+19,Tb Disease > Treatment Duration Months,Possible 2,9
+19,Risk Of Progression To Tb Disease,Untreated Ltbi Lifetime Risk Percent,5–10%
+19,Risk Of Progression To Tb Disease,Majority Us Cases Source,Untreated latent TB infection
+19,Risk Of Progression To Tb Disease > High Risk Categories,Recent Infection,True
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 1,HIV
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 2,Substance use
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 3,Rheumatoid arthritis treatment
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 4,Crohn’s disease treatment
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 5,Organ transplant
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 6,Severe kidney disease
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 7,Head and neck cancer
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 8,Diabetes
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 9,Corticosteroid therapy
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 10,Silicosis
+19,Risk Of Progression To Tb Disease > High Risk Categories,Immunocompromised Conditions 11,Low body weight
+19,Risk Of Progression To Tb Disease > High Risk Categories,Children Under 5,High risk
+19,Symptoms,Pulmonary Tb 1,Cough longer than 3 weeks
+19,Symptoms,Pulmonary Tb 2,Coughing up blood
+19,Symptoms,Pulmonary Tb 3,Chest pain
+19,Symptoms,Pulmonary Tb 4,Fever
+19,Symptoms,Pulmonary Tb 5,Night sweats
+19,Symptoms,Pulmonary Tb 6,Chills
+19,Symptoms,Pulmonary Tb 7,Loss of appetite
+19,Symptoms,Pulmonary Tb 8,Fatigue
+19,Symptoms,Pulmonary Tb 9,Weight loss
+19,Symptoms > Extrapulmonary Tb,Kidney,Blood in urine
+19,Symptoms > Extrapulmonary Tb,Meninges 1,Headache
+19,Symptoms > Extrapulmonary Tb,Meninges 2,Confusion
+19,Symptoms > Extrapulmonary Tb,Spine,Back pain
+19,Symptoms > Extrapulmonary Tb,Larynx,Hoarseness
+19,Ltbi Vs Tb Disease Comparison > Ltbi,Symptoms,False
+19,Ltbi Vs Tb Disease Comparison > Ltbi,Infectious,False
+19,Ltbi Vs Tb Disease Comparison > Ltbi,Chest Xray,Normal
+19,Ltbi Vs Tb Disease Comparison > Ltbi,Sputum,Negative
+19,Ltbi Vs Tb Disease Comparison > Ltbi,Treatment Goal,Prevent TB disease
+19,Ltbi Vs Tb Disease Comparison > Tb Disease,Symptoms,True
+19,Ltbi Vs Tb Disease Comparison > Tb Disease,Infectious,May be
+19,Ltbi Vs Tb Disease Comparison > Tb Disease,Chest Xray,Abnormal
+19,Ltbi Vs Tb Disease Comparison > Tb Disease,Sputum,May be positive
+19,Ltbi Vs Tb Disease Comparison > Tb Disease,Treatment Goal,Cure TB
+19,Testing Guidelines,Who Should Be Tested 1,Close contacts
+19,Testing Guidelines,Who Should Be Tested 2,People from TB-endemic countries
+19,Testing Guidelines,Who Should Be Tested 3,Residents or workers in group settings
+19,Testing Guidelines,Who Should Be Tested 4,Healthcare workers
+19,Testing Guidelines,Who Should Be Tested 5,Low-income or substance misuse populations
+19,Testing Guidelines,Who Should Be Tested 6,Children exposed to TB
+19,Testing Guidelines > Tests Available,Tb Blood Tests 1,QuantiFERON-TB Gold Plus
+19,Testing Guidelines > Tests Available,Tb Blood Tests 2,T-SPOT.TB
+19,Testing Guidelines > Tests Available > Tb Skin Test,Reading Time Hours,48–72
+19,Testing Guidelines > Tests Available > Tb Skin Test,Repeat Testing Window Weeks,8–10 if recent exposure
+19,Positive Test Management,Next Steps 1,Chest X-ray
+19,Positive Test Management,Next Steps 2,Sputum test
+19,Positive Test Management,Next Steps 3,Urine test
+19,Positive Test Management,Next Steps 4,Tissue samples if needed
+19,Positive Test Management > Outcomes,Ltbi,Treat to prevent TB disease
+19,Positive Test Management > Outcomes,Tb Disease,Start TB disease treatment
+19,Bcg Vaccine Guidance,Used In Us,False
+19,Bcg Vaccine Guidance,Common Outside Us,True
+19,Bcg Vaccine Guidance,Effect,Prevents severe TB in children
+19,Bcg Vaccine Guidance,Skin Test Effect,May cause false positive
+19,Bcg Vaccine Guidance,Preferred Test,TB blood test
+19,Ltbi Treatment,Importance,Prevents progression to TB disease
+19,Ltbi Treatment,Preferred Short Course Regimens 1,3HP: 3 months once-weekly isoniazid + rifapentine
+19,Ltbi Treatment,Preferred Short Course Regimens 2,4R: 4 months daily rifampin
+19,Ltbi Treatment,Preferred Short Course Regimens 3,3HR: 3 months daily isoniazid + rifampin
+19,Ltbi Treatment,Alternative Regimens 1,6 months isoniazid
+19,Ltbi Treatment,Alternative Regimens 2,9 months isoniazid
+19,Ltbi Treatment,Medications 1,Isoniazid
+19,Ltbi Treatment,Medications 2,Rifampin
+19,Ltbi Treatment,Medications 3,Rifapentine
+19,Tb Disease Treatment,Principle,Multiple medicines required
+19,Tb Disease Treatment,Common Drugs 1,Isoniazid
+19,Tb Disease Treatment,Common Drugs 2,Rifampin
+19,Tb Disease Treatment,Common Drugs 3,Rifapentine
+19,Tb Disease Treatment,Common Drugs 4,Ethambutol
+19,Tb Disease Treatment,Common Drugs 5,Pyrazinamide
+19,Tb Disease Treatment,Common Drugs 6,Moxifloxacin
+19,Tb Disease Treatment,Treatment Duration Months 1,4
+19,Tb Disease Treatment,Treatment Duration Months 2,6
+19,Tb Disease Treatment,Treatment Duration Months 3,9
+19,Tb Disease Treatment > Infectious Control,Home Isolation,True
+19,Tb Disease Treatment > Infectious Control,Return To Work,After doctor confirms non-infectious
+19,Drug Resistant Tb > Mdr Tb,Definition,Resistant to isoniazid and rifampin
+19,Drug Resistant Tb > Xdr Tb,Definition,Resistant to nearly all TB medicines
+19,Drug Resistant Tb,Risk Factors 1,Exposure to resistant TB
+19,Drug Resistant Tb,Risk Factors 2,Incomplete treatment
+19,Drug Resistant Tb,Risk Factors 3,Previous TB disease
+19,Drug Resistant Tb,Risk Factors 4,Residence in high-resistance regions
+19,Drug Resistant Tb,Management,Requires TB expert and prolonged treatment
+19,Directly Observed Therapy,Abbreviation,DOT
+19,Directly Observed Therapy,Purpose,Ensure medication adherence
+19,Directly Observed Therapy,Methods 1,In-person DOT
+19,Directly Observed Therapy,Methods 2,Electronic DOT (eDOT)
+19,Directly Observed Therapy,Benefits 1,Improves cure rates
+19,Directly Observed Therapy,Benefits 2,Prevents drug resistance
+19,Directly Observed Therapy,Benefits 3,Monitors side effects
+19,Prevention Of Spread,Key Actions 1,Take medicines as prescribed
+19,Prevention Of Spread,Key Actions 2,Cover mouth when coughing
+19,Prevention Of Spread,Key Actions 3,Isolate if infectious
+19,Prevention Of Spread,Key Actions 4,Improve ventilation
+19,Prevention Of Spread,Key Actions 5,Avoid public places while infectious
+19,Prevention Of Spread,Hospital Measures 1,Special isolation rooms
+19,Prevention Of Spread,Hospital Measures 2,Healthcare worker masks
+19,Chatbot Intent Catalog,Definition Intents 1,What is TB?
+19,Chatbot Intent Catalog,Definition Intents 2,What causes tuberculosis?
+19,Chatbot Intent Catalog,Transmission Intents 1,How does TB spread?
+19,Chatbot Intent Catalog,Transmission Intents 2,Is TB airborne?
+19,Chatbot Intent Catalog,Risk Intents 1,Who is at risk for TB?
+19,Chatbot Intent Catalog,Risk Intents 2,Can latent TB become active?
+19,Chatbot Intent Catalog,Testing Intents 1,Should I get tested for TB?
+19,Chatbot Intent Catalog,Testing Intents 2,What TB tests are available?
+19,Chatbot Intent Catalog,Treatment Intents 1,How is TB treated?
+19,Chatbot Intent Catalog,Treatment Intents 2,What is DOT?
+19,Chatbot Intent Catalog,Prevention Intents 1,How can I avoid spreading TB?

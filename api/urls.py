@@ -6,6 +6,20 @@ from django.urls import path
 from .views import (
     # Home
     home,
+    ai_assistant_page,
+
+    # AI Prediction Views
+    AIAssistantAPIView,
+    AIDailyCheckInAPIView,
+    AIMedicationAPIView,
+    AIMedicationPrescriptionExtractAPIView,
+    AIMedicationPrescriptionSaveAPIView,
+    AIMedicationDoseStatusAPIView,
+    AIWeeklyHealthReportAPIView,
+    AIWeeklyHealthReportPDFAPIView,
+    AIPatientTimelineAPIView,
+    DiseasePredictionAPIView,
+    DiseasePredictionMetadataAPIView,
     
     # Authentication Views
     UserSignupAPIView, 
@@ -55,6 +69,19 @@ from .views import (
 urlpatterns = [
     # ========== HOME/INDEX ==========
     path('index/', home, name='home'),  # API root endpoint for navigation
+
+    # ========== AI DISEASE PREDICTION ==========
+    path('ai/assistant/message/', AIAssistantAPIView.as_view(), name='ai-assistant-message'),
+    path('ai/daily-checkin/', AIDailyCheckInAPIView.as_view(), name='ai-daily-checkin'),
+    path('ai/weekly-report/', AIWeeklyHealthReportAPIView.as_view(), name='ai-weekly-report'),
+    path('ai/weekly-report/pdf/', AIWeeklyHealthReportPDFAPIView.as_view(), name='ai-weekly-report-pdf'),
+    path('ai/medicines/', AIMedicationAPIView.as_view(), name='ai-medicines'),
+    path('ai/medicines/prescription-extract/', AIMedicationPrescriptionExtractAPIView.as_view(), name='ai-medicines-prescription-extract'),
+    path('ai/medicines/prescription-save/', AIMedicationPrescriptionSaveAPIView.as_view(), name='ai-medicines-prescription-save'),
+    path('ai/medicines/<int:medication_id>/dose/', AIMedicationDoseStatusAPIView.as_view(), name='ai-medication-dose'),
+    path('ai/patient-timeline/<int:patient_id>/', AIPatientTimelineAPIView.as_view(), name='ai-patient-timeline'),
+    path('ai/disease-prediction/', DiseasePredictionAPIView.as_view(), name='ai-disease-prediction'),
+    path('ai/disease-prediction/meta/', DiseasePredictionMetadataAPIView.as_view(), name='ai-disease-prediction-meta'),
     
     # ========== AUTHENTICATION ENDPOINTS ==========
     path('user/signup/', UserSignupAPIView.as_view(), name='user-signup'),

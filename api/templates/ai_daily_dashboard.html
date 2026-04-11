@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir AI Daily Dashboard</title>
+    <style>
+        :root { --panel: rgba(255, 251, 246, 0.92); --card: rgba(255,255,255,0.84); --text:#19343f; --muted:#627983; --line:rgba(25,52,63,0.12); --brand:#127a74; --brand-deep:#0d5160; --warn:#b95b30; --shadow:0 22px 48px rgba(14,55,66,0.12); }
+        * { box-sizing: border-box; }
+        body { margin:0; font-family:"Segoe UI Variable Display","Aptos",sans-serif; font-size:15px; color:var(--text); background:linear-gradient(160deg,#f6f1ea 0%,#efe4d7 52%,#eaf3f0 100%); }
+        .page { width:min(1180px,calc(100vw - 20px)); margin:10px auto; display:grid; grid-template-columns:290px minmax(0,1fr); gap:14px; }
+        .sidebar,.main { background:var(--panel); border:1px solid rgba(255,255,255,0.55); backdrop-filter:blur(12px); box-shadow:var(--shadow); }
+        .sidebar { border-radius:24px; padding:18px; display:flex; flex-direction:column; gap:14px; }
+        .main { border-radius:26px; overflow:hidden; display:grid; grid-template-rows:auto auto 1fr; min-height:calc(100vh - 20px); }
+        .title { margin:0; font:700 clamp(1.6rem,2.4vw,2.45rem) Georgia,serif; line-height:1.02; }
+        .muted { color:var(--muted); }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,button,select,input,textarea { font:inherit; }
+        .nav a,.ghost-btn { text-decoration:none; color:var(--text); padding:9px 12px; border-radius:999px; background:rgba(255,255,255,0.72); border:1px solid var(--line); }
+        .hero { padding:18px 22px 14px; border-bottom:1px solid var(--line); background:linear-gradient(135deg,rgba(255,255,255,0.55),rgba(255,246,238,0.65)); }
+        .hero h1 { margin:0; font-size:clamp(1.35rem,1.8vw,1.9rem); }
+        .hero p { margin:8px 0 0; color:var(--muted); }
+        .toolbar { padding:14px 22px; border-bottom:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1fr) auto auto; gap:10px; align-items:center; }
+        .token,.grid,.cards { display:grid; gap:12px; }
+        .token input,.grid input,.grid select,.grid textarea { width:100%; border:1px solid var(--line); border-radius:14px; background:white; padding:10px 12px; color:var(--text); }
+        .grid textarea { min-height:80px; resize:vertical; }
+        .primary-btn { border:0; border-radius:14px; background:linear-gradient(135deg,var(--brand),var(--brand-deep)); color:white; padding:11px 15px; font-weight:700; cursor:pointer; }
+        .surface { padding:18px 22px 22px; display:grid; gap:14px; overflow-y:auto; }
+        .section,.stat,.list-card { background:var(--card); border:1px solid var(--line); border-radius:18px; }
+        .section { padding:14px; }
+        .section h3,.list-card h3 { margin:0 0 12px; }
+        .stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+        .stat { padding:14px; }
+        .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; }
+        .value { margin-top:6px; font-size:1.35rem; font-weight:700; }
+        .chips,.list { display:flex; flex-wrap:wrap; gap:10px; }
+        .chip { padding:7px 11px; border-radius:999px; background:rgba(18,122,116,0.1); border:1px solid rgba(18,122,116,0.12); }
+        .chip.warn { background:rgba(226,114,77,0.12); border-color:rgba(226,114,77,0.18); color:var(--warn); }
+        .medicine,.tracker-day { display:grid; gap:8px; padding:12px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,0.78); }
+        .medicine-row,.prediction-item { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+        .dose-row { display:flex; flex-wrap:wrap; gap:8px; }
+        .dose-pill { padding:7px 10px; border-radius:999px; background:#f4f5f5; border:1px solid var(--line); font-size:0.88rem; }
+        .prediction-item { padding:10px 12px; border-radius:12px; background:rgba(18,122,116,0.06); border:1px solid rgba(18,122,116,0.08); }
+        .tracker-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; }
+        .tracker-day.active { border-color:rgba(18,122,116,0.28); background:rgba(18,122,116,0.08); }
+        .tracker-top { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+        .mini-label { color:var(--muted); font-size:12px; }
+        .mini-pill { padding:5px 9px; border-radius:999px; background:rgba(18,122,116,0.1); border:1px solid rgba(18,122,116,0.16); font-size:12px; font-weight:700; }
+        .mini-pill.warn { background:rgba(226,114,77,0.12); border-color:rgba(226,114,77,0.2); color:var(--warn); }
+        .empty { color:var(--muted); }
+        @media (max-width:980px){ .page{grid-template-columns:1fr;} .main{min-height:auto;} }
+        @media (max-width:720px){ .toolbar{grid-template-columns:1fr;} .stats{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <aside class="sidebar">
+            <div>
+                <h2 class="title">Daily AI health dashboard.</h2>
+                <p class="muted">Check-in, reminders, warning system, and quick insights in one place.</p>
+            </div>
+            <div class="nav">
+                <a href="{% url 'ai-assistant-page' %}">Assistant</a>
+                <a href="{% url 'ai-daily-dashboard-page' %}">Dashboard</a>
+                <a href="{% url 'ai-medicines-page' %}">Medicines</a>
+                <a href="{% url 'ai-weekly-report-page' %}">Weekly report</a>
+                <a href="{% url 'ai-patient-timeline-page' %}">Doctor timeline</a>
+            </div>
+            <div class="token">
+                <label for="tokenInput">JWT Access Token</label>
+                <input id="tokenInput" placeholder="Paste access token here">
+                <button class="ghost-btn" id="saveTokenBtn" type="button">Save token locally</button>
+                <p class="muted">This page calls protected `/api/ai/...` endpoints, so token required.</p>
+            </div>
+            <div class="section">
+                <h3>Quick note</h3>
+                <p class="muted">Best flow: har din ka check-in save karo. 7 din complete hone par dashboard aapke stored routine aur symptoms se weekly AI report bhi dikhayega.</p>
+            </div>
+        </aside>
+        <section class="main">
+            <div class="hero">
+                <h1>Today's Health Dashboard</h1>
+                <p>Daily check-in save karo, 7 din ka health data build karo, aur usi dataset ke hisaab se weekly AI report pao.</p>
+            </div>
+            <div class="toolbar">
+                <input id="dateInput" type="date">
+                <button class="primary-btn" id="loadBtn" type="button">Load dashboard</button>
+                <button class="ghost-btn" id="useTodayBtn" type="button">Use today</button>
+            </div>
+            <div class="surface">
+                <div class="section">
+                    <h3>Daily Check-in</h3>
+                    <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+                        <textarea id="symptomsText" placeholder="Example: fever, headache, body pain"></textarea>
+                        <textarea id="notesText" placeholder="Extra notes, duration, discomfort details"></textarea>
+                        <select id="foodType"><option value="home">Normal home food</option><option value="outside">Outside food</option><option value="junk">Junk / oily</option></select>
+                        <input id="waterIntake" type="number" min="0" max="40" placeholder="Water intake glasses">
+                        <input id="sleepHours" type="number" step="0.5" min="0" max="24" placeholder="Sleep hours">
+                        <select id="sleepQuality"><option value="average">Sleep quality: Average</option><option value="good">Good</option><option value="poor">Poor</option></select>
+                        <select id="stressLevel"><option value="moderate">Stress: Moderate</option><option value="low">Low</option><option value="high">High</option></select>
+                        <select id="energyLevel"><option value="medium">Energy: Medium</option><option value="high">High</option><option value="low">Low</option></select>
+                    </div>
+                    <div style="margin-top: 14px;"><button class="primary-btn" id="saveCheckinBtn" type="button">Save check-in</button></div>
+                </div>
+                <div class="stats">
+                    <div class="stat"><div class="label">Health score</div><div class="value" id="healthScore">--</div></div>
+                    <div class="stat"><div class="label">Top prediction</div><div class="value" id="topPrediction">--</div></div>
+                    <div class="stat"><div class="label">Pending doses</div><div class="value" id="pendingDoses">--</div></div>
+                </div>
+                <div class="list-card section"><h3>Quick Insights</h3><div class="chips" id="insights"></div></div>
+                <div class="list-card section"><h3>Warnings</h3><div class="chips" id="warnings"></div></div>
+                <div class="list-card section"><h3>Today's Medicines</h3><div class="cards" id="medicines"></div></div>
+                <div class="list-card section"><h3>Prediction Snapshot</h3><div class="cards" id="predictions"></div></div>
+                <div class="list-card section">
+                    <h3>7-Day Tracking</h3>
+                    <div class="muted" id="trackerSummary">Save your daily routine to build a 7-day health record.</div>
+                    <div class="cards tracker-grid" id="trackerDays" style="margin-top:12px;"></div>
+                </div>
+                <div class="list-card section">
+                    <h3>7-Day AI Report</h3>
+                    <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-bottom:12px;">
+                        <div class="stat"><div class="label">Days logged</div><div class="value" id="reportDaysLogged">--</div></div>
+                        <div class="stat"><div class="label">Possible issue</div><div class="value" id="reportIssue">--</div></div>
+                        <div class="stat"><div class="label">Risk probability</div><div class="value" id="reportRisk">--</div></div>
+                    </div>
+                    <div class="muted" id="reportMessage">7 days complete hone ke baad detailed AI report ready hogi.</div>
+                    <div class="muted" id="reportSummary" style="margin-top:8px;">Weekly AI summary will appear here after enough tracking data is available.</div>
+                    <div class="list-card section" style="margin-top:12px;">
+                        <h3>Matched weekly symptoms</h3>
+                        <div class="chips" id="reportSymptoms"></div>
+                    </div>
+                    <div class="list-card section">
+                        <h3>Care guidance</h3>
+                        <div class="chips" id="reportCare"></div>
+                    </div>
+                    <div class="list-card section">
+                        <h3>Warning signs</h3>
+                        <div class="chips" id="reportWarnings"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const tokenInput = document.getElementById("tokenInput");
+        const dateInput = document.getElementById("dateInput");
+        const symptomsText = document.getElementById("symptomsText");
+        const notesText = document.getElementById("notesText");
+        const foodType = document.getElementById("foodType");
+        const waterIntake = document.getElementById("waterIntake");
+        const sleepHours = document.getElementById("sleepHours");
+        const sleepQuality = document.getElementById("sleepQuality");
+        const stressLevel = document.getElementById("stressLevel");
+        const energyLevel = document.getElementById("energyLevel");
+        const healthScore = document.getElementById("healthScore");
+        const topPrediction = document.getElementById("topPrediction");
+        const pendingDoses = document.getElementById("pendingDoses");
+        const insights = document.getElementById("insights");
+        const warnings = document.getElementById("warnings");
+        const medicines = document.getElementById("medicines");
+        const predictions = document.getElementById("predictions");
+        const trackerSummary = document.getElementById("trackerSummary");
+        const trackerDays = document.getElementById("trackerDays");
+        const reportDaysLogged = document.getElementById("reportDaysLogged");
+        const reportIssue = document.getElementById("reportIssue");
+        const reportRisk = document.getElementById("reportRisk");
+        const reportMessage = document.getElementById("reportMessage");
+        const reportSummary = document.getElementById("reportSummary");
+        const reportSymptoms = document.getElementById("reportSymptoms");
+        const reportCare = document.getElementById("reportCare");
+        const reportWarnings = document.getElementById("reportWarnings");
+        tokenInput.value = localStorage.getItem("medoair_access_token") || "";
+        dateInput.value = new Date().toISOString().slice(0, 10);
+        document.getElementById("saveTokenBtn").addEventListener("click", () => localStorage.setItem("medoair_access_token", tokenInput.value.trim()));
+        document.getElementById("useTodayBtn").addEventListener("click", () => {
+            dateInput.value = new Date().toISOString().slice(0, 10);
+            resetDashboardState();
+        });
+        dateInput.addEventListener("change", resetDashboardState);
+        document.getElementById("loadBtn").addEventListener("click", loadDashboard);
+        document.getElementById("saveCheckinBtn").addEventListener("click", saveCheckin);
+        async function apiFetch(url, options = {}) {
+            const token = tokenInput.value.trim();
+            const headers = Object.assign({}, options.headers || {}, token ? { Authorization: `Bearer ${token}` } : {});
+            const response = await fetch(url, Object.assign({}, options, { headers }));
+            const payload = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(payload.error || payload.detail || "Request failed");
+            return payload;
+        }
+        async function loadDashboard() {
+            try { renderDashboard((await apiFetch(`/api/ai/daily-checkin/?log_date=${encodeURIComponent(dateInput.value)}`)).data); } catch (error) { alert(error.message); }
+        }
+        async function saveCheckin() {
+            try {
+                const symptoms = symptomsText.value.split(/[\n,]+/).map((item) => item.trim()).filter(Boolean);
+                const payload = await apiFetch("/api/ai/daily-checkin/", { method:"POST", headers:{ "Content-Type":"application/json" }, body:JSON.stringify({ log_date:dateInput.value, symptoms, symptoms_text:symptomsText.value.trim(), notes:notesText.value.trim(), food_type:foodType.value, water_intake_glasses:Number(waterIntake.value || 0), sleep_hours:sleepHours.value ? Number(sleepHours.value) : null, sleep_quality:sleepQuality.value, stress_level:stressLevel.value, energy_level:energyLevel.value }) });
+                renderDashboard(payload.data.dashboard);
+            } catch (error) { alert(error.message); }
+        }
+        function renderDashboard(data) {
+            if (data.daily_log) {
+                dateInput.value = data.daily_log.date || dateInput.value;
+                symptomsText.value = (data.daily_log.symptoms || []).join(", ");
+                notesText.value = data.daily_log.notes || "";
+                foodType.value = data.daily_log.food_type || "home";
+                waterIntake.value = data.daily_log.water_intake_glasses ?? "";
+                sleepHours.value = data.daily_log.sleep_hours ?? "";
+                sleepQuality.value = data.daily_log.sleep_quality || "average";
+                stressLevel.value = data.daily_log.stress_level || "moderate";
+                energyLevel.value = data.daily_log.energy_level || "medium";
+            } else {
+                clearFormFields();
+            }
+            healthScore.textContent = data.health_score ?? "--";
+            topPrediction.textContent = data.prediction?.predicted_display_name || "No symptom prediction";
+            pendingDoses.textContent = (data.today_medicines || []).reduce((sum, item) => sum + (item.pending_count || 0), 0);
+            renderChips(insights, data.quick_insights || [], false);
+            renderChips(warnings, data.warnings || [], true);
+            medicines.innerHTML = "";
+            if (!(data.today_medicines || []).length) {
+                medicines.innerHTML = '<div class="empty">No active medicines for this date.</div>';
+            } else {
+                data.today_medicines.forEach((item) => {
+                    const doses = (item.doses || []).map((dose) => `<span class="dose-pill">${escapeHtml(dose.timing)}: ${escapeHtml(dose.status)}</span>`).join("");
+                    medicines.innerHTML += `<div class="medicine"><div class="medicine-row"><strong>${escapeHtml(item.name)}</strong><span class="muted">${escapeHtml(item.status)}</span></div><div class="muted">${escapeHtml(item.dose || "Dose not specified")}</div><div class="dose-row">${doses}</div></div>`;
+                });
+            }
+            predictions.innerHTML = "";
+            if (!(data.prediction?.top_predictions || []).length) {
+                predictions.innerHTML = '<div class="empty">No prediction yet. Add symptoms to see AI output.</div>';
+            } else {
+                data.prediction.top_predictions.forEach((item) => {
+                    predictions.innerHTML += `<div class="prediction-item"><div><strong>${escapeHtml(item.display_name)}</strong><div class="muted">${escapeHtml((item.sample_symptoms || []).slice(0, 3).join(", "))}</div></div><strong>${escapeHtml(String(item.confidence))}%</strong></div>`;
+                });
+            }
+            renderTracker(data.seven_day_tracker || null);
+            renderWeeklyPreview(data.weekly_report_preview || null);
+        }
+        function renderTracker(data) {
+            trackerDays.innerHTML = "";
+            if (!data) {
+                trackerSummary.textContent = "7-day data not available yet.";
+                trackerDays.innerHTML = '<div class="empty">No tracker data.</div>';
+                return;
+            }
+            trackerSummary.textContent = `${data.days_logged || 0}/7 days logged. ${data.is_week_ready ? "Weekly AI report ready." : `${data.days_remaining || 0} more day(s) needed for a complete weekly report.`}`;
+            (data.days || []).forEach((item) => {
+                const symptoms = (item.symptoms || []).length ? escapeHtml(item.symptoms.join(", ")) : "No symptoms saved";
+                trackerDays.innerHTML += `
+                    <div class="tracker-day ${item.logged ? "active" : ""}">
+                        <div class="tracker-top">
+                            <strong>${escapeHtml(item.date)}</strong>
+                            <span class="mini-pill ${item.logged ? "" : "warn"}">${item.logged ? "Saved" : "Missing"}</span>
+                        </div>
+                        <div class="mini-label">${symptoms}</div>
+                        <div class="mini-label">Health score: ${item.health_score ?? "--"}</div>
+                    </div>
+                `;
+            });
+        }
+        function renderWeeklyPreview(data) {
+            const assessment = data?.dataset_assessment || {};
+            const aiReport = data?.ai_health_report || {};
+            reportDaysLogged.textContent = data?.days_logged ?? "--";
+            reportIssue.textContent = assessment.possible_issue || "Building report";
+            reportRisk.textContent = assessment.risk_probability != null ? `${assessment.risk_probability}%` : "--";
+            reportMessage.textContent = assessment.message || "Save daily logs to generate a dataset-based report.";
+            reportSummary.textContent = aiReport.summary || "Weekly AI summary will appear here after enough tracking data is available.";
+            renderChips(reportSymptoms, assessment.matched_symptoms || [], false, "No repeated symptom pattern yet.");
+            renderChips(reportCare, assessment.care_guidance || [], false, "No dataset care guidance yet.");
+            renderChips(reportWarnings, assessment.warning_signs || [], true, "No warning signs detected.");
+        }
+        function renderChips(target, items, warn, emptyText) {
+            target.innerHTML = "";
+            if (!items.length) { target.innerHTML = `<div class="empty">${emptyText || (warn ? "No warnings right now." : "No insights yet.")}</div>`; return; }
+            items.forEach((item) => { const node = document.createElement("div"); node.className = warn ? "chip warn" : "chip"; node.textContent = item; target.appendChild(node); });
+        }
+        function clearFormFields() {
+            symptomsText.value = "";
+            notesText.value = "";
+            foodType.value = "home";
+            waterIntake.value = "";
+            sleepHours.value = "";
+            sleepQuality.value = "average";
+            stressLevel.value = "moderate";
+            energyLevel.value = "medium";
+        }
+        function resetDashboardState() {
+            clearFormFields();
+            healthScore.textContent = "--";
+            topPrediction.textContent = "--";
+            pendingDoses.textContent = "--";
+            renderChips(insights, [], false, "No insights yet.");
+            renderChips(warnings, [], true, "No warnings right now.");
+            medicines.innerHTML = '<div class="empty">No active medicines for this date.</div>';
+            predictions.innerHTML = '<div class="empty">No prediction yet. Add symptoms to see AI output.</div>';
+            trackerSummary.textContent = "Save your daily routine to build a 7-day health record.";
+            trackerDays.innerHTML = '<div class="empty">No tracker data.</div>';
+            reportDaysLogged.textContent = "--";
+            reportIssue.textContent = "--";
+            reportRisk.textContent = "--";
+            reportMessage.textContent = "7 days complete hone ke baad detailed AI report ready hogi.";
+            reportSummary.textContent = "Weekly AI summary will appear here after enough tracking data is available.";
+            renderChips(reportSymptoms, [], false, "No repeated symptom pattern yet.");
+            renderChips(reportCare, [], false, "No dataset care guidance yet.");
+            renderChips(reportWarnings, [], true, "No warning signs detected.");
+        }
+        function escapeHtml(value) { return String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
+        resetDashboardState();
+    </script>
+</body>
+</html>

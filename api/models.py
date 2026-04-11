@@ -360,3 +360,172 @@ class Report(models.Model):
 
     def __str__(self):
         return f"{self.user.email} - {self.title or 'Report'}"
+
+
+class DailyHealthLog(models.Model):
+    FOOD_CHOICES = [
+        ('home', 'Normal home food'),
+        ('outside', 'Outside food'),
+        ('junk', 'Junk / oily'),
+    ]
+
+    LEVEL_CHOICES = [
+        ('low', 'Low'),
+        ('moderate', 'Moderate'),
+        ('high', 'High'),
+    ]
+
+    ENERGY_CHOICES = [
+        ('low', 'Low'),
+        ('medium', 'Medium'),
+        ('high', 'High'),
+    ]
+
+    SLEEP_QUALITY_CHOICES = [
+        ('poor', 'Poor'),
+        ('average', 'Average'),
+        ('good', 'Good'),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='daily_health_logs')
+    log_date = models.DateField(default=timezone.localdate)
+    symptoms = models.JSONField(default=list, blank=True)
+    symptoms_text = models.TextField(blank=True, null=True)
+    food_type = models.CharField(max_length=20, choices=FOOD_CHOICES, default='home')
+    water_intake_glasses = models.PositiveIntegerField(default=0)
+    sleep_hours = models.DecimalField(max_digits=4, decimal_places=1, null=True, blank=True)
+    sleep_quality = models.CharField(max_length=20, choices=SLEEP_QUALITY_CHOICES, default='average')
+    stress_level = models.CharField(max_length=20, choices=LEVEL_CHOICES, default='moderate')
+    energy_level = models.CharField(max_length=20, choices=ENERGY_CHOICES, default='medium')
+    notes = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-log_date', '-updated_at']
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'log_date'], name='unique_daily_health_log_per_user')
+        ]
+
+    def __str__(self):
+        return f"{self.user.email} - {self.log_date}"
+
+
+class AIAnalysisRecord(models.Model):
+    RESPONSE_LANGUAGE_CHOICES = [
+        ('english', 'English'),
+        ('hinglish', 'Hinglish'),
+    ]
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        related_name='ai_analysis_records',
+        null=True,
+        blank=True,
+    )
+    log_date = models.DateField(default=timezone.localdate, null=True, blank=True)
+    input_message = models.TextField(blank=True, null=True)
+    symptoms = models.JSONField(default=list, blank=True)
+    symptoms_text = models.TextField(blank=True, null=True)
+    notes = models.TextField(blank=True, null=True)
+    food_type = models.CharField(max_length=20, choices=DailyHealthLog.FOOD_CHOICES, blank=True)
+    water_intake_glasses = models.PositiveIntegerField(null=True, blank=True)
+    sleep_hours = models.DecimalField(max_digits=4, decimal_places=1, null=True, blank=True)
+    sleep_quality = models.CharField(max_length=20, choices=DailyHealthLog.SLEEP_QUALITY_CHOICES, blank=True)
+    stress_level = models.CharField(max_length=20, choices=DailyHealthLog.LEVEL_CHOICES, blank=True)
+    energy_level = models.CharField(max_length=20, choices=DailyHealthLog.ENERGY_CHOICES, blank=True)
+    matched_symptoms = models.JSONField(default=list, blank=True)
+    detected_problem = models.CharField(max_length=200)
+    risk_probability = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    model_name = models.CharField(max_length=100, default='LogisticRegression')
+    top_predictions = models.JSONField(default=list, blank=True)
+    reference_symptoms = models.JSONField(default=list, blank=True)
+    care_guidance = models.JSONField(default=list, blank=True)
+    medicine_guidance = models.JSONField(default=list, blank=True)
+    warning_signs = models.JSONField(default=list, blank=True)
+    submitted_context = models.JSONField(default=list, blank=True)
+    follow_up_questions = models.JSONField(default=list, blank=True)
+    assistant_response = models.TextField()
+    response_language = models.CharField(
+        max_length=20,
+        choices=RESPONSE_LANGUAGE_CHOICES,
+        default='english',
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.detected_problem} - {self.created_at:%Y-%m-%d %H:%M}"
+
+
+class MedicationSchedule(models.Model):
+    SOURCE_CHOICES = [
+        ('manual', 'Manual entry'),
+        ('prescription_upload', 'Prescription upload'),
+    ]
+
+    TIMING_CHOICES = [
+        ('morning', 'Morning'),
+        ('afternoon', 'Afternoon'),
+        ('night', 'Night'),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='medication_schedules')
+    name = models.CharField(max_length=200)
+    dose = models.CharField(max_length=100, blank=True)
+    duration_days = models.PositiveIntegerField(default=1)
+    timings = models.JSONField(default=list, blank=True)
+    start_date = models.DateField(default=timezone.localdate)
+    end_date = models.DateField(blank=True, null=True)
+    source = models.CharField(max_length=30, choices=SOURCE_CHOICES, default='manual')
+    instructions = models.TextField(blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def save(self, *args, **kwargs):
+        if self.start_date and self.duration_days and not self.end_date:
+            self.end_date = self.start_date + timedelta(days=self.duration_days - 1)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.user.email} - {self.name}"
+
+
+class MedicationDoseLog(models.Model):
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('taken', 'Taken'),
+        ('missed', 'Missed'),
+        ('skipped', 'Skipped'),
+    ]
+
+    medication = models.ForeignKey(
+        MedicationSchedule,
+        on_delete=models.CASCADE,
+        related_name='dose_logs',
+    )
+    dose_date = models.DateField()
+    timing = models.CharField(max_length=20, choices=MedicationSchedule.TIMING_CHOICES)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    marked_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-dose_date', 'timing']
+        constraints = [
+            models.UniqueConstraint(
+                fields=['medication', 'dose_date', 'timing'],
+                name='unique_medication_dose_log',
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.medication.name} - {self.dose_date} - {self.timing}"

@@ -1,0 +1,1848 @@
+﻿Record,Section,Field,Value
+1,Meta,Disease Name,Typhoid Fever
+1,Meta,Alternate Names 1,Enteric Fever
+1,Meta,Causative Agent,Salmonella enterica serotype Typhi
+1,Meta,Last Compiled,2026-01
+1,Meta,Source Documents 1,Typhoid Investigative Guidelines (Aug 2025)
+1,Meta,Source Documents 2,Communicable Disease Management Protocol – Typhoid Fever (Dec 2024 update)
+1,Case Definitions > Confirmed Case,Criteria 1,Isolation of Salmonella Typhi from blood
+1,Case Definitions > Confirmed Case,Criteria 2,Isolation from stool
+1,Case Definitions > Confirmed Case,Criteria 3,Isolation from urine
+1,Case Definitions > Confirmed Case,Criteria 4,Isolation from bone marrow
+1,Case Definitions > Confirmed Case,Criteria 5,Isolation from other sterile sites
+1,Case Definitions > Confirmed Case,Clinical Illness Required,False
+1,Case Definitions > Probable Case,Criteria 1,Compatible clinical illness
+1,Case Definitions > Probable Case,Criteria 2,Epidemiological link to confirmed case
+1,Case Definitions > Suspect Case,Criteria 1,Compatible illness lasting at least 7 days
+1,Case Definitions > Suspect Case,Criteria 2,No laboratory confirmation
+1,Case Definitions > Suspect Case,Reportable,False
+1,Clinical Presentation,Early Symptoms 1,Gradual onset fever
+1,Clinical Presentation,Early Symptoms 2,Headache
+1,Clinical Presentation,Early Symptoms 3,Malaise
+1,Clinical Presentation,Early Symptoms 4,Anorexia
+1,Clinical Presentation,Early Symptoms 5,Lethargy
+1,Clinical Presentation,Early Symptoms 6,Dry cough
+1,Clinical Presentation,Gastrointestinal Features 1,Constipation (more common)
+1,Clinical Presentation,Gastrointestinal Features 2,Diarrhea (less common)
+1,Clinical Presentation,Gastrointestinal Features 3,Abdominal pain
+1,Clinical Presentation,Gastrointestinal Features 4,Abdominal tenderness
+1,Clinical Presentation,Systemic Features 1,Relative bradycardia
+1,Clinical Presentation,Systemic Features 2,Hepatomegaly
+1,Clinical Presentation,Systemic Features 3,Splenomegaly
+1,Clinical Presentation,Systemic Features 4,Mental dullness
+1,Clinical Presentation,Systemic Features 5,Slight deafness
+1,Clinical Presentation > Dermatologic Signs,Rash Name,Rose spots
+1,Clinical Presentation > Dermatologic Signs,Appearance,Rose-colored maculopapular lesions
+1,Clinical Presentation > Dermatologic Signs,Locations 1,Abdomen
+1,Clinical Presentation > Dermatologic Signs,Locations 2,Back
+1,Clinical Presentation > Dermatologic Signs,Locations 3,Arms
+1,Clinical Presentation > Dermatologic Signs,Locations 4,Legs
+1,Clinical Presentation > Dermatologic Signs,Duration Days,2–4
+1,Clinical Presentation > Severity,Untreated Fatality Rate,10–20%
+1,Clinical Presentation > Severity,Treated Fatality Rate,<1%
+1,Clinical Presentation > Severity,Relapse Rate,Up to 10%
+1,Clinical Presentation,Complications 1,Intestinal hemorrhage
+1,Clinical Presentation,Complications 2,Intestinal perforation
+1,Clinical Presentation,Complications 3,Sepsis
+1,Clinical Presentation,Complications 4,Neurologic manifestations
+1,Epidemiology,Reservoir,Humans only
+1,Epidemiology > Carrier State,Chronic Carrier Rate,1–5%
+1,Epidemiology > Carrier State,High Risk Groups 1,Women
+1,Epidemiology > Carrier State,High Risk Groups 2,Age >50 years
+1,Epidemiology > Carrier State,High Risk Groups 3,Gallbladder disease
+1,Epidemiology > Carrier State,High Risk Groups 4,Schistosomiasis
+1,Epidemiology > Carrier State,High Risk Groups 5,Gallbladder carcinoma
+1,Epidemiology > Global Burden,Annual Cases Worldwide,≈22 million
+1,Epidemiology > Global Burden,Annual Deaths Worldwide,"≈200,000"
+1,Epidemiology > Global Burden,High Risk Regions 1,South Asia
+1,Epidemiology > Global Burden,High Risk Regions 2,Southeast Asia
+1,Epidemiology > Global Burden,High Risk Regions 3,Africa
+1,Epidemiology > Global Burden,High Risk Regions 4,Caribbean
+1,Epidemiology > Global Burden,High Risk Regions 5,Central and South America
+1,Epidemiology > Travel Risk,Highest Risk Travel 1,India
+1,Epidemiology > Travel Risk,Highest Risk Travel 2,Pakistan
+1,Epidemiology > Travel Risk,Highest Risk Travel 3,Bangladesh
+1,Epidemiology > Travel Risk,High Risk Travelers,Visiting friends and relatives (VFRs)
+1,Transmission,Primary Route,Fecal–oral
+1,Transmission,Common Vehicles 1,Contaminated drinking water
+1,Transmission,Common Vehicles 2,Food handled by infected persons
+1,Transmission,Common Vehicles 3,Raw vegetables fertilized with night soil
+1,Transmission,Common Vehicles 4,Shellfish from sewage-contaminated waters
+1,Transmission,Common Vehicles 5,Unpasteurized milk
+1,Transmission,Additional Routes 1,"Sexual transmission (documented, especially MSM)"
+1,Incubation And Communicability > Incubation Period,Average Days,8–14
+1,Incubation And Communicability > Incubation Period,Range Days,3–60+
+1,Incubation And Communicability > Communicability,Start,First week of illness
+1,Incubation And Communicability > Communicability,End,Through convalescence
+1,Incubation And Communicability > Communicability,Chronic,Permanent if carrier develops
+1,Laboratory Diagnosis,Preferred Tests 1,Blood culture (early disease)
+1,Laboratory Diagnosis,Preferred Tests 2,Stool culture (after first week)
+1,Laboratory Diagnosis,Preferred Tests 3,Urine culture
+1,Laboratory Diagnosis,Gold Standard,Bone marrow culture
+1,Laboratory Diagnosis,Not Recommended 1,Widal test (low specificity)
+1,Laboratory Diagnosis,Specimen Rules 1,Collect before antibiotics or 48h after stopping
+1,Laboratory Diagnosis,Specimen Rules 2,Specimens collected ≥24h apart
+1,Treatment,General Principles 1,Antibiotics required to prevent complications
+1,Treatment,General Principles 2,Treatment guided by susceptibility testing
+1,Treatment > First Line,Adults 1,Ciprofloxacin (if susceptible)
+1,Treatment > First Line,Adults 2,Azithromycin
+1,Treatment > First Line,Children 1,Ceftriaxone
+1,Treatment,Alternative Agents 1,Cefixime
+1,Treatment,Alternative Agents 2,Ceftriaxone (parenteral)
+1,Treatment,Alternative Agents 3,Azithromycin (uncomplicated cases)
+1,Treatment,Resistance Notes 1,Multidrug resistance common
+1,Treatment,Resistance Notes 2,High fluoroquinolone resistance in Indian subcontinent
+1,Treatment,Resistance Notes 3,Nalidixic acid resistance predicts fluoroquinolone failure
+1,Treatment,Severe Cases 1,Ceftriaxone
+1,Treatment,Severe Cases 2,Adjunct corticosteroids for critically ill patients
+1,Carrier Management,Definition,Excretion of S. Typhi >1 year
+1,Carrier Management > Treatment,Preferred 1,Ciprofloxacin 750 mg BID × 28 days
+1,Carrier Management > Treatment,Preferred 2,Norfloxacin 400 mg BID × 28 days
+1,Carrier Management > Treatment,Success Rate,80–90%
+1,Carrier Management > Clearance Requirements,Stool Cultures,6
+1,Carrier Management > Clearance Requirements,Urine Culture,1
+1,Carrier Management > Clearance Requirements,Interval,≥72 hours apart
+1,Public Health Reporting > Laboratory Reporting,Timeframe,Within 1 working day
+1,Public Health Reporting > Laboratory Reporting,Requirements 1,Immediate notification
+1,Public Health Reporting > Laboratory Reporting,Requirements 2,Submission of isolates for confirmation
+1,Public Health Reporting,Public Health Followup 1,Case investigation
+1,Public Health Reporting,Public Health Followup 2,Source identification
+1,Public Health Reporting,Public Health Followup 3,Contact tracing
+1,Public Health Reporting,Public Health Followup 4,Carrier assessment
+1,Case Control Measures > Isolation,Standard Precautions,True
+1,Case Control Measures > Isolation,Contact Precautions 1,Incontinent adults
+1,Case Control Measures > Isolation,Contact Precautions 2,Diapered children
+1,Case Control Measures > Exclusion Criteria > Food Handlers,Requirement,≥3–4 negative stool cultures
+1,Case Control Measures > Exclusion Criteria > Food Handlers,Timing,≥48h post-antibiotics
+1,Case Control Measures > Exclusion Criteria > Childcare,Under 5,3 negative stool cultures
+1,Case Control Measures > Exclusion Criteria > Childcare,Over 5,Exclude until symptoms resolve
+1,Contact Management,Contacts Defined As 1,Household members
+1,Contact Management,Contacts Defined As 2,Sexual partners
+1,Contact Management,Contacts Defined As 3,Travel companions
+1,Contact Management > Symptomatic Contacts,Action 1,Clinical assessment
+1,Contact Management > Symptomatic Contacts,Action 2,Stool culture
+1,Contact Management > Symptomatic Contacts,Action 3,Exclude from high-risk work
+1,Contact Management > Asymptomatic Contacts,High Risk Occupations,Screen but do not exclude unless positive
+1,Outbreak Management,Definition,Cases exceeding expected baseline
+1,Outbreak Management,Key Actions 1,Identify common source
+1,Outbreak Management,Key Actions 2,Environmental investigation
+1,Outbreak Management,Key Actions 3,Public notification
+1,Outbreak Management,Key Actions 4,Enhanced surveillance
+1,Outbreak Management,Vaccination Role,Not recommended for outbreak control
+1,Prevention > Vaccination,Recommended For 1,Travelers to endemic areas
+1,Prevention > Vaccination,Recommended For 2,Laboratory workers
+1,Prevention > Vaccination,Recommended For 3,Household contacts of carriers
+1,Prevention > Vaccination,Protection Duration Years,2–3
+1,Prevention > Vaccination,Limitations,Not fully protective
+1,Prevention,Food And Water Safety 1,Drink boiled or bottled water
+1,Prevention,Food And Water Safety 2,Avoid ice
+1,Prevention,Food And Water Safety 3,Avoid raw foods
+1,Prevention,Food And Water Safety 4,Consume pasteurized dairy only
+1,Prevention,Food And Water Safety 5,Avoid street food
+1,Prevention,Hygiene 1,Hand washing after defecation
+1,Prevention,Hygiene 2,Hand washing before food preparation
+1,Chatbot Intents,Symptom Check 1,What are symptoms of typhoid?
+1,Chatbot Intents,Symptom Check 2,How does typhoid start?
+1,Chatbot Intents,Diagnosis 1,How is typhoid confirmed?
+1,Chatbot Intents,Diagnosis 2,Which test is best for typhoid?
+1,Chatbot Intents,Treatment 1,What antibiotics treat typhoid?
+1,Chatbot Intents,Treatment 2,Is typhoid curable?
+1,Chatbot Intents,Prevention 1,How can typhoid be prevented?
+1,Chatbot Intents,Prevention 2,Is there a vaccine for typhoid?
+1,Chatbot Intents,Public Health 1,When should typhoid be reported?
+1,Chatbot Intents,Public Health 2,Who must be excluded from work?
+2,General,Domain,Healthcare
+2,General,Subdomain,Infectious Diseases
+2,General,Topic,Typhoid (Enteric) Fever
+2,Source,Title,Typhoid enteric fever – part 1
+2,Source,Journal,Update in Anaesthesia
+2,Source,Publisher,World Federation of Societies of Anaesthesiologists (WFSA)
+2,Source,Original Release,Anaesthesia Tutorial of the Week 338
+2,Source,Publication Year,2016
+2,Source,Authors 1,Falan Mouton
+2,Source,Authors 2,Esohe I. Ohuoba
+2,Source,Authors 3,Faye M. Evans
+2,Source,Authors 4,Ibironke Desalu
+2,Definition,Description,"Typhoid fever, also known as enteric fever, is a bacterial infection of the gastrointestinal system caused by Salmonella enterica serotypes Typhi and Paratyphi."
+2,Definition,Host Specificity,Humans are the only reservoir
+2,Definition,Bacterial Characteristics 1,Gram-negative bacilli
+2,Definition,Bacterial Characteristics 2,Facultative anaerobes
+2,Definition,Bacterial Characteristics 3,Flagellated and motile
+2,Definition,Bacterial Characteristics 4,Non-spore forming
+2,Definition,Bacterial Characteristics 5,Highly antigenic
+2,Causative Agents,Primary 1,Salmonella Typhi
+2,Causative Agents,Primary 2,Salmonella Paratyphi
+2,Causative Agents,Notes 1,Animals are NOT carriers of typhoid Salmonella
+2,Causative Agents,Notes 2,"Non-typhoidal Salmonella causes gastroenteritis, not typhoid"
+2,Epidemiology > Global Statistics,Annual Cases,>22 million
+2,Epidemiology > Global Statistics,Annual Deaths,">200,000"
+2,Epidemiology > Global Statistics,Mortality Rate,1–4%
+2,Epidemiology > Geographical Distribution,Low Incidence 1,North America
+2,Epidemiology > Geographical Distribution,Low Incidence 2,Europe
+2,Epidemiology > Geographical Distribution,High Incidence 1,Central Asia
+2,Epidemiology > Geographical Distribution,High Incidence 2,Southeast Asia
+2,Epidemiology > Geographical Distribution,High Incidence 3,Sub-Saharan Africa
+2,Epidemiology,Risk Environments 1,Urban areas
+2,Epidemiology,Risk Environments 2,Poor sanitation regions
+2,Epidemiology,Risk Environments 3,Limited clean water access
+2,Epidemiology,Most Affected Group,Children aged 5–10 years
+2,Transmission,Route,Fecal–oral
+2,Transmission,Modes 1,Contaminated drinking water
+2,Transmission,Modes 2,Contaminated food
+2,Transmission,Modes 3,Street food vendors
+2,Transmission,Modes 4,Poor hand hygiene
+2,Transmission,Modes 5,Sewage-contaminated agriculture
+2,Transmission,Non Vectors 1,Livestock
+2,Transmission,Non Vectors 2,Household pets
+2,Pathophysiology,Entry,Ingestion of contaminated food or water
+2,Pathophysiology,Intestinal Phase 1,Bacteria cross intestinal epithelium
+2,Pathophysiology,Intestinal Phase 2,Attach to Peyer’s patches (terminal ileum)
+2,Pathophysiology,Systemic Spread 1,Phagocytosed by macrophages
+2,Pathophysiology,Systemic Spread 2,Spread via lymphatics
+2,Pathophysiology,Systemic Spread 3,"Involvement of spleen, liver, bone marrow"
+2,Pathophysiology,Gallbladder Cycle,Bacteria secreted into GI tract from gallbladder
+2,Pathophysiology,Tissue Damage 1,Inflammation of Peyer’s patches
+2,Pathophysiology,Tissue Damage 2,Necrosis and ulceration
+2,Pathophysiology,Tissue Damage 3,Bleeding and perforation
+2,Incubation Period,Range,3 days – 3 weeks
+2,Incubation Period,Factors Affecting Duration 1,Immune status
+2,Incubation Period,Factors Affecting Duration 2,Bacterial load
+2,Incubation Period,Factors Affecting Duration 3,Gastric acidity
+2,Clinical Features,General Symptoms 1,Prolonged fever
+2,Clinical Features,General Symptoms 2,Frontal headache
+2,Clinical Features,General Symptoms 3,Fatigue
+2,Clinical Features,General Symptoms 4,Flu-like symptoms (>75%)
+2,Clinical Features,Gastrointestinal 1,Abdominal pain
+2,Clinical Features,Gastrointestinal 2,Nausea
+2,Clinical Features,Gastrointestinal 3,Vomiting
+2,Clinical Features,Gastrointestinal 4,Diarrhea
+2,Clinical Features,Gastrointestinal 5,Constipation
+2,Clinical Features,Gastrointestinal 6,GI bleeding
+2,Clinical Features,Gastrointestinal 7,Anorexia
+2,Clinical Features,Physical Signs 1,Hepatomegaly
+2,Clinical Features,Physical Signs 2,Splenomegaly
+2,Clinical Features,Physical Signs 3,Rose spots (transient rash)
+2,Clinical Features,Neurological 1,Delirium
+2,Clinical Features,Neurological 2,Meningitis
+2,Clinical Features,Neurological 3,Guillain–Barré syndrome
+2,Complications > Intestinal > Perforation,Incidence,1–3%
+2,Complications > Intestinal > Perforation,Most Common Site,Terminal ileum
+2,Complications > Intestinal > Perforation,Mortality,Up to 40%
+2,Complications > Intestinal,Bleeding,True
+2,Complications,Systemic 1,Myocarditis
+2,Complications,Systemic 2,Endocarditis
+2,Complications,Systemic 3,Hepatitis
+2,Complications,Systemic 4,Pancreatitis
+2,Complications,Systemic 5,Renal failure
+2,Complications,Systemic 6,Pneumonia
+2,Complications,Systemic 7,DIC
+2,Complications,Systemic 8,Sepsis
+2,Complications > Carriage,Rate,Up to 4% become chronic carriers
+2,Complications > Carriage,Shedding 1,Urine
+2,Complications > Carriage,Shedding 2,Stool
+2,Diagnosis,Clinical Note,Clinical features alone are insufficient for diagnosis
+2,Diagnosis,Gold Standard,Culture-based isolation
+2,Diagnosis > Diagnostic Tests > Bone Marrow Culture,Sensitivity,55–90%
+2,Diagnosis > Diagnostic Tests > Bone Marrow Culture,Advantage,Positive even after antibiotics
+2,Diagnosis > Diagnostic Tests,Blood Culture,Commonly used
+2,Diagnosis > Diagnostic Tests,Stool Culture,Helpful for carriers
+2,Diagnosis > Diagnostic Tests,Urine Culture,Supportive
+2,Diagnosis > Diagnostic Tests,Skin Biopsy,Rose spots
+2,Diagnosis > Serology > Widal Test,Status,Low reliability
+2,Diagnosis > Serology > Widal Test,Limitations 1,High false positives
+2,Diagnosis > Serology > Widal Test,Limitations 2,Cross-reactivity
+2,Diagnosis > Serology > Widal Test,Limitations 3,Affected by vaccination
+2,Diagnosis > Advanced Methods > Pcr,Accuracy,High
+2,Diagnosis > Advanced Methods > Pcr,Limitations,"Expensive, limited availability"
+2,Treatment,Principles 1,Early antibiotic therapy
+2,Treatment,Principles 2,Culture-guided treatment when possible
+2,Treatment,First Line Antibiotics 1,Ciprofloxacin
+2,Treatment,First Line Antibiotics 2,Ofloxacin
+2,Treatment,Alternative Antibiotics 1,Chloramphenicol
+2,Treatment,Alternative Antibiotics 2,Amoxicillin
+2,Treatment,Alternative Antibiotics 3,Trimethoprim–sulfamethoxazole
+2,Treatment,Drug Resistant Cases 1,Ceftriaxone
+2,Treatment,Drug Resistant Cases 2,Azithromycin
+2,Treatment,Treatment Duration,Up to 21 days
+2,Treatment > Steroids,Drug,Dexamethasone
+2,Treatment > Steroids,Benefit,Reduced mortality in severe disease
+2,Treatment > Chronic Carrier Management,Duration,4–6 weeks
+2,Treatment > Chronic Carrier Management,Drugs 1,Amoxicillin
+2,Treatment > Chronic Carrier Management,Drugs 2,TMP-SMX
+2,Treatment > Chronic Carrier Management,Drugs 3,Ciprofloxacin
+2,Surgical Management,Indication,Intestinal perforation only
+2,Surgical Management,Contraindication,No surgery without perforation
+2,Surgical Management,Note,Surgery may spread infection if performed unnecessarily
+2,Sepsis Management,Guidelines,Surviving Sepsis Campaign
+2,Sepsis Management,Adult Protocol 1,Blood cultures within 3 hours
+2,Sepsis Management,Adult Protocol 2,Early broad-spectrum antibiotics
+2,Sepsis Management,Adult Protocol 3,30 mL/kg IV fluids
+2,Sepsis Management,Adult Protocol 4,Maintain MAP 55–65 mmHg
+2,Sepsis Management,Paediatric Protocol 1,20 mL/kg fluid boluses
+2,Sepsis Management,Paediatric Protocol 2,Early antibiotics (<1 hour)
+2,Sepsis Management,Paediatric Protocol 3,Urine output ≥1 mL/kg/hr
+2,Sepsis Management,Paediatric Protocol 4,Hb goal ≥10 g/dL initially
+2,Prevention,Public Health Measures 1,Safe drinking water
+2,Prevention,Public Health Measures 2,Proper sewage disposal
+2,Prevention,Public Health Measures 3,Hand hygiene
+2,Prevention,Public Health Measures 4,Early outbreak detection
+2,Prevention > Vaccination > Available Vaccines 1,Name,Ty21a (oral)
+2,Prevention > Vaccination > Available Vaccines 1,Efficacy,67–80%
+2,Prevention > Vaccination > Available Vaccines 1,Age Limit,≥6 years
+2,Prevention > Vaccination > Available Vaccines 1,Booster,Every 5 years
+2,Prevention > Vaccination > Available Vaccines 2,Name,Vi polysaccharide (injectable)
+2,Prevention > Vaccination > Available Vaccines 2,Efficacy,55–72%
+2,Prevention > Vaccination > Available Vaccines 2,Age Limit,≥2 years
+2,Prevention > Vaccination > Available Vaccines 2,Booster,Every 2 years
+2,Prevention > Vaccination,Limitations 1,No vaccine for Paratyphi
+2,Prevention > Vaccination,Limitations 2,Reduced effectiveness with high bacterial load
+2,Chatbot Metadata,Supported Intents 1,What is typhoid fever?
+2,Chatbot Metadata,Supported Intents 2,Symptoms of typhoid
+2,Chatbot Metadata,Supported Intents 3,Transmission of typhoid
+2,Chatbot Metadata,Supported Intents 4,Diagnosis methods
+2,Chatbot Metadata,Supported Intents 5,Treatment options
+2,Chatbot Metadata,Supported Intents 6,Complications
+2,Chatbot Metadata,Supported Intents 7,Sepsis management
+2,Chatbot Metadata,Supported Intents 8,Vaccination
+2,Chatbot Metadata,Supported Intents 9,Prevention tips
+2,Chatbot Metadata,Intended Users 1,Medical students
+2,Chatbot Metadata,Intended Users 2,Healthcare professionals
+2,Chatbot Metadata,Intended Users 3,Public health workers
+2,Chatbot Metadata,Intended Users 4,General public
+3,General,Domain,Healthcare
+3,General,Subdomain,Pediatric Infectious Diseases
+3,General,Topic,Enteric Fever (Typhoid & Paratyphoid)
+3,Guideline,Name,Standard Treatment Guidelines 2022
+3,Guideline,Organization,Indian Academy of Pediatrics (IAP)
+3,Guideline,Lead Author,Tapisha Gupta
+3,Guideline,Year,2022
+3,Guideline,Country,India
+3,Definition,Description,Enteric fever is an acute generalized infection of the reticuloendothelial system with predilection for intestinal lymphoid tissue and gallbladder.
+3,Definition > Types > Typhoid,Organism,Salmonella typhi
+3,Definition > Types > Typhoid,Global Proportion,≈80%
+3,Definition > Types > Paratyphoid,Organisms 1,Salmonella paratyphi A
+3,Definition > Types > Paratyphoid,Organisms 2,Salmonella paratyphi B
+3,Definition > Types > Paratyphoid,Global Proportion,≈20%
+3,Definition,Bacterial Features 1,Gram-negative
+3,Definition,Bacterial Features 2,Non-lactose fermenting
+3,Clinical Presentation,Most Common Scenario,Fever without focus
+3,Clinical Presentation > Age Specific Features,Infants And Under 5 1,Fever
+3,Clinical Presentation > Age Specific Features,Infants And Under 5 2,Vomiting
+3,Clinical Presentation > Age Specific Features,Infants And Under 5 3,Diarrhea
+3,Clinical Presentation > Age Specific Features,Older Children 1,Step-ladder fever over 5–7 days
+3,Clinical Presentation > Age Specific Features,Older Children 2,Anorexia
+3,Clinical Presentation > Age Specific Features,Older Children 3,Abdominal pain
+3,Clinical Presentation > Age Specific Features,Older Children 4,Cough
+3,Clinical Presentation > Age Specific Features,Older Children 5,Lethargy
+3,Clinical Presentation > Age Specific Features,Older Children 6,Toxic appearance
+3,Clinical Presentation > Age Specific Features,Older Children 7,Tender abdomen
+3,Clinical Presentation > Age Specific Features,Older Children 8,Soft splenomegaly
+3,Clinical Presentation > Age Specific Features,Older Children 9,Hepatomegaly
+3,Clinical Presentation > Age Specific Features,Older Children 10,Relative bradycardia
+3,Clinical Presentation > Rash,Rose Spots,Rarely seen in Indian children
+3,Laboratory Findings > Hemogram,Tlc,Normal or low
+3,Laboratory Findings > Hemogram,Neutrophilia,True
+3,Laboratory Findings > Hemogram,Thrombocytopenia,True
+3,Laboratory Findings > Hemogram,Eosinopenia,Highly consistent finding
+3,Laboratory Findings > Hemogram,Transaminases,Mild elevation possible
+3,Diagnosis,Gold Standard,Culture and sensitivity
+3,Diagnosis > Blood Culture > Yield,Week 1,≈90%
+3,Diagnosis > Blood Culture > Yield,Week 4,≈40%
+3,Diagnosis > Blood Culture,Sample Volume,5–10 mL
+3,Diagnosis > Blood Culture,Blood To Broth Ratio,1:5
+3,Diagnosis > Blood Culture,Automation,BACTEC improves yield and cost-effectiveness
+3,Diagnosis > Bone Marrow Culture,Indication,Pyrexia of unknown origin or late illness
+3,Diagnosis > Bone Marrow Culture,Advantage,Remains positive even after antibiotics
+3,Diagnosis,Not Recommended 1,Routine stool culture
+3,Diagnosis,Not Recommended 2,Routine urine culture
+3,Diagnosis > Serology,Role,"Supportive only, not diagnostic"
+3,Diagnosis > Serology > Widal Test,Detects 1,IgM
+3,Diagnosis > Serology > Widal Test,Detects 2,IgG
+3,Diagnosis > Serology > Widal Test,Positive Cutoff,≥1:160
+3,Diagnosis > Serology > Widal Test,Limitations 1,Low sensitivity and specificity
+3,Diagnosis > Serology > Widal Test,Limitations 2,"False positives (malaria, rickettsial disease)"
+3,Diagnosis > Serology > Widal Test,Limitations 3,False negatives after antibiotics
+3,Diagnosis > Serology > Typhi Dot Eia,Specificity,≈37%
+3,Diagnosis > Serology > Typhi Dot Eia,Status,Not recommended for clinical decisions
+3,Treatment > Empirical Therapy > Severe Or Complicated,First Line,Ceftriaxone
+3,Treatment > Empirical Therapy > Severe Or Complicated,Alternatives 1,Cefotaxime (with hepatitis)
+3,Treatment > Empirical Therapy > Severe Or Complicated,Alternatives 2,Aztreonam (penicillin allergy)
+3,Treatment > Empirical Therapy > Outpatient,First Line,Cefixime
+3,Treatment > Empirical Therapy > Outpatient,Alternative,Azithromycin (penicillin allergy)
+3,Treatment > Dosage Guidelines,Ceftriaxone,100 mg/kg/day (max 4 g)
+3,Treatment > Dosage Guidelines,Cefotaxime,150–200 mg/kg/day (max 8 g)
+3,Treatment > Dosage Guidelines,Cefixime,20 mg/kg/day (max 1200 mg)
+3,Treatment > Dosage Guidelines,Azithromycin,20 mg/kg/day (max 1 g)
+3,Treatment > Dosage Guidelines,Aztreonam,50–100 mg/kg/day (max 8 g)
+3,Treatment > Duration,Standard,14 days or 7 days after defervescence (whichever is later)
+3,Treatment > Duration,Azithromycin,7 days
+3,Steroids,Indication,Severe illness only
+3,Steroids,Criteria 1,Shock
+3,Steroids,Criteria 2,Coma
+3,Steroids,Criteria 3,Altered sensorium
+3,Steroids > Regimen > Dexamethasone,Loading Dose,3 mg/kg
+3,Steroids > Regimen > Dexamethasone,Maintenance,1 mg/kg every 6 hours for 2 days
+3,Steroids,Warning,Prolonged use increases relapse risk
+3,Treatment Response > Delayed Defervescence,Definition,No fever resolution by day 7 but child clinically improving
+3,Treatment Response > Delayed Defervescence,Action,Continue same antibiotic till day 10
+3,Treatment Response > Clinical Failure,Definition,Persistent fever + toxic child after 7 days
+3,Treatment Response > Clinical Failure,Evaluate For 1,"Complications (abscess, HLH)"
+3,Treatment Response > Clinical Failure,Evaluate For 2,"Coinfections (malaria, hepatitis A)"
+3,Treatment Response > Clinical Failure,Evaluate For 3,Drug fever
+3,Treatment Response > Clinical Failure,Evaluate For 4,Thrombophlebitis
+3,Treatment Response > Clinical Failure,Evaluate For 5,Incorrect diagnosis
+3,Antimicrobial Resistance,Important Notes 1,Quinolones contraindicated in children
+3,Antimicrobial Resistance,Important Notes 2,Aminoglycosides ineffective (intracellular organism)
+3,Antimicrobial Resistance > Mic Guidance > Ceftriaxone,Excellent Outcome,MIC ≤1
+3,Antimicrobial Resistance > Mic Guidance > Ceftriaxone > Resistance Cutoff,Clsi,≥4
+3,Antimicrobial Resistance > Mic Guidance > Ceftriaxone > Resistance Cutoff,Eucast,>2
+3,Antimicrobial Resistance > Resistant Infections,First Choice,Azithromycin
+3,Antimicrobial Resistance > Resistant Infections,Severe Or Unstable,Meropenem
+3,Carrier State,Definition,Asymptomatic shedding >3 months
+3,Carrier State,Pediatric Relevance,Uncommon
+3,Carrier State,Screening,Not routinely recommended
+3,Carrier State,Treatment 1,TMP-SMX 10 mg/kg/day for 6–12 weeks
+3,Carrier State,Treatment 2,Amoxicillin 75–100 mg/kg/day for 4–6 weeks
+3,Relapse,Rate,5–20%
+3,Relapse,Timing,2–3 weeks after fever resolution
+3,Relapse,Severity,Usually milder
+3,Relapse,Management,Same antibiotic as initial episode
+3,Chatbot Readiness,Supported Intents 1,What is enteric fever?
+3,Chatbot Readiness,Supported Intents 2,Symptoms in children
+3,Chatbot Readiness,Supported Intents 3,Diagnosis of typhoid
+3,Chatbot Readiness,Supported Intents 4,Blood culture timing
+3,Chatbot Readiness,Supported Intents 5,Empirical antibiotics
+3,Chatbot Readiness,Supported Intents 6,Drug dosages
+3,Chatbot Readiness,Supported Intents 7,Steroid use
+3,Chatbot Readiness,Supported Intents 8,Delayed defervescence
+3,Chatbot Readiness,Supported Intents 9,Clinical failure
+3,Chatbot Readiness,Supported Intents 10,Antibiotic resistance
+3,Chatbot Readiness,Supported Intents 11,Carrier state
+3,Chatbot Readiness,Supported Intents 12,Relapse management
+3,Chatbot Readiness,Target Users 1,Medical students
+3,Chatbot Readiness,Target Users 2,Pediatric residents
+3,Chatbot Readiness,Target Users 3,Clinicians
+3,Chatbot Readiness,Target Users 4,Healthcare chatbots
+4,Disease,Name,Typhoid Fever
+4,Disease,Alternate Names 1,Enteric Fever
+4,Disease > Causative Agents,Typhoid,Salmonella enterica serotype Typhi
+4,Disease > Causative Agents,Paratyphoid 1,Salmonella Paratyphi A
+4,Disease > Causative Agents,Paratyphoid 2,Salmonella Paratyphi B
+4,Disease > Causative Agents,Paratyphoid 3,Salmonella Paratyphi C
+4,Disease > Classification,Bacteria Type,Gram-negative
+4,Disease > Classification,Fermentation,Non-lactose fermenting
+4,Disease > Classification,System Affected 1,Reticuloendothelial system
+4,Disease > Classification,System Affected 2,Intestinal lymphoid tissue
+4,Disease > Classification,System Affected 3,Gallbladder
+4,Disease > Incubation Period,Average Days,9–21
+4,Disease > Incubation Period,Range Days,3–60
+4,Transmission,Modes 1,Fecal–oral route
+4,Transmission,Modes 2,Contaminated food
+4,Transmission,Modes 3,Contaminated water
+4,Transmission,Risk Factors 1,Poor sanitation
+4,Transmission,Risk Factors 2,Unsafe drinking water
+4,Transmission,Risk Factors 3,Poor food hygiene
+4,Transmission,Risk Factors 4,Chronic carriers handling food
+4,Transmission > Chronic Carriers,Definition,Excretion of Salmonella Typhi in stool or urine for ≥1 year
+4,Transmission > Chronic Carriers,Restrictions,Excluded from food handling until 3 negative stool cultures (1 month apart)
+4,Clinical Features,General Symptoms 1,Prolonged fever
+4,Clinical Features,General Symptoms 2,Headache
+4,Clinical Features,General Symptoms 3,Fatigue
+4,Clinical Features,General Symptoms 4,Anorexia
+4,Clinical Features,General Symptoms 5,Lethargy
+4,Clinical Features > Children,Common 1,Fever
+4,Clinical Features > Children,Common 2,Vomiting
+4,Clinical Features > Children,Common 3,Diarrhea
+4,Clinical Features > Children,Common 4,Abdominal pain
+4,Clinical Features > Children,Older Children 1,Step-ladder fever pattern
+4,Clinical Features > Children,Older Children 2,Cough
+4,Clinical Features > Children,Older Children 3,Hepatomegaly
+4,Clinical Features > Children,Older Children 4,Splenomegaly
+4,Clinical Features > Children,Older Children 5,Relative bradycardia
+4,Clinical Features,Adults 1,Abdominal pain
+4,Clinical Features,Adults 2,Diarrhea or constipation
+4,Clinical Features,Adults 3,Headache
+4,Clinical Features,Adults 4,Relative bradycardia
+4,Clinical Features > Physical Signs > Rose Spots,Description,Faint pink maculopapular rash on trunk
+4,Clinical Features > Physical Signs > Rose Spots,Frequency,"<7% in LMIC, up to 19% in high-income countries"
+4,Laboratory Findings,Hematology 1,Normal or low total leukocyte count
+4,Laboratory Findings,Hematology 2,Neutrophilia
+4,Laboratory Findings,Hematology 3,Thrombocytopenia
+4,Laboratory Findings,Hematology 4,Eosinopenia (consistent finding)
+4,Laboratory Findings,Hematology 5,Mild elevation of liver enzymes
+4,Diagnosis,Gold Standard,Culture and sensitivity
+4,Diagnosis > Culture Methods > Blood Culture,Sensitivity,40–60%
+4,Diagnosis > Culture Methods > Blood Culture,Best Time,First week (up to 90% yield)
+4,Diagnosis > Culture Methods > Blood Culture > Volume,Children,2–4 mL
+4,Diagnosis > Culture Methods > Blood Culture > Volume,Adults,10–15 mL
+4,Diagnosis > Culture Methods > Bone Marrow Culture,Sensitivity,>80%
+4,Diagnosis > Culture Methods > Bone Marrow Culture,Use Case,Previously treated or prolonged illness
+4,Diagnosis > Culture Methods > Bone Marrow Culture,Note,Invasive; not routine
+4,Diagnosis > Culture Methods > Stool Culture,Use,Carrier detection
+4,Diagnosis > Culture Methods > Stool Culture,Note,Poor yield in acute illness
+4,Diagnosis > Culture Methods > Urine Culture,Use,Chronic urinary carriage
+4,Diagnosis > Serology > Widal Test,Utility,Supportive only
+4,Diagnosis > Serology > Widal Test,Limitations 1,Low sensitivity
+4,Diagnosis > Serology > Widal Test,Limitations 2,False positives
+4,Diagnosis > Serology > Widal Test,Limitations 3,False negatives after antibiotics
+4,Diagnosis > Serology > Widal Test,Positive Titer,≥1:160
+4,Diagnosis > Serology > Typhidot M,Detects,IgM antibodies
+4,Diagnosis > Serology > Typhidot M,Advantage,Early diagnosis
+4,Diagnosis > Serology > Typhidot M,Accuracy,>93% sensitivity
+4,Diagnosis > Molecular Tests > Pcr,Status,Research use only
+4,Diagnosis > Molecular Tests > Pcr,Samples 1,Blood
+4,Diagnosis > Molecular Tests > Pcr,Samples 2,Urine
+4,Treatment,General Principles 1,Start antibiotics early
+4,Treatment,General Principles 2,Do not delay treatment for lab results
+4,Treatment,General Principles 3,Supportive care essential
+4,Treatment > Antibiotics,Uncomplicated 1,Cefixime
+4,Treatment > Antibiotics,Uncomplicated 2,Azithromycin
+4,Treatment > Antibiotics,Severe Or Complicated 1,Ceftriaxone
+4,Treatment > Antibiotics,Severe Or Complicated 2,Cefotaxime
+4,Treatment > Antibiotics > Drug Dosage Mg Per Kg Per Day,Ceftriaxone,100 (max 4 g)
+4,Treatment > Antibiotics > Drug Dosage Mg Per Kg Per Day,Cefotaxime,150–200 (max 8 g)
+4,Treatment > Antibiotics > Drug Dosage Mg Per Kg Per Day,Cefixime,20 (max 1200 mg)
+4,Treatment > Antibiotics > Drug Dosage Mg Per Kg Per Day,Azithromycin,20 (max 1 g)
+4,Treatment > Antimicrobial Resistance,Mdr 1,Chloramphenicol
+4,Treatment > Antimicrobial Resistance,Mdr 2,Ampicillin
+4,Treatment > Antimicrobial Resistance,Mdr 3,Trimethoprim-sulfamethoxazole
+4,Treatment > Antimicrobial Resistance,Narst,Nalidixic-acid-resistant strains
+4,Treatment > Antimicrobial Resistance,Concern,Fluoroquinolone resistance increasing
+4,Complications,Intestinal 1,Intestinal perforation
+4,Complications,Intestinal 2,Gastrointestinal bleeding
+4,Complications,Extra Intestinal 1,Hepatitis
+4,Complications,Extra Intestinal 2,Pneumonia
+4,Complications,Extra Intestinal 3,Encephalopathy
+4,Complications,Extra Intestinal 4,Myocarditis
+4,Complications,Extra Intestinal 5,Acute kidney injury
+4,Complications > Risk Statistics,Children,27%
+4,Complications > Risk Statistics,Adults,17%
+4,Prevention,Water 1,Safe drinking water
+4,Prevention,Water 2,Boiled or treated water
+4,Prevention,Food Safety 1,Hand washing
+4,Prevention,Food Safety 2,Proper cooking
+4,Prevention,Food Safety 3,Avoid raw food
+4,Prevention,Food Safety 4,Clean food surfaces
+4,Prevention,Sanitation 1,Proper sewage disposal
+4,Prevention,Sanitation 2,No human excreta as fertilizer
+4,Prevention,Health Education 1,Community awareness
+4,Prevention,Health Education 2,School education
+4,Prevention,Health Education 3,Healthcare worker training
+4,Vaccination,Available Vaccines 1,Vi polysaccharide vaccine
+4,Vaccination,Available Vaccines 2,Ty21a live attenuated vaccine
+4,Vaccination,Available Vaccines 3,Typhoid conjugate vaccine
+4,Vaccination,Age Eligibility,≥2 years
+4,Vaccination,Efficacy,55–72%
+4,Vaccination,Duration Of Protection,≈3 years
+4,Vaccination,Who Recommendations 1,Endemic regions
+4,Vaccination,Who Recommendations 2,Travelers
+4,Vaccination,Who Recommendations 3,Outbreak control
+4,Vaccination,Who Recommendations 4,School-based immunization
+4,Public Health,Notifiable Disease,True
+4,Public Health,Control Measures 1,Case isolation
+4,Public Health,Control Measures 2,Contact tracing
+4,Public Health,Control Measures 3,Carrier treatment
+4,Public Health,Control Measures 4,Food handler restrictions
+4,General,Chatbot Intents Supported 1,What is typhoid fever?
+4,General,Chatbot Intents Supported 2,Symptoms of typhoid
+4,General,Chatbot Intents Supported 3,Diagnosis methods
+4,General,Chatbot Intents Supported 4,Treatment options
+4,General,Chatbot Intents Supported 5,Drug dosage guidance
+4,General,Chatbot Intents Supported 6,Complications
+4,General,Chatbot Intents Supported 7,Vaccination information
+4,General,Chatbot Intents Supported 8,Prevention tips
+4,General,Chatbot Intents Supported 9,Difference between typhoid and paratyphoid
+5,General,Knowledge Domain,Infectious Diseases
+5,Disease,Name,Typhoid Fever
+5,Disease,Synonyms 1,Enteric Fever
+5,Disease > Causative Agents,Primary,Salmonella enterica serovar Typhi
+5,Disease > Causative Agents,Related 1,Salmonella Paratyphi A
+5,Disease > Causative Agents,Related 2,Salmonella Paratyphi B
+5,Disease > Causative Agents,Related 3,Salmonella Paratyphi C
+5,Disease > Pathogen Profile,Family,Enterobacteriaceae
+5,Disease > Pathogen Profile,Shape,Rod-shaped
+5,Disease > Pathogen Profile,Gram Stain,Gram-negative
+5,Disease > Pathogen Profile,Oxygen Requirement,Facultative anaerobe
+5,Disease > Pathogen Profile,Motility,Motile (peritrichous flagella)
+5,Disease > Pathogen Profile > Antigens,O Antigen,Somatic antigen
+5,Disease > Pathogen Profile > Antigens,H Antigen,Flagellar antigen
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Present In 1,S. Typhi
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Present In 2,S. Paratyphi C
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Absent In 1,S. Paratyphi A
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Absent In 2,S. Paratyphi B
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Function 1,Enhances virulence
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Function 2,Resists complement-mediated lysis
+5,Disease > Pathogen Profile > Antigens > Vi Antigen,Function 3,Aids immune evasion
+5,Disease > Incubation Period,Average Days,7–14
+5,Disease > Incubation Period,Range Days,3–60
+5,Epidemiology,Global Distribution 1,South Asia
+5,Epidemiology,Global Distribution 2,Southeast Asia
+5,Epidemiology,Global Distribution 3,Sub-Saharan Africa
+5,Epidemiology,Global Distribution 4,Oceania (island nations)
+5,Epidemiology > Burden,Global Cases,Millions annually
+5,Epidemiology > Burden,Global Deaths,Thousands annually
+5,Epidemiology > Burden,Trend,Declining since 2000 but still endemic
+5,Epidemiology,High Risk Groups 1,Children (5–15 years)
+5,Epidemiology,High Risk Groups 2,Children under 5 years
+5,Epidemiology,High Risk Groups 3,Elderly
+5,Epidemiology,High Risk Groups 4,Low-income populations
+5,Epidemiology,High Risk Groups 5,Immunocompromised individuals
+5,Epidemiology,High Risk Groups 6,People with achlorhydria
+5,Epidemiology > Regional Example Sri Lanka,High Incidence Districts 1,Vavuniya
+5,Epidemiology > Regional Example Sri Lanka,High Incidence Districts 2,Jaffna
+5,Epidemiology > Regional Example Sri Lanka,High Incidence Districts 3,Nuwara Eliya
+5,Epidemiology > Regional Example Sri Lanka,High Incidence Districts 4,Colombo
+5,Epidemiology > Regional Example Sri Lanka,High Incidence Districts 5,Kegalle
+5,Epidemiology > Regional Example Sri Lanka,Contributing Factors 1,Water scarcity
+5,Epidemiology > Regional Example Sri Lanka,Contributing Factors 2,Contaminated springs
+5,Epidemiology > Regional Example Sri Lanka,Contributing Factors 3,Unsafe food practices
+5,Epidemiology > Regional Example Sri Lanka,Contributing Factors 4,Poor sanitation
+5,Transmission,Route,Fecal–oral
+5,Transmission > Cycles,Short Cycle,"Local contamination (food handlers, households)"
+5,Transmission > Cycles,Long Cycle,Environmental contamination (water sources)
+5,Transmission,Risk Factors 1,Unsafe drinking water
+5,Transmission,Risk Factors 2,Poor sanitation
+5,Transmission,Risk Factors 3,Inadequate hygiene
+5,Transmission,Risk Factors 4,Contaminated food
+5,Transmission,Risk Factors 5,High population density
+5,Pathogenesis,Entry,Ingestion of contaminated food or water
+5,Pathogenesis,Early Phase,Silent primary bacteremia
+5,Pathogenesis,Target System,Reticuloendothelial system
+5,Pathogenesis,Cellular Mechanism,Intracellular multiplication inside macrophages
+5,Pathogenesis,Systemic Spread,Secondary bacteremia leading to clinical illness
+5,Clinical Features,General Symptoms 1,Persistent high fever
+5,Clinical Features,General Symptoms 2,Headache
+5,Clinical Features,General Symptoms 3,Malaise
+5,Clinical Features,General Symptoms 4,Fatigue
+5,Clinical Features,General Symptoms 5,Abdominal discomfort
+5,Clinical Features > Gastrointestinal,Children,Diarrhea common
+5,Clinical Features > Gastrointestinal,Older Children And Adults 1,Constipation
+5,Clinical Features > Gastrointestinal,Older Children And Adults 2,Diarrhea
+5,Clinical Features,Severe Risk Factors 1,Immunosuppression
+5,Clinical Features,Severe Risk Factors 2,Low gastric acidity
+5,Clinical Features,Severe Risk Factors 3,High bacterial load ingestion
+5,Complications,Overall Rate,10–15% of hospitalized patients
+5,Complications,Major Life Threatening 1,Intestinal hemorrhage
+5,Complications,Major Life Threatening 2,Intestinal perforation
+5,Complications,Major Life Threatening 3,Encephalopathy
+5,Complications,Major Life Threatening 4,Hemodynamic shock
+5,Complications > Intestinal Perforation,Outbreak Rate,Up to 40%
+5,Complications > Intestinal Perforation,Mortality Rate,18–43%
+5,Carrier State,Definition,Chronic gallbladder carriage with continuous shedding
+5,Carrier State,Prevalence,2–5% of infected individuals
+5,Carrier State,Risk Factors 1,Older age
+5,Carrier State,Risk Factors 2,Pre-existing gallbladder disease
+5,Carrier State,Public Health Significance 1,Sustains endemic transmission
+5,Carrier State,Public Health Significance 2,Foodborne outbreaks via carriers
+5,Carrier State,Long Term Risk,Increased risk of hepatobiliary cancer
+5,Diagnosis,Clinical Challenges 1,Non-specific symptoms
+5,Diagnosis,Clinical Challenges 2,Confusion with other febrile illnesses
+5,Diagnosis > Laboratory Confirmation > Blood Culture,Gold Standard,True
+5,Diagnosis > Laboratory Confirmation > Blood Culture,Sensitivity,~60%
+5,Diagnosis > Laboratory Confirmation > Blood Culture,Limitations 1,Reduced by prior antibiotics
+5,Diagnosis > Laboratory Confirmation > Blood Culture,Limitations 2,Low use in LMIC outpatient settings
+5,Diagnosis,Serology Limitations 1,Variable antibody response
+5,Diagnosis,Serology Limitations 2,Cross-reactivity with other bacteria
+5,Diagnosis,Surveillance Issues 1,Underdiagnosis in children
+5,Diagnosis,Surveillance Issues 2,Underreporting in LMICs
+5,Treatment,Principles 1,Early antibiotic therapy
+5,Treatment,Principles 2,Do not rely on clinical diagnosis alone
+5,Treatment,Principles 3,Supportive care
+5,Treatment,Resistance Concern 1,Multidrug-resistant strains
+5,Treatment,Resistance Concern 2,Ceftriaxone-resistant outbreaks reported
+5,Prevention,Water And Sanitation 1,Safe water supply
+5,Prevention,Water And Sanitation 2,Improved sanitation
+5,Prevention,Water And Sanitation 3,Proper sewage disposal
+5,Prevention,Food Safety 1,Hand hygiene
+5,Prevention,Food Safety 2,Safe food preparation
+5,Prevention,Food Safety 3,Food handler screening
+5,Prevention > Vaccination,Types 1,Typhoid conjugate vaccine (TCV)
+5,Prevention > Vaccination,Types 2,Vi polysaccharide vaccine
+5,Prevention > Vaccination,Types 3,Ty21a live oral vaccine
+5,Prevention > Vaccination,Who Recommendation 1,Endemic regions
+5,Prevention > Vaccination,Who Recommendation 2,Outbreak control
+5,Prevention > Vaccination,Who Recommendation 3,Routine childhood immunization
+5,Public Health,Disease Status,Notifiable disease
+5,Public Health,Control Measures 1,Surveillance
+5,Public Health,Control Measures 2,Case isolation
+5,Public Health,Control Measures 3,Carrier identification
+5,Public Health,Control Measures 4,Vaccination campaigns
+5,Chatbot Capabilities,Supported Intents 1,What is typhoid fever?
+5,Chatbot Capabilities,Supported Intents 2,How does typhoid spread?
+5,Chatbot Capabilities,Supported Intents 3,Symptoms of typhoid
+5,Chatbot Capabilities,Supported Intents 4,Complications of typhoid
+5,Chatbot Capabilities,Supported Intents 5,Diagnosis methods
+5,Chatbot Capabilities,Supported Intents 6,Carrier state explanation
+5,Chatbot Capabilities,Supported Intents 7,Vaccination information
+5,Chatbot Capabilities,Supported Intents 8,Prevention tips
+5,Chatbot Capabilities,Supported Intents 9,Epidemiology data
+5,Chatbot Capabilities,Safe Use Note,Information-only. Not a substitute for medical diagnosis or treatment.
+6,Meta,Version,1.0
+6,Meta,Last Updated,2026
+6,Meta,Data Sources 1,WHO / WER reports
+6,Meta,Data Sources 2,IAP Standard Treatment Guidelines
+6,Meta,Data Sources 3,Anaesthesia Tutorials
+6,Meta,Data Sources 4,National communicable disease manuals
+6,Meta,Data Sources 5,Uploaded PDFs (throyidfever series)
+6,Meta,Intended Use,"Medical education, public health awareness, chatbot assistance"
+6,Meta,Disclaimer,Information-only. Not a substitute for professional medical care.
+6,Disease Profile,Name,Enteric Fever
+6,Disease Profile,Common Name,Typhoid Fever
+6,Disease Profile > Causative Agents,Typhoid,Salmonella enterica serovar Typhi
+6,Disease Profile > Causative Agents,Paratyphoid 1,Salmonella Paratyphi A
+6,Disease Profile > Causative Agents,Paratyphoid 2,Salmonella Paratyphi B
+6,Disease Profile > Causative Agents,Paratyphoid 3,Salmonella Paratyphi C
+6,Disease Profile,Reservoir,Humans only
+6,Disease Profile > Bacterial Characteristics,Gram Stain,Gram-negative
+6,Disease Profile > Bacterial Characteristics,Shape,Bacillus
+6,Disease Profile > Bacterial Characteristics,Motility,Motile (flagellated)
+6,Disease Profile > Bacterial Characteristics,Oxygen Requirement,Facultative anaerobe
+6,Disease Profile > Bacterial Characteristics > Antigens,O,Somatic antigen
+6,Disease Profile > Bacterial Characteristics > Antigens,H,Flagellar antigen
+6,Disease Profile > Bacterial Characteristics > Antigens > Vi,Role 1,Virulence factor
+6,Disease Profile > Bacterial Characteristics > Antigens > Vi,Role 2,Immune evasion
+6,Disease Profile > Bacterial Characteristics > Antigens > Vi,Role 3,Carrier state association
+6,Disease Profile > Bacterial Characteristics > Antigens > Vi,Present In 1,S. Typhi
+6,Disease Profile > Bacterial Characteristics > Antigens > Vi,Present In 2,S. Paratyphi C
+6,Epidemiology > Global Burden,Annual Cases,11–20 million
+6,Epidemiology > Global Burden,Annual Deaths,"130,000–160,000"
+6,Epidemiology > Global Burden,Trend,"Declining globally, persistent in LMICs"
+6,Epidemiology,High Burden Regions 1,South Asia
+6,Epidemiology,High Burden Regions 2,Southeast Asia
+6,Epidemiology,High Burden Regions 3,Sub-Saharan Africa
+6,Epidemiology,High Risk Groups 1,Children 5–15 years
+6,Epidemiology,High Risk Groups 2,Children under 5 years
+6,Epidemiology,High Risk Groups 3,Elderly
+6,Epidemiology,High Risk Groups 4,Immunocompromised
+6,Epidemiology,High Risk Groups 5,Low socioeconomic populations
+6,Epidemiology,Seasonality,Higher incidence during rainy/summer seasons
+6,Transmission,Primary Route,Fecal–oral
+6,Transmission > Cycles,Short Cycle,Food handlers and household spread
+6,Transmission > Cycles,Long Cycle,Contaminated water sources
+6,Transmission,Risk Factors 1,Unsafe drinking water
+6,Transmission,Risk Factors 2,Poor sanitation
+6,Transmission,Risk Factors 3,Inadequate hand hygiene
+6,Transmission,Risk Factors 4,Street food consumption
+6,Transmission,Risk Factors 5,Chronic carriers
+6,Pathogenesis,Entry,Ingestion of contaminated food or water
+6,Pathogenesis,Intestinal Phase,Invasion of Peyer’s patches in terminal ileum
+6,Pathogenesis,Systemic Phase,Intracellular survival in macrophages
+6,Pathogenesis,Secondary Bacteremia,Clinical illness onset
+6,Pathogenesis,Gallbladder Colonization,Source of relapse and chronic carriage
+6,Incubation Period,Average,7–14 days
+6,Incubation Period,Range,3–60 days
+6,Clinical Features,General 1,Prolonged fever
+6,Clinical Features,General 2,Headache
+6,Clinical Features,General 3,Malaise
+6,Clinical Features,General 4,Anorexia
+6,Clinical Features,General 5,Weight loss
+6,Clinical Features,Gastrointestinal 1,Abdominal pain
+6,Clinical Features,Gastrointestinal 2,Diarrhea (more common in children)
+6,Clinical Features,Gastrointestinal 3,Constipation (more common in adults)
+6,Clinical Features,Gastrointestinal 4,Nausea
+6,Clinical Features,Gastrointestinal 5,Vomiting
+6,Clinical Features,Physical Signs 1,Hepatomegaly
+6,Clinical Features,Physical Signs 2,Splenomegaly
+6,Clinical Features,Physical Signs 3,Relative bradycardia
+6,Clinical Features,Physical Signs 4,Rose spots (transient maculopapular rash)
+6,Clinical Features,Neurological 1,Delirium
+6,Clinical Features,Neurological 2,Encephalopathy
+6,Clinical Features,Neurological 3,Meningitis (rare)
+6,Complications,Overall Rate,10–15%
+6,Complications,Intestinal 1,Intestinal hemorrhage
+6,Complications,Intestinal 2,Intestinal perforation (terminal ileum)
+6,Complications,Systemic 1,Sepsis
+6,Complications,Systemic 2,Shock
+6,Complications,Systemic 3,Myocarditis
+6,Complications,Systemic 4,Hepatitis
+6,Complications,Systemic 5,Pneumonia
+6,Complications,Systemic 6,Acute kidney injury
+6,Complications,Systemic 7,Disseminated intravascular coagulation
+6,Complications > Mortality,Treated,<1–2%
+6,Complications > Mortality,Untreated,10–20%
+6,Complications > Mortality,With Perforation,18–43%
+6,Carrier State,Definition,Excretion of Salmonella Typhi for >12 months
+6,Carrier State,Prevalence,2–5%
+6,Carrier State,Risk Factors 1,Gallstones
+6,Carrier State,Risk Factors 2,Older age
+6,Carrier State,Risk Factors 3,Female sex
+6,Carrier State,Public Health Impact 1,Sustained transmission
+6,Carrier State,Public Health Impact 2,Foodborne outbreaks
+6,Carrier State,Public Health Impact 3,Increased gallbladder cancer risk
+6,Diagnosis,Clinical Challenge,Non-specific febrile illness
+6,Diagnosis > Laboratory Confirmation > Blood Culture,Gold Standard,True
+6,Diagnosis > Laboratory Confirmation > Blood Culture,Sensitivity,40–70%
+6,Diagnosis > Laboratory Confirmation > Blood Culture,Best Time,First week of illness
+6,Diagnosis > Laboratory Confirmation > Bone Marrow Culture,Sensitivity,>80%
+6,Diagnosis > Laboratory Confirmation > Bone Marrow Culture,Use Case,Prior antibiotic exposure
+6,Diagnosis > Laboratory Confirmation,Stool And Urine Culture,Useful for carrier detection
+6,Diagnosis > Serology > Widal Test,Role,Supportive only
+6,Diagnosis > Serology > Widal Test,Limitations 1,Low specificity
+6,Diagnosis > Serology > Widal Test,Limitations 2,Cross-reactivity
+6,Diagnosis > Serology > Widal Test,Limitations 3,Baseline titers in endemic areas
+6,Diagnosis > Molecular Tests,Pcr,"Limited availability, research use"
+6,Treatment,Principles 1,Early antibiotic therapy
+6,Treatment,Principles 2,Do not delay treatment awaiting cultures
+6,Treatment,Principles 3,"Supportive care (hydration, nutrition)"
+6,Treatment > Recommended Antibiotics,Uncomplicated 1,Azithromycin
+6,Treatment > Recommended Antibiotics,Uncomplicated 2,Cefixime
+6,Treatment > Recommended Antibiotics,Severe Or Hospitalized 1,Ceftriaxone
+6,Treatment > Recommended Antibiotics,Severe Or Hospitalized 2,Cefotaxime
+6,Treatment > Recommended Antibiotics,Extensively Drug Resistant 1,Azithromycin
+6,Treatment > Recommended Antibiotics,Extensively Drug Resistant 2,Meropenem
+6,Treatment > Treatment Duration,Standard,10–14 days
+6,Treatment > Treatment Duration,Azithromycin,7 days
+6,Treatment > Steroids,Indication 1,Shock
+6,Treatment > Steroids,Indication 2,Severe encephalopathy
+6,Treatment > Steroids,Drug,Dexamethasone
+6,Antimicrobial Resistance,Mdr Definition,"Resistance to ampicillin, chloramphenicol, TMP-SMX"
+6,Antimicrobial Resistance,Fluoroquinolone Resistance,Common in Asia
+6,Antimicrobial Resistance,Xdr Definition,Resistance to first-line + fluoroquinolones + cephalosporins
+6,Antimicrobial Resistance,Public Health Concern,Emerging ceftriaxone resistance
+6,Prevention,Water And Sanitation 1,Safe drinking water
+6,Prevention,Water And Sanitation 2,Improved sanitation
+6,Prevention,Water And Sanitation 3,Sewage treatment
+6,Prevention,Food Safety 1,Hand hygiene
+6,Prevention,Food Safety 2,Safe food preparation
+6,Prevention,Food Safety 3,Food handler screening
+6,Prevention > Vaccination,Available Vaccines 1,Typhoid conjugate vaccine (TCV)
+6,Prevention > Vaccination,Available Vaccines 2,Vi polysaccharide vaccine
+6,Prevention > Vaccination,Available Vaccines 3,Ty21a oral vaccine
+6,Prevention > Vaccination,Who Recommendation 1,Routine use in endemic regions
+6,Prevention > Vaccination,Who Recommendation 2,Outbreak response
+6,Prevention > Vaccination,Who Recommendation 3,Travelers to endemic areas
+6,Public Health And Surveillance,Notifiable Disease,True
+6,Public Health And Surveillance,Control Measures 1,Case reporting
+6,Public Health And Surveillance,Control Measures 2,Outbreak investigation
+6,Public Health And Surveillance,Control Measures 3,Carrier identification
+6,Public Health And Surveillance,Control Measures 4,Vaccination campaigns
+6,General,Chatbot Intents 1,What is typhoid fever?
+6,General,Chatbot Intents 2,How does typhoid spread?
+6,General,Chatbot Intents 3,Symptoms of typhoid
+6,General,Chatbot Intents 4,Complications
+6,General,Chatbot Intents 5,Diagnosis methods
+6,General,Chatbot Intents 6,Treatment options
+6,General,Chatbot Intents 7,Antibiotic resistance
+6,General,Chatbot Intents 8,Carrier state
+6,General,Chatbot Intents 9,Vaccination information
+6,General,Chatbot Intents 10,Prevention tips
+6,General,Chatbot Intents 11,Public health reporting
+7,Meta,Knowledge Type,Medical
+7,Meta,Topic,Enteric (Typhoid) Fever
+7,Meta,Version,Final-Master
+7,Meta,Last Updated,2026
+7,Meta,Sources 1,WHO / WER reports
+7,Meta,Sources 2,IAP Standard Treatment Guidelines
+7,Meta,Sources 3,NICD Manuals
+7,Meta,Sources 4,WFSA Anaesthesia Tutorials
+7,Meta,Sources 5,National surveillance documents
+7,Meta,Sources 6,Uploaded PDFs (throyidfever series)
+7,Meta,Disclaimer,For education and chatbot assistance only. Not a substitute for medical diagnosis or treatment.
+7,Disease Profile,Name,Enteric Fever
+7,Disease Profile,Common Name,Typhoid Fever
+7,Disease Profile,Synonyms 1,Typhoid
+7,Disease Profile,Synonyms 2,Paratyphoid Fever
+7,Disease Profile > Causative Agents,Typhoid,Salmonella enterica serovar Typhi
+7,Disease Profile > Causative Agents,Paratyphoid 1,Salmonella Paratyphi A
+7,Disease Profile > Causative Agents,Paratyphoid 2,Salmonella Paratyphi B
+7,Disease Profile > Causative Agents,Paratyphoid 3,Salmonella Paratyphi C
+7,Disease Profile,Reservoir,Humans only
+7,Disease Profile > Bacterial Characteristics,Family,Enterobacteriaceae
+7,Disease Profile > Bacterial Characteristics,Gram Stain,Gram-negative
+7,Disease Profile > Bacterial Characteristics,Shape,Rod-shaped bacillus
+7,Disease Profile > Bacterial Characteristics,Motility,Motile (peritrichous flagella)
+7,Disease Profile > Bacterial Characteristics,Oxygen Requirement,Facultative anaerobe
+7,Disease Profile > Bacterial Characteristics,Fermentation,Non-lactose fermenter
+7,Disease Profile > Bacterial Characteristics > Antigens,O,Somatic antigen
+7,Disease Profile > Bacterial Characteristics > Antigens,H,Flagellar antigen
+7,Disease Profile > Bacterial Characteristics > Antigens > Vi,Presence 1,S. Typhi
+7,Disease Profile > Bacterial Characteristics > Antigens > Vi,Presence 2,S. Paratyphi C
+7,Disease Profile > Bacterial Characteristics > Antigens > Vi,Functions 1,Virulence factor
+7,Disease Profile > Bacterial Characteristics > Antigens > Vi,Functions 2,Immune evasion
+7,Disease Profile > Bacterial Characteristics > Antigens > Vi,Functions 3,Associated with chronic carriage
+7,Epidemiology > Global Burden,Annual Cases,11–20 million
+7,Epidemiology > Global Burden,Annual Deaths,"130,000–160,000"
+7,Epidemiology > Global Burden,Case Fatality Treated,<2%
+7,Epidemiology > Global Burden,Case Fatality Untreated,10–20%
+7,Epidemiology,High Burden Regions 1,South Asia
+7,Epidemiology,High Burden Regions 2,Southeast Asia
+7,Epidemiology,High Burden Regions 3,Sub-Saharan Africa
+7,Epidemiology,High Risk Groups 1,Children 5–15 years
+7,Epidemiology,High Risk Groups 2,Children under 5 years
+7,Epidemiology,High Risk Groups 3,Elderly
+7,Epidemiology,High Risk Groups 4,Immunocompromised
+7,Epidemiology,High Risk Groups 5,Low socioeconomic populations
+7,Epidemiology,High Risk Groups 6,People with low gastric acidity
+7,Epidemiology,Seasonality,Increased during rainy/summer seasons
+7,Transmission,Route,Fecal–oral
+7,Transmission > Transmission Cycles,Short Cycle,Person-to-person via food handlers
+7,Transmission > Transmission Cycles,Long Cycle,Environmental contamination of water sources
+7,Transmission,Risk Factors 1,Unsafe drinking water
+7,Transmission,Risk Factors 2,Poor sanitation
+7,Transmission,Risk Factors 3,Poor hand hygiene
+7,Transmission,Risk Factors 4,Street food consumption
+7,Transmission,Risk Factors 5,Chronic carriers
+7,Pathogenesis,Entry,Ingestion of contaminated food or water
+7,Pathogenesis,Intestinal Phase,Invasion of Peyer’s patches in terminal ileum
+7,Pathogenesis,Systemic Phase,Intracellular multiplication in macrophages
+7,Pathogenesis,Secondary Bacteremia,Onset of clinical symptoms
+7,Pathogenesis,Gallbladder Colonization,Source of relapse and chronic carriage
+7,Incubation Period,Average,7–14 days
+7,Incubation Period,Range,3–60 days
+7,Clinical Features,General 1,Prolonged fever
+7,Clinical Features,General 2,Headache
+7,Clinical Features,General 3,Malaise
+7,Clinical Features,General 4,Anorexia
+7,Clinical Features,General 5,Weight loss
+7,Clinical Features,General 6,Fatigue
+7,Clinical Features > Gastrointestinal,Children 1,Diarrhea
+7,Clinical Features > Gastrointestinal,Children 2,Vomiting
+7,Clinical Features > Gastrointestinal,Children 3,Abdominal pain
+7,Clinical Features > Gastrointestinal,Older Children And Adults 1,Constipation
+7,Clinical Features > Gastrointestinal,Older Children And Adults 2,Diarrhea
+7,Clinical Features > Gastrointestinal,Older Children And Adults 3,Abdominal discomfort
+7,Clinical Features,Physical Signs 1,Hepatomegaly
+7,Clinical Features,Physical Signs 2,Splenomegaly
+7,Clinical Features,Physical Signs 3,Relative bradycardia
+7,Clinical Features,Physical Signs 4,Rose spots (transient maculopapular rash)
+7,Clinical Features,Neurological 1,Delirium
+7,Clinical Features,Neurological 2,Encephalopathy
+7,Clinical Features,Neurological 3,Meningitis (rare)
+7,Laboratory Findings,Hematology 1,Normal or low total leukocyte count
+7,Laboratory Findings,Hematology 2,Neutrophilia
+7,Laboratory Findings,Hematology 3,Eosinopenia (consistent finding)
+7,Laboratory Findings,Hematology 4,Thrombocytopenia
+7,Laboratory Findings,Biochemistry 1,Mildly elevated transaminases
+7,Laboratory Findings,Biochemistry 2,Electrolyte imbalance in severe disease
+7,Complications,Overall Rate,10–15%
+7,Complications,Intestinal 1,Intestinal hemorrhage
+7,Complications,Intestinal 2,Intestinal perforation (terminal ileum)
+7,Complications,Systemic 1,Sepsis
+7,Complications,Systemic 2,Shock
+7,Complications,Systemic 3,Myocarditis
+7,Complications,Systemic 4,Hepatitis
+7,Complications,Systemic 5,Pneumonia
+7,Complications,Systemic 6,Acute kidney injury
+7,Complications,Systemic 7,DIC
+7,Complications > Mortality,Treated,<2%
+7,Complications > Mortality,Untreated,10–20%
+7,Complications > Mortality,With Perforation,18–43%
+7,Carrier State,Definition,Excretion of Salmonella Typhi for ≥12 months
+7,Carrier State,Prevalence,2–5%
+7,Carrier State,Risk Factors 1,Gallstones
+7,Carrier State,Risk Factors 2,Older age
+7,Carrier State,Risk Factors 3,Female sex
+7,Carrier State,Public Health Significance 1,Sustained transmission
+7,Carrier State,Public Health Significance 2,Foodborne outbreaks
+7,Carrier State,Public Health Significance 3,Increased gallbladder cancer risk
+7,Diagnosis,Clinical Challenge,Non-specific febrile illness
+7,Diagnosis > Laboratory Confirmation > Blood Culture,Gold Standard,True
+7,Diagnosis > Laboratory Confirmation > Blood Culture,Sensitivity,40–70%
+7,Diagnosis > Laboratory Confirmation > Blood Culture,Best Time,First week of illness
+7,Diagnosis > Laboratory Confirmation > Bone Marrow Culture,Sensitivity,>80%
+7,Diagnosis > Laboratory Confirmation > Bone Marrow Culture,Use Case,Prior antibiotic exposure
+7,Diagnosis > Laboratory Confirmation,Stool Culture,Carrier detection
+7,Diagnosis > Laboratory Confirmation,Urine Culture,Chronic urinary carriage
+7,Diagnosis > Serology > Widal Test,Role,Supportive only
+7,Diagnosis > Serology > Widal Test,Limitations 1,Low specificity
+7,Diagnosis > Serology > Widal Test,Limitations 2,Cross-reactivity
+7,Diagnosis > Serology > Widal Test,Limitations 3,Baseline titers in endemic regions
+7,Diagnosis > Molecular Tests,Pcr,"Limited availability, research use"
+7,Treatment,Principles 1,Early antibiotic therapy
+7,Treatment,Principles 2,Do not delay treatment awaiting culture results
+7,Treatment,Principles 3,"Supportive care (hydration, nutrition, antipyretics)"
+7,Treatment > Recommended Antibiotics,Uncomplicated 1,Azithromycin
+7,Treatment > Recommended Antibiotics,Uncomplicated 2,Cefixime
+7,Treatment > Recommended Antibiotics,Severe Or Hospitalized 1,Ceftriaxone
+7,Treatment > Recommended Antibiotics,Severe Or Hospitalized 2,Cefotaxime
+7,Treatment > Recommended Antibiotics,Extensively Drug Resistant 1,Azithromycin
+7,Treatment > Recommended Antibiotics,Extensively Drug Resistant 2,Meropenem
+7,Treatment > Treatment Duration,Standard,10–14 days
+7,Treatment > Treatment Duration,Azithromycin,7 days
+7,Treatment > Steroids,Indication 1,Shock
+7,Treatment > Steroids,Indication 2,Severe encephalopathy
+7,Treatment > Steroids,Drug,Dexamethasone
+7,Antimicrobial Resistance,Mdr,"Resistance to ampicillin, chloramphenicol, TMP-SMX"
+7,Antimicrobial Resistance,Fluoroquinolone Resistance,Common in Asia
+7,Antimicrobial Resistance,Xdr,Resistance to first-line + fluoroquinolones + cephalosporins
+7,Antimicrobial Resistance,Emerging Threats 1,Ceftriaxone resistance
+7,Antimicrobial Resistance,Emerging Threats 2,Azithromycin resistance
+7,Prevention,Water And Sanitation 1,Safe drinking water
+7,Prevention,Water And Sanitation 2,Improved sanitation
+7,Prevention,Water And Sanitation 3,Proper sewage disposal
+7,Prevention,Food Safety 1,Hand hygiene
+7,Prevention,Food Safety 2,Safe food preparation
+7,Prevention,Food Safety 3,Food handler screening
+7,Prevention > Vaccination,Available Vaccines 1,Typhoid conjugate vaccine (TCV)
+7,Prevention > Vaccination,Available Vaccines 2,Vi polysaccharide vaccine
+7,Prevention > Vaccination,Available Vaccines 3,Ty21a oral vaccine
+7,Prevention > Vaccination,Who Recommendations 1,Routine use in endemic regions
+7,Prevention > Vaccination,Who Recommendations 2,Outbreak control
+7,Prevention > Vaccination,Who Recommendations 3,Travelers to endemic areas
+7,Public Health,Notifiable Disease,True
+7,Public Health,Control Measures 1,Case reporting
+7,Public Health,Control Measures 2,Outbreak investigation
+7,Public Health,Control Measures 3,Carrier identification
+7,Public Health,Control Measures 4,Vaccination campaigns
+7,Chatbot Support,Supported Intents 1,What is typhoid fever?
+7,Chatbot Support,Supported Intents 2,How does typhoid spread?
+7,Chatbot Support,Supported Intents 3,Symptoms of typhoid
+7,Chatbot Support,Supported Intents 4,Diagnosis methods
+7,Chatbot Support,Supported Intents 5,Treatment options
+7,Chatbot Support,Supported Intents 6,Drug resistance
+7,Chatbot Support,Supported Intents 7,Complications
+7,Chatbot Support,Supported Intents 8,Carrier state
+7,Chatbot Support,Supported Intents 9,Vaccination information
+7,Chatbot Support,Supported Intents 10,Prevention tips
+7,Chatbot Support,Supported Intents 11,Public health reporting
+7,Chatbot Support,Conversation Style 1,Educational
+7,Chatbot Support,Conversation Style 2,Student-friendly
+7,Chatbot Support,Conversation Style 3,Public-health focused
+8,Document,Title,Complications and mortality of typhoid fever: A global systematic review and meta-analysis
+8,Document,Authors 1,Christian S. Marchello
+8,Document,Authors 2,Megan Birkhold
+8,Document,Authors 3,John A. Crump
+8,Document,Journal,Journal of Infection 81 (2020) 902-910
+8,Document,Doi,10.1016/j.jinf.2020.10.030
+8,Key Stats,Total Studies,113
+8,Key Stats,Confirmed Cases,10335
+8,Key Stats,Complications Rate,26.3%
+8,Key Stats,Global Cfr,2.0% (95% CI 1.4-2.8%)
+8,Key Stats,Tip Cfr Median,15.5%
+8,Cfr By Region,Asia,0.9%
+8,Cfr By Region,Africa,5.4%
+8,Cfr By Region,Oceania,7.2%
+8,Cfr By Region,Americas,6.7%
+8,Top Complications 1,Name,Delirium
+8,Top Complications 1,Prevalence,26.6%
+8,Top Complications 2,Name,Anemia
+8,Top Complications 2,Prevalence,21.4%
+8,Top Complications 3,Name,Encephalopathy
+8,Top Complications 3,Prevalence,3.6%
+8,Top Complications 4,Name,Gastrointestinal hemorrhage
+8,Top Complications 4,Prevalence,3.1%
+8,Top Complications 5,Name,TIP
+8,Top Complications 5,Prevalence,1.3%
+8,Chatbot Faq 1,Question,What is the case fatality ratio of typhoid fever?
+8,Chatbot Faq 1,Answer,Global pooled CFR is 2.0% (95% CI 1.4-2.8%) for confirmed cases; higher in Africa (5.4%) than Asia (0.9%).[file:1]
+8,Chatbot Faq 2,Question,What are the most common complications of typhoid fever?
+8,Chatbot Faq 2,Answer,"Delirium (26.6%), anemia (21.4%), encephalopathy (3.6%), and TIP (1.3%). 26.3% of confirmed cases had complications.[file:1]"
+8,Chatbot Faq 3,Question,How does typhoid CFR differ by region?
+8,Chatbot Faq 3,Answer,"Asia: 0.9%, Africa: 5.4%, with TIP CFR median 15.5% overall (20% Africa).[file:1]"
+8,Chatbot Faq 4,Question,What factors increase typhoid mortality?
+8,Chatbot Faq 4,Answer,Delays in care correlate with higher CFR (r=0.84 in Asia); hospital-based studies show higher rates than community.[file:1]
+8,Chatbot Faq 5,Question,Recommendations from the study?
+8,Chatbot Faq 5,Answer,"Emphasizes typhoid conjugate vaccine (TCV) to prevent complications and deaths, alongside sanitation improvements.[file:1]"
+8,General,Full Text Snippet,Objectives: Updated estimates of the prevalence of complications and CFR... [truncated; use for RAG].
+9,Disease,Name,Typhoid Fever
+9,Disease,Alternate Names 1,Enteric Fever
+9,Disease > Causative Agent,Organism,Salmonella enterica
+9,Disease > Causative Agent,Serovars 1,Typhi
+9,Disease > Causative Agent,Serovars 2,Paratyphi A
+9,Disease > Causative Agent,Serovars 3,Paratyphi B
+9,Disease > Causative Agent,Serovars 4,Paratyphi C
+9,Disease > Causative Agent,Type,Gram-negative bacillus
+9,Disease > Causative Agent,Family,Enterobacteriaceae
+9,Disease > Causative Agent,Characteristics 1,Facultative intracellular pathogen
+9,Disease > Causative Agent,Characteristics 2,Flagellated
+9,Disease > Causative Agent,Characteristics 3,Non-spore forming
+9,Disease > Causative Agent,Characteristics 4,"Lipopolysaccharide antigens O9, O12"
+9,Disease > Causative Agent,Characteristics 5,Vi capsular polysaccharide antigen
+9,Transmission,Mode,Fecal–oral
+9,Transmission,Sources 1,Contaminated drinking water
+9,Transmission,Sources 2,Contaminated food
+9,Transmission,Sources 3,Raw fruits and vegetables
+9,Transmission,Sources 4,Dairy products
+9,Transmission,Sources 5,Street food
+9,Transmission,Sources 6,Food handlers who are chronic carriers
+9,Transmission,Risk Factors 1,Poor sanitation
+9,Transmission,Risk Factors 2,Unsafe water supply
+9,Transmission,Risk Factors 3,Poor personal hygiene
+9,Transmission,Risk Factors 4,Overcrowding
+9,Transmission,Risk Factors 5,Low socioeconomic status
+9,Transmission,Risk Factors 6,Flooding
+9,Transmission,Risk Factors 7,Contact with infected persons or carriers
+9,Epidemiology > Global Burden,Annual Cases,21–27 million
+9,Epidemiology > Global Burden,Annual Deaths,"129,000–600,000"
+9,Epidemiology,High Risk Regions 1,South Asia
+9,Epidemiology,High Risk Regions 2,Southeast Asia
+9,Epidemiology,High Risk Regions 3,Pakistan
+9,Epidemiology,High Risk Regions 4,India
+9,Epidemiology > Pakistan Specific,Incidence Rate,"412.9 per 100,000"
+9,Epidemiology > Pakistan Specific,High Risk Age Groups 1,2–10 years
+9,Epidemiology > Pakistan Specific,High Risk Age Groups 2,Up to 25 years
+9,Epidemiology > Pakistan Specific,Seasonality,Higher incidence in summer
+9,Epidemiology > Pakistan Specific,Carrier Rate,Up to 9% among food handlers
+9,Incubation Period,Range Days,7–14
+9,Clinical Features,Early Symptoms 1,Gradual onset fever
+9,Clinical Features,Early Symptoms 2,Malaise
+9,Clinical Features,Early Symptoms 3,Headache
+9,Clinical Features,Early Symptoms 4,Poor appetite
+9,Clinical Features,Early Symptoms 5,Constipation
+9,Clinical Features,Advanced Symptoms 1,High-grade fever (39–40°C)
+9,Clinical Features,Advanced Symptoms 2,Rose-colored rash
+9,Clinical Features,Advanced Symptoms 3,Abdominal pain
+9,Clinical Features,Advanced Symptoms 4,Diarrhea
+9,Clinical Features,Advanced Symptoms 5,Abdominal distension
+9,Clinical Features,Advanced Symptoms 6,Weakness
+9,Clinical Features,Physical Findings 1,Relative bradycardia
+9,Clinical Features,Physical Findings 2,Splenomegaly
+9,Clinical Features,Physical Findings 3,Hepatomegaly
+9,Clinical Features,Physical Findings 4,Abdominal tenderness
+9,General,Complications 1,Intestinal hemorrhage
+9,General,Complications 2,Intestinal perforation
+9,General,Complications 3,Pneumonia
+9,General,Complications 4,Meningitis
+9,General,Complications 5,Myocarditis
+9,General,Complications 6,Cholecystitis
+9,General,Complications 7,Osteomyelitis
+9,General,Complications 8,Nephritis
+9,General,Complications 9,Sepsis
+9,Pathogenesis,Entry,Oral ingestion
+9,Pathogenesis,Process 1,Survives gastric acid
+9,Pathogenesis,Process 2,Invades intestinal mucosa
+9,Pathogenesis,Process 3,Multiplies in Peyer’s patches
+9,Pathogenesis,Process 4,Spreads to lymph nodes
+9,Pathogenesis,Process 5,Disseminates via bloodstream
+9,Pathogenesis,Process 6,"Colonizes liver, spleen, bone marrow"
+9,Pathogenesis,Process 7,Excreted via stool
+9,Diagnosis,Gold Standard 1,Blood culture
+9,Diagnosis,Gold Standard 2,Bone marrow culture
+9,Diagnosis > Culture Methods,Blood,Moderate sensitivity
+9,Diagnosis > Culture Methods,Bone Marrow,Highest sensitivity
+9,Diagnosis > Culture Methods,Stool,Useful for carrier detection
+9,Diagnosis > Culture Methods,Urine,Occasionally positive
+9,Diagnosis > Serological Tests > Widal Test,Advantages 1,Cheap
+9,Diagnosis > Serological Tests > Widal Test,Advantages 2,Widely available
+9,Diagnosis > Serological Tests > Widal Test,Limitations 1,Low sensitivity
+9,Diagnosis > Serological Tests > Widal Test,Limitations 2,Low specificity
+9,Diagnosis > Serological Tests > Tubex Tf,Sensitivity,41.86%
+9,Diagnosis > Serological Tests > Tubex Tf,Specificity,95.97%
+9,Diagnosis > Serological Tests > Typhidot,Sensitivity,26.7%
+9,Diagnosis > Serological Tests > Typhidot,Specificity,61.5%
+9,Diagnosis > Serological Tests > Typhidot,Recommendation,Not reliable
+9,Diagnosis > Serological Tests > Igm Dipstick,Target,S. Typhi IgM antibodies
+9,Diagnosis > Serological Tests > Igm Dipstick,Use,Rapid screening
+9,Diagnosis > Molecular Diagnosis,Method,PCR
+9,Diagnosis > Molecular Diagnosis,Advantages 1,High sensitivity
+9,Diagnosis > Molecular Diagnosis,Advantages 2,Early detection
+9,Diagnosis > Molecular Diagnosis,Advantages 3,Useful when cultures are negative
+9,Treatment,Historical Drugs 1,Chloramphenicol
+9,Treatment,Historical Drugs 2,Ampicillin
+9,Treatment,Historical Drugs 3,Co-trimoxazole
+9,Treatment,Current First Line 1,Ceftriaxone
+9,Treatment,Current First Line 2,Azithromycin
+9,Treatment,Alternative Drugs 1,Ofloxacin
+9,Treatment,Alternative Drugs 2,Gatifloxacin
+9,Treatment > Drug Resistance,Mdr,Common
+9,Treatment > Drug Resistance,Fluoroquinolone Resistance,Increasing
+9,Treatment > Drug Resistance,Cephalosporin Resistance,Emerging
+9,Prevention,Hygiene Measures 1,Safe drinking water
+9,Prevention,Hygiene Measures 2,Proper sewage disposal
+9,Prevention,Hygiene Measures 3,Hand hygiene
+9,Prevention,Hygiene Measures 4,Food safety practices
+9,Prevention > Vaccines,Available 1,Oral live attenuated Ty21a
+9,Prevention > Vaccines,Available 2,Vi polysaccharide injectable
+9,Prevention > Vaccines > Conjugate Vaccines,Benefits 1,Longer protection
+9,Prevention > Vaccines > Conjugate Vaccines,Benefits 2,Effective in young children
+9,Prevention > Vaccines > Conjugate Vaccines,Benefits 3,Higher efficacy
+9,Prevention > Vaccines > Conjugate Vaccines,Example,Vi-rEPA conjugate vaccine
+9,General,Public Health Recommendations 1,Improved sanitation infrastructure
+9,General,Public Health Recommendations 2,Rational antibiotic use
+9,General,Public Health Recommendations 3,Surveillance and diagnostics
+9,General,Public Health Recommendations 4,School-based vaccination programs
+9,General,Public Health Recommendations 5,Health education
+9,General,Keywords 1,Typhoid
+9,General,Keywords 2,Salmonella Typhi
+9,General,Keywords 3,Enteric fever
+9,General,Keywords 4,Drug resistance
+9,General,Keywords 5,Food-borne disease
+9,General,Keywords 6,Water-borne disease
+9,Source Metadata,Article Title,A review: Typhoid fever
+9,Source Metadata,Journal,Journal of Bacteriology & Infectious Diseases
+9,Source Metadata,Year,2018
+9,Source Metadata,Authors 1,Nusrat Yasin
+9,Source Metadata,Authors 2,Azmat Jabeen
+9,Source Metadata,Authors 3,Iqbal Nisa
+9,Source Metadata,Authors 4,Umber Tasleem
+10,Disease,Name,Typhoid (Enteric) Fever
+10,Disease,Alternate Names 1,Enteric Fever
+10,Disease,Related Disease,Paratyphoid Fever
+10,Disease,Last Updated,August 2025
+10,Disease,Reporting Urgency,Report within 1 working day
+10,Reporting And Surveillance,Purpose 1,Identify public health sources of infection
+10,Reporting And Surveillance,Purpose 2,Stop transmission from food handlers or contaminated products
+10,Reporting And Surveillance,Purpose 3,Assess risk of spread to others
+10,Reporting And Surveillance,Purpose 4,Identify additional cases
+10,Reporting And Surveillance > Laboratory Reporting,Who Must Report 1,Laboratories
+10,Reporting And Surveillance > Laboratory Reporting,Who Must Report 2,Physicians
+10,Reporting And Surveillance > Laboratory Reporting,Timeframe,Within 1 working day
+10,Reporting And Surveillance > Laboratory Reporting,Notes 1,Do not delay reporting for serotyping
+10,Reporting And Surveillance > Laboratory Reporting,Notes 2,Isolates must be sent for serotyping if unavailable locally
+10,Reporting And Surveillance,Local Health Department Actions 1,Report confirmed and presumptive cases to OHD
+10,Reporting And Surveillance,Local Health Department Actions 2,Begin investigation within 1 working day
+10,Reporting And Surveillance,Local Health Department Actions 3,Use official case investigation forms
+10,Reporting And Surveillance,Local Health Department Actions 4,Encourage isolate forwarding to CPHL
+10,Reporting And Surveillance,Local Health Department Actions 5,Complete outbreak summary forms if needed
+10,Reporting And Surveillance,Local Health Department Actions 6,Manage carrier agreements for chronic carriers
+10,Etiology > Typhoid,Agent,Salmonella enterica serotype Typhi
+10,Etiology > Typhoid,Type,Gram-negative bacillus
+10,Etiology > Typhoid,Environmental Survival 1,Weeks to months in water or ice
+10,Etiology > Typhoid,Environmental Survival 2,"Killed by sunlight, drying, disinfectants, chlorination"
+10,Etiology > Paratyphoid,Agents 1,Salmonella Paratyphi A
+10,Etiology > Paratyphoid,Agents 2,Salmonella Paratyphi B
+10,Etiology > Paratyphoid,Agents 3,Salmonella Paratyphi C
+10,Etiology > Paratyphoid,Severity,Usually milder than typhoid
+10,Clinical Features,Early Symptoms 1,Fever
+10,Clinical Features,Early Symptoms 2,Anorexia
+10,Clinical Features,Early Symptoms 3,Lethargy
+10,Clinical Features,Early Symptoms 4,Malaise
+10,Clinical Features,Early Symptoms 5,Headache
+10,Clinical Features,Early Symptoms 6,Dry cough
+10,Clinical Features,Early Symptoms 7,Abdominal pain
+10,Clinical Features,Early Symptoms 8,Constipation
+10,Clinical Features,Later Symptoms 1,Prolonged fever
+10,Clinical Features,Later Symptoms 2,Mental dullness or stupor
+10,Clinical Features,Later Symptoms 3,Diarrhea (sometimes)
+10,Clinical Features,Later Symptoms 4,Hepatosplenomegaly
+10,Clinical Features,Later Symptoms 5,Rose spots rash
+10,Clinical Features > Rash Description,Type,Maculopapular
+10,Clinical Features > Rash Description,Location,Upper abdomen
+10,Clinical Features > Rash Description,Size Cm,2
+10,Clinical Features > Rash Description,Duration Days,2–4
+10,Clinical Features > Rash Description,Characteristic,Blanches on pressure
+10,Clinical Features > Severity,Untreated Mortality Rate,Up to 10%
+10,Clinical Features > Severity,Relapse Rate,Common if untreated or inadequately treated
+10,Reservoirs And Carriers,Reservoir,Humans only
+10,Reservoirs And Carriers > Carrier Statistics,Chronic Carrier Rate,2–5%
+10,Reservoirs And Carriers > Carrier Statistics,High Risk Groups 1,Middle-aged individuals
+10,Reservoirs And Carriers > Carrier Statistics,High Risk Groups 2,Women
+10,Reservoirs And Carriers > Carrier Statistics,High Risk Groups 3,Persons with gall bladder disease
+10,Reservoirs And Carriers > Carrier Characteristics,Excretion 1,Stool
+10,Reservoirs And Carriers > Carrier Characteristics,Excretion 2,Urine
+10,Reservoirs And Carriers > Carrier Characteristics,Organism Load,Up to 10^11 organisms per gram of stool
+10,Transmission,Primary Mode,Fecal–oral
+10,Transmission,Vehicles 1,Contaminated drinking water
+10,Transmission,Vehicles 2,Food handled by infected persons
+10,Transmission,Vehicles 3,Shellfish from sewage-contaminated water
+10,Transmission,Vehicles 4,Vegetables grown in night soil
+10,Transmission,Non Causes 1,Floods in non-endemic countries
+10,Transmission,Non Causes 2,Natural disasters alone
+10,Incubation Period,Typhoid,1–3 weeks
+10,Incubation Period,Paratyphoid,1–10 days
+10,Communicability,Start,About 1 week after symptom onset
+10,Communicability,Duration 1,During illness
+10,Communicability,Duration 2,Through convalescence
+10,Communicability,Duration 3,Permanently in carriers
+10,Diagnosis,Confirmed Case,Isolation of Salmonella Typhi or Paratyphi from clinical specimen
+10,Diagnosis,Presumptive Case,Compatible illness with epidemiological link
+10,Diagnosis,Suspect Case,Compatible illness lasting ≥1 week
+10,Diagnosis,Preferred Specimens 1,Blood
+10,Diagnosis,Preferred Specimens 2,Stool
+10,Diagnosis,Preferred Specimens 3,Urine
+10,Diagnosis,Preferred Specimens 4,Bone marrow
+10,Diagnosis,Not Recommended,Widal test due to poor specificity
+10,Laboratory Services,Provided By,Center for Public Health Laboratories (CPHL)
+10,Laboratory Services,Services 1,Isolate confirmation
+10,Laboratory Services,Services 2,Serotyping
+10,Laboratory Services,Services 3,Blood and stool cultures
+10,Laboratory Services,Services 4,Carrier state follow-up cultures
+10,Laboratory Services,Specimen Rules 1,Stool must be collected before antibiotics or 48h after stopping
+10,Laboratory Services,Specimen Rules 2,Proper double packaging required
+10,Treatment,First Line Antibiotics 1,Ampicillin
+10,Treatment,First Line Antibiotics 2,Amoxicillin
+10,Treatment,First Line Antibiotics 3,Trimethoprim-sulfamethoxazole
+10,Treatment,First Line Antibiotics 4,Chloramphenicol
+10,Treatment,First Line Antibiotics 5,Cephalosporins
+10,Treatment,Alternative,Ciprofloxacin (resistance dependent)
+10,Treatment,Relapse Rate,15–35%
+10,Treatment,Notes,Multiple relapses may occur
+10,Prevention > Vaccination,Available,True
+10,Prevention > Vaccination,Types 1,Oral
+10,Prevention > Vaccination,Types 2,Parenteral
+10,Prevention > Vaccination,Recommended For 1,Household contacts of carriers
+10,Prevention > Vaccination,Recommended For 2,Travelers to endemic regions
+10,Prevention > Vaccination,Limitations,Not 100% effective
+10,Prevention,Hygiene 1,Handwashing after defecation
+10,Prevention,Hygiene 2,Safe food and water practices
+10,Case Management > Isolation,Standard Precautions,True
+10,Case Management > Isolation,Contact Precautions,Required for diapered or incontinent children
+10,Case Management > Work Restrictions,Food Handlers,Excluded until cleared
+10,Case Management > Work Restrictions,Healthcare And Childcare,Excluded until clearance
+10,Clearance Criteria > Acute Cases,Stool Cultures,4
+10,Clearance Criteria > Acute Cases,Urine Cultures,1
+10,Clearance Criteria > Acute Cases,Timing Rules 1,Asymptomatic
+10,Clearance Criteria > Acute Cases,Timing Rules 2,48h post-antibiotics
+10,Clearance Criteria > Acute Cases,Timing Rules 3,24h apart
+10,Clearance Criteria > Chronic Carriers,Stool Cultures,6
+10,Clearance Criteria > Chronic Carriers,Urine Culture,1
+10,Clearance Criteria > Chronic Carriers,Interval,≥72 hours apart
+10,Special Situations,Daycare 1,Exclude cases
+10,Special Situations,Daycare 2,Conduct stool screening
+10,Special Situations,Daycare 3,Cohorting if necessary
+10,Special Situations,Daycare 4,Weekly follow-up
+10,Special Situations,Food Handlers 1,Environmental evaluation
+10,Special Situations,Food Handlers 2,Employee stool testing
+10,Special Situations,Food Handlers 3,Patron illness investigation
+10,Special Situations,Healthcare Facilities 1,Consult infection control
+10,Special Situations,Healthcare Facilities 2,Evaluate for outbreaks
+10,General,Chatbot Intent Examples 1,What are the symptoms of typhoid fever?
+10,General,Chatbot Intent Examples 2,How is typhoid transmitted?
+10,General,Chatbot Intent Examples 3,When should typhoid be reported?
+10,General,Chatbot Intent Examples 4,What tests confirm typhoid?
+10,General,Chatbot Intent Examples 5,Who should not work if diagnosed with typhoid?
+10,General,Chatbot Intent Examples 6,How long is the incubation period?
+10,General,Chatbot Intent Examples 7,Is vaccination available for typhoid?
+11,Metadata,Condition,Typhoid Fever
+11,Metadata,Alternate Names 1,Enteric Fever
+11,Metadata,Pathogen,Salmonella enterica serotype Typhi
+11,Metadata,Disease Category,Bacterial enteric infection
+11,Metadata,Last Updated,2026-01
+11,Metadata,Data Source,Communicable Disease Management Protocols
+11,Case Definitions > Confirmed,Definition,Laboratory confirmation of Salmonella Typhi infection
+11,Case Definitions > Confirmed,Laboratory Criteria 1,Isolation from blood
+11,Case Definitions > Confirmed,Laboratory Criteria 2,Isolation from stool
+11,Case Definitions > Confirmed,Laboratory Criteria 3,Isolation from urine
+11,Case Definitions > Confirmed,Laboratory Criteria 4,Isolation from bone marrow
+11,Case Definitions > Confirmed,Laboratory Criteria 5,Isolation from rectal swab
+11,Case Definitions > Confirmed,Laboratory Criteria 6,Isolation from sterile body sites
+11,Case Definitions > Confirmed,Laboratory Criteria 7,Isolation from vomitus or deep tissue
+11,Case Definitions > Confirmed,Clinical Symptoms Required,False
+11,Case Definitions > Probable,Definition,Clinical illness with epidemiological linkage
+11,Case Definitions > Probable,Criteria 1,Compatible clinical illness
+11,Case Definitions > Probable,Criteria 2,Direct epidemiological link to a confirmed case
+11,Case Definitions > Suspected,Definition,Compatible illness without laboratory confirmation
+11,Case Definitions > Suspected,Minimum Duration,≥7 days
+11,Clinical Illness,General Description,Systemic bacterial illness with gradual onset
+11,Clinical Illness,Early Symptoms 1,Sustained fever
+11,Clinical Illness,Early Symptoms 2,Headache
+11,Clinical Illness,Early Symptoms 3,Malaise
+11,Clinical Illness,Early Symptoms 4,Anorexia
+11,Clinical Illness,Early Symptoms 5,Lethargy
+11,Clinical Illness,Early Symptoms 6,Dry cough
+11,Clinical Illness,Gastrointestinal Symptoms 1,Constipation (more common)
+11,Clinical Illness,Gastrointestinal Symptoms 2,Diarrhea (less common)
+11,Clinical Illness,Gastrointestinal Symptoms 3,Abdominal pain
+11,Clinical Illness,Gastrointestinal Symptoms 4,Abdominal tenderness
+11,Clinical Illness,Systemic Findings 1,Relative bradycardia
+11,Clinical Illness,Systemic Findings 2,Hepatomegaly
+11,Clinical Illness,Systemic Findings 3,Splenomegaly
+11,Clinical Illness,Systemic Findings 4,Mental dullness
+11,Clinical Illness,Systemic Findings 5,Slight deafness
+11,Clinical Illness,Systemic Findings 6,Parotitis
+11,Clinical Illness > Dermatologic Signs,Name,Rose spots
+11,Clinical Illness > Dermatologic Signs,Description,Rose-colored maculopapular lesions
+11,Clinical Illness > Dermatologic Signs,Locations 1,Abdomen
+11,Clinical Illness > Dermatologic Signs,Locations 2,Back
+11,Clinical Illness > Dermatologic Signs,Locations 3,Arms
+11,Clinical Illness > Dermatologic Signs,Locations 4,Legs
+11,Clinical Illness > Dermatologic Signs,Duration Days,2–4
+11,Clinical Illness > Dermatologic Signs,Blanching,True
+11,Clinical Illness > Disease Course,Untreated Duration,Up to 4 weeks of continuous fever
+11,Clinical Illness > Disease Course,Post Fever Fatigue,May persist for months
+11,Clinical Illness,Complications 1,Intestinal hemorrhage
+11,Clinical Illness,Complications 2,Intestinal perforation
+11,Clinical Illness,Complications 3,Sepsis
+11,Clinical Illness,Complications 4,Neurologic manifestations
+11,Clinical Illness > Severity,Untreated Case Fatality,10–20%
+11,Clinical Illness > Severity,Treated Case Fatality,<1%
+11,Clinical Illness > Severity,Relapse Rate,Up to 10%
+11,Etiology,Organism,Salmonella enterica subsp. enterica serotype Typhi
+11,Etiology,Organism Type,Gram-negative bacillus
+11,Etiology,Infectious Dose,Low in susceptible individuals
+11,Etiology,Environmental Survival 1,Survives weeks in water
+11,Etiology,Environmental Survival 2,Survives months in ice
+11,Etiology,Environmental Survival 3,"Destroyed by sunlight, drying, disinfectants, chlorination"
+11,Epidemiology,Reservoir,Humans only
+11,Epidemiology > Carrier State,Chronic Carriage Rate,1–5%
+11,Epidemiology > Carrier State,Duration,Months to years
+11,Epidemiology > Carrier State,Risk Factors 1,Female sex
+11,Epidemiology > Carrier State,Risk Factors 2,Age >50 years
+11,Epidemiology > Carrier State,Risk Factors 3,Gallbladder disease
+11,Epidemiology > Carrier State,Risk Factors 4,Schistosomiasis
+11,Epidemiology > Carrier State,Risk Factors 5,Gallstones
+11,Epidemiology > Carrier State,Risk Factors 6,Gallbladder malignancy
+11,Epidemiology > Global Burden,Annual Cases,≈22 million
+11,Epidemiology > Global Burden,Annual Deaths,"≈200,000"
+11,Epidemiology > Global Burden,Highest Burden Regions 1,South Asia
+11,Epidemiology > Global Burden,Highest Burden Regions 2,Southeast Asia
+11,Epidemiology > Global Burden,Highest Burden Regions 3,Africa
+11,Epidemiology > Global Burden,Highest Burden Regions 4,Central America
+11,Epidemiology > Global Burden,Highest Burden Regions 5,South America
+11,Epidemiology > Global Burden,Highest Burden Regions 6,Caribbean
+11,Epidemiology > Travel Association,Most Common Source,Travel to endemic areas
+11,Epidemiology > Travel Association,Highest Risk Destinations 1,India
+11,Epidemiology > Travel Association,Highest Risk Destinations 2,Pakistan
+11,Epidemiology > Travel Association,Highest Risk Destinations 3,Bangladesh
+11,Epidemiology > Travel Association,High Risk Travelers,Visiting friends and relatives (VFRs)
+11,Transmission,Primary Mode,Fecal–oral
+11,Transmission,Routes 1,Contaminated drinking water
+11,Transmission,Routes 2,Food handled by infected persons
+11,Transmission,Routes 3,Raw vegetables fertilized with night soil
+11,Transmission,Routes 4,Shellfish from sewage-contaminated waters
+11,Transmission,Routes 5,Unpasteurized milk and milk products
+11,Transmission,Additional Modes 1,Sexual transmission (documented)
+11,Incubation And Communicability > Incubation Period,Average Days,8–14
+11,Incubation And Communicability > Incubation Period,Range Days,3–60+
+11,Incubation And Communicability > Period Of Communicability,Start,First week of illness
+11,Incubation And Communicability > Period Of Communicability,End,Throughout convalescence
+11,Incubation And Communicability > Period Of Communicability,Chronic,Indefinite in carriers
+11,Laboratory Diagnosis,Preferred Specimens 1,Blood (early disease)
+11,Laboratory Diagnosis,Preferred Specimens 2,Stool (after first week)
+11,Laboratory Diagnosis,Preferred Specimens 3,Urine
+11,Laboratory Diagnosis,Gold Standard,Bone marrow culture
+11,Laboratory Diagnosis,Testing Notes 1,Multiple cultures increase sensitivity
+11,Laboratory Diagnosis,Testing Notes 2,Outbreaks must be clearly indicated on requisition
+11,Laboratory Diagnosis,Not Recommended Tests 1,Widal test (low sensitivity and specificity)
+11,Treatment,Treatment Goals 1,Resolve symptoms
+11,Treatment,Treatment Goals 2,Prevent complications
+11,Treatment,Treatment Goals 3,Prevent relapse
+11,Treatment,Treatment Goals 4,Eliminate carriage
+11,Treatment > Recommended Antibiotics,Adults 1,Ciprofloxacin (if susceptible)
+11,Treatment > Recommended Antibiotics,Adults 2,Azithromycin
+11,Treatment > Recommended Antibiotics,Children 1,Ceftriaxone
+11,Treatment,Alternative Agents 1,Cefixime
+11,Treatment,Alternative Agents 2,Ceftriaxone (parenteral)
+11,Treatment,Alternative Agents 3,Azithromycin (uncomplicated cases)
+11,Treatment,Resistance Considerations 1,Multidrug resistance common
+11,Treatment,Resistance Considerations 2,High fluoroquinolone resistance in South Asia
+11,Treatment,Resistance Considerations 3,Nalidixic acid resistance predicts treatment failure
+11,Treatment,Severe Cases 1,Ceftriaxone
+11,Treatment,Severe Cases 2,Adjunct corticosteroids
+11,Carrier Management,Definition,Excretion of Salmonella Typhi for >1 year
+11,Carrier Management,Treatment Options 1,Ciprofloxacin 750 mg BID for 28 days
+11,Carrier Management,Treatment Options 2,Norfloxacin 400 mg BID for 28 days
+11,Carrier Management,Treatment Success Rate,80–90%
+11,Carrier Management > Clearance Testing,Stool Cultures Required,6
+11,Carrier Management > Clearance Testing,Urine Cultures Required,1
+11,Carrier Management > Clearance Testing,Spacing,≥72 hours apart
+11,Public Health Reporting > Laboratory Reporting,Mandatory,True
+11,Public Health Reporting > Laboratory Reporting,Timeframe,Within 1 working day
+11,Public Health Reporting,Public Health Actions 1,Case investigation
+11,Public Health Reporting,Public Health Actions 2,Source identification
+11,Public Health Reporting,Public Health Actions 3,Contact tracing
+11,Public Health Reporting,Public Health Actions 4,Carrier assessment
+11,Public Health Reporting,Public Health Actions 5,Outbreak surveillance
+11,Infection Control > Precautions,Routine,True
+11,Infection Control > Precautions,Contact Precautions 1,Incontinent adults
+11,Infection Control > Precautions,Contact Precautions 2,Diapered children
+11,Infection Control > Precautions,Contact Precautions 3,Poor hygiene compliance
+11,Infection Control > Work And School Exclusion > Food Handlers,Requirement,≥3 negative stool cultures
+11,Infection Control > Work And School Exclusion > Food Handlers,Timing,≥48h after antibiotics
+11,Infection Control > Work And School Exclusion > Childcare Attendees,Under 5 Years,3 negative stool cultures
+11,Infection Control > Work And School Exclusion > Childcare Attendees,Over 5 Years,Exclude until symptom-free
+11,Contact Management,Defined Contacts 1,Household members
+11,Contact Management,Defined Contacts 2,Sexual partners
+11,Contact Management,Defined Contacts 3,Travel companions
+11,Contact Management,Symptomatic Contacts 1,Clinical evaluation
+11,Contact Management,Symptomatic Contacts 2,Stool cultures
+11,Contact Management,Symptomatic Contacts 3,Exclude from high-risk settings
+11,Contact Management > Asymptomatic Contacts,High Risk Occupations,Screen but do not exclude unless positive
+11,Outbreak Management,Definition,Cases exceeding expected baseline
+11,Outbreak Management,Key Actions 1,Identify common source
+11,Outbreak Management,Key Actions 2,Environmental assessment
+11,Outbreak Management,Key Actions 3,Public notification
+11,Outbreak Management,Key Actions 4,Enhanced surveillance
+11,Outbreak Management,Vaccination Role,Not recommended for outbreak control
+11,Prevention > Vaccination,Recommended For 1,Travelers to endemic regions
+11,Prevention > Vaccination,Recommended For 2,Laboratory workers
+11,Prevention > Vaccination,Recommended For 3,Household contacts of carriers
+11,Prevention > Vaccination,Protection Duration Years,2–3
+11,Prevention > Vaccination,Limitations,Not fully protective
+11,Prevention,Hygiene Measures 1,Hand washing after defecation
+11,Prevention,Hygiene Measures 2,Hand washing before food handling
+11,Prevention,Food And Water Safety 1,Boiled or bottled water
+11,Prevention,Food And Water Safety 2,Avoid ice
+11,Prevention,Food And Water Safety 3,Avoid raw foods
+11,Prevention,Food And Water Safety 4,Consume pasteurized dairy only
+11,Prevention,Food And Water Safety 5,Avoid street food
+11,Chatbot Intents,Symptom Assessment 1,What are the symptoms of typhoid?
+11,Chatbot Intents,Symptom Assessment 2,How does typhoid fever start?
+11,Chatbot Intents,Diagnosis 1,How is typhoid diagnosed?
+11,Chatbot Intents,Diagnosis 2,Which test confirms typhoid?
+11,Chatbot Intents,Treatment 1,How is typhoid treated?
+11,Chatbot Intents,Treatment 2,Which antibiotics cure typhoid?
+11,Chatbot Intents,Prevention 1,How can typhoid be prevented?
+11,Chatbot Intents,Prevention 2,Is there a typhoid vaccine?
+11,Chatbot Intents,Public Health 1,When must typhoid be reported?
+11,Chatbot Intents,Public Health 2,Who must stop working if infected?
+12,Metadata,Disease,Typhoid Fever
+12,Metadata,Alternate Name,Enteric Fever
+12,Metadata,Guideline Title,Typhoid Management Guidelines 2022
+12,Metadata,Issuing Body,Medical Microbiology & Infectious Diseases Society of Pakistan
+12,Metadata,Geographic Context,Endemic regions with high antimicrobial resistance
+12,Metadata,Last Updated,2022-06-22
+12,Etiology,Typhoid,Salmonella enterica serovar Typhi
+12,Etiology,Paratyphoid 1,Salmonella Paratyphi A
+12,Etiology,Paratyphoid 2,Salmonella Paratyphi B
+12,Etiology,Paratyphoid 3,Salmonella Paratyphi C
+12,Etiology,Transmission,Fecal–oral
+12,Etiology > Relative Severity,Typhi,More severe
+12,Etiology > Relative Severity,Paratyphi,Less severe
+12,Clinical Presentation > Incubation Period Days,Typical,7–14
+12,Clinical Presentation > Incubation Period Days,Range,7–21
+12,Clinical Presentation,Early Symptoms 1,Stepwise rising fever
+12,Clinical Presentation,Early Symptoms 2,Headache
+12,Clinical Presentation,Early Symptoms 3,Coated tongue
+12,Clinical Presentation,Early Symptoms 4,Weakness
+12,Clinical Presentation,Early Symptoms 5,Fatigue
+12,Clinical Presentation,Early Symptoms 6,Myalgia
+12,Clinical Presentation,Early Symptoms 7,Sweating
+12,Clinical Presentation,Early Symptoms 8,Dry cough
+12,Clinical Presentation,Early Symptoms 9,Loss of appetite
+12,Clinical Presentation,Early Symptoms 10,Weight loss
+12,Clinical Presentation,Gastrointestinal Features 1,Abdominal pain
+12,Clinical Presentation,Gastrointestinal Features 2,Abdominal distension
+12,Clinical Presentation,Gastrointestinal Features 3,Diarrhea
+12,Clinical Presentation,Gastrointestinal Features 4,Constipation
+12,Clinical Presentation > Dermatologic,Rash,Rose spots
+12,Clinical Presentation,Late And Severe Features 1,Delirium
+12,Clinical Presentation,Late And Severe Features 2,Intestinal perforation
+12,Clinical Presentation,Late And Severe Features 3,Gastrointestinal hemorrhage
+12,Clinical Presentation,Late And Severe Features 4,Encephalitis
+12,Clinical Presentation,Late And Severe Features 5,Cranial neuritis
+12,Clinical Presentation,Late And Severe Features 6,Septic shock
+12,Clinical Presentation,Clinical Suspicion Rule,Any patient with fever >3 days with no clear focus in endemic area
+12,Laboratory Findings,Common Results 1,Anemia
+12,Laboratory Findings,Common Results 2,Relative leukopenia
+12,Laboratory Findings,Common Results 3,Occasional thrombocytopenia
+12,Laboratory Findings,Common Results 4,Mildly raised ESR
+12,Laboratory Findings,Common Results 5,Raised liver transaminases
+12,Laboratory Findings,Common Results 6,Raised serum bilirubin
+12,Laboratory Findings,Common Results 7,Hyponatremia
+12,Laboratory Findings,Common Results 8,Hypokalemia
+12,Laboratory Findings,Tests To Rule Out 1,Malaria
+12,Laboratory Findings,Tests To Rule Out 2,Dengue
+12,Laboratory Findings,Tests To Rule Out 3,Acute viral hepatitis
+12,Microbiological Diagnosis,Gold Standard,Blood culture
+12,Microbiological Diagnosis,Culture Sources 1,Blood
+12,Microbiological Diagnosis,Culture Sources 2,Bone marrow
+12,Microbiological Diagnosis,Culture Sources 3,Urine
+12,Microbiological Diagnosis,Culture Sources 4,Stool
+12,Microbiological Diagnosis,Culture Sources 5,Rose spot biopsy
+12,Microbiological Diagnosis,Culture Sources 6,Duodenal aspirate
+12,Microbiological Diagnosis > Culture Sensitivity,Blood,40–80%
+12,Microbiological Diagnosis > Culture Sensitivity,Bone Marrow,≈90% (even after antibiotics)
+12,Microbiological Diagnosis > Blood Culture Guidelines,Timing,Before antibiotics whenever possible
+12,Microbiological Diagnosis > Blood Culture Guidelines,Volume Adults Ml,20
+12,Microbiological Diagnosis > Blood Culture Guidelines > Volume Children Ml,<5 Years,3–5
+12,Microbiological Diagnosis > Blood Culture Guidelines > Volume Children Ml,5–12 Years,5–10
+12,Microbiological Diagnosis > Blood Culture Guidelines > Volume Children Ml,>12 Years,10–15
+12,Microbiological Diagnosis > Blood Culture Guidelines,Repeat Culture,If no response after 7–9 days
+12,Microbiological Diagnosis > Serology,Tests 1,Widal
+12,Microbiological Diagnosis > Serology,Tests 2,TyphiDOT
+12,Microbiological Diagnosis > Serology,Recommendation,NOT recommended due to low sensitivity and specificity
+12,Case Definitions > Suspected Or Probable,Criteria 1,Fever ≥38°C for ≥5 days
+12,Case Definitions > Suspected Or Probable,Criteria 2,Rising fever trend
+12,Case Definitions > Suspected Or Probable,Criteria 3,No alternative diagnosis
+12,Case Definitions > Confirmed,Criteria 1,Persistent fever ≥3 days
+12,Case Definitions > Confirmed,Criteria 2,Isolation of S. Typhi from blood or bone marrow
+12,Case Definitions > Chronic Carrier,Definition,Excretion of S. Typhi in stool or urine for >1 year
+12,Drug Resistance Classification,Non Resistant,Sensitive to first-line drugs and cephalosporins
+12,Drug Resistance Classification,Mdr,"Resistant to first-line drugs, sensitive to cephalosporins"
+12,Drug Resistance Classification,Xdr,"Resistant to first-line, fluoroquinolones, and cephalosporins"
+12,Drug Resistance Classification,Esbl Positive,"Cephalosporin resistant, may be sensitive to older agents"
+12,Management Principles,General Rules 1,Always send blood cultures before antibiotics
+12,Management Principles,General Rules 2,Do not use serological tests
+12,Management Principles,General Rules 3,Do not rush antibiotic change before 5–7 days
+12,Management Principles,General Rules 4,Monitor for complications closely
+12,General,Supportive Care 1,Antipyretics
+12,General,Supportive Care 2,Adequate hydration
+12,General,Supportive Care 3,Electrolyte correction
+12,General,Supportive Care 4,"Soft, easily digestible diet"
+12,General,Supportive Care 5,Monitoring vitals and labs in severe disease
+12,Empiric Treatment,Initial Options 1,Oral Azithromycin
+12,Empiric Treatment,Initial Options 2,IV Ceftriaxone
+12,Empiric Treatment,Escalation Criteria 1,No improvement after 5 days
+12,Empiric Treatment,Escalation Criteria 2,Clinical deterioration
+12,Empiric Treatment,Escalation Criteria 3,Development of complications
+12,Empiric Treatment,Escalation Drug,IV Carbapenem
+12,Definitive Treatment > Non Resistant,Duration Days,14
+12,Definitive Treatment > Non Resistant,Options 1,Ceftriaxone
+12,Definitive Treatment > Non Resistant,Options 2,Cefixime
+12,Definitive Treatment > Non Resistant,Options 3,Ciprofloxacin
+12,Definitive Treatment > Non Resistant,Options 4,Chloramphenicol
+12,Definitive Treatment > Non Resistant,Options 5,Trimethoprim-Sulfamethoxazole
+12,Definitive Treatment > Non Resistant,Options 6,Ampicillin/Amoxicillin
+12,Definitive Treatment > Mdr,Drug,Third-generation cephalosporins
+12,Definitive Treatment > Mdr,Duration Days,14
+12,Definitive Treatment > Xdr,Stable Patient,Azithromycin
+12,Definitive Treatment > Xdr,Unstable Patient 1,Meropenem
+12,Definitive Treatment > Xdr,Unstable Patient 2,Imipenem
+12,Definitive Treatment > Xdr,Unstable Patient 3,Ertapenem
+12,Definitive Treatment > Xdr,Duration Days,10–14
+12,Definitive Treatment > Esbl Positive,Strategy,De-escalate to susceptible first-line agent
+12,Definitive Treatment > Esbl Positive,Duration Days,14
+12,Antibiotic Dosing > Azithromycin,<60Kg,"1g loading, then 500mg daily for 7–10 days"
+12,Antibiotic Dosing > Azithromycin,>60Kg,1g daily for 7–10 days
+12,Antibiotic Dosing,Ceftriaxone,1–2g daily (10–14 days)
+12,Antibiotic Dosing,Cefixime,400mg q12h (10–14 days)
+12,Antibiotic Dosing,Meropenem,1g q8h IV (10–14 days)
+12,Antibiotic Dosing,Imipenem,500mg q6h or 1g q8h IV
+12,Antibiotic Dosing,Ertapenem,1g daily IV
+12,Complicated Typhoid,Features 1,Jaundice
+12,Complicated Typhoid,Features 2,Altered mental status
+12,Complicated Typhoid,Features 3,Severe abdominal pain
+12,Complicated Typhoid,Features 4,GI bleeding
+12,Complicated Typhoid,Features 5,Septic shock
+12,Complicated Typhoid,Management,Tertiary care center
+12,Follow Up,Monitoring Period Months,3
+12,Follow Up,Watch For 1,Relapse
+12,Follow Up,Watch For 2,Complications
+12,Follow Up,Watch For 3,Chronic carriage
+12,Prevention > Vaccines > Vi Polysaccharide,Age,>2 years
+12,Prevention > Vaccines > Vi Polysaccharide,Revaccination Years,3
+12,Prevention > Vaccines > Typhoid Conjugate Vaccine,Age,≥6 months
+12,Prevention > Vaccines > Typhoid Conjugate Vaccine,Protection,≥3 years
+12,Prevention,Who Should Be Vaccinated 1,Household contacts
+12,Prevention,Who Should Be Vaccinated 2,Healthcare workers
+12,Prevention,Who Should Be Vaccinated 3,Food handlers
+12,Prevention,Hygiene Measures 1,Hand washing
+12,Prevention,Hygiene Measures 2,Boiled water
+12,Prevention,Hygiene Measures 3,Avoid street food
+12,Prevention,Hygiene Measures 4,Avoid raw produce
+12,Prevention,Hygiene Measures 5,Fly control
+12,Chatbot Intents,Symptoms 1,What are symptoms of typhoid?
+12,Chatbot Intents,Symptoms 2,How does typhoid start?
+12,Chatbot Intents,Diagnosis 1,Which test confirms typhoid?
+12,Chatbot Intents,Diagnosis 2,Why is Widal not recommended?
+12,Chatbot Intents,Treatment 1,How is XDR typhoid treated?
+12,Chatbot Intents,Treatment 2,What antibiotics are used for typhoid?
+12,Chatbot Intents,Prevention 1,Is there a typhoid vaccine?
+12,Chatbot Intents,Prevention 2,How can typhoid be prevented?
+13,Disease,Name,Typhoid Fever
+13,Disease,Alternate Names 1,Enteric Fever
+13,Disease,Causative Agents 1,Salmonella enterica serovar Typhi
+13,Disease,Causative Agents 2,Salmonella Paratyphi A
+13,Disease,Causative Agents 3,Salmonella Paratyphi B
+13,Disease,Causative Agents 4,Salmonella Paratyphi C
+13,Disease,Disease Type,Bacterial infectious disease
+13,Disease,Transmission Route,Fecal-oral
+13,Disease,Incubation Period Days,7–14
+13,Disease,Host,Humans only
+13,Etiology,Family,Enterobacteriaceae
+13,Etiology > Bacterial Characteristics,Gram Stain,Gram-negative
+13,Etiology > Bacterial Characteristics,Motility,Motile (flagella)
+13,Etiology > Bacterial Characteristics,Acid Sensitivity,Acid-sensitive except some resistant strains
+13,Etiology,Risk Factors 1,Contaminated food and water
+13,Etiology,Risk Factors 2,Poor sanitation
+13,Etiology,Risk Factors 3,Overcrowding
+13,Etiology,Risk Factors 4,Malnutrition
+13,Etiology,Risk Factors 5,Use of broad-spectrum antibiotics
+13,Etiology,Risk Factors 6,Reduced gastric acidity
+13,Etiology,Risk Factors 7,Poor personal hygiene
+13,Epidemiology,Global Cases Per Year,≈26 million
+13,Epidemiology,Global Deaths Per Year,"≈215,000"
+13,Epidemiology,High Risk Regions 1,South Asia
+13,Epidemiology,High Risk Regions 2,India
+13,Epidemiology,High Risk Regions 3,Pakistan
+13,Epidemiology,High Risk Regions 4,Bangladesh
+13,Epidemiology,High Risk Regions 5,South-Central Asia
+13,Epidemiology,High Risk Regions 6,Southern Africa
+13,Epidemiology > Carrier State,Chronic Carriers Percentage,≈4%
+13,Epidemiology > Carrier State,Duration Of Shedding,Up to 1 year
+13,Epidemiology > Carrier State,High Risk Groups 1,Women
+13,Epidemiology > Carrier State,High Risk Groups 2,Gallbladder disease patients
+13,Epidemiology > Carrier State,High Risk Groups 3,Cholelithiasis patients
+13,Pathophysiology,Virulence Factors 1,Vi antigen (capsule)
+13,Pathophysiology,Virulence Factors 2,O antigen (LPS endotoxin)
+13,Pathophysiology,Virulence Factors 3,H antigen (flagella)
+13,Pathophysiology,Virulence Factors 4,Typhoid toxin
+13,Pathophysiology,Virulence Factors 5,Type III secretion system
+13,Pathophysiology,Infection Process 1,Survival through stomach acid
+13,Pathophysiology,Infection Process 2,Attachment to intestinal mucosa
+13,Pathophysiology,Infection Process 3,Invasion via M cells
+13,Pathophysiology,Infection Process 4,Replication inside macrophages
+13,Pathophysiology,Infection Process 5,Primary bacteremia (asymptomatic)
+13,Pathophysiology,Infection Process 6,Secondary bacteremia (symptomatic)
+13,Pathophysiology,Affected Organs 1,Intestine (Peyer’s patches)
+13,Pathophysiology,Affected Organs 2,Liver
+13,Pathophysiology,Affected Organs 3,Spleen
+13,Pathophysiology,Affected Organs 4,Bone marrow
+13,Pathophysiology,Affected Organs 5,Gallbladder
+13,Pathophysiology,Complications 1,Intestinal ulceration
+13,Pathophysiology,Complications 2,Hemorrhage
+13,Pathophysiology,Complications 3,Septic shock
+13,Pathophysiology,Complications 4,Chronic carrier state
+13,Signs And Symptoms,General 1,High fever
+13,Signs And Symptoms,General 2,Weakness
+13,Signs And Symptoms,General 3,Fatigue
+13,Signs And Symptoms,General 4,Sweating
+13,Signs And Symptoms,General 5,Loss of appetite
+13,Signs And Symptoms,General 6,Weight loss
+13,Signs And Symptoms,Gastrointestinal 1,Abdominal pain
+13,Signs And Symptoms,Gastrointestinal 2,Diarrhea
+13,Signs And Symptoms,Gastrointestinal 3,Constipation
+13,Signs And Symptoms,Gastrointestinal 4,Extremely swollen abdomen
+13,Signs And Symptoms,Neurological 1,Headache
+13,Signs And Symptoms,Neurological 2,Confusion (severe cases)
+13,Signs And Symptoms,Dermatological 1,Rose spots (rash)
+13,Signs And Symptoms,Respiratory 1,Dry cough
+13,Transmission,Primary Modes 1,Contaminated drinking water
+13,Transmission,Primary Modes 2,Contaminated food
+13,Transmission,Primary Modes 3,Poor food handling
+13,Transmission,High Risk Foods 1,Ice cream
+13,Transmission,High Risk Foods 2,Raw fruits and vegetables
+13,Transmission,High Risk Foods 3,Shellfish
+13,Transmission,High Risk Foods 4,Food fertilized with sewage
+13,Transmission > Dose Response,High Dose,"Short incubation, high attack rate"
+13,Transmission > Dose Response,Low Dose,"Long incubation, lower attack rate"
+13,Diagnosis,Clinical Criteria 1,Fever > 3 days
+13,Diagnosis,Clinical Criteria 2,GI symptoms
+13,Diagnosis,Clinical Criteria 3,Travel or residence in endemic area
+13,Diagnosis > Laboratory Tests > Blood Culture,Status,Most common
+13,Diagnosis > Laboratory Tests > Blood Culture,Sensitivity,30–50%
+13,Diagnosis > Laboratory Tests > Blood Culture,Best Time,Second week
+13,Diagnosis > Laboratory Tests > Stool Culture,Best Time,Second and third week
+13,Diagnosis > Laboratory Tests > Stool Culture,Sensitivity,≈37%
+13,Diagnosis > Laboratory Tests > Bone Marrow Culture,Gold Standard,True
+13,Diagnosis > Laboratory Tests > Bone Marrow Culture,Sensitivity,≈90%
+13,Diagnosis > Laboratory Tests > Bone Marrow Culture,Limitations 1,Invasive
+13,Diagnosis > Laboratory Tests > Bone Marrow Culture,Limitations 2,Expensive
+13,Diagnosis > Laboratory Tests,Serological Tests 1,Widal test
+13,Diagnosis > Laboratory Tests,Serological Tests 2,Antibody detection
+13,Diagnosis > Laboratory Tests,Molecular Tests 1,PCR for typhoid DNA
+13,Widal Test,Purpose,Detection of antibodies against Salmonella antigens
+13,Widal Test,Antigens Tested 1,O
+13,Widal Test,Antigens Tested 2,H
+13,Widal Test,Antigens Tested 3,AH
+13,Widal Test,Antigens Tested 4,BH
+13,Widal Test,Procedure 1,Add positive control
+13,Widal Test,Procedure 2,Add negative control
+13,Widal Test,Procedure 3,Add patient serum
+13,Widal Test,Procedure 4,Add specific antigens
+13,Widal Test,Procedure 5,Mix and rock slide
+13,Widal Test,Procedure 6,Observe agglutination within 1 minute
+13,Widal Test > Interpretation,Positive,Visible agglutination
+13,Widal Test > Interpretation,Negative,No agglutination
+13,Treatment,Primary Treatment,Antibiotic therapy
+13,Treatment,Recommended Antibiotics 1,Ceftriaxone
+13,Treatment,Recommended Antibiotics 2,Azithromycin
+13,Treatment > Resistance Notes,Resistant To 1,Chloramphenicol
+13,Treatment > Resistance Notes,Resistant To 2,Ampicillin
+13,Treatment > Resistance Notes,Resistant To 3,Cotrimoxazole
+13,Treatment > Resistance Notes,Resistant To 4,Fluoroquinolones
+13,Treatment > Resistance Notes,Reason,Multidrug-resistant Salmonella strains
+13,Prevention,Water Safety 1,Clean drinking water
+13,Prevention,Water Safety 2,Proper water treatment
+13,Prevention,Food Hygiene 1,Hand washing
+13,Prevention,Food Hygiene 2,Avoid raw food
+13,Prevention,Food Hygiene 3,Eat freshly cooked food
+13,Prevention,Sanitation 1,Safe disposal of human waste
+13,Prevention,Sanitation 2,Sewage treatment
+13,Prevention,Sanitation 3,Avoid use of human excreta as fertilizer
+13,Prevention > Vaccination > Oral Vaccine,Minimum Age,6 years
+13,Prevention > Vaccination > Oral Vaccine,Schedule,"4 doses, alternate days"
+13,Prevention > Vaccination > Injectable Vaccine,Minimum Age,2 years
+13,Prevention > Vaccination > Injectable Vaccine,Timing,2 weeks before exposure
+13,Outcomes And Learning,Key Understandings 1,Disease pathology
+13,Outcomes And Learning,Key Understandings 2,Modes of transmission
+13,Outcomes And Learning,Key Understandings 3,Diagnostic techniques
+13,Outcomes And Learning,Key Understandings 4,Treatment strategies
+13,Outcomes And Learning,Key Understandings 5,Preventive measures
+13,General,Chatbot Use Cases 1,Symptom checker
+13,General,Chatbot Use Cases 2,Patient education
+13,General,Chatbot Use Cases 3,Medical student learning
+13,General,Chatbot Use Cases 4,Public health awareness
+13,General,Chatbot Use Cases 5,Diagnostic guidance (non-clinical)
+14,Disease,Name,Typhoid Fever
+14,Disease,Causative Agent,Salmonella Typhi
+14,Disease,Disease Type,Life-threatening bacterial infection
+14,Disease,Primary Transmission 1,Contaminated food
+14,Disease,Primary Transmission 2,Contaminated water
+14,Disease,Human Reservoir,True
+14,Key Facts,Annual Global Cases,9000000
+14,Key Facts,Annual Global Deaths,110000
+14,Key Facts,Data Reference Year,2019
+14,Key Facts,Severity,Can cause serious complications or death if untreated
+14,Key Facts,Antibiotic Resistance,Increasing and complicating treatment
+14,Key Facts,Vaccine Availability,WHO-prequalified typhoid conjugate vaccines available
+14,Overview,Infection Process 1,Ingestion of Salmonella Typhi
+14,Overview,Infection Process 2,Bacterial multiplication in intestine
+14,Overview,Infection Process 3,Spread into bloodstream
+14,Overview,Global Challenges 1,Urbanization
+14,Overview,Global Challenges 2,Climate change
+14,Overview,Global Challenges 3,Antimicrobial resistance
+14,Overview,Global Challenges 4,Poor access to safe water
+14,Overview,Global Challenges 5,Inadequate sanitation
+14,Symptoms,Common Symptoms 1,Prolonged high fever
+14,Symptoms,Common Symptoms 2,Fatigue
+14,Symptoms,Common Symptoms 3,Headache
+14,Symptoms,Common Symptoms 4,Nausea
+14,Symptoms,Common Symptoms 5,Abdominal pain
+14,Symptoms,Common Symptoms 6,Constipation
+14,Symptoms,Common Symptoms 7,Diarrhoea
+14,Symptoms,Additional Symptoms 1,Rash
+14,Symptoms,Severe Outcomes 1,Serious complications
+14,Symptoms,Severe Outcomes 2,Death
+14,Symptoms,Diagnostic Confirmation 1,Blood testing
+14,Epidemiology And Burden,Global Distribution 1,WHO African Region
+14,Epidemiology And Burden,Global Distribution 2,WHO Eastern Mediterranean Region
+14,Epidemiology And Burden,Global Distribution 3,WHO South-East Asia Region
+14,Epidemiology And Burden,Global Distribution 4,WHO Western Pacific Region
+14,Epidemiology And Burden,High Risk Populations 1,Children
+14,Epidemiology And Burden,High Risk Populations 2,Populations without safe water
+14,Epidemiology And Burden,High Risk Populations 3,Populations with poor sanitation
+14,Epidemiology And Burden > Historical Trend,Industrialized Countries,Drastic reduction due to antibiotics and improved living conditions
+14,Epidemiology And Burden > Historical Trend,Developing Countries,Ongoing public health problem
+14,Risk Factors,Environmental 1,Lack of safe drinking water
+14,Risk Factors,Environmental 2,Poor sanitation
+14,Risk Factors,Environmental 3,Urban overcrowding
+14,Risk Factors,Individual 1,Poor hygiene
+14,Risk Factors,Individual 2,Exposure during travel to endemic areas
+14,Treatment,Primary Treatment,Antibiotics
+14,Treatment,Treatment Challenges 1,Antimicrobial resistance
+14,Treatment,Treatment Challenges 2,Higher treatment cost in endemic regions
+14,Treatment,Post Treatment Considerations 1,Patients may continue to carry bacteria
+14,Treatment,Post Treatment Considerations 2,Bacteria can be shed in faeces
+14,Treatment,Post Treatment Considerations 3,Risk of transmission persists
+14,Treatment,Patient Instructions 1,Complete full antibiotic course
+14,Treatment,Patient Instructions 2,Wash hands with soap after using toilet
+14,Treatment,Patient Instructions 3,Avoid preparing food for others
+14,Treatment,Patient Instructions 4,Undergo testing to confirm bacterial clearance
+14,Prevention,Core Strategies 1,Access to safe drinking water
+14,Prevention,Core Strategies 2,Adequate sanitation
+14,Prevention,Core Strategies 3,Food hygiene
+14,Prevention,Core Strategies 4,Hand hygiene
+14,Prevention,Core Strategies 5,Vaccination
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine,Description,Purified Vi antigen linked to a carrier protein
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine,Dose Schedule,Single injectable dose
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine > Age Eligibility,Children,From 6 months of age
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine > Age Eligibility,Adults,Up to 45 years or 65 years (depending on vaccine)
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine,Advantages 1,Long-lasting immunity
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine,Advantages 2,Single-dose schedule
+14,Prevention > Vaccination > Typhoid Conjugate Vaccine,Advantages 3,Suitable for infants
+14,Prevention > Vaccination > Older Vaccines > Injectable Polysaccharide Vaccine,Minimum Age,2 years
+14,Prevention > Vaccination > Older Vaccines > Injectable Polysaccharide Vaccine,Limitations 1,Shorter immunity
+14,Prevention > Vaccination > Older Vaccines > Injectable Polysaccharide Vaccine,Limitations 2,Requires booster doses
+14,Prevention > Vaccination > Older Vaccines > Oral Live Attenuated Vaccine,Minimum Age,6 years
+14,Prevention > Vaccination > Older Vaccines > Oral Live Attenuated Vaccine,Limitations 1,Shorter immunity
+14,Prevention > Vaccination > Older Vaccines > Oral Live Attenuated Vaccine,Limitations 2,Not suitable for young children
+14,Traveller Guidance,Risk Level,Present in all endemic regions
+14,Traveller Guidance,Vaccination Recommendation,Vaccination recommended for high-risk destinations
+14,Traveller Guidance,Food And Water Safety 1,Eat food that is fully cooked and hot
+14,Traveller Guidance,Food And Water Safety 2,Avoid raw milk and raw milk products
+14,Traveller Guidance,Food And Water Safety 3,Drink boiled or pasteurized milk
+14,Traveller Guidance,Food And Water Safety 4,Avoid ice made from unsafe water
+14,Traveller Guidance,Food And Water Safety 5,Boil or disinfect drinking water
+14,Traveller Guidance,Food And Water Safety 6,Wash hands frequently with soap
+14,Traveller Guidance,Food And Water Safety 7,Wash and peel fruits and vegetables
+14,Who Response > Sage Recommendation,Year,2017
+14,Who Response > Sage Recommendation,Action,Add typhoid conjugate vaccine to routine childhood immunization in endemic countries
+14,Who Response > Sage Recommendation,Priority Countries 1,High disease burden countries
+14,Who Response > Sage Recommendation,Priority Countries 2,Countries with high antibiotic resistance
+14,Who Response > Gavi Support,Start Year,2019
+14,Who Response > Gavi Support,Purpose,Funding support for typhoid conjugate vaccine introduction
+14,Who Response > Who Prequalification,Vaccines Prequalified,2
+14,Who Response > Who Prequalification,Status Year,2023
+14,Who Response > Who Prequalification,Key Benefit,Longer-lasting immunity with single dose
+14,Who Response,Public Health Impact 1,Reduced typhoid burden
+14,Who Response,Public Health Impact 2,Lives saved
+14,Who Response,Public Health Impact 3,Reduced antibiotic use
+14,Who Response,Public Health Impact 4,Slower development of antimicrobial resistance
+14,General,Chatbot Applications 1,WHO health education chatbot
+14,General,Chatbot Applications 2,Symptom awareness assistant
+14,General,Chatbot Applications 3,Vaccination eligibility checker
+14,General,Chatbot Applications 4,Traveller safety chatbot
+14,General,Chatbot Applications 5,Public health surveillance support
+14,General,Chatbot Applications 6,Antibiotic resistance education

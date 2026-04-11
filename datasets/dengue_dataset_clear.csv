@@ -1,0 +1,3199 @@
+﻿Record,Section,Field,Value
+1,Disease,Name,Dengue Fever
+1,Disease,Category,Vector-borne viral disease
+1,Disease > Causative Agent,Virus,Dengue virus
+1,Disease > Causative Agent,Family,Flaviviridae
+1,Disease > Causative Agent,Serotypes 1,DEN-1
+1,Disease > Causative Agent,Serotypes 2,DEN-2
+1,Disease > Causative Agent,Serotypes 3,DEN-3
+1,Disease > Causative Agent,Serotypes 4,DEN-4
+1,Disease > Causative Agent > Genotypes,Den-1,3
+1,Disease > Causative Agent > Genotypes,Den-2,2
+1,Disease > Causative Agent > Genotypes,Den-3,4
+1,Disease > Causative Agent > Genotypes,Den-4,4
+1,Disease > Transmission,Mode,Mosquito-borne
+1,Disease > Transmission,Vector,Aedes aegypti
+1,Disease > Transmission,Risk Environment 1,Urban areas
+1,Disease > Transmission,Risk Environment 2,Stagnant water
+1,Disease > Transmission,Risk Environment 3,Monsoon season
+1,Clinical Course > Phases 1,Name,Febrile Phase
+1,Clinical Course > Phases 1,Duration Days,2–7
+1,Clinical Course > Phases 1,Features 1,High-grade fever
+1,Clinical Course > Phases 1,Features 2,Headache
+1,Clinical Course > Phases 1,Features 3,Retro-orbital pain
+1,Clinical Course > Phases 1,Features 4,Myalgia
+1,Clinical Course > Phases 1,Features 5,Arthralgia
+1,Clinical Course > Phases 1,Features 6,Rash
+1,Clinical Course > Phases 1,Features 7,Mild bleeding
+1,Clinical Course > Phases 2,Name,Critical Phase
+1,Clinical Course > Phases 2,Features 1,Plasma leakage
+1,Clinical Course > Phases 2,Features 2,Rising hematocrit
+1,Clinical Course > Phases 2,Features 3,Thrombocytopenia
+1,Clinical Course > Phases 2,Features 4,Shock risk
+1,Clinical Course > Phases 3,Name,Convalescent Phase
+1,Clinical Course > Phases 3,Features 1,Reabsorption of plasma
+1,Clinical Course > Phases 3,Features 2,Improving platelet count
+1,Clinical Course > Phases 3,Features 3,Clinical recovery
+1,Case Definitions > Probable Case,Criteria 1,Clinical features of dengue fever
+1,Case Definitions > Probable Case,Criteria 2,Positive Rapid Diagnostic Test (RDT)
+1,Case Definitions > Probable Case,Note,RDT has poor sensitivity and specificity
+1,Case Definitions > Confirmed Case,Criteria 1,Virus isolation
+1,Case Definitions > Confirmed Case,Criteria 2,NS1 antigen positive by ELISA
+1,Case Definitions > Confirmed Case,Criteria 3,IgM ELISA positive
+1,Case Definitions > Confirmed Case,Criteria 4,IgG seroconversion (4-fold rise)
+1,Case Definitions > Confirmed Case,Criteria 5,PCR positive
+1,Classification,Asymptomatic,True
+1,Classification > Symptomatic > Mild Dengue,Features 1,Fever without complications
+1,Classification > Symptomatic > Mild Dengue,Management,Home care
+1,Classification > Symptomatic > Moderate Dengue,Features 1,Warning signs present
+1,Classification > Symptomatic > Moderate Dengue,Features 2,Minor bleeding
+1,Classification > Symptomatic > Moderate Dengue,Features 3,Hematocrit rise
+1,Classification > Symptomatic > Moderate Dengue,Management,Close monitoring / Hospitalization
+1,Classification > Symptomatic > Severe Dengue,Features 1,Severe bleeding
+1,Classification > Symptomatic > Severe Dengue,Features 2,Shock (DSS)
+1,Classification > Symptomatic > Severe Dengue,Features 3,Organ failure
+1,Classification > Symptomatic > Severe Dengue,Management,Tertiary care
+1,General,Warning Signs 1,Persistent vomiting
+1,General,Warning Signs 2,Severe abdominal pain
+1,General,Warning Signs 3,Bleeding from any site
+1,General,Warning Signs 4,Decreased urine output
+1,General,Warning Signs 5,Respiratory distress
+1,General,Warning Signs 6,Restlessness or lethargy
+1,General,Warning Signs 7,Shock or impending shock
+1,General,Warning Signs 8,Rapidly falling platelet count
+1,Expanded Dengue Syndrome,Cns 1,Encephalopathy
+1,Expanded Dengue Syndrome,Cns 2,Encephalitis
+1,Expanded Dengue Syndrome,Cns 3,Seizures
+1,Expanded Dengue Syndrome,Cns 4,Intracranial bleeding
+1,Expanded Dengue Syndrome,Gastrointestinal 1,Acute hepatitis
+1,Expanded Dengue Syndrome,Gastrointestinal 2,Fulminant liver failure
+1,Expanded Dengue Syndrome,Gastrointestinal 3,Pancreatitis
+1,Expanded Dengue Syndrome,Renal 1,Acute renal failure
+1,Expanded Dengue Syndrome,Renal 2,Acute tubular necrosis
+1,Expanded Dengue Syndrome,Cardiac 1,Myocarditis
+1,Expanded Dengue Syndrome,Cardiac 2,Arrhythmia
+1,Expanded Dengue Syndrome,Cardiac 3,Cardiomyopathy
+1,Expanded Dengue Syndrome,Respiratory 1,ARDS
+1,Expanded Dengue Syndrome,Respiratory 2,Pulmonary edema
+1,Expanded Dengue Syndrome,Respiratory 3,Pleural effusion
+1,Expanded Dengue Syndrome,Eye 1,Conjunctival bleed
+1,Expanded Dengue Syndrome,Eye 2,Macular hemorrhage
+1,Expanded Dengue Syndrome,Eye 3,Optic neuritis
+1,Diagnosis,Day 1 To 5 1,NS1 ELISA
+1,Diagnosis,After Day 5 1,IgM ELISA
+1,Diagnosis,Rdt Policy,RDT positive = probable case only
+1,Treatment,General 1,Adequate fluids
+1,Treatment,General 2,Rest
+1,Treatment,General 3,Paracetamol only
+1,Treatment,General 4,Avoid NSAIDs and aspirin
+1,Treatment,Monitoring 1,Blood pressure
+1,Treatment,Monitoring 2,Hematocrit
+1,Treatment,Monitoring 3,Platelet count
+1,Treatment,Monitoring 4,Urine output
+1,Treatment,Monitoring 5,Consciousness level
+1,Treatment > Dengue Fever And Dhf 1 2,Management 1,Oral/IV fluids
+1,Treatment > Dengue Fever And Dhf 1 2,Management 2,Observation
+1,Treatment > Dhf 3 4,Management 1,Crystalloid fluids
+1,Treatment > Dhf 3 4,Management 2,Blood transfusion if severe bleeding
+1,Treatment > Dhf 3 4,Management 3,Platelet transfusion if <10000/mm3
+1,Platelet Transfusion Guidelines,Indications 1,Platelet count <10000/mm3
+1,Platelet Transfusion Guidelines,Indications 2,Any thrombocytopenia with bleeding
+1,Platelet Transfusion Guidelines,Not Indicated 1,Prophylactic transfusion if platelets >10000/mm3
+1,General,Admission Criteria 1,Any warning signs
+1,General,Admission Criteria 2,Significant bleeding
+1,General,Admission Criteria 3,Persistent fever >40°C
+1,General,Admission Criteria 4,Shock or circulatory failure
+1,General,Admission Criteria 5,Neurological symptoms
+1,General,Discharge Criteria 1,Afebrile for 24 hours
+1,General,Discharge Criteria 2,Platelet count >50000/mm3
+1,General,Discharge Criteria 3,Stable vitals
+1,General,Discharge Criteria 4,Good urine output
+1,General,Discharge Criteria 5,Clinical improvement
+1,Home Care Criteria,Allowed If 1,Stable vitals
+1,Home Care Criteria,Allowed If 2,Platelet count >100000/mm3
+1,Home Care Criteria,Allowed If 3,No bleeding
+1,Home Care Criteria,Allowed If 4,No warning signs
+1,Home Care Criteria,Return Immediately If 1,Bleeding
+1,Home Care Criteria,Return Immediately If 2,Persistent vomiting
+1,Home Care Criteria,Return Immediately If 3,Abdominal pain
+1,Home Care Criteria,Return Immediately If 4,Reduced urine output
+1,Home Care Criteria,Return Immediately If 5,Altered sensorium
+1,Nursing Care,Focus Areas 1,Early detection of shock
+1,Nursing Care,Focus Areas 2,Fluid balance
+1,Nursing Care,Focus Areas 3,Monitoring bleeding
+1,Nursing Care,Focus Areas 4,Monitoring urine output
+1,Nursing Care,Focus Areas 5,Neurological status
+1,Public Health Notes,High Risk Groups 1,Infants
+1,Public Health Notes,High Risk Groups 2,Elderly
+1,Public Health Notes,High Risk Groups 3,Pregnant women
+1,Public Health Notes,High Risk Groups 4,Diabetes
+1,Public Health Notes,High Risk Groups 5,Hypertension
+1,Public Health Notes,High Risk Groups 6,CKD
+1,Public Health Notes,High Risk Groups 7,CLD
+1,Public Health Notes,High Risk Groups 8,Immunocompromised
+1,Public Health Notes,Key Message,Fluid management and early detection of warning signs save lives
+1,Emergency Contacts,Helpline,DISHA
+1,Emergency Contacts,Numbers 1,0471-2552056
+1,Emergency Contacts,Numbers 2,1056
+1,Emergency Contacts,Availability,24x7
+2,Metadata,Document,National Guidelines for Clinical Management of Dengue Fever
+2,Metadata,Year,2023
+2,Metadata,Authority,"NCVBDC, Ministry of Health & Family Welfare, Government of India"
+2,Metadata,Geography,India
+2,Metadata,Last Updated,2023
+2,Disease,Name,Dengue Fever
+2,Disease,Type,Acute viral illness
+2,Disease,Family,Flaviviridae
+2,Disease,Virus,Dengue virus (DENV)
+2,Disease,Serotypes 1,DENV-1
+2,Disease,Serotypes 2,DENV-2
+2,Disease,Serotypes 3,DENV-3
+2,Disease,Serotypes 4,DENV-4
+2,Disease > Genotypes,Denv-1,3
+2,Disease > Genotypes,Denv-2,6
+2,Disease > Genotypes,Denv-3,4
+2,Disease > Genotypes,Denv-4,4
+2,Disease > Incubation Period Days,Average,4–6
+2,Disease > Incubation Period Days,Range,3–14
+2,Transmission,Primary Mode,Mosquito bite
+2,Transmission,Vector 1,Aedes aegypti
+2,Transmission,Vector 2,Aedes albopictus
+2,Transmission > Vector Characteristics,Feeding Time,Day time
+2,Transmission > Vector Characteristics,Flight Range Meters,400
+2,Transmission > Vector Characteristics,Egg Survival,Up to 1 year in dry conditions
+2,Transmission,Other Modes 1,Blood transfusion
+2,Transmission,Other Modes 2,Organ transplantation
+2,Transmission,Other Modes 3,Vertical transmission (rare)
+2,Transmission,Other Modes 4,Perinatal transmission
+2,Epidemiology,Endemic Regions,All Indian States/UTs except Ladakh
+2,Epidemiology,Seasonality,Post-monsoon peak (July–November)
+2,Epidemiology,Urban Rural Trend,Increasing rural spread
+2,Epidemiology,Risk Factors Environmental 1,Stagnant water
+2,Epidemiology,Risk Factors Environmental 2,Poor water storage
+2,Epidemiology,Risk Factors Environmental 3,Construction sites
+2,Epidemiology,Risk Factors Environmental 4,Urbanization
+2,Epidemiology,Risk Factors Environmental 5,Climate change
+2,Pathophysiology,Core Mechanisms 1,Antibody-dependent enhancement (ADE)
+2,Pathophysiology,Core Mechanisms 2,Cytokine storm
+2,Pathophysiology,Core Mechanisms 3,Vasculopathy
+2,Pathophysiology,Core Mechanisms 4,Coagulopathy
+2,Pathophysiology > Ade,Description,Non-neutralizing antibodies enhance viral entry into macrophages
+2,Pathophysiology > Ade,Risk,Secondary heterologous infection
+2,Pathophysiology > Cytokine Storm,Mediators 1,TNF-α
+2,Pathophysiology > Cytokine Storm,Mediators 2,IFN-γ
+2,Pathophysiology > Cytokine Storm,Mediators 3,IL-6
+2,Pathophysiology > Cytokine Storm,Mediators 4,IL-8
+2,Pathophysiology > Cytokine Storm,Mediators 5,IL-10
+2,Pathophysiology > Cytokine Storm,Effects 1,Shock
+2,Pathophysiology > Cytokine Storm,Effects 2,Organ dysfunction
+2,Pathophysiology > Vasculopathy,Features 1,Capillary leakage
+2,Pathophysiology > Vasculopathy,Features 2,Hemoconcentration
+2,Pathophysiology > Vasculopathy,Features 3,Pleural effusion
+2,Pathophysiology > Vasculopathy,Features 4,Ascites
+2,Pathophysiology > Coagulopathy,Features 1,Prolonged aPTT
+2,Pathophysiology > Coagulopathy,Features 2,Low fibrinogen
+2,Pathophysiology > Coagulopathy,Features 3,Thrombocytopenia
+2,Pathophysiology > Coagulopathy,Features 4,DIC
+2,Clinical Phases 1,Phase,Febrile
+2,Clinical Phases 1,Duration Days,2–7
+2,Clinical Phases 1,Features 1,High-grade fever
+2,Clinical Phases 1,Features 2,Headache
+2,Clinical Phases 1,Features 3,Retro-orbital pain
+2,Clinical Phases 1,Features 4,Myalgia
+2,Clinical Phases 1,Features 5,Arthralgia
+2,Clinical Phases 1,Features 6,Maculopapular rash
+2,Clinical Phases 1,Features 7,Leucopenia
+2,Clinical Phases 1,Features 8,Mild bleeding
+2,Clinical Phases 2,Phase,Critical
+2,Clinical Phases 2,Duration Hours,24–48
+2,Clinical Phases 2,Features 1,Plasma leakage
+2,Clinical Phases 2,Features 2,Rising hematocrit
+2,Clinical Phases 2,Features 3,Rapid platelet fall
+2,Clinical Phases 2,Features 4,Shock
+2,Clinical Phases 2,Features 5,Organ impairment
+2,Clinical Phases 3,Phase,Recovery
+2,Clinical Phases 3,Duration Days,2–3
+2,Clinical Phases 3,Features 1,Fluid reabsorption
+2,Clinical Phases 3,Features 2,Rising platelets
+2,Clinical Phases 3,Features 3,Convalescent rash
+2,Clinical Phases 3,Features 4,Pruritus
+2,Case Definitions > Probable,Criteria 1,Compatible clinical illness
+2,Case Definitions > Probable,Criteria 2,NS1 or IgM positive by non-ELISA / RDT
+2,Case Definitions > Probable,Note,RDT positive = probable only
+2,Case Definitions > Confirmed,Criteria 1,NS1 ELISA positive
+2,Case Definitions > Confirmed,Criteria 2,IgM ELISA positive
+2,Case Definitions > Confirmed,Criteria 3,PCR positive
+2,Case Definitions > Confirmed,Criteria 4,Virus isolation
+2,Case Definitions > Confirmed,Criteria 5,IgG seroconversion (4-fold rise)
+2,Classification > Group A,Label,Dengue without warning signs
+2,Classification > Group A,Severity,Mild
+2,Classification > Group A,Management,Home or OPD
+2,Classification > Group B,Label,Dengue with warning signs / risk factors
+2,Classification > Group B,Severity,Moderate
+2,Classification > Group B,Management,Hospital admission
+2,Classification > Group C,Label,Severe Dengue
+2,Classification > Group C,Severity,Life-threatening
+2,Classification > Group C,Management,ICU / Tertiary care
+2,General,Warning Signs 1,Persistent vomiting
+2,General,Warning Signs 2,Severe abdominal pain
+2,General,Warning Signs 3,Lethargy or restlessness
+2,General,Warning Signs 4,Bleeding from any site
+2,General,Warning Signs 5,Clinical fluid accumulation
+2,General,Warning Signs 6,Hepatomegaly >2 cm
+2,General,Warning Signs 7,Rising hematocrit with falling platelets
+2,General,Warning Signs 8,Syncope or giddiness
+2,Severe Dengue Criteria,Shock,True
+2,Severe Dengue Criteria,Severe Bleeding,True
+2,Severe Dengue Criteria,Organ Dysfunction 1,Liver (AST/ALT ≥1000)
+2,Severe Dengue Criteria,Organ Dysfunction 2,"CNS (GCS <9, encephalopathy)"
+2,Severe Dengue Criteria,Organ Dysfunction 3,Kidney (AKI)
+2,Severe Dengue Criteria,Organ Dysfunction 4,Heart (myocarditis)
+2,Severe Dengue Criteria,Organ Dysfunction 5,Lungs (ARDS)
+2,Diagnosis,Day 1 To 5 1,NS1 ELISA
+2,Diagnosis,Day 1 To 5 2,PCR
+2,Diagnosis,After Day 5 1,IgM ELISA
+2,Diagnosis,Supportive Labs 1,CBC
+2,Diagnosis,Supportive Labs 2,Hematocrit
+2,Diagnosis,Supportive Labs 3,Platelet count
+2,Diagnosis,Supportive Labs 4,LFT
+2,Diagnosis,Supportive Labs 5,Coagulation profile
+2,Treatment,General 1,Paracetamol only
+2,Treatment,General 2,Avoid NSAIDs and aspirin
+2,Treatment,General 3,Adequate oral/IV fluids
+2,Treatment,General 4,Close monitoring
+2,Treatment > Fluid Management,Preferred Fluids 1,Normal saline
+2,Treatment > Fluid Management,Preferred Fluids 2,Ringer’s lactate
+2,Treatment > Fluid Management,Avoid 1,Hypotonic fluids
+2,Treatment,Severe Cases 1,Judicious IV fluids
+2,Treatment,Severe Cases 2,Blood transfusion for bleeding
+2,Treatment,Severe Cases 3,Colloids if refractory shock
+2,Treatment,Severe Cases 4,Vasopressors if fluid unresponsive
+2,Platelet Transfusion,Indicated If 1,Active bleeding with thrombocytopenia
+2,Platelet Transfusion,Indicated If 2,"Platelets <10,000/mm³ (even without bleeding)"
+2,Platelet Transfusion,Not Indicated 1,Prophylactic transfusion without bleeding
+2,General,High Risk Groups 1,Infants
+2,General,High Risk Groups 2,Children <10 years
+2,General,High Risk Groups 3,Elderly >65 years
+2,General,High Risk Groups 4,Pregnant women
+2,General,High Risk Groups 5,Obesity
+2,General,High Risk Groups 6,Diabetes
+2,General,High Risk Groups 7,Hypertension
+2,General,High Risk Groups 8,CKD
+2,General,High Risk Groups 9,CLD
+2,General,High Risk Groups 10,Patients on steroids or NSAIDs
+2,General,Admission Criteria 1,Any warning sign
+2,General,Admission Criteria 2,Significant bleeding
+2,General,Admission Criteria 3,Persistent high fever
+2,General,Admission Criteria 4,Postural hypotension
+2,General,Admission Criteria 5,Shock
+2,General,Admission Criteria 6,Neurological symptoms
+2,General,Discharge Criteria 1,Afebrile for 24–48 hours
+2,General,Discharge Criteria 2,Stable hemodynamics
+2,General,Discharge Criteria 3,"Platelet count rising (>50,000/mm³)"
+2,General,Discharge Criteria 4,Good urine output
+2,General,Discharge Criteria 5,No respiratory distress
+2,Pediatric Specific,Differences 1,Undifferentiated febrile illness common
+2,Pediatric Specific,Differences 2,Higher risk of shock
+2,Pediatric Specific,Differences 3,Rapid progression
+2,Pediatric Specific,Management Notes 1,Weight-based fluid dosing
+2,Pediatric Specific,Management Notes 2,Early PICU for severe cases
+2,Monitoring,Vitals Frequency,"Every 30 min until stable, then 2–4 hourly"
+2,Monitoring,Labs 1,Serial hematocrit
+2,Monitoring,Labs 2,Platelet count
+2,Monitoring,Labs 3,Urine output
+2,General,Key Clinical Rules 1,Platelet count alone does not predict bleeding
+2,General,Key Clinical Rules 2,Early shock recognition saves lives
+2,General,Key Clinical Rules 3,Excess fluids cause harm
+2,General,Key Clinical Rules 4,No role of steroids
+3,Metadata,Title,Comprehensive Guidelines for Prevention and Control of Dengue and Dengue Haemorrhagic Fever
+3,Metadata,Publisher,World Health Organization – South-East Asia Regional Office
+3,Metadata,Year,2011
+3,Metadata,Isbn,978-92-9022-394-8
+3,Metadata,Scope,"Clinical management, epidemiology, vector control, surveillance, outbreak response"
+3,Disease Overview,Name,Dengue Fever
+3,Disease Overview,Severe Forms 1,Dengue Haemorrhagic Fever (DHF)
+3,Disease Overview,Severe Forms 2,Dengue Shock Syndrome (DSS)
+3,Disease Overview,Classification,Arboviral disease
+3,Disease Overview,Public Health Importance,Fastest emerging arboviral disease globally
+3,Disease Overview > Population At Risk,Global,≈2.5 billion
+3,Disease Overview > Population At Risk,Asia Pacific Share,≈75%
+3,Etiology,Virus Family,Flaviviridae
+3,Etiology,Genus,Flavivirus
+3,Etiology > Genome,Type,Single-stranded RNA
+3,Etiology > Genome,Length Nt,11644
+3,Etiology,Structural Proteins 1,C
+3,Etiology,Structural Proteins 2,M
+3,Etiology,Structural Proteins 3,E
+3,Etiology,Non Structural Proteins 1,NS1
+3,Etiology,Non Structural Proteins 2,NS2A
+3,Etiology,Non Structural Proteins 3,NS2B
+3,Etiology,Non Structural Proteins 4,NS3
+3,Etiology,Non Structural Proteins 5,NS4A
+3,Etiology,Non Structural Proteins 6,NS4B
+3,Etiology,Non Structural Proteins 7,NS5
+3,Etiology,Serotypes 1,DENV-1
+3,Etiology,Serotypes 2,DENV-2
+3,Etiology,Serotypes 3,DENV-3
+3,Etiology,Serotypes 4,DENV-4
+3,Etiology > Genotypes,Denv-1,3
+3,Etiology > Genotypes,Denv-2,6
+3,Etiology > Genotypes,Denv-3,4
+3,Etiology > Genotypes,Denv-4,4
+3,Etiology > Immunity,Primary,Lifelong immunity to same serotype
+3,Etiology > Immunity,Secondary,Temporary cross-protection only
+3,Etiology > Immunity,Risk,Secondary infection increases DHF/DSS risk
+3,Vectors > Primary,Species,Aedes aegypti
+3,Vectors > Primary > Behavior,Feeding,"Day-biting, multiple feeds"
+3,Vectors > Primary > Behavior,Host Preference,Strongly anthropophilic
+3,Vectors > Primary > Behavior,Habitat,"Urban, domestic containers"
+3,Vectors > Primary,Vectorial Capacity,High
+3,Vectors > Secondary,Species,Aedes albopictus
+3,Vectors > Secondary > Behavior,Feeding,"Single-feed, aggressive"
+3,Vectors > Secondary > Behavior,Host Preference,Humans and animals
+3,Vectors > Secondary > Behavior,Habitat,"Peri-urban, rural"
+3,Vectors > Secondary,Vectorial Capacity,Lower in urban epidemics
+3,Transmission,Cycles 1,Enzootic (monkey–mosquito)
+3,Transmission,Cycles 2,Epizootic (spillover)
+3,Transmission,Cycles 3,Epidemic (human–mosquito–human)
+3,Transmission > Incubation,Intrinsic Days,5–7
+3,Transmission > Incubation,Extrinsic Days,8–12
+3,Transmission > Infectious Period Human,Start,2 days before fever
+3,Transmission > Infectious Period Human,End,5 days after fever onset
+3,Epidemiology,Distribution,Tropical and subtropical regions
+3,Epidemiology,Trend,Increasing incidence and geographic spread
+3,Epidemiology,Seasonality,Rainy and post-monsoon season
+3,Epidemiology,Risk Factors 1,Unplanned urbanization
+3,Epidemiology,Risk Factors 2,Poor water storage
+3,Epidemiology,Risk Factors 3,Solid waste accumulation
+3,Epidemiology,Risk Factors 4,Global travel
+3,Epidemiology,Risk Factors 5,Climate change
+3,Clinical Spectrum > Iceberg Phenomenon,Asymptomatic,Majority
+3,Clinical Spectrum > Iceberg Phenomenon,Dengue Fever,Common
+3,Clinical Spectrum > Iceberg Phenomenon,Dhf,Less common
+3,Clinical Spectrum > Iceberg Phenomenon,Dss,Least but most severe
+3,Clinical Phases 1,Phase,Febrile
+3,Clinical Phases 1,Features 1,High fever
+3,Clinical Phases 1,Features 2,Headache
+3,Clinical Phases 1,Features 3,Retro-orbital pain
+3,Clinical Phases 1,Features 4,Myalgia
+3,Clinical Phases 1,Features 5,Arthralgia
+3,Clinical Phases 1,Features 6,Rash
+3,Clinical Phases 1,Features 7,Leukopenia
+3,Clinical Phases 2,Phase,Critical
+3,Clinical Phases 2,Features 1,Plasma leakage
+3,Clinical Phases 2,Features 2,Rising hematocrit
+3,Clinical Phases 2,Features 3,Thrombocytopenia
+3,Clinical Phases 2,Features 4,Shock
+3,Clinical Phases 3,Phase,Recovery
+3,Clinical Phases 3,Features 1,Fluid reabsorption
+3,Clinical Phases 3,Features 2,Rising platelets
+3,Clinical Phases 3,Features 3,Clinical improvement
+3,Case Definitions > Dengue Fever,Criteria 1,Acute fever 2–7 days
+3,Case Definitions > Dengue Fever,Criteria 2,Two or more symptoms
+3,Case Definitions > Dengue Fever,Criteria 3,Headache / myalgia / rash / bleeding
+3,Case Definitions > Dengue Haemorrhagic Fever,Criteria 1,Fever
+3,Case Definitions > Dengue Haemorrhagic Fever,Criteria 2,Hemorrhagic tendency
+3,Case Definitions > Dengue Haemorrhagic Fever,Criteria 3,Platelets <100000/mm3
+3,Case Definitions > Dengue Haemorrhagic Fever,Criteria 4,Evidence of plasma leakage
+3,Case Definitions > Dengue Shock Syndrome,Criteria 1,All DHF criteria
+3,Case Definitions > Dengue Shock Syndrome,Criteria 2,Rapid weak pulse
+3,Case Definitions > Dengue Shock Syndrome,Criteria 3,Narrow pulse pressure ≤20 mmHg
+3,Case Definitions > Dengue Shock Syndrome,Criteria 4,Hypotension or shock
+3,Expanded Dengue Syndrome,Neurological 1,Encephalopathy
+3,Expanded Dengue Syndrome,Neurological 2,Seizures
+3,Expanded Dengue Syndrome,Neurological 3,Intracranial bleed
+3,Expanded Dengue Syndrome,Hepatic 1,Acute hepatitis
+3,Expanded Dengue Syndrome,Hepatic 2,Fulminant liver failure
+3,Expanded Dengue Syndrome,Renal 1,Acute renal failure
+3,Expanded Dengue Syndrome,Cardiac 1,Myocarditis
+3,Expanded Dengue Syndrome,Cardiac 2,Arrhythmia
+3,Expanded Dengue Syndrome,Respiratory 1,ARDS
+3,Expanded Dengue Syndrome,Respiratory 2,Pulmonary hemorrhage
+3,Expanded Dengue Syndrome,Ocular 1,Macular hemorrhage
+3,Expanded Dengue Syndrome,Ocular 2,Optic neuritis
+3,Laboratory Diagnosis,Early Phase 1,NS1 ELISA
+3,Laboratory Diagnosis,Early Phase 2,PCR
+3,Laboratory Diagnosis,Late Phase 1,IgM ELISA
+3,Laboratory Diagnosis,Late Phase 2,IgG seroconversion
+3,Laboratory Diagnosis,Supportive 1,CBC
+3,Laboratory Diagnosis,Supportive 2,Hematocrit
+3,Laboratory Diagnosis,Supportive 3,Platelet count
+3,Laboratory Diagnosis,Supportive 4,LFT
+3,Laboratory Diagnosis,Supportive 5,Coagulation profile
+3,Management,General Principles 1,No antiviral therapy
+3,Management,General Principles 2,Early recognition of warning signs
+3,Management,General Principles 3,Judicious fluid therapy
+3,Management > Medications,Allowed 1,Paracetamol
+3,Management > Medications,Avoid 1,Aspirin
+3,Management > Medications,Avoid 2,NSAIDs
+3,Management > Medications,Avoid 3,Steroids
+3,Fluid Management,Preferred 1,Normal saline
+3,Fluid Management,Preferred 2,Ringer lactate
+3,Fluid Management,Avoid 1,Hypotonic fluids
+3,Fluid Management,Risk,Overhydration causes pulmonary edema
+3,Platelet Transfusion,Indications 1,Active bleeding with thrombocytopenia
+3,Platelet Transfusion,Indications 2,Platelets <10000/mm3
+3,Platelet Transfusion,Not Recommended 1,Prophylactic transfusion without bleeding
+3,General,Warning Signs 1,Persistent vomiting
+3,General,Warning Signs 2,Severe abdominal pain
+3,General,Warning Signs 3,Bleeding
+3,General,Warning Signs 4,Lethargy
+3,General,Warning Signs 5,Decreased urine output
+3,General,Warning Signs 6,Shock signs
+3,General,High Risk Groups 1,Children
+3,General,High Risk Groups 2,Pregnant women
+3,General,High Risk Groups 3,Elderly
+3,General,High Risk Groups 4,Diabetes
+3,General,High Risk Groups 5,Hypertension
+3,General,High Risk Groups 6,CKD
+3,General,High Risk Groups 7,CLD
+3,General,High Risk Groups 8,Immunocompromised
+3,Surveillance,Types 1,Epidemiological surveillance
+3,Surveillance,Types 2,Entomological surveillance
+3,Surveillance,Indices 1,House Index
+3,Surveillance,Indices 2,Container Index
+3,Surveillance,Indices 3,Breteau Index
+3,Vector Control,Environmental 1,Source reduction
+3,Vector Control,Environmental 2,Water container management
+3,Vector Control,Biological 1,Larvivorous fish
+3,Vector Control,Biological 2,Bacterial larvicides
+3,Vector Control,Chemical 1,Larvicides
+3,Vector Control,Chemical 2,Space spraying (ULV)
+3,Vector Control,Integrated Vector Management,True
+3,Outbreak Response,Components 1,Early detection
+3,Outbreak Response,Components 2,Rapid response teams
+3,Outbreak Response,Components 3,Case investigation
+3,Outbreak Response,Components 4,Risk communication
+3,General,Key Public Health Messages 1,Most dengue deaths are preventable
+3,General,Key Public Health Messages 2,Early fluid management saves lives
+3,General,Key Public Health Messages 3,Vector control is the only prevention
+3,General,Key Public Health Messages 4,Community participation is critical
+4,Metadata,Title,"Dengue Fever: Causes, Treatment & Prevention"
+4,Metadata,Type,Public Health Education Material
+4,Metadata,Compiled By,"Dr. Bir Singh, MD"
+4,Metadata,Institution,"Disease Outbreak Response Cell (DORC), AIIMS"
+4,Metadata,Publication Date,May 2007
+4,Metadata,Intended Audience,General public
+4,Metadata,Language,English
+4,Metadata,Geography,India
+4,Disease,Name,Dengue Fever
+4,Disease,Common Names 1,Break-bone fever
+4,Disease,Common Names 2,Haddi Tod Bukhar
+4,Disease,Nature,Communicable viral disease
+4,Disease > Severity Profile,Simple Dengue,"Self-limiting, non-fatal"
+4,Disease > Severity Profile,Dhf,Potentially fatal if untreated
+4,Disease > Severity Profile,Dss,"Medical emergency, life-threatening"
+4,Cause,Agent,Dengue virus
+4,Cause,Virus Types 1,Type 1
+4,Cause,Virus Types 2,Type 2
+4,Cause,Virus Types 3,Type 3
+4,Cause,Virus Types 4,Type 4
+4,Transmission,Mode,Mosquito bite
+4,Transmission > Vector,Species,Aedes mosquito
+4,Transmission > Vector,Characteristics 1,Bites during daytime
+4,Transmission > Vector,Characteristics 2,Bold and aggressive
+4,Transmission > Vector,Characteristics 3,Breeds in clean stagnant water
+4,Transmission > Seasonality India,High Risk Months 1,July
+4,Transmission > Seasonality India,High Risk Months 2,August
+4,Transmission > Seasonality India,High Risk Months 3,September
+4,Transmission > Seasonality India,High Risk Months 4,October
+4,Transmission > Seasonality India,Association,Rainy and post-rainy season
+4,Transmission,Human To Mosquito Cycle 1,Mosquito bites infected person
+4,Transmission,Human To Mosquito Cycle 2,Virus multiplies in mosquito
+4,Transmission,Human To Mosquito Cycle 3,Mosquito bites healthy person
+4,Transmission,Human To Mosquito Cycle 4,Virus transmitted to new host
+4,Incubation Period,Average Days,5
+4,Incubation Period,Range Days 1,3
+4,Incubation Period,Range Days 2,10
+4,Types Of Dengue 1,Type,Classical (Simple) Dengue Fever
+4,Types Of Dengue 1,Fatal,False
+4,Types Of Dengue 2,Type,Dengue Haemorrhagic Fever (DHF)
+4,Types Of Dengue 2,Fatal,True
+4,Types Of Dengue 3,Type,Dengue Shock Syndrome (DSS)
+4,Types Of Dengue 3,Fatal,True
+4,Symptoms,Classical Dengue 1,Sudden high fever with chills
+4,Symptoms,Classical Dengue 2,Severe headache
+4,Symptoms,Classical Dengue 3,Muscle and joint pain
+4,Symptoms,Classical Dengue 4,Pain behind eyes
+4,Symptoms,Classical Dengue 5,Extreme weakness
+4,Symptoms,Classical Dengue 6,Loss of appetite
+4,Symptoms,Classical Dengue 7,Nausea
+4,Symptoms,Classical Dengue 8,Altered taste sensation
+4,Symptoms,Classical Dengue 9,Mild throat pain
+4,Symptoms,Classical Dengue 10,Abdominal pain
+4,Symptoms,Classical Dengue 11,Depressed feeling
+4,Symptoms,Classical Dengue 12,Skin rash (pinkish-red)
+4,Symptoms > Rash Description,Appearance,Diffuse flushing or pinhead eruptions
+4,Symptoms > Rash Description,Locations 1,Face
+4,Symptoms > Rash Description,Locations 2,Neck
+4,Symptoms > Rash Description,Locations 3,Chest
+4,Symptoms > Rash Description,Progression,Becomes more prominent later
+4,Symptoms,Duration,5–7 days
+4,Danger Signs,Dhf Indicators 1,Bleeding from nose
+4,Danger Signs,Dhf Indicators 2,Bleeding from gums
+4,Danger Signs,Dhf Indicators 3,Blood in stool
+4,Danger Signs,Dhf Indicators 4,Blood in vomit
+4,Danger Signs,Dhf Indicators 5,Bluish-black bleeding spots on skin
+4,Danger Signs,Dhf Indicators 6,Positive tourniquet test
+4,Danger Signs,Dss Indicators 1,Cold clammy skin despite fever
+4,Danger Signs,Dss Indicators 2,Extreme restlessness
+4,Danger Signs,Dss Indicators 3,Weak rapid pulse
+4,Danger Signs,Dss Indicators 4,Low blood pressure
+4,Danger Signs,Dss Indicators 5,Loss of consciousness
+4,Treatment,Simple Dengue Home Care 1,Paracetamol as advised
+4,Treatment,Simple Dengue Home Care 2,Avoid aspirin or Dispirin
+4,Treatment,Simple Dengue Home Care 3,Hydrotherapy if fever >102°F
+4,Treatment,Simple Dengue Home Care 4,"Plenty of fluids (water, shikanji)"
+4,Treatment,Simple Dengue Home Care 5,Continue normal feeding
+4,Treatment,Simple Dengue Home Care 6,Adequate rest
+4,Treatment,Hospital Referral Required If 1,Any bleeding
+4,Treatment,Hospital Referral Required If 2,Signs of shock
+4,Treatment,Hospital Referral Required If 3,Suspected DHF or DSS
+4,Treatment,Important Note 1,Not every patient needs platelet transfusion
+4,Treatment,Important Note 2,Early diagnosis saves lives
+4,Prevention,Core Principles 1,Prevent mosquito breeding
+4,Prevention,Core Principles 2,Prevent mosquito bites
+4,Prevention,Anti Breeding Measures 1,Remove stagnant water
+4,Prevention,Anti Breeding Measures 2,Clean drains and ditches
+4,Prevention,Anti Breeding Measures 3,Empty and dry coolers weekly
+4,Prevention,Anti Breeding Measures 4,Cover water tanks tightly
+4,Prevention,Anti Breeding Measures 5,Dispose old tyres and containers
+4,Prevention > Chemical Control > Petrol Or Kerosene,Dose,30 ml per 100 litres of water
+4,Prevention > Chemical Control > Petrol Or Kerosene,Frequency,Weekly
+4,Prevention > Chemical Control > Petrol Or Kerosene,Purpose,Prevents mosquito breeding
+4,Prevention,Biological Control 1,"Larvivorous fish (Gambusia, Lebister)"
+4,General,Personal Protection 1,Wire mesh on doors and windows
+4,General,Personal Protection 2,"Mosquito repellents (sprays, creams, coils, mats)"
+4,General,Personal Protection 3,Indigenous smoke (googal)
+4,General,Personal Protection 4,Full-sleeve clothing
+4,General,Personal Protection 5,Avoid shorts and T-shirts for children
+4,General,Personal Protection 6,Insecticidal sprays weekly inside house
+4,General,Household Measures 1,Spray behind photo frames and curtains
+4,General,Household Measures 2,Keep surroundings clean
+4,General,Household Measures 3,Remove wild vegetation within 100m
+4,General,Household Measures 4,Cooperate with government spray workers
+4,General,Community Guidance 1,Report mosquito density to local health authorities
+4,General,Community Guidance 2,Inform authorities if fever cases increase
+4,General,Community Guidance 3,Use mosquito net for dengue patient during first 5–6 days
+4,General,Key Public Messages 1,Aedes mosquitoes bite during daytime
+4,General,Key Public Messages 2,Dengue prevention is easy and cheap
+4,General,Key Public Messages 3,Early treatment prevents death
+4,General,Key Public Messages 4,Community participation is essential
+4,Helpline Information,Service,DORC Dengue Information Helpline
+4,Helpline Information,Phone,011-26589712
+4,Helpline Information,Availability,Anytime
+5,Metadata,Title,Dengue Fever: A Review Article
+5,Metadata,Authors 1,R. Prem Kumar
+5,Metadata,Authors 2,R. Sunith
+5,Metadata,Authors 3,A. Karthikeyan
+5,Metadata,Authors 4,V. Pradeep Kumar
+5,Metadata,Journal,International Journal of Current Microbiology and Applied Sciences
+5,Metadata,Year,2020
+5,Metadata,Volume Issue,"Vol 9, Issue 1"
+5,Metadata,Pages,1502–1510
+5,Metadata,Doi,10.20546/ijcmas.2020.901.168
+5,Metadata,Article Type,Review Article
+5,Metadata,Intended Use,Academic / Clinical / Public Health
+5,Disease Overview,Name,Dengue Fever
+5,Disease Overview,Classification,Mosquito-borne viral disease
+5,Disease Overview,Public Health Status 1,Neglected Tropical Disease (WHO)
+5,Disease Overview,Public Health Status 2,Disease of poverty
+5,Disease Overview > Global Distribution,Endemic Countries,>100
+5,Disease Overview > Global Distribution,Highest Burden Regions 1,South-East Asia
+5,Disease Overview > Global Distribution,Highest Burden Regions 2,South America
+5,Disease Overview > Global Distribution,Highest Burden Regions 3,Tropical and Subtropical regions
+5,Disease Overview > Global Burden,Annual Infections,390000000
+5,Disease Overview > Global Burden,Symptomatic Cases,96000000
+5,Disease Overview > Global Burden,Annual Deaths,20000
+5,Etiology > Virus,Name,Dengue virus (DENV)
+5,Etiology > Virus,Family,Flaviviridae
+5,Etiology > Virus,Genus,Flavivirus
+5,Etiology > Virus,Serotypes 1,DENV-1
+5,Etiology > Virus,Serotypes 2,DENV-2
+5,Etiology > Virus,Serotypes 3,DENV-3
+5,Etiology > Virus,Serotypes 4,DENV-4
+5,Etiology > Immunity,Homologous,Lifelong immunity to same serotype
+5,Etiology > Immunity,Heterologous,Temporary cross-protection
+5,Etiology > Immunity,Risk,Secondary infection increases severity risk
+5,Etiology > Viral Structure,Particle Shape,Spherical
+5,Etiology > Viral Structure,Diameter Nm,40–50
+5,Etiology > Viral Structure > Genome,Type,Single-stranded positive-sense RNA
+5,Etiology > Viral Structure > Genome,Length Kb,~11
+5,Etiology > Viral Structure,Key Proteins 1,Envelope glycoprotein (E)
+5,Etiology > Viral Structure,Key Proteins 2,NS1 (non-structural protein)
+5,Vectors > Primary Vector,Species,Aedes aegypti
+5,Vectors > Primary Vector,Behavior 1,Highly anthropophilic
+5,Vectors > Primary Vector,Behavior 2,Daytime feeder
+5,Vectors > Primary Vector,Behavior 3,Breeds in stagnant clean water
+5,Vectors > Primary Vector,Behavior 4,Urban adapted
+5,Vectors > Secondary Vector,Species,Aedes albopictus
+5,Vectors > Secondary Vector,Characteristics 1,Originally Asian
+5,Vectors > Secondary Vector,Characteristics 2,Now globally expanded
+5,Vectors > Secondary Vector,Characteristics 3,Contributes to spread
+5,Vectors > Life Cycle,Stages 1,Egg
+5,Vectors > Life Cycle,Stages 2,Larva
+5,Vectors > Life Cycle,Stages 3,Pupa
+5,Vectors > Life Cycle,Stages 4,Adult
+5,Vectors > Life Cycle,Larval Duration Days,7–9
+5,Vectors > Life Cycle,Pupal Duration Days,2–3
+5,Vectors > Life Cycle,Temperature Reference Celsius,25
+5,Transmission,Mode,Mosquito bite
+5,Transmission,Human Infectious Period,During febrile phase
+5,Transmission,Extrinsic Incubation Period Days,8–10
+5,Transmission > Temperature Effects,Higher Temperature 1,Faster larval growth
+5,Transmission > Temperature Effects,Higher Temperature 2,Shorter extrinsic incubation
+5,Transmission > Temperature Effects,Higher Temperature 3,Increased biting frequency
+5,Transmission > Temperature Effects,2 Degree Celsius Rise Effect,Reduces EIP and increases transmission
+5,Risk Factors,Environmental 1,Rainfall
+5,Risk Factors,Environmental 2,Temperature
+5,Risk Factors,Environmental 3,Stagnant water
+5,Risk Factors,Environmental 4,Climate change
+5,Risk Factors,Socioeconomic 1,Rapid urbanization
+5,Risk Factors,Socioeconomic 2,Poor waste management
+5,Risk Factors,Socioeconomic 3,Inadequate water supply
+5,Risk Factors,Socioeconomic 4,Poverty
+5,Risk Factors,Population Factors 1,Population movement
+5,Risk Factors,Population Factors 2,Global travel
+5,Risk Factors,Population Factors 3,Globalization
+5,Risk Factors > Future Risk Projection,Additional Population At Risk By 2080,2000000000
+5,Risk Factors > Future Risk Projection,Reason,Climate change
+5,Clinical Spectrum,Asymptomatic,Majority of infections
+5,Clinical Spectrum > Undifferentiated Fever,Features 1,Mild fever
+5,Clinical Spectrum > Undifferentiated Fever,Features 2,Clinically indistinguishable
+5,Clinical Spectrum > Undifferentiated Fever,Features 3,Often undiagnosed
+5,Clinical Spectrum > Dengue Fever,Common In 1,Adults
+5,Clinical Spectrum > Dengue Fever,Common In 2,Older children
+5,Clinical Spectrum > Dengue Fever,Features 1,Biphasic high-grade fever (3–7 days)
+5,Clinical Spectrum > Dengue Fever,Features 2,Severe headache (retrobulbar)
+5,Clinical Spectrum > Dengue Fever,Features 3,Myalgia
+5,Clinical Spectrum > Dengue Fever,Features 4,Arthralgia
+5,Clinical Spectrum > Dengue Fever,Features 5,Vomiting
+5,Clinical Spectrum > Dengue Fever,Features 6,Abdominal pain
+5,Clinical Spectrum > Dengue Fever,Features 7,Diarrhea
+5,Clinical Spectrum > Dengue Fever,Features 8,Cutaneous rash (50–82%)
+5,Clinical Spectrum > Dengue Fever,Bleeding,Rare but possible
+5,Clinical Spectrum > Dengue Shock Syndrome,Definition,DHF with circulatory failure
+5,Clinical Spectrum > Dengue Shock Syndrome,Features 1,Weak rapid pulse
+5,Clinical Spectrum > Dengue Shock Syndrome,Features 2,Narrow pulse pressure <20 mmHg
+5,Clinical Spectrum > Dengue Shock Syndrome,Features 3,Cold clammy skin
+5,Clinical Spectrum > Dengue Shock Syndrome,Features 4,Restlessness
+5,Clinical Spectrum > Dengue Shock Syndrome,Features 5,Cyanosis
+5,Clinical Spectrum > Dengue Shock Syndrome,Mortality Risk,High without prompt treatment
+5,Laboratory Diagnosis,Direct Detection 1,Virus isolation (cell culture)
+5,Laboratory Diagnosis,Direct Detection 2,RT-PCR
+5,Laboratory Diagnosis,Direct Detection 3,Real-time PCR
+5,Laboratory Diagnosis > Antigen Detection > Ns1,Detectable Days,Day 1 to Day 9+
+5,Laboratory Diagnosis > Antigen Detection > Ns1,Advantages 1,Early diagnosis
+5,Laboratory Diagnosis > Antigen Detection > Ns1,Advantages 2,High sensitivity and specificity
+5,Laboratory Diagnosis > Serology > Ig M,Method,MAC-ELISA
+5,Laboratory Diagnosis > Serology > Ig M,Appearance Days,5–7
+5,Laboratory Diagnosis > Serology > Ig G,Use,Primary vs secondary infection
+5,Laboratory Diagnosis > Serology > Ig G,Marker,Four-fold rise
+5,Laboratory Diagnosis > Serology,Limitations 1,Cross-reactivity with flaviviruses
+5,Treatment,Specific Antiviral,None available
+5,Treatment,Core Principle,Supportive management
+5,Treatment > Outpatient Management,Criteria 1,Early febrile phase
+5,Treatment > Outpatient Management,Criteria 2,No warning signs
+5,Treatment > Outpatient Management,Monitoring,Daily clinical monitoring
+5,Treatment > Hospital Management,Indications 1,Plasma leakage
+5,Treatment > Hospital Management,Indications 2,Critical phase
+5,Treatment > Hospital Management,Indications 3,Shock
+5,Treatment > Fluid Management,Preferred Fluids 1,0.9% Normal Saline
+5,Treatment > Fluid Management,Preferred Fluids 2,Ringer’s Lactate
+5,Treatment > Fluid Management,Preferred Fluids 3,Hartmann’s Solution
+5,Treatment > Fluid Management,Objective 1,Maintain organ perfusion
+5,Treatment > Fluid Management,Objective 2,Prevent hypovolemic shock
+5,Treatment > Fluid Management,Risk,Fluid overload
+5,Treatment > Blood Products,Indications 1,Severe bleeding
+5,Treatment > Blood Products,Indications 2,Refractory shock
+5,Treatment > Blood Products,Types 1,Packed red cells
+5,Treatment > Blood Products,Types 2,Platelets
+5,Treatment > Blood Products,Types 3,Fresh frozen plasma
+5,Experimental And Future Therapies,Antiviral Research 1,Glycyrrhizin
+5,Experimental And Future Therapies,Antiviral Research 2,Ribavirin
+5,Experimental And Future Therapies,Antiviral Research 3,6-azauridine
+5,Experimental And Future Therapies,Phytomedicine 1,Sulfated polysaccharides from seaweeds
+5,Experimental And Future Therapies,Status,"Under research, not standard care"
+5,Prevention And Control,Primary Strategy,Vector control
+5,Prevention And Control,Direct Methods 1,Insecticides
+5,Prevention And Control,Direct Methods 2,Repellents
+5,Prevention And Control,Direct Methods 3,Larviciding
+5,Prevention And Control,Direct Methods 4,Space spraying
+5,Prevention And Control,Indirect Methods 1,Environmental sanitation
+5,Prevention And Control,Indirect Methods 2,Source reduction
+5,Prevention And Control,Indirect Methods 3,House improvement
+5,Prevention And Control,Community Role 1,Eliminate breeding sites
+5,Prevention And Control,Community Role 2,Participate in control programs
+5,General,Key Conclusions 1,Dengue burden is rapidly increasing
+5,General,Key Conclusions 2,Early diagnosis is critical
+5,General,Key Conclusions 3,Fluid management saves lives
+5,General,Key Conclusions 4,Climate change will worsen transmission
+5,General,Key Conclusions 5,Integrated vector control is essential
+6,Metadata,Title,"Dengue: Guidelines for Diagnosis, Treatment, Prevention and Control"
+6,Metadata,Edition,New edition
+6,Metadata,Year,2009
+6,Metadata,Publisher,World Health Organization (WHO)
+6,Metadata,Isbn,978-92-4-154787-1
+6,Metadata,Validity Period,2009–2014
+6,Metadata,Intended Users 1,Clinicians
+6,Metadata,Intended Users 2,Laboratory personnel
+6,Metadata,Intended Users 3,Vector control staff
+6,Metadata,Intended Users 4,Public health officials
+6,Metadata,Intended Users 5,Researchers
+6,Disease Overview,Name,Dengue
+6,Disease Overview,Type,Mosquito-borne viral disease
+6,Disease Overview,Global Importance,Most rapidly spreading arboviral disease
+6,Disease Overview,Estimated Annual Infections,50000000
+6,Disease Overview,Population At Risk,2500000000
+6,Disease Overview,Who Priority,Neglected Tropical Disease
+6,Virus,Name,Dengue virus (DENV)
+6,Virus,Family,Flaviviridae
+6,Virus,Genus,Flavivirus
+6,Virus,Serotypes 1,DEN-1
+6,Virus,Serotypes 2,DEN-2
+6,Virus,Serotypes 3,DEN-3
+6,Virus,Serotypes 4,DEN-4
+6,Virus,Genetic Variability,Multiple genotypes per serotype
+6,Virus,High Risk Genotypes 1,Asian genotypes of DEN-2
+6,Virus,High Risk Genotypes 2,Asian genotypes of DEN-3
+6,Virus > Genome,Type,Single-stranded positive-sense RNA
+6,Virus > Genome,Structure 1,Capsid (C)
+6,Virus > Genome,Structure 2,Pre-membrane (prM)
+6,Virus > Genome,Structure 3,Envelope (E)
+6,Virus > Genome,Structure 4,Non-structural proteins NS1–NS5
+6,Vectors > Primary,Species,Aedes aegypti
+6,Vectors > Primary,Behavior 1,Highly anthropophilic
+6,Vectors > Primary,Behavior 2,Daytime biting
+6,Vectors > Primary,Behavior 3,Multiple bites per feeding
+6,Vectors > Primary,Behavior 4,Indoor resting
+6,Vectors > Primary,Breeding Sites 1,Water storage containers
+6,Vectors > Primary,Breeding Sites 2,Discarded tyres
+6,Vectors > Primary,Breeding Sites 3,Flower pots
+6,Vectors > Primary,Breeding Sites 4,Coolers
+6,Vectors > Secondary,Species,Aedes albopictus
+6,Vectors > Secondary,Role,Expanding geographic spread
+6,Transmission,Cycle,Human–mosquito–human
+6,Transmission,Intrinsic Incubation Days,4–10
+6,Transmission,Extrinsic Incubation Days,8–12
+6,Transmission,Infectious Period Human,During febrile phase
+6,Transmission,Vertical Transmission,"Rare, limited epidemiological role"
+6,Epidemiology,Global Distribution,All WHO regions except Europe
+6,Epidemiology,High Burden Regions 1,South-East Asia
+6,Epidemiology,High Burden Regions 2,Western Pacific
+6,Epidemiology,High Burden Regions 3,Americas
+6,Epidemiology,Seasonality,Rainy and post-rainy season
+6,Epidemiology,Urban Rural Trend,Shift from urban to rural transmission
+6,Risk Factors,Host 1,Secondary dengue infection
+6,Risk Factors,Host 2,Infancy
+6,Risk Factors,Host 3,Young children
+6,Risk Factors,Host 4,"Chronic diseases (diabetes, asthma, sickle cell disease)"
+6,Risk Factors,Environmental 1,Rainfall
+6,Risk Factors,Environmental 2,Temperature
+6,Risk Factors,Environmental 3,Urbanization
+6,Risk Factors,Environmental 4,Poor water management
+6,Risk Factors,Immunological 1,Antibody-dependent enhancement (ADE)
+6,Risk Factors,Immunological 2,Maternal antibodies in infants
+6,Clinical Spectrum,Asymptomatic,Majority of infections
+6,Clinical Spectrum > Non Severe Dengue,Features 1,Acute fever
+6,Clinical Spectrum > Non Severe Dengue,Features 2,Headache
+6,Clinical Spectrum > Non Severe Dengue,Features 3,Myalgia
+6,Clinical Spectrum > Non Severe Dengue,Features 4,Arthralgia
+6,Clinical Spectrum > Non Severe Dengue,Features 5,Rash
+6,Clinical Spectrum > Non Severe Dengue,Features 6,Leukopenia
+6,Clinical Spectrum > Severe Dengue,Features 1,Severe plasma leakage
+6,Clinical Spectrum > Severe Dengue,Features 2,Severe bleeding
+6,Clinical Spectrum > Severe Dengue,Features 3,Severe organ involvement
+6,Who Case Classification 2009 > Dengue,Criteria 1,Fever
+6,Who Case Classification 2009 > Dengue,Criteria 2,Nausea or vomiting
+6,Who Case Classification 2009 > Dengue,Criteria 3,Rash
+6,Who Case Classification 2009 > Dengue,Criteria 4,Aches and pains
+6,Who Case Classification 2009 > Dengue,Criteria 5,Leukopenia
+6,Who Case Classification 2009 > Dengue,Criteria 6,Tourniquet test positive
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 1,Abdominal pain or tenderness
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 2,Persistent vomiting
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 3,Clinical fluid accumulation
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 4,Mucosal bleeding
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 5,Lethargy or restlessness
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 6,Liver enlargement >2 cm
+6,Who Case Classification 2009 > Dengue With Warning Signs,Warning Signs 7,Rising hematocrit with falling platelets
+6,Who Case Classification 2009 > Severe Dengue,Criteria 1,Shock (DSS)
+6,Who Case Classification 2009 > Severe Dengue,Criteria 2,Respiratory distress
+6,Who Case Classification 2009 > Severe Dengue,Criteria 3,Severe bleeding
+6,Who Case Classification 2009 > Severe Dengue,Criteria 4,"Severe organ involvement (AST/ALT ≥1000, CNS, heart)"
+6,Diagnosis,Early Phase 1,Virus isolation
+6,Diagnosis,Early Phase 2,RT-PCR
+6,Diagnosis,Early Phase 3,NS1 antigen detection
+6,Diagnosis,Late Phase 1,IgM ELISA
+6,Diagnosis,Late Phase 2,IgG seroconversion (four-fold rise)
+6,Diagnosis,Supportive Labs 1,Hematocrit
+6,Diagnosis,Supportive Labs 2,Platelet count
+6,Diagnosis,Supportive Labs 3,White blood cell count
+6,Diagnosis,Supportive Labs 4,Liver enzymes
+6,Diagnosis,Diagnostic Limitations 1,Cross-reactivity with other flaviviruses
+6,Diagnosis,Diagnostic Limitations 2,Under-reporting common
+6,Clinical Management,General Principles 1,No specific antiviral treatment
+6,Clinical Management,General Principles 2,Early recognition of warning signs
+6,Clinical Management,General Principles 3,Careful fluid management
+6,Clinical Management > Medications,Recommended 1,Paracetamol
+6,Clinical Management > Medications,Contraindicated 1,Aspirin
+6,Clinical Management > Medications,Contraindicated 2,NSAIDs
+6,Clinical Management > Medications,Contraindicated 3,Steroids
+6,Fluid Management,Preferred Fluids 1,Normal saline
+6,Fluid Management,Preferred Fluids 2,Ringer lactate
+6,Fluid Management,Goal,Prevent shock without causing fluid overload
+6,Fluid Management,Major Risk,Pulmonary edema from overhydration
+6,Blood Products > Platelet Transfusion,Indications 1,Severe bleeding
+6,Blood Products > Platelet Transfusion,Indications 2,Very low platelets with clinical bleeding
+6,Blood Products > Platelet Transfusion,Not Recommended 1,Prophylactic transfusion without bleeding
+6,Blood Products,Packed Red Cells,For significant hemorrhage
+6,Case Fatality,Without Proper Care,Up to 20%
+6,Case Fatality,With Early Fluid Management,<1%
+6,Surveillance,Types 1,Epidemiological surveillance
+6,Surveillance,Types 2,Laboratory surveillance
+6,Surveillance,Types 3,Entomological surveillance
+6,Surveillance,Entomological Indices 1,House Index
+6,Surveillance,Entomological Indices 2,Container Index
+6,Surveillance,Entomological Indices 3,Breteau Index
+6,Vector Control,Strategies 1,Integrated Vector Management (IVM)
+6,Vector Control,Strategies 2,Environmental management
+6,Vector Control,Strategies 3,Chemical control
+6,Vector Control,Strategies 4,Biological control
+6,Vector Control,Community Role 1,Source reduction
+6,Vector Control,Community Role 2,Behavior change communication (COMBI)
+6,Outbreak Preparedness,Components 1,Early detection
+6,Outbreak Preparedness,Components 2,Rapid response
+6,Outbreak Preparedness,Components 3,Surge capacity planning
+6,Outbreak Preparedness,Components 4,Risk communication
+6,Vaccines And Future,Status 2009,No licensed vaccine
+6,Vaccines And Future,Research Focus 1,Live attenuated vaccines
+6,Vaccines And Future,Research Focus 2,Antiviral drug development
+6,General,Key Messages 1,Dengue is one disease with variable severity
+6,General,Key Messages 2,Warning signs guide triage and admission
+6,General,Key Messages 3,Early fluids save lives
+6,General,Key Messages 4,Vector control is the only prevention
+7,Metadata,Title,"Dengue fever: epidemiology, clinical manifestations, diagnosis, and therapeutic strategies"
+7,Metadata,Authors 1,Teddy Namirimu
+7,Metadata,Authors 2,Sunjoo Kim
+7,Metadata,Journal,Annals of Clinical Microbiology
+7,Metadata,Year,2024
+7,Metadata,Volume Issue,27(2)
+7,Metadata,Pages,131–141
+7,Metadata,Doi,10.5145/ACM.2024.27.2.7
+7,Metadata,Article Type,Review Article
+7,Metadata,License,CC BY-NC-ND 4.0
+7,Metadata,Intended Use 1,Clinical
+7,Metadata,Intended Use 2,Research
+7,Metadata,Intended Use 3,Public Health
+7,Global Epidemiology,Disease,Dengue fever
+7,Global Epidemiology,Endemic Countries,>100
+7,Global Epidemiology,Population At Risk,≈50% of world population
+7,Global Epidemiology,Annual Cases Estimated,390000000
+7,Global Epidemiology,Symptomatic Cases,96000000
+7,Global Epidemiology > Regional Distribution,Asia,≈70% of global burden
+7,Global Epidemiology > Regional Distribution,Other Regions 1,Americas
+7,Global Epidemiology > Regional Distribution,Other Regions 2,Western Pacific
+7,Global Epidemiology > Regional Distribution,Other Regions 3,Africa
+7,Global Epidemiology > Future Projection,Population At Risk By 2080,6100000000
+7,Global Epidemiology > Future Projection,Key Drivers 1,Climate change
+7,Global Epidemiology > Future Projection,Key Drivers 2,Urbanization
+7,Global Epidemiology > Future Projection,Key Drivers 3,Global travel
+7,Virus And Serotypes,Virus Name,Dengue virus (DENV)
+7,Virus And Serotypes,Family,Flaviviridae
+7,Virus And Serotypes,Genus,Flavivirus
+7,Virus And Serotypes,Serotypes 1,DENV-1
+7,Virus And Serotypes,Serotypes 2,DENV-2
+7,Virus And Serotypes,Serotypes 3,DENV-3
+7,Virus And Serotypes,Serotypes 4,DENV-4
+7,Virus And Serotypes > Immunity Profile,Primary Infection,Serotype-specific long-term immunity
+7,Virus And Serotypes > Immunity Profile,Secondary Infection,Higher risk of severe dengue
+7,Virus And Serotypes > Immunity Profile,Mechanism,Antibody-dependent enhancement (ADE)
+7,Vectors And Transmission,Primary Vectors 1,Aedes aegypti
+7,Vectors And Transmission,Primary Vectors 2,Aedes albopictus
+7,Vectors And Transmission,Secondary Vectors 1,Aedes polynesiensis
+7,Vectors And Transmission,Secondary Vectors 2,Aedes niveus
+7,Vectors And Transmission,Mosquito Characteristics 1,Daytime biting
+7,Vectors And Transmission,Mosquito Characteristics 2,Urban adaptation
+7,Vectors And Transmission,Mosquito Characteristics 3,Highly anthropophilic
+7,Vectors And Transmission,Transmission Modes 1,Mosquito bite (primary)
+7,Vectors And Transmission,Transmission Modes 2,Vertical transmission in mosquitoes
+7,Vectors And Transmission,Transmission Modes 3,Mother-to-child transmission
+7,Vectors And Transmission,Transmission Modes 4,Blood transfusion (rare)
+7,Vectors And Transmission,Transmission Modes 5,Organ transplantation (rare)
+7,Vectors And Transmission,Transmission Modes 6,Needlestick injury (rare)
+7,Vectors And Transmission > Incubation,Intrinsic Days,4–10
+7,Vectors And Transmission > Incubation,Extrinsic Days,5–14
+7,Vectors And Transmission > Incubation,Temperature Effect,Shorter EIP at 25–30°C
+7,Vectors And Transmission > Mechanical Transmission,Description,Immediate transmission without midgut replication
+7,Vectors And Transmission > Mechanical Transmission,Evidence,Observed in household clusters
+7,Clinical Classification Who 2009 > Dengue Without Warning Signs,Features 1,Fever
+7,Clinical Classification Who 2009 > Dengue Without Warning Signs,Features 2,Headache
+7,Clinical Classification Who 2009 > Dengue Without Warning Signs,Features 3,Myalgia
+7,Clinical Classification Who 2009 > Dengue Without Warning Signs,Features 4,Rash
+7,Clinical Classification Who 2009 > Dengue Without Warning Signs,Features 5,Mild bleeding
+7,Clinical Classification Who 2009 > Dengue With Warning Signs,Warning Signs 1,Persistent vomiting
+7,Clinical Classification Who 2009 > Dengue With Warning Signs,Warning Signs 2,Severe abdominal pain
+7,Clinical Classification Who 2009 > Dengue With Warning Signs,Warning Signs 3,Lethargy
+7,Clinical Classification Who 2009 > Dengue With Warning Signs,Warning Signs 4,Mucosal bleeding
+7,Clinical Classification Who 2009 > Dengue With Warning Signs,Warning Signs 5,Rapid breathing
+7,Clinical Classification Who 2009 > Severe Dengue,Criteria 1,Shock
+7,Clinical Classification Who 2009 > Severe Dengue,Criteria 2,Severe plasma leakage
+7,Clinical Classification Who 2009 > Severe Dengue,Criteria 3,Severe bleeding
+7,Clinical Classification Who 2009 > Severe Dengue,Criteria 4,Severe organ involvement
+7,Clinical Phases > Febrile Phase,Features 1,High fever
+7,Clinical Phases > Febrile Phase,Features 2,Viremia
+7,Clinical Phases > Febrile Phase,Features 3,Headache
+7,Clinical Phases > Febrile Phase,Features 4,Myalgia
+7,Clinical Phases > Febrile Phase,Features 5,Petechiae
+7,Clinical Phases > Critical Phase,Onset,Around day 3–5
+7,Clinical Phases > Critical Phase,Features 1,Plasma leakage
+7,Clinical Phases > Critical Phase,Features 2,Hemoconcentration (>20%)
+7,Clinical Phases > Critical Phase,Features 3,Risk of shock
+7,Clinical Phases > Critical Phase,Features 4,Gastrointestinal bleeding
+7,Clinical Phases > Convalescent Phase,Features 1,Fluid reabsorption
+7,Clinical Phases > Convalescent Phase,Features 2,Hemodynamic stabilization
+7,Clinical Phases > Convalescent Phase,Features 3,Recovery
+7,Diagnosis > Early Febrile Phase,Tests 1,RT-PCR
+7,Diagnosis > Early Febrile Phase,Tests 2,NS1 antigen detection
+7,Diagnosis > Early Febrile Phase,Tests 3,Virus isolation
+7,Diagnosis > Early Febrile Phase > Ns1 Sensitivity,Primary Infection,>90%
+7,Diagnosis > Early Febrile Phase > Ns1 Sensitivity,Secondary Infection,60–80%
+7,Diagnosis > Critical And Late Phase,Tests 1,IgM ELISA
+7,Diagnosis > Critical And Late Phase,Tests 2,IgG ELISA
+7,Diagnosis > Critical And Late Phase,Tests 3,Hemagglutination inhibition assay
+7,Diagnosis > Critical And Late Phase > Interpretation,Primary Infection,IgM dominant
+7,Diagnosis > Critical And Late Phase > Interpretation,Secondary Infection,Early IgG dominance
+7,Diagnosis > Critical And Late Phase > Interpretation,Ig M Ig G Ratio,Used to differentiate infection type
+7,Diagnosis > Combined Testing,Best Performance,NS1 + IgM + IgG
+7,Diagnosis > Combined Testing,Sensitivity,≈90%
+7,Diagnosis > Combined Testing,Specificity,≈89%
+7,Treatment And Management,Antiviral Status,No approved antiviral treatment
+7,Treatment And Management,Supportive Care 1,Rest
+7,Treatment And Management,Supportive Care 2,Hydration
+7,Treatment And Management,Supportive Care 3,Close monitoring
+7,Treatment And Management > Medications,Recommended 1,Paracetamol (acetaminophen)
+7,Treatment And Management > Medications,Avoid 1,Aspirin
+7,Treatment And Management > Medications,Avoid 2,Ibuprofen
+7,Treatment And Management > Medications,Avoid 3,NSAIDs
+7,Treatment And Management,Hospitalization Indications 1,Warning signs present
+7,Treatment And Management,Hospitalization Indications 2,Severe dengue
+7,Treatment And Management,Hospitalization Indications 3,Hemodynamic instability
+7,Treatment And Management,Severe Case Management 1,Intravenous fluids
+7,Treatment And Management,Severe Case Management 2,Electrolyte correction
+7,Treatment And Management,Severe Case Management 3,Blood transfusion if required
+7,Treatment And Management,Severe Case Management 4,Intensive monitoring
+7,Emerging Antiviral Research > Jnj A07,Mechanism,Blocks NS3–NS4B interaction
+7,Emerging Antiviral Research > Jnj A07,Coverage,All four serotypes
+7,Emerging Antiviral Research > Jnj A07,Status,Preclinical / experimental
+7,Emerging Antiviral Research,Natural Compounds 1,Flavonoids
+7,Emerging Antiviral Research,Natural Compounds 2,Silymarin
+7,Emerging Antiviral Research,Natural Compounds 3,Baicalein
+7,Vaccines > Approved Vaccines > Dengvaxia Cyd Tdv,Type,Live attenuated
+7,Vaccines > Approved Vaccines > Dengvaxia Cyd Tdv,Eligibility,Previously infected individuals
+7,Vaccines > Approved Vaccines > Dengvaxia Cyd Tdv,Efficacy,≈60%
+7,Vaccines > Approved Vaccines > Dengvaxia Cyd Tdv,Risk,Severe dengue in seronegative individuals
+7,Vaccines > Approved Vaccines > Tak 003 Qdenga,Type,Live attenuated
+7,Vaccines > Approved Vaccines > Tak 003 Qdenga > Efficacy,Symptomatic,61.2%
+7,Vaccines > Approved Vaccines > Tak 003 Qdenga > Efficacy,Hospitalization,84%
+7,Vaccines > Approved Vaccines > Tak 003 Qdenga > Efficacy,Dhf,70%
+7,Vaccines > Pipeline Vaccines > Butantan Dv,Type,Single-dose tetravalent
+7,Vaccines > Pipeline Vaccines > Butantan Dv > Efficacy,Overall,80%
+7,Vaccines > Pipeline Vaccines > Butantan Dv > Efficacy,Previously Infected,89%
+7,Vaccines > Pipeline Vaccines > Dengusiil,Status,Clinical trials
+7,Vaccines > Pipeline Vaccines > Dengusiil,Response,High seroconversion
+7,Vaccines,Development Challenges 1,Balanced immunity to all serotypes
+7,Vaccines,Development Challenges 2,Antibody-dependent enhancement
+7,Vaccines,Development Challenges 3,Limited animal models
+7,Vector Control Strategies,Conventional 1,Insecticides
+7,Vector Control Strategies,Conventional 2,Source reduction
+7,Vector Control Strategies,Conventional 3,Mosquito surveillance
+7,Vector Control Strategies > Biological > Wolbachia,Mechanism,Reduces viral replication
+7,Vector Control Strategies > Biological > Wolbachia,Field Results,Reduced dengue transmission
+7,Vector Control Strategies,Genetic 1,Genetically modified Aedes mosquitoes
+7,Future Technologies > Stem Cell Therapy,Role,Reduces inflammation and organ damage
+7,Future Technologies > Stem Cell Therapy,Evidence,Animal models
+7,Future Technologies > Wearable Biosensors,Use,Early detection and real-time monitoring
+7,General,Key Conclusions 1,Dengue burden is increasing globally
+7,General,Key Conclusions 2,Treatment remains supportive
+7,General,Key Conclusions 3,Early recognition of warning signs is critical
+7,General,Key Conclusions 4,Vaccines and antivirals are promising but incomplete
+7,General,Key Conclusions 5,Vector control remains the cornerstone of prevention
+8,Metadata,Title,"Dengue virus: Etiology, epidemiology, pathobiology, and developments in diagnosis and control"
+8,Metadata,Journal,"Infection, Genetics and Evolution"
+8,Metadata,Year,2025
+8,Metadata,Article Type,Comprehensive Review
+8,Metadata,License,CC BY 4.0
+8,Metadata,Publisher,Elsevier
+8,Metadata,Intended Chatbot Scope 1,Medical education
+8,Metadata,Intended Chatbot Scope 2,Clinical decision support
+8,Metadata,Intended Chatbot Scope 3,Public health surveillance
+8,Metadata,Intended Chatbot Scope 4,Research assistance
+8,Disease Identity,Name,Dengue fever
+8,Disease Identity,Virus,Dengue virus (DENV)
+8,Disease Identity,Family,Flaviviridae
+8,Disease Identity,Genus,Flavivirus
+8,Disease Identity > Global Burden,Annual Infections,100–400 million
+8,Disease Identity > Global Burden,Annual Deaths,"22,000–40,000"
+8,Disease Identity > Global Burden,Population At Risk,≈50% of world population
+8,Virus Structure And Genome > Virion,Shape,"Spherical, enveloped"
+8,Virus Structure And Genome > Virion,Diameter Nm,50
+8,Virus Structure And Genome > Virion,Symmetry,Icosahedral
+8,Virus Structure And Genome > Genome,Type,Positive-sense single-stranded RNA
+8,Virus Structure And Genome > Genome,Features 1,5′ cap
+8,Virus Structure And Genome > Genome,Features 2,No 3′ poly-A tail
+8,Virus Structure And Genome > Genome,Expression,Single polyprotein ORF
+8,Virus Structure And Genome > Proteins,Structural 1,Capsid (C)
+8,Virus Structure And Genome > Proteins,Structural 2,Membrane (M)
+8,Virus Structure And Genome > Proteins,Structural 3,Envelope (E)
+8,Virus Structure And Genome > Proteins,Non Structural 1,NS1
+8,Virus Structure And Genome > Proteins,Non Structural 2,NS2A
+8,Virus Structure And Genome > Proteins,Non Structural 3,NS2B
+8,Virus Structure And Genome > Proteins,Non Structural 4,NS3
+8,Virus Structure And Genome > Proteins,Non Structural 5,NS4A
+8,Virus Structure And Genome > Proteins,Non Structural 6,NS4B
+8,Virus Structure And Genome > Proteins,Non Structural 7,NS5
+8,Virus Structure And Genome > Key Functions,E Protein,"Cell attachment, membrane fusion, neutralizing antibody target"
+8,Virus Structure And Genome > Key Functions,Ns1,"Immune evasion, complement inhibition"
+8,Virus Structure And Genome > Key Functions,Ns3 Ns5,Protease and RNA-dependent RNA polymerase
+8,Serotypes And Immunity,Serotypes 1,DENV-1
+8,Serotypes And Immunity,Serotypes 2,DENV-2
+8,Serotypes And Immunity,Serotypes 3,DENV-3
+8,Serotypes And Immunity,Serotypes 4,DENV-4
+8,Serotypes And Immunity > Primary Infection,Immunity,Lifelong to same serotype
+8,Serotypes And Immunity > Primary Infection,Severity,Usually mild to moderate
+8,Serotypes And Immunity > Secondary Infection,Risk,High
+8,Serotypes And Immunity > Secondary Infection,Mechanism,Antibody-dependent enhancement (ADE)
+8,Serotypes And Immunity > Secondary Infection,Outcome 1,DHF
+8,Serotypes And Immunity > Secondary Infection,Outcome 2,DSS
+8,Vectors And Transmission,Primary Vector,Aedes aegypti
+8,Vectors And Transmission,Secondary Vectors 1,Aedes albopictus
+8,Vectors And Transmission,Secondary Vectors 2,Aedes polynesiensis
+8,Vectors And Transmission,Secondary Vectors 3,Aedes scutellaris
+8,Vectors And Transmission,Secondary Vectors 4,Aedes niveus
+8,Vectors And Transmission,Vector Characteristics 1,Daytime biting
+8,Vectors And Transmission,Vector Characteristics 2,Urban adaptation
+8,Vectors And Transmission,Vector Characteristics 3,Anthropophilic
+8,Vectors And Transmission,Vector Characteristics 4,Indoor resting
+8,Vectors And Transmission,Transmission Routes 1,Mosquito bite (primary)
+8,Vectors And Transmission,Transmission Routes 2,Blood transfusion (rare)
+8,Vectors And Transmission,Transmission Routes 3,Vertical transmission
+8,Vectors And Transmission,Transmission Routes 4,Needlestick injury (rare)
+8,Vectors And Transmission > Incubation,Human Days,5–7 (up to 14)
+8,Vectors And Transmission > Incubation,Mosquito Days,7–14
+8,Viral Replication Cycle,Entry,Receptor-mediated endocytosis
+8,Viral Replication Cycle,Host Receptors 1,Heparan sulfate
+8,Viral Replication Cycle,Host Receptors 2,Hsp70 / Hsp90
+8,Viral Replication Cycle,Host Receptors 3,CD14
+8,Viral Replication Cycle,Host Receptors 4,GRP78/BiP
+8,Viral Replication Cycle,Host Receptors 5,Laminin receptor
+8,Viral Replication Cycle,Host Receptors 6,C-type lectin receptors
+8,Viral Replication Cycle,Replication Site,Endoplasmic reticulum (ER)
+8,Viral Replication Cycle,Assembly,Budding into ER lumen
+8,Viral Replication Cycle,Maturation,prM cleavage in trans-Golgi network
+8,Viral Replication Cycle,Release,Exocytosis of mature virions
+8,Pathogenesis,Target Cells 1,Monocytes
+8,Pathogenesis,Target Cells 2,Macrophages
+8,Pathogenesis,Target Cells 3,Dendritic cells
+8,Pathogenesis,Target Cells 4,Endothelial cells
+8,Pathogenesis,Severity Drivers 1,High viremia
+8,Pathogenesis,Severity Drivers 2,Secondary infection
+8,Pathogenesis,Severity Drivers 3,Host genetics
+8,Pathogenesis,Severity Drivers 4,Immune dysregulation
+8,Pathogenesis > Immune Mechanisms,Innate 1,Type I interferons (IFN-α/β)
+8,Pathogenesis > Immune Mechanisms,Innate 2,NK cell activation
+8,Pathogenesis > Immune Mechanisms,Innate 3,Complement activation
+8,Pathogenesis > Immune Mechanisms,Adaptive 1,IgM → IgG antibody switch
+8,Pathogenesis > Immune Mechanisms,Adaptive 2,CD4 and CD8 T cell responses
+8,Pathogenesis > Immune Mechanisms,Adaptive 3,Immunopathology in secondary infection
+8,Clinical Spectrum,Phases 1,Febrile phase
+8,Clinical Spectrum,Phases 2,Critical phase
+8,Clinical Spectrum,Phases 3,Recovery phase
+8,Clinical Spectrum,Classic Dengue 1,High fever (39–40°C)
+8,Clinical Spectrum,Classic Dengue 2,Headache
+8,Clinical Spectrum,Classic Dengue 3,Myalgia
+8,Clinical Spectrum,Classic Dengue 4,Arthralgia
+8,Clinical Spectrum,Classic Dengue 5,Rash
+8,Clinical Spectrum,Classic Dengue 6,Retro-orbital pain
+8,Clinical Spectrum > Dengue Hemorrhagic Fever,Criteria 1,Fever
+8,Clinical Spectrum > Dengue Hemorrhagic Fever,Criteria 2,Bleeding manifestations
+8,Clinical Spectrum > Dengue Hemorrhagic Fever,Criteria 3,Plasma leakage
+8,Clinical Spectrum > Dengue Hemorrhagic Fever,Criteria 4,Thrombocytopenia
+8,Clinical Spectrum > Dengue Shock Syndrome,Features 1,Cold clammy skin
+8,Clinical Spectrum > Dengue Shock Syndrome,Features 2,Weak rapid pulse
+8,Clinical Spectrum > Dengue Shock Syndrome,Features 3,Hypotension
+8,Clinical Spectrum > Dengue Shock Syndrome,Features 4,Altered consciousness
+8,Co Infections,Common 1,Zika virus
+8,Co Infections,Common 2,Chikungunya
+8,Co Infections,Common 3,Malaria
+8,Co Infections,Common 4,COVID-19
+8,Co Infections,Common 5,West Nile virus
+8,Co Infections,Clinical Impact 1,Increased severity
+8,Co Infections,Clinical Impact 2,Diagnostic confusion
+8,Co Infections,Clinical Impact 3,Higher hospitalization risk
+8,Diagnostics,Early Phase 1,RT-PCR
+8,Diagnostics,Early Phase 2,Virus isolation
+8,Diagnostics,Early Phase 3,NS1 antigen detection
+8,Diagnostics,Late Phase 1,IgM ELISA
+8,Diagnostics,Late Phase 2,IgG ELISA
+8,Diagnostics,Late Phase 3,Hemagglutination inhibition test
+8,Diagnostics > Rapid Tests,Targets 1,NS1
+8,Diagnostics > Rapid Tests,Targets 2,IgM
+8,Diagnostics > Rapid Tests,Targets 3,IgG
+8,Diagnostics > Rapid Tests,Advantages 1,Low cost
+8,Diagnostics > Rapid Tests,Advantages 2,Fast results
+8,Diagnostics > Rapid Tests,Advantages 3,Minimal training required
+8,Diagnostics > Rapid Tests,Limitations 1,Lower sensitivity in secondary infection
+8,Diagnostics > Rapid Tests,Limitations 2,Serotype variability
+8,Treatment,Current Status,No approved antiviral therapy
+8,Treatment,Standard Care 1,Supportive treatment
+8,Treatment,Standard Care 2,Fluid management
+8,Treatment,Standard Care 3,Monitoring for warning signs
+8,Treatment,Drug Restrictions 1,Avoid NSAIDs
+8,Treatment,Drug Restrictions 2,Avoid aspirin
+8,Antiviral Research,Viral Targets 1,Envelope protein (fusion inhibitors)
+8,Antiviral Research,Viral Targets 2,NS3 protease
+8,Antiviral Research,Viral Targets 3,NS5 polymerase
+8,Antiviral Research,Host Targets 1,α-glucosidase
+8,Antiviral Research,Host Targets 2,IMP dehydrogenase
+8,Antiviral Research,Ideal Drug Profile 1,Effective against all serotypes
+8,Antiviral Research,Ideal Drug Profile 2,Oral
+8,Antiviral Research,Ideal Drug Profile 3,Low resistance risk
+8,Vaccines > Licensed > Dengvaxia,Type,Live attenuated
+8,Vaccines > Licensed > Dengvaxia,Limitation,Risk in seronegative individuals
+8,Vaccines,Candidates 1,DENVax
+8,Vaccines,Candidates 2,TV003 / TV005
+8,Vaccines,Candidates 3,DNA vaccines
+8,Vaccines,Candidates 4,Subunit vaccines
+8,Vaccines,Candidates 5,Inactivated vaccines
+8,Vaccines,Development Challenges 1,ADE
+8,Vaccines,Development Challenges 2,Balanced tetravalent immunity
+8,Vaccines,Development Challenges 3,Lack of animal models
+8,Epidemiology,High Burden Regions 1,Asia (~70%)
+8,Epidemiology,High Burden Regions 2,Americas
+8,Epidemiology,High Burden Regions 3,Western Pacific
+8,Epidemiology,High Burden Regions 4,Africa
+8,Epidemiology,Recent Trends 1,Explosive outbreaks in 2023–2024
+8,Epidemiology,Recent Trends 2,Expansion into Europe
+8,Epidemiology,Recent Trends 3,Climate-driven spread
+8,Prevention And Control,Vector Control 1,Source reduction
+8,Prevention And Control,Vector Control 2,Insecticides
+8,Prevention And Control,Vector Control 3,Insect growth regulators
+8,Prevention And Control,Biological 1,Wolbachia-based control
+8,Prevention And Control,Biological 2,Sterile insect technique
+8,Prevention And Control,Community Measures 1,Public awareness
+8,Prevention And Control,Community Measures 2,Surveillance
+8,Prevention And Control,Community Measures 3,Early outbreak detection
+8,General,Core Chatbot Messages 1,Dengue severity depends on immune history
+8,General,Core Chatbot Messages 2,Secondary infection is the highest risk
+8,General,Core Chatbot Messages 3,Early diagnosis saves lives
+8,General,Core Chatbot Messages 4,Vector control remains essential
+8,General,Core Chatbot Messages 5,Supportive care is currently the only treatment
+9,Metadata,Source,Cleveland Clinic
+9,Metadata,Document Type,Patient Education Guide
+9,Metadata,Disease,Dengue Fever
+9,Metadata,Audience,General public
+9,Metadata,Medical Level,"Non-clinical, safety-focused"
+9,Metadata,Last Reviewed,Not specified
+9,Overview,Definition,Dengue fever is a mosquito-borne viral illness caused by dengue virus infection.
+9,Overview,Severity Range 1,Asymptomatic
+9,Overview,Severity Range 2,Mild flu-like illness
+9,Overview,Severity Range 3,Severe dengue (dengue hemorrhagic fever)
+9,Overview,Key Risk Fact,Second infection with a different dengue virus strain increases risk of severe disease.
+9,Causative Agent,Virus,Dengue virus (DENV)
+9,Causative Agent,Strains 1,DENV-1
+9,Causative Agent,Strains 2,DENV-2
+9,Causative Agent,Strains 3,DENV-3
+9,Causative Agent,Strains 4,DENV-4
+9,Causative Agent > Immunity,After Infection,Long-term immunity to the same strain
+9,Causative Agent > Immunity,Cross Strain Effect,Increased severity risk due to antibody-dependent enhancement (ADE)
+9,Transmission,Primary Mode,Bite of infected Aedes mosquito
+9,Transmission,Mosquito Species,Aedes mosquitoes
+9,Transmission,Human To Human,Not contagious
+9,Transmission,Exceptions 1,Mother-to-child during pregnancy or childbirth
+9,Geographical Distribution,Common Regions 1,Central America
+9,Geographical Distribution,Common Regions 2,South America
+9,Geographical Distribution,Common Regions 3,Africa
+9,Geographical Distribution,Common Regions 4,Asia
+9,Geographical Distribution,Common Regions 5,Pacific Islands
+9,Geographical Distribution,Global Risk Population,More than half of the world’s population
+9,Geographical Distribution,High Risk Groups 1,Children
+9,Geographical Distribution,High Risk Groups 2,Elderly
+9,Geographical Distribution,High Risk Groups 3,Pregnant women
+9,Geographical Distribution,High Risk Groups 4,Frequent travelers to endemic regions
+9,Incubation And Course > Incubation Period Days,Min,4
+9,Incubation And Course > Incubation Period Days,Max,10
+9,Incubation And Course > Typical Duration Days,Min,3
+9,Incubation And Course > Typical Duration Days,Max,7
+9,Incubation And Course,Progression Risk,About 1 in 20 cases progress to severe dengue
+9,Symptoms,Common Symptoms 1,High fever (up to 104°F / 40°C)
+9,Symptoms,Common Symptoms 2,Rash
+9,Symptoms,Common Symptoms 3,Intense pain behind the eyes
+9,Symptoms,Common Symptoms 4,Muscle pain
+9,Symptoms,Common Symptoms 5,Bone pain
+9,Symptoms,Common Symptoms 6,Joint pain
+9,Symptoms,Common Symptoms 7,Nausea
+9,Symptoms,Common Symptoms 8,Vomiting
+9,Symptoms,Symptom Notes 1,Symptoms often resemble influenza
+9,Symptoms,Symptom Notes 2,Most infections cause mild or no symptoms
+9,Severe Dengue,Description,A life-threatening complication occurring after fever subsides
+9,Severe Dengue,Onset Window Hours,24–48 hours after fever goes away
+9,Severe Dengue,Warning Signs 1,Severe abdominal pain
+9,Severe Dengue,Warning Signs 2,Frequent vomiting
+9,Severe Dengue,Warning Signs 3,Vomiting blood
+9,Severe Dengue,Warning Signs 4,Blood in stool
+9,Severe Dengue,Warning Signs 5,Nosebleeds
+9,Severe Dengue,Warning Signs 6,Bleeding gums
+9,Severe Dengue,Warning Signs 7,Extreme tiredness
+9,Severe Dengue,Warning Signs 8,Restlessness
+9,Severe Dengue,Warning Signs 9,Irritability
+9,Severe Dengue,Emergency Instruction,Immediate emergency care required
+9,Pathophysiology Simple,Mechanism 1,Virus multiplies in bloodstream
+9,Pathophysiology Simple,Mechanism 2,Immune response damages blood vessels
+9,Pathophysiology Simple,Mechanism 3,Platelet destruction and plasma leakage
+9,Pathophysiology Simple,Mechanism 4,Risk of internal bleeding and shock
+9,Diagnosis,Primary Method,Blood test
+9,Diagnosis,Test Purposes 1,Detect dengue virus
+9,Diagnosis,Test Purposes 2,Identify virus strain
+9,Diagnosis,Test Purposes 3,Rule out similar infections
+9,Diagnosis,Timing Note,Testing guided by symptom onset and exposure history
+9,Treatment,Specific Antiviral,None available
+9,Treatment,Management Strategy,Supportive care only
+9,Treatment,Home Care 1,Adequate hydration
+9,Treatment,Home Care 2,Plenty of rest
+9,Treatment,Home Care 3,Acetaminophen (paracetamol) for pain and fever
+9,Treatment,Medications To Avoid 1,Aspirin
+9,Treatment,Medications To Avoid 2,Ibuprofen
+9,Treatment,Medications To Avoid 3,Other NSAIDs
+9,Treatment,Reason For Avoidance,Increased risk of life-threatening bleeding
+9,Hospital Care,Indications 1,Severe dengue symptoms
+9,Hospital Care,Indications 2,Warning signs present
+9,Hospital Care,Indications 3,High-risk patients
+9,Hospital Care,Possible Interventions 1,Intravenous fluids
+9,Hospital Care,Possible Interventions 2,Close monitoring
+9,Hospital Care,Possible Interventions 3,Blood transfusion if required
+9,Prognosis,Mild Cases,Full recovery expected
+9,Prognosis,Severe Cases With Treatment,>99% survival rate
+9,Prognosis,Risk Without Treatment,High mortality
+9,Pregnancy Considerations,Possible Complications 1,Miscarriage
+9,Pregnancy Considerations,Possible Complications 2,Preterm birth
+9,Pregnancy Considerations,Possible Complications 3,Low birth weight
+9,Pregnancy Considerations,Recommendation,Avoid travel to dengue-endemic areas during pregnancy
+9,Reinfection,Possibility,True
+9,Reinfection,Severity Risk,Higher with subsequent infections
+9,Reinfection,Prevention Focus,Vaccination discussion and mosquito avoidance
+9,Prevention,Primary Strategy,Prevent mosquito bites
+9,Prevention,Personal Protection 1,EPA-registered insect repellents (20–30% DEET)
+9,Prevention,Personal Protection 2,Cover exposed skin
+9,Prevention,Personal Protection 3,Use mosquito nets
+9,Prevention,Personal Protection 4,Repair window and door screens
+9,Prevention,Environmental Control 1,Remove standing water
+9,Prevention,Environmental Control 2,Dispose of containers holding water
+9,Prevention,Environmental Control 3,Fill low-lying water collection areas
+9,Vaccination,Availability,Two vaccines exist (one available in the U.S.)
+9,Vaccination,Target Group 1,Children in endemic areas
+9,Vaccination,Target Group 2,Selected high-risk adults
+9,Vaccination,Note,Eligibility depends on prior dengue exposure
+9,When To Seek Care,See Doctor If 1,Any dengue symptoms after travel
+9,When To Seek Care,See Doctor If 2,Living in endemic region with fever
+9,When To Seek Care,Go To Er If 1,Any warning signs of severe dengue
+9,When To Seek Care,Go To Er If 2,Bleeding
+9,When To Seek Care,Go To Er If 3,Severe abdominal pain
+9,When To Seek Care,Go To Er If 4,Persistent vomiting
+9,General,Key Chatbot Messages 1,"Dengue is spread by mosquitoes, not casual contact"
+9,General,Key Chatbot Messages 2,Second dengue infection is more dangerous
+9,General,Key Chatbot Messages 3,Avoid aspirin and NSAIDs
+9,General,Key Chatbot Messages 4,Warning signs require emergency care
+9,General,Key Chatbot Messages 5,Most patients recover fully with early care
+10,Metadata,Title,"Dengue Fever: Stages, Complication, Diagnosis, and Prevention Strategies"
+10,Metadata,Authors 1,Poulomi Biswas
+10,Metadata,Authors 2,Santosh Ganguly
+10,Metadata,Authors 3,Biplab Debnath
+10,Metadata,Journal,Asian Journal of Pharmaceutical and Clinical Research
+10,Metadata,Volume,14
+10,Metadata,Issue,5
+10,Metadata,Year,2021
+10,Metadata,Article Type,Review Article
+10,Metadata,License,CC BY 4.0
+10,Metadata,Geographical Focus,Global with Asia emphasis
+10,Disease Identity,Name,Dengue Fever
+10,Disease Identity,Alternate Names 1,Break-bone fever
+10,Disease Identity,Alternate Names 2,Dengue hemorrhagic fever (severe form)
+10,Disease Identity,Classification,Arthropod-borne viral disease
+10,Disease Identity,Family,Flaviviridae
+10,Disease Identity,Genus,Flavivirus
+10,Virus Characteristics,Virus Name,Dengue virus (DENV)
+10,Virus Characteristics > Genome,Type,Single-stranded positive-sense RNA
+10,Virus Characteristics > Genome,Length Kb,11
+10,Virus Characteristics > Genome,Open Reading Frame,Single ORF
+10,Virus Characteristics,Serotypes 1,DENV-1
+10,Virus Characteristics,Serotypes 2,DENV-2
+10,Virus Characteristics,Serotypes 3,DENV-3
+10,Virus Characteristics,Serotypes 4,DENV-4
+10,Virus Characteristics > Immunity,Homotypic,Lifelong immunity to same serotype
+10,Virus Characteristics > Immunity,Heterotypic,Temporary and partial
+10,Virus Characteristics > Immunity,Risk,Secondary infection increases severe dengue risk
+10,Virus Characteristics,Structural Proteins 1,Capsid (C)
+10,Virus Characteristics,Structural Proteins 2,pre-Membrane (prM)
+10,Virus Characteristics,Structural Proteins 3,Envelope (E)
+10,Virus Characteristics,Non Structural Proteins 1,NS1
+10,Virus Characteristics,Non Structural Proteins 2,NS2A
+10,Virus Characteristics,Non Structural Proteins 3,NS2B
+10,Virus Characteristics,Non Structural Proteins 4,NS3
+10,Virus Characteristics,Non Structural Proteins 5,NS4A
+10,Virus Characteristics,Non Structural Proteins 6,NS4B
+10,Virus Characteristics,Non Structural Proteins 7,NS5
+10,Vectors > Primary Vector,Species,Aedes aegypti
+10,Vectors > Primary Vector,Characteristics 1,Daytime biting
+10,Vectors > Primary Vector,Characteristics 2,Urban adaptation
+10,Vectors > Primary Vector,Characteristics 3,Breeds in clean stagnant water
+10,Vectors > Primary Vector,Characteristics 4,Indoor resting
+10,Vectors,Secondary Vectors 1,Aedes albopictus
+10,Vectors,Secondary Vectors 2,Aedes polynesiensis
+10,Vectors,Secondary Vectors 3,Aedes scutellaris
+10,Vectors,Secondary Vectors 4,Aedes niveus (sylvatic)
+10,Vectors > Life Cycle Days,Average,8–10
+10,Vectors > Life Cycle Days,Stages 1,Egg
+10,Vectors > Life Cycle Days,Stages 2,Larva
+10,Vectors > Life Cycle Days,Stages 3,Pupa
+10,Vectors > Life Cycle Days,Stages 4,Adult
+10,Transmission,Primary,Mosquito bite
+10,Transmission,Additional Routes 1,Blood transfusion
+10,Transmission,Additional Routes 2,Organ transplantation
+10,Transmission,Additional Routes 3,Vertical transmission (mother to child)
+10,Transmission,Additional Routes 4,Rare human-to-human transmission
+10,Transmission > Geographical Limits,Latitude,35°N–35°S
+10,Transmission > Geographical Limits,Altitude Meters,<1000
+10,Global Epidemiology,Endemic Countries,>100
+10,Global Epidemiology,Annual Infections Estimated,390000000
+10,Global Epidemiology,Population At Risk,>2.5 billion
+10,Global Epidemiology,High Burden Regions 1,South-East Asia
+10,Global Epidemiology,High Burden Regions 2,Western Pacific
+10,Global Epidemiology,High Burden Regions 3,Americas
+10,Global Epidemiology,High Burden Regions 4,Africa
+10,Global Epidemiology,Trend,Shift from urban-only to rural transmission
+10,Incubation And Course > Incubation Period Days,Range,3–14
+10,Incubation And Course > Incubation Period Days,Most Common,4–7
+10,Incubation And Course,Clinical Outcomes 1,Asymptomatic infection
+10,Incubation And Course,Clinical Outcomes 2,Undifferentiated febrile illness
+10,Incubation And Course,Clinical Outcomes 3,Dengue fever
+10,Incubation And Course,Clinical Outcomes 4,Dengue hemorrhagic fever
+10,Incubation And Course,Clinical Outcomes 5,Dengue shock syndrome
+10,Clinical Stages > Febrile Phase,Duration Days,3–7
+10,Clinical Stages > Febrile Phase,Features 1,High fever (≥38.5°C)
+10,Clinical Stages > Febrile Phase,Features 2,Headache
+10,Clinical Stages > Febrile Phase,Features 3,Myalgia
+10,Clinical Stages > Febrile Phase,Features 4,Arthralgia
+10,Clinical Stages > Febrile Phase,Features 5,Vomiting
+10,Clinical Stages > Febrile Phase,Features 6,Transient macular rash
+10,Clinical Stages > Febrile Phase,Features 7,"Mild bleeding (petechiae, bruising)"
+10,Clinical Stages > Febrile Phase,Features 8,Palpable liver
+10,Clinical Stages > Febrile Phase,Laboratory Findings 1,Leukopenia
+10,Clinical Stages > Febrile Phase,Laboratory Findings 2,Mild to moderate thrombocytopenia
+10,Clinical Stages > Febrile Phase,Laboratory Findings 3,Raised liver enzymes
+10,Clinical Stages > Critical Phase,Timing,Around defervescence (day 4–7)
+10,Clinical Stages > Critical Phase,Hallmark,Plasma leakage
+10,Clinical Stages > Critical Phase,Features 1,Rising hematocrit
+10,Clinical Stages > Critical Phase,Features 2,Rapid platelet fall
+10,Clinical Stages > Critical Phase,Features 3,Pleural effusion
+10,Clinical Stages > Critical Phase,Features 4,Ascites
+10,Clinical Stages > Critical Phase,Features 5,Persistent vomiting
+10,Clinical Stages > Critical Phase,Features 6,Severe abdominal pain
+10,Clinical Stages > Critical Phase,Features 7,Mucosal bleeding
+10,Clinical Stages > Critical Phase,Features 8,Restlessness
+10,Clinical Stages > Critical Phase,Shock Criteria 1,Pulse pressure ≤20 mmHg
+10,Clinical Stages > Critical Phase,Shock Criteria 2,Cold clammy skin
+10,Clinical Stages > Critical Phase,Shock Criteria 3,Hypotension
+10,Clinical Stages > Recovery Phase,Duration Hours,48–72
+10,Clinical Stages > Recovery Phase,Features 1,Reabsorption of extravascular fluid
+10,Clinical Stages > Recovery Phase,Features 2,Hemodynamic stabilization
+10,Clinical Stages > Recovery Phase,Features 3,Improving platelet count
+10,Clinical Stages > Recovery Phase,Features 4,Convalescent itchy rash
+10,Clinical Stages > Recovery Phase,Features 5,Fatigue lasting weeks
+10,Severe Complications,Hemorrhagic 1,Gastrointestinal bleeding
+10,Severe Complications,Hemorrhagic 2,Mucosal bleeding
+10,Severe Complications,Hemorrhagic 3,Severe thrombocytopenia
+10,Severe Complications > Organ Involvement,Neurological 1,Encephalitis
+10,Severe Complications > Organ Involvement,Neurological 2,Encephalopathy
+10,Severe Complications > Organ Involvement,Neurological 3,Guillain–Barré syndrome
+10,Severe Complications > Organ Involvement,Neurological 4,Transverse myelitis
+10,Severe Complications > Organ Involvement,Cardiac 1,Myocarditis
+10,Severe Complications > Organ Involvement,Hepatic 1,Acute liver failure
+10,Severe Complications > Organ Involvement,Renal 1,Acute kidney injury
+10,Pathogenesis,Cell Targets 1,Dendritic cells
+10,Pathogenesis,Cell Targets 2,Monocytes
+10,Pathogenesis,Cell Targets 3,Macrophages
+10,Pathogenesis,Cell Targets 4,Endothelial cells
+10,Pathogenesis,Mechanisms 1,Antibody-dependent enhancement (ADE)
+10,Pathogenesis,Mechanisms 2,Cytokine release
+10,Pathogenesis,Mechanisms 3,Endothelial dysfunction
+10,Pathogenesis,Mechanisms 4,Bone marrow suppression
+10,Pathogenesis,Key Receptors 1,DC-SIGN
+10,Pathogenesis,Key Receptors 2,Mannose receptor
+10,Pathogenesis,Key Receptors 3,C-type lectins
+10,Laboratory Diagnosis,Definitive Methods 1,Virus isolation
+10,Laboratory Diagnosis,Definitive Methods 2,Viral RNA detection
+10,Laboratory Diagnosis,Definitive Methods 3,Antigen detection
+10,Laboratory Diagnosis,Definitive Methods 4,Serology
+10,Laboratory Diagnosis,Virus Isolation Methods 1,Mosquito inoculation (gold standard)
+10,Laboratory Diagnosis,Virus Isolation Methods 2,Mosquito cell culture (C6/36)
+10,Laboratory Diagnosis,Virus Isolation Methods 3,Mammalian cell culture
+10,Laboratory Diagnosis,Virus Isolation Methods 4,Infant mouse inoculation
+10,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 1,Rapid
+10,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 2,Serotype-specific
+10,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 3,High sensitivity
+10,Laboratory Diagnosis > Molecular > Rt Pcr,Limitations 1,False positives due to contamination
+10,Laboratory Diagnosis > Molecular > Rt Pcr,Limitations 2,Cannot replace virus isolation for surveillance
+10,Laboratory Diagnosis > Serology,Ig M,Appears after day 5
+10,Laboratory Diagnosis > Serology,Ig G,Early rise in secondary infection
+10,Laboratory Diagnosis > Serology,Limitation,Cross-reactivity with flaviviruses
+10,Treatment,Specific Antiviral,None available
+10,Treatment,Management Principle,Supportive care
+10,Treatment,Mild Cases 1,Oral hydration
+10,Treatment,Mild Cases 2,Paracetamol
+10,Treatment,Mild Cases 3,Rest
+10,Treatment,Severe Cases 1,Intravenous fluids
+10,Treatment,Severe Cases 2,Blood transfusion
+10,Treatment,Severe Cases 3,Close monitoring for shock
+10,Treatment,Contraindicated Drugs 1,Aspirin
+10,Treatment,Contraindicated Drugs 2,NSAIDs
+10,Treatment,Contraindicated Drugs 3,Steroids
+10,Prevention And Control > Vector Control,Environmental 1,Eliminate stagnant water
+10,Prevention And Control > Vector Control,Environmental 2,Proper waste management
+10,Prevention And Control > Vector Control,Chemical 1,Larvicides
+10,Prevention And Control > Vector Control,Chemical 2,Insect growth regulators
+10,Prevention And Control > Vector Control,Biological 1,Larvivorous fish
+10,Prevention And Control > Vector Control,Biological 2,Copepods
+10,Prevention And Control > Vector Control,Biological 3,Wolbachia-based control
+10,Prevention And Control > Vector Control,Genetic 1,Sterile insect technique
+10,Prevention And Control > Vector Control,Genetic 2,Genetically modified mosquitoes
+10,Prevention And Control,Personal Protection 1,Protective clothing
+10,Prevention And Control,Personal Protection 2,Insect repellents (DEET)
+10,Prevention And Control,Personal Protection 3,Screened or air-conditioned rooms
+10,Prevention And Control,Personal Protection 4,Mosquito nets
+10,Vaccines > Dengvaxia,Type,Live attenuated tetravalent
+10,Vaccines > Dengvaxia,Eligible Population,Seropositive individuals ≥9 years
+10,Vaccines > Dengvaxia,Risk,Severe dengue in seronegative children
+10,Vaccines > Tak 003,Developer,Takeda
+10,Vaccines > Tak 003,Status,Phase 3 completed
+10,Vaccines > Tak 003,Mechanism,Live attenuated DENV2 backbone
+10,Vaccines > Latv,Status,Phase 3 trials
+10,Vaccines > Latv,Advantage,Single-dose protection
+10,General,Key Chatbot Rules 1,Critical phase begins after fever subsides
+10,General,Key Chatbot Rules 2,Rapid platelet fall + rising hematocrit = danger
+10,General,Key Chatbot Rules 3,Secondary infection is highest risk
+10,General,Key Chatbot Rules 4,Fluid management saves lives
+10,General,Key Chatbot Rules 5,Vector control is the main prevention strategy
+11,Metadata,Title,"Dengue Fever: Stages, Complication, Diagnosis, and Prevention Strategies"
+11,Metadata,Authors 1,Poulomi Biswas
+11,Metadata,Authors 2,Santosh Ganguly
+11,Metadata,Authors 3,Biplab Debnath
+11,Metadata,Journal,Asian Journal of Pharmaceutical and Clinical Research
+11,Metadata,Volume,14
+11,Metadata,Issue,5
+11,Metadata,Year,2021
+11,Metadata,Article Type,Review Article
+11,Metadata,License,CC BY 4.0
+11,Metadata,Geographical Focus,Global with Asia emphasis
+11,Disease Identity,Name,Dengue Fever
+11,Disease Identity,Alternate Names 1,Break-bone fever
+11,Disease Identity,Alternate Names 2,Dengue hemorrhagic fever (severe form)
+11,Disease Identity,Classification,Arthropod-borne viral disease
+11,Disease Identity,Family,Flaviviridae
+11,Disease Identity,Genus,Flavivirus
+11,Virus Characteristics,Virus Name,Dengue virus (DENV)
+11,Virus Characteristics > Genome,Type,Single-stranded positive-sense RNA
+11,Virus Characteristics > Genome,Length Kb,11
+11,Virus Characteristics > Genome,Open Reading Frame,Single ORF
+11,Virus Characteristics,Serotypes 1,DENV-1
+11,Virus Characteristics,Serotypes 2,DENV-2
+11,Virus Characteristics,Serotypes 3,DENV-3
+11,Virus Characteristics,Serotypes 4,DENV-4
+11,Virus Characteristics > Immunity,Homotypic,Lifelong immunity to same serotype
+11,Virus Characteristics > Immunity,Heterotypic,Temporary and partial
+11,Virus Characteristics > Immunity,Risk,Secondary infection increases severe dengue risk
+11,Virus Characteristics,Structural Proteins 1,Capsid (C)
+11,Virus Characteristics,Structural Proteins 2,pre-Membrane (prM)
+11,Virus Characteristics,Structural Proteins 3,Envelope (E)
+11,Virus Characteristics,Non Structural Proteins 1,NS1
+11,Virus Characteristics,Non Structural Proteins 2,NS2A
+11,Virus Characteristics,Non Structural Proteins 3,NS2B
+11,Virus Characteristics,Non Structural Proteins 4,NS3
+11,Virus Characteristics,Non Structural Proteins 5,NS4A
+11,Virus Characteristics,Non Structural Proteins 6,NS4B
+11,Virus Characteristics,Non Structural Proteins 7,NS5
+11,Vectors > Primary Vector,Species,Aedes aegypti
+11,Vectors > Primary Vector,Characteristics 1,Daytime biting
+11,Vectors > Primary Vector,Characteristics 2,Urban adaptation
+11,Vectors > Primary Vector,Characteristics 3,Breeds in clean stagnant water
+11,Vectors > Primary Vector,Characteristics 4,Indoor resting
+11,Vectors,Secondary Vectors 1,Aedes albopictus
+11,Vectors,Secondary Vectors 2,Aedes polynesiensis
+11,Vectors,Secondary Vectors 3,Aedes scutellaris
+11,Vectors,Secondary Vectors 4,Aedes niveus (sylvatic)
+11,Vectors > Life Cycle Days,Average,8–10
+11,Vectors > Life Cycle Days,Stages 1,Egg
+11,Vectors > Life Cycle Days,Stages 2,Larva
+11,Vectors > Life Cycle Days,Stages 3,Pupa
+11,Vectors > Life Cycle Days,Stages 4,Adult
+11,Transmission,Primary,Mosquito bite
+11,Transmission,Additional Routes 1,Blood transfusion
+11,Transmission,Additional Routes 2,Organ transplantation
+11,Transmission,Additional Routes 3,Vertical transmission (mother to child)
+11,Transmission,Additional Routes 4,Rare human-to-human transmission
+11,Transmission > Geographical Limits,Latitude,35°N–35°S
+11,Transmission > Geographical Limits,Altitude Meters,<1000
+11,Global Epidemiology,Endemic Countries,>100
+11,Global Epidemiology,Annual Infections Estimated,390000000
+11,Global Epidemiology,Population At Risk,>2.5 billion
+11,Global Epidemiology,High Burden Regions 1,South-East Asia
+11,Global Epidemiology,High Burden Regions 2,Western Pacific
+11,Global Epidemiology,High Burden Regions 3,Americas
+11,Global Epidemiology,High Burden Regions 4,Africa
+11,Global Epidemiology,Trend,Shift from urban-only to rural transmission
+11,Incubation And Course > Incubation Period Days,Range,3–14
+11,Incubation And Course > Incubation Period Days,Most Common,4–7
+11,Incubation And Course,Clinical Outcomes 1,Asymptomatic infection
+11,Incubation And Course,Clinical Outcomes 2,Undifferentiated febrile illness
+11,Incubation And Course,Clinical Outcomes 3,Dengue fever
+11,Incubation And Course,Clinical Outcomes 4,Dengue hemorrhagic fever
+11,Incubation And Course,Clinical Outcomes 5,Dengue shock syndrome
+11,Clinical Stages > Febrile Phase,Duration Days,3–7
+11,Clinical Stages > Febrile Phase,Features 1,High fever (≥38.5°C)
+11,Clinical Stages > Febrile Phase,Features 2,Headache
+11,Clinical Stages > Febrile Phase,Features 3,Myalgia
+11,Clinical Stages > Febrile Phase,Features 4,Arthralgia
+11,Clinical Stages > Febrile Phase,Features 5,Vomiting
+11,Clinical Stages > Febrile Phase,Features 6,Transient macular rash
+11,Clinical Stages > Febrile Phase,Features 7,"Mild bleeding (petechiae, bruising)"
+11,Clinical Stages > Febrile Phase,Features 8,Palpable liver
+11,Clinical Stages > Febrile Phase,Laboratory Findings 1,Leukopenia
+11,Clinical Stages > Febrile Phase,Laboratory Findings 2,Mild to moderate thrombocytopenia
+11,Clinical Stages > Febrile Phase,Laboratory Findings 3,Raised liver enzymes
+11,Clinical Stages > Critical Phase,Timing,Around defervescence (day 4–7)
+11,Clinical Stages > Critical Phase,Hallmark,Plasma leakage
+11,Clinical Stages > Critical Phase,Features 1,Rising hematocrit
+11,Clinical Stages > Critical Phase,Features 2,Rapid platelet fall
+11,Clinical Stages > Critical Phase,Features 3,Pleural effusion
+11,Clinical Stages > Critical Phase,Features 4,Ascites
+11,Clinical Stages > Critical Phase,Features 5,Persistent vomiting
+11,Clinical Stages > Critical Phase,Features 6,Severe abdominal pain
+11,Clinical Stages > Critical Phase,Features 7,Mucosal bleeding
+11,Clinical Stages > Critical Phase,Features 8,Restlessness
+11,Clinical Stages > Critical Phase,Shock Criteria 1,Pulse pressure ≤20 mmHg
+11,Clinical Stages > Critical Phase,Shock Criteria 2,Cold clammy skin
+11,Clinical Stages > Critical Phase,Shock Criteria 3,Hypotension
+11,Clinical Stages > Recovery Phase,Duration Hours,48–72
+11,Clinical Stages > Recovery Phase,Features 1,Reabsorption of extravascular fluid
+11,Clinical Stages > Recovery Phase,Features 2,Hemodynamic stabilization
+11,Clinical Stages > Recovery Phase,Features 3,Improving platelet count
+11,Clinical Stages > Recovery Phase,Features 4,Convalescent itchy rash
+11,Clinical Stages > Recovery Phase,Features 5,Fatigue lasting weeks
+11,Severe Complications,Hemorrhagic 1,Gastrointestinal bleeding
+11,Severe Complications,Hemorrhagic 2,Mucosal bleeding
+11,Severe Complications,Hemorrhagic 3,Severe thrombocytopenia
+11,Severe Complications > Organ Involvement,Neurological 1,Encephalitis
+11,Severe Complications > Organ Involvement,Neurological 2,Encephalopathy
+11,Severe Complications > Organ Involvement,Neurological 3,Guillain–Barré syndrome
+11,Severe Complications > Organ Involvement,Neurological 4,Transverse myelitis
+11,Severe Complications > Organ Involvement,Cardiac 1,Myocarditis
+11,Severe Complications > Organ Involvement,Hepatic 1,Acute liver failure
+11,Severe Complications > Organ Involvement,Renal 1,Acute kidney injury
+11,Pathogenesis,Cell Targets 1,Dendritic cells
+11,Pathogenesis,Cell Targets 2,Monocytes
+11,Pathogenesis,Cell Targets 3,Macrophages
+11,Pathogenesis,Cell Targets 4,Endothelial cells
+11,Pathogenesis,Mechanisms 1,Antibody-dependent enhancement (ADE)
+11,Pathogenesis,Mechanisms 2,Cytokine release
+11,Pathogenesis,Mechanisms 3,Endothelial dysfunction
+11,Pathogenesis,Mechanisms 4,Bone marrow suppression
+11,Pathogenesis,Key Receptors 1,DC-SIGN
+11,Pathogenesis,Key Receptors 2,Mannose receptor
+11,Pathogenesis,Key Receptors 3,C-type lectins
+11,Laboratory Diagnosis,Definitive Methods 1,Virus isolation
+11,Laboratory Diagnosis,Definitive Methods 2,Viral RNA detection
+11,Laboratory Diagnosis,Definitive Methods 3,Antigen detection
+11,Laboratory Diagnosis,Definitive Methods 4,Serology
+11,Laboratory Diagnosis,Virus Isolation Methods 1,Mosquito inoculation (gold standard)
+11,Laboratory Diagnosis,Virus Isolation Methods 2,Mosquito cell culture (C6/36)
+11,Laboratory Diagnosis,Virus Isolation Methods 3,Mammalian cell culture
+11,Laboratory Diagnosis,Virus Isolation Methods 4,Infant mouse inoculation
+11,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 1,Rapid
+11,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 2,Serotype-specific
+11,Laboratory Diagnosis > Molecular > Rt Pcr,Advantages 3,High sensitivity
+11,Laboratory Diagnosis > Molecular > Rt Pcr,Limitations 1,False positives due to contamination
+11,Laboratory Diagnosis > Molecular > Rt Pcr,Limitations 2,Cannot replace virus isolation for surveillance
+11,Laboratory Diagnosis > Serology,Ig M,Appears after day 5
+11,Laboratory Diagnosis > Serology,Ig G,Early rise in secondary infection
+11,Laboratory Diagnosis > Serology,Limitation,Cross-reactivity with flaviviruses
+11,Treatment,Specific Antiviral,None available
+11,Treatment,Management Principle,Supportive care
+11,Treatment,Mild Cases 1,Oral hydration
+11,Treatment,Mild Cases 2,Paracetamol
+11,Treatment,Mild Cases 3,Rest
+11,Treatment,Severe Cases 1,Intravenous fluids
+11,Treatment,Severe Cases 2,Blood transfusion
+11,Treatment,Severe Cases 3,Close monitoring for shock
+11,Treatment,Contraindicated Drugs 1,Aspirin
+11,Treatment,Contraindicated Drugs 2,NSAIDs
+11,Treatment,Contraindicated Drugs 3,Steroids
+11,Prevention And Control > Vector Control,Environmental 1,Eliminate stagnant water
+11,Prevention And Control > Vector Control,Environmental 2,Proper waste management
+11,Prevention And Control > Vector Control,Chemical 1,Larvicides
+11,Prevention And Control > Vector Control,Chemical 2,Insect growth regulators
+11,Prevention And Control > Vector Control,Biological 1,Larvivorous fish
+11,Prevention And Control > Vector Control,Biological 2,Copepods
+11,Prevention And Control > Vector Control,Biological 3,Wolbachia-based control
+11,Prevention And Control > Vector Control,Genetic 1,Sterile insect technique
+11,Prevention And Control > Vector Control,Genetic 2,Genetically modified mosquitoes
+11,Prevention And Control,Personal Protection 1,Protective clothing
+11,Prevention And Control,Personal Protection 2,Insect repellents (DEET)
+11,Prevention And Control,Personal Protection 3,Screened or air-conditioned rooms
+11,Prevention And Control,Personal Protection 4,Mosquito nets
+11,Vaccines > Dengvaxia,Type,Live attenuated tetravalent
+11,Vaccines > Dengvaxia,Eligible Population,Seropositive individuals ≥9 years
+11,Vaccines > Dengvaxia,Risk,Severe dengue in seronegative children
+11,Vaccines > Tak 003,Developer,Takeda
+11,Vaccines > Tak 003,Status,Phase 3 completed
+11,Vaccines > Tak 003,Mechanism,Live attenuated DENV2 backbone
+11,Vaccines > Latv,Status,Phase 3 trials
+11,Vaccines > Latv,Advantage,Single-dose protection
+11,General,Key Chatbot Rules 1,Critical phase begins after fever subsides
+11,General,Key Chatbot Rules 2,Rapid platelet fall + rising hematocrit = danger
+11,General,Key Chatbot Rules 3,Secondary infection is highest risk
+11,General,Key Chatbot Rules 4,Fluid management saves lives
+11,General,Key Chatbot Rules 5,Vector control is the main prevention strategy
+12,Metadata,Title,"Dengue Fever Disease: Guidance for Surveillance, Case Diagnosis, and Management"
+12,Metadata,Version,V1.3
+12,Metadata,Year,2023
+12,Metadata,Country,Kingdom of Saudi Arabia
+12,Metadata,Issuing Authority,Public Health Authority (WEQYAH)
+12,Metadata,Ministries Involved 1,Ministry of Health (MOH)
+12,Metadata,Ministries Involved 2,"Ministry of Environment, Water and Agriculture (MEWA)"
+12,Metadata,Ministries Involved 3,Ministry of Municipal & Rural Affairs and Housing (MOMRA)
+12,Metadata,Document Scope 1,Surveillance
+12,Metadata,Document Scope 2,Case definition
+12,Metadata,Document Scope 3,Diagnosis
+12,Metadata,Document Scope 4,Clinical management
+12,Metadata,Document Scope 5,Notification & reporting
+12,Metadata,Document Scope 6,Prevention and control
+12,Disease Overview,Name,Dengue Fever
+12,Disease Overview,Type,Vector-borne arboviral disease
+12,Disease Overview,Virus Family,Flaviviridae
+12,Disease Overview,Genus,Flavivirus
+12,Disease Overview,Genome,Single-stranded RNA
+12,Disease Overview,Serotypes 1,DENV-1
+12,Disease Overview,Serotypes 2,DENV-2
+12,Disease Overview,Serotypes 3,DENV-3
+12,Disease Overview,Serotypes 4,DENV-4
+12,Disease Overview,Treatment Availability,No specific antiviral treatment
+12,Disease Overview,Global Risk,≈50% of world population at risk
+12,Disease Overview > Ksa History,First Reported,1994
+12,Disease Overview > Ksa History,First Location,Jeddah
+12,Disease Overview > Ksa History,First Serotype,DENV-2
+12,Transmission,Primary Mode,Bite of infected female Aedes mosquito
+12,Transmission,Vector Species 1,Aedes aegypti
+12,Transmission,Vector Species 2,Aedes albopictus
+12,Transmission > Human To Mosquito,Period,Up to 2 days before symptoms until 2 days after fever resolves
+12,Transmission > Human To Mosquito,Includes 1,Symptomatic
+12,Transmission > Human To Mosquito,Includes 2,Pre-symptomatic
+12,Transmission > Human To Mosquito,Includes 3,Asymptomatic
+12,Transmission,Other Routes 1,Mother-to-child transmission
+12,Transmission,Other Routes 2,Blood transfusion (rare)
+12,Transmission,Other Routes 3,Organ transplantation (rare)
+12,Transmission,Other Routes 4,Laboratory exposure (rare)
+12,Transmission,Other Routes 5,Transovarial transmission in mosquitoes
+12,Incubation And Phases > Incubation Period Days,Typical,5–7
+12,Incubation And Phases > Incubation Period Days,Range,3–14
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Duration Days,2–7
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 1,High fever
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 2,Headache
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 3,Retro-orbital pain
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 4,Muscle and joint pain
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 5,Nausea
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 6,Vomiting
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 7,Rash
+12,Incubation And Phases > Clinical Phases > Febrile Phase,Features 8,"Mild bleeding (petechiae, gums, nose)"
+12,Incubation And Phases > Clinical Phases > Critical Phase,Timing,24–48 hours after defervescence
+12,Incubation And Phases > Clinical Phases > Critical Phase,Hallmark,Plasma leakage
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 1,Severe abdominal pain
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 2,Persistent vomiting
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 3,Clinical fluid accumulation
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 4,Mucosal bleeding
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 5,Lethargy or restlessness
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 6,Rising hematocrit
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 7,Rapid platelet drop
+12,Incubation And Phases > Clinical Phases > Critical Phase,Features 8,Shock
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Duration Hours,48–72
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Features 1,Fluid reabsorption
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Features 2,Hemodynamic stabilization
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Features 3,"Rising WBC first, platelets later"
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Features 4,Convalescent rash (isles of white in sea of red)
+12,Incubation And Phases > Clinical Phases > Recovery Phase,Features 5,General improvement
+12,Case Definitions > Suspected Case,Criteria 1,Fever >38.5°C for 2–7 days
+12,Case Definitions > Suspected Case,Criteria 2,"One or more symptoms: headache, joint pain, muscle pain, retro-orbital pain, nausea, vomiting, swollen glands, rash"
+12,Case Definitions > Probable Case,Criteria 1,Meets suspected case definition
+12,Case Definitions > Probable Case,Criteria 2,Epidemiological link (entomological index present OR travel/residence in endemic area within 15 days)
+12,Case Definitions > Confirmed Case,Criteria 1,RT-PCR positive
+12,Case Definitions > Confirmed Case,Criteria 2,NS1 antigen positive
+12,Case Definitions > Confirmed Case,Criteria 3,IgM positive (with confirmation due to cross-reactivity)
+12,Case Definitions > Not A Case,Criteria 1,RT-PCR negative
+12,Case Definitions > Not A Case,Criteria 2,NS1 negative
+12,Case Definitions > Not A Case,Criteria 3,IgM negative
+12,Case Definitions > Not A Case,Follow Up,Screen 25–100% for other Viral Hemorrhagic Fevers (VHF)
+12,Severity Classification > Group A Mild,Label,Dengue without warning signs
+12,Severity Classification > Group A Mild,Management,Home care
+12,Severity Classification > Group A Mild,Criteria 1,No warning signs
+12,Severity Classification > Group A Mild,Criteria 2,Able to tolerate oral fluids
+12,Severity Classification > Group A Mild,Criteria 3,Urine output at least once every 6 hours
+12,Severity Classification > Group B Moderate,Label,Dengue with warning signs or risk factors
+12,Severity Classification > Group B Moderate,Management,In-hospital care
+12,Severity Classification > Group B Moderate,Criteria 1,Any warning sign
+12,Severity Classification > Group B Moderate,Criteria 2,"Comorbidities (pregnancy, diabetes, renal failure)"
+12,Severity Classification > Group B Moderate,Criteria 3,"Social risk factors (living alone, far from hospital)"
+12,Severity Classification > Group C Severe,Label,Severe dengue
+12,Severity Classification > Group C Severe,Management,Hospitalization / ICU
+12,Severity Classification > Group C Severe,Criteria 1,Severe plasma leakage leading to shock
+12,Severity Classification > Group C Severe,Criteria 2,Severe bleeding
+12,Severity Classification > Group C Severe,Criteria 3,"Severe organ impairment (liver, CNS, heart)"
+12,Laboratory Diagnosis > Early Phase Tests > Rt Pcr,Timing Days,≤7 days
+12,Laboratory Diagnosis > Early Phase Tests > Rt Pcr,Role,"Gold standard, serotype-specific"
+12,Laboratory Diagnosis > Early Phase Tests > Ns1 Antigen,Timing Days,1–5 (up to 12)
+12,Laboratory Diagnosis > Early Phase Tests > Ns1 Antigen,Role,Early antigen detection
+12,Laboratory Diagnosis > Late Phase Tests > Ig M,Appearance,After day 5
+12,Laboratory Diagnosis > Late Phase Tests > Ig M,Duration,Up to 12 weeks
+12,Laboratory Diagnosis > Late Phase Tests > Ig G,Role,Past infection or secondary infection
+12,Laboratory Diagnosis > Late Phase Tests > Ig G,Note,Single IgG not diagnostic
+12,Laboratory Diagnosis,Supportive Labs 1,CBC
+12,Laboratory Diagnosis,Supportive Labs 2,Hematocrit
+12,Laboratory Diagnosis,Supportive Labs 3,Platelet count
+12,Laboratory Diagnosis,Supportive Labs 4,Liver enzymes
+12,Treatment And Management,General Principles 1,No antiviral therapy
+12,Treatment And Management,General Principles 2,Supportive care only
+12,Treatment And Management,General Principles 3,Avoid NSAIDs and aspirin
+12,Treatment And Management,Group A Home Care 1,Adequate oral fluids
+12,Treatment And Management,Group A Home Care 2,Bed rest
+12,Treatment And Management,Group A Home Care 3,Paracetamol (max 4g/day adults)
+12,Treatment And Management,Group A Home Care 4,Daily monitoring for warning signs
+12,Treatment And Management,Group B Hospital Care 1,IV fluids (Normal saline or Ringer lactate)
+12,Treatment And Management,Group B Hospital Care 2,Strict intake/output monitoring
+12,Treatment And Management,Group B Hospital Care 3,Frequent hematocrit and platelet checks
+12,Treatment And Management,Group C Severe Management 1,Rapid fluid resuscitation
+12,Treatment And Management,Group C Severe Management 2,Management of shock
+12,Treatment And Management,Group C Severe Management 3,Blood transfusion if severe bleeding
+12,Treatment And Management,Group C Severe Management 4,ICU monitoring
+12,Recovery And Discharge,Recovery Criteria 1,Stable vitals
+12,Recovery And Discharge,Recovery Criteria 2,Normal temperature
+12,Recovery And Discharge,Recovery Criteria 3,No bleeding
+12,Recovery And Discharge,Recovery Criteria 4,Good urine output
+12,Recovery And Discharge,Recovery Criteria 5,Stable hematocrit
+12,Recovery And Discharge,Recovery Criteria 6,Improving rash or itching
+12,Recovery And Discharge,Discharge Criteria 1,Afebrile for ≥24 hours
+12,Recovery And Discharge,Discharge Criteria 2,Clinical improvement
+12,Recovery And Discharge,Discharge Criteria 3,"Platelet count >50,000/mm³"
+12,Recovery And Discharge,Discharge Criteria 4,No respiratory distress
+12,Recovery And Discharge,Discharge Criteria 5,2–3 days after shock recovery
+12,Vaccination > Dengvaxia,Type,Live attenuated (CYD-TDV)
+12,Vaccination > Dengvaxia,Eligible,Seropositive individuals aged 9–45 years
+12,Vaccination > Dengvaxia,Risk,Severe dengue in seronegative individuals
+12,Vaccination,Ksa Status,Not approved in KSA
+12,Vaccination,Future Candidates,Multiple vaccines under evaluation
+12,Surveillance And Reporting,System,HESN Plus (Health Electronic Surveillance Network)
+12,Surveillance And Reporting,Notification Importance 1,Early outbreak prevention
+12,Surveillance And Reporting,Notification Importance 2,Rapid response
+12,Surveillance And Reporting,Notification Importance 3,Early treatment
+12,Surveillance And Reporting,Reporting Entities 1,Primary Health Centers
+12,Surveillance And Reporting,Reporting Entities 2,Hospitals
+12,Surveillance And Reporting,Reporting Entities 3,Private clinics
+12,Surveillance And Reporting,Reporting Entities 4,Laboratories
+12,Surveillance And Reporting > Vhf Screening,Conditions 1,Chikungunya
+12,Surveillance And Reporting > Vhf Screening,Conditions 2,Yellow fever
+12,Surveillance And Reporting > Vhf Screening,Conditions 3,West Nile
+12,Surveillance And Reporting > Vhf Screening,Conditions 4,Zika
+12,Surveillance And Reporting > Vhf Screening,Conditions 5,Alkhurma
+12,Surveillance And Reporting > Vhf Screening,Conditions 6,Rift Valley Fever
+12,Surveillance And Reporting > Vhf Screening,Conditions 7,Crimean-Congo
+12,Surveillance And Reporting > Vhf Screening,Conditions 8,Ebola/Marburg
+12,Prevention And Control,Vector Control 1,Eliminate stagnant water
+12,Prevention And Control,Vector Control 2,Cover and clean water containers weekly
+12,Prevention And Control,Vector Control 3,Proper waste disposal
+12,Prevention And Control,Vector Control 4,Larvicides and insecticides
+12,Prevention And Control,Personal Protection 1,Repellents
+12,Prevention And Control,Personal Protection 2,Window screens
+12,Prevention And Control,Personal Protection 3,Protective clothing
+12,Prevention And Control,Personal Protection 4,Daytime mosquito avoidance
+12,Prevention And Control,Community Actions 1,Health education
+12,Prevention And Control,Community Actions 2,Community engagement
+12,Prevention And Control,Community Actions 3,Active mosquito surveillance
+12,General,Core Chatbot Rules 1,Warning signs often appear after fever subsides
+12,General,Core Chatbot Rules 2,Rising hematocrit with falling platelets = danger
+12,General,Core Chatbot Rules 3,Avoid aspirin and NSAIDs
+12,General,Core Chatbot Rules 4,Early reporting prevents outbreaks
+12,General,Core Chatbot Rules 5,Vector control is the primary prevention
+13,Metadata,Document Title,Dengue fever
+13,Metadata,Document Type,Comprehensive medical review
+13,Metadata,Language,English
+13,Metadata,Scope 1,Clinical features
+13,Metadata,Scope 2,Diagnosis
+13,Metadata,Scope 3,Treatment
+13,Metadata,Scope 4,Epidemiology
+13,Metadata,Scope 5,Prevention
+13,Metadata,Scope 6,Vaccines
+13,Metadata,Scope 7,Public health impact
+13,Metadata,Last Updated Context,Includes data up to 2024–2025
+13,Disease Identity,Name,Dengue fever
+13,Disease Identity,Category,Mosquito-borne viral disease
+13,Disease Identity,Family,Flaviviridae
+13,Disease Identity,Genus,Flavivirus
+13,Disease Identity,Neglected Tropical Disease,True
+13,Virology,Virus Name,Dengue virus (DENV)
+13,Virology > Genome,Type,Positive-sense single-stranded RNA
+13,Virology > Genome,Length Nucleotides,"~11,000"
+13,Virology > Genome,Structure,Single open reading frame
+13,Virology > Proteins,Structural 1,Capsid (C)
+13,Virology > Proteins,Structural 2,pre-Membrane (prM)
+13,Virology > Proteins,Structural 3,Envelope (E)
+13,Virology > Proteins,Non Structural 1,NS1
+13,Virology > Proteins,Non Structural 2,NS2A
+13,Virology > Proteins,Non Structural 3,NS2B
+13,Virology > Proteins,Non Structural 4,NS3
+13,Virology > Proteins,Non Structural 5,NS4A
+13,Virology > Proteins,Non Structural 6,NS4B
+13,Virology > Proteins,Non Structural 7,NS5
+13,Virology,Serotypes 1,DENV-1
+13,Virology,Serotypes 2,DENV-2
+13,Virology,Serotypes 3,DENV-3
+13,Virology,Serotypes 4,DENV-4
+13,Virology > Immunity Profile,Primary Infection,Lifelong immunity to the same serotype
+13,Virology > Immunity Profile,Secondary Infection,Short-term cross-immunity only
+13,Virology > Immunity Profile,Risk Mechanism,Antibody-dependent enhancement (ADE)
+13,Transmission,Primary Vector,Female Aedes mosquitoes
+13,Transmission,Main Species 1,Aedes aegypti
+13,Transmission,Other Vectors 1,Aedes albopictus
+13,Transmission,Other Vectors 2,Aedes polynesiensis
+13,Transmission,Other Vectors 3,Aedes scutellaris
+13,Transmission,Biting Pattern 1,Daytime biting
+13,Transmission,Biting Pattern 2,Peak at dawn and dusk
+13,Transmission,Additional Transmission Routes 1,Blood transfusion
+13,Transmission,Additional Transmission Routes 2,Organ transplantation
+13,Transmission,Additional Transmission Routes 3,Vertical transmission (mother to child)
+13,Transmission,Human To Human,Not transmitted by casual contact
+13,Incubation And Course > Incubation Period Days,Range,3–14
+13,Incubation And Course > Incubation Period Days,Most Common,4–7
+13,Incubation And Course,Overall Duration Days,2–7 (longer with complications)
+13,Clinical Phases > Febrile Phase,Duration Days,2–7
+13,Clinical Phases > Febrile Phase,Features 1,High fever (40–41°C)
+13,Clinical Phases > Febrile Phase,Features 2,Severe headache
+13,Clinical Phases > Febrile Phase,Features 3,Retro-orbital pain
+13,Clinical Phases > Febrile Phase,Features 4,Muscle and joint pain
+13,Clinical Phases > Febrile Phase,Features 5,Nausea and vomiting
+13,Clinical Phases > Febrile Phase,Features 6,Skin rash
+13,Clinical Phases > Febrile Phase,Features 7,"Mild bleeding (nose, gums)"
+13,Clinical Phases > Critical Phase,Timing,After fever subsides
+13,Clinical Phases > Critical Phase,Hallmark,Plasma leakage
+13,Clinical Phases > Critical Phase,Warning Signs 1,Severe abdominal pain
+13,Clinical Phases > Critical Phase,Warning Signs 2,Persistent vomiting
+13,Clinical Phases > Critical Phase,Warning Signs 3,Rapid breathing
+13,Clinical Phases > Critical Phase,Warning Signs 4,Bleeding
+13,Clinical Phases > Critical Phase,Warning Signs 5,Lethargy or restlessness
+13,Clinical Phases > Critical Phase,Warning Signs 6,Rising hematocrit
+13,Clinical Phases > Critical Phase,Warning Signs 7,Falling platelets
+13,Clinical Phases > Critical Phase,Risks 1,Shock
+13,Clinical Phases > Critical Phase,Risks 2,Internal bleeding
+13,Clinical Phases > Critical Phase,Risks 3,Organ failure
+13,Clinical Phases > Recovery Phase,Duration Days,2–3
+13,Clinical Phases > Recovery Phase,Features 1,Fluid reabsorption
+13,Clinical Phases > Recovery Phase,Features 2,Improved appetite
+13,Clinical Phases > Recovery Phase,Features 3,Severe itching
+13,Clinical Phases > Recovery Phase,Features 4,Slow heart rate (bradycardia)
+13,Clinical Phases > Recovery Phase,Features 5,Gradual platelet recovery
+13,Severity Classification > Uncomplicated Dengue,Percentage,~80%
+13,Severity Classification > Uncomplicated Dengue,Outcome,Self-limiting
+13,Severity Classification > Severe Dengue,Percentage,~5%
+13,Severity Classification > Severe Dengue,Criteria 1,Severe plasma leakage
+13,Severity Classification > Severe Dengue,Criteria 2,Severe bleeding
+13,Severity Classification > Severe Dengue,Criteria 3,Severe organ dysfunction
+13,Severity Classification > Severe Dengue,Medical Emergency,True
+13,Complications,Hematological 1,Severe thrombocytopenia
+13,Complications,Hematological 2,Internal bleeding
+13,Complications > Organ Related,Liver 1,Acute liver failure
+13,Complications > Organ Related,Kidney 1,Acute kidney injury
+13,Complications > Organ Related,Heart 1,Myocarditis
+13,Complications > Organ Related,Neurological 1,Encephalopathy
+13,Complications > Organ Related,Neurological 2,Seizures
+13,Complications > Organ Related,Neurological 3,Cognitive impairment
+13,Complications > Special Populations,Pregnancy 1,Miscarriage
+13,Complications > Special Populations,Pregnancy 2,Preterm birth
+13,Complications > Special Populations,Pregnancy 3,Low birth weight
+13,Complications > Special Populations,Children,Higher severity risk
+13,Complications > Special Populations,Elderly,Higher mortality risk
+13,Pathophysiology,Initial Infection 1,Virus enters skin via mosquito saliva
+13,Pathophysiology,Initial Infection 2,Infects keratinocytes and Langerhans cells
+13,Pathophysiology,Systemic Spread 1,Lymph node replication
+13,Pathophysiology,Systemic Spread 2,Viremia
+13,Pathophysiology,Systemic Spread 3,Cytokine storm
+13,Pathophysiology,Severe Disease Mechanism 1,Capillary leakage
+13,Pathophysiology,Severe Disease Mechanism 2,Bone marrow suppression
+13,Pathophysiology,Severe Disease Mechanism 3,Reduced platelet production
+13,Pathophysiology,Severe Disease Mechanism 4,Hypovolemic shock
+13,Diagnosis,Early Phase Tests 1,RT-PCR
+13,Diagnosis,Early Phase Tests 2,NS1 antigen ELISA
+13,Diagnosis,Late Phase Tests 1,IgM ELISA
+13,Diagnosis,Late Phase Tests 2,IgG serology
+13,Diagnosis,Most Reliable,Nucleic acid amplification tests
+13,Diagnosis,Differential Diagnosis 1,Malaria
+13,Diagnosis,Differential Diagnosis 2,Influenza
+13,Diagnosis,Differential Diagnosis 3,Chikungunya
+13,Diagnosis,Differential Diagnosis 4,Zika
+13,Diagnosis,Differential Diagnosis 5,Measles
+13,Diagnosis,Differential Diagnosis 6,Leptospirosis
+13,Treatment,Specific Antiviral,None available
+13,Treatment,Management,Supportive care
+13,Treatment,Mild Cases 1,Rest
+13,Treatment,Mild Cases 2,Oral fluids
+13,Treatment,Mild Cases 3,Paracetamol
+13,Treatment,Severe Cases 1,Hospitalization
+13,Treatment,Severe Cases 2,Intravenous fluids
+13,Treatment,Severe Cases 3,Blood or platelet transfusion
+13,Treatment,Severe Cases 4,Intensive care monitoring
+13,Treatment,Medications To Avoid 1,Aspirin
+13,Treatment,Medications To Avoid 2,Ibuprofen
+13,Treatment,Medications To Avoid 3,NSAIDs
+13,Prognosis,Mild Cases,Full recovery expected
+13,Prognosis,Severe Cases With Treatment,<1% mortality
+13,Prognosis,Severe Cases Without Treatment,Up to 26% mortality
+13,Prognosis,Long Term Effects 1,Fatigue
+13,Prognosis,Long Term Effects 2,Memory and concentration problems
+13,Epidemiology,Endemic Countries,>100
+13,Epidemiology,Global Population At Risk,≈3.9 billion
+13,Epidemiology,Annual Infections Estimated,≈390 million
+13,Epidemiology,Annual Deaths Estimated,"≈25,000"
+13,Epidemiology,High Burden Regions 1,Southeast Asia
+13,Epidemiology,High Burden Regions 2,Western Pacific
+13,Epidemiology,High Burden Regions 3,Americas
+13,Epidemiology,Urban Association,True
+13,Epidemiology,Climate Change Impact 1,Expanded mosquito range
+13,Epidemiology,Climate Change Impact 2,Longer transmission seasons
+13,Prevention,Mosquito Control 1,Eliminate standing water
+13,Prevention,Mosquito Control 2,Environmental sanitation
+13,Prevention,Mosquito Control 3,Community-based vector control
+13,Prevention,Personal Protection 1,Protective clothing
+13,Prevention,Personal Protection 2,Mosquito nets
+13,Prevention,Personal Protection 3,DEET-based repellents
+13,Prevention,Personal Protection 4,Permethrin-treated clothing
+13,Prevention,Household Measures 1,Window and door screens
+13,Prevention,Household Measures 2,Air conditioning
+13,Prevention,Household Measures 3,Regular container cleaning
+13,Vaccination > Available Vaccines > Dengvaxia,Type,Live attenuated
+13,Vaccination > Available Vaccines > Dengvaxia,Eligibility,Previously infected individuals only
+13,Vaccination > Available Vaccines > Dengvaxia,Dosing,3 doses at 6-month intervals
+13,Vaccination > Available Vaccines > Dengvaxia,Note,Manufacturing to cease by 2026
+13,Vaccination > Available Vaccines > Qdenga,Type,Live attenuated tetravalent
+13,Vaccination > Available Vaccines > Qdenga,Eligibility,Age ≥4 years
+13,Vaccination > Available Vaccines > Qdenga,Dosing,"2 doses, 3 months apart"
+13,Vaccination > Available Vaccines > Qdenga,Prior Infection Required,False
+13,Public Health,Surveillance Importance,True
+13,Public Health,Blood Donation Restriction Months,6
+13,Public Health,Economic Burden Usd,≈8.9 billion annually
+13,Public Health,Awareness Days 1,International Anti-Dengue Day – 15 June
+13,Public Health,Awareness Days 2,National Dengue Day (India) – 16 May
+13,General,Core Chatbot Rules 1,Warning signs often appear after fever subsides
+13,General,Core Chatbot Rules 2,Avoid aspirin and NSAIDs
+13,General,Core Chatbot Rules 3,Second dengue infection is more dangerous
+13,General,Core Chatbot Rules 4,Early fluid management saves lives
+13,General,Core Chatbot Rules 5,Vector control is the main preventive strategy
+14,Metadata,Title,Dengue in Children
+14,Metadata,Guideline Type,Standard Treatment Guidelines
+14,Metadata,Issuing Body,Indian Academy of Pediatrics (IAP)
+14,Metadata,Year,2022
+14,Metadata,Country,India
+14,Metadata,Target Population,Children
+14,Metadata,Document Scope 1,Case definitions
+14,Metadata,Document Scope 2,Clinical staging
+14,Metadata,Document Scope 3,Diagnosis
+14,Metadata,Document Scope 4,Fluid management
+14,Metadata,Document Scope 5,Shock management
+14,Metadata,Document Scope 6,Discharge criteria
+14,Epidemiology In Children,Importance,One of the most common causes of undifferentiated tropical fever in hospitalized children in India
+14,Epidemiology In Children > Icu Data,Multicenter Study,34 ICUs across India
+14,Epidemiology In Children > Icu Data,Dengue Contribution Percent,23
+14,Epidemiology In Children > Mortality Risk,Children Under 15,4 times higher risk of death compared to adults
+14,Epidemiology In Children > Mortality Risk > Case Fatality Trend,1996,3.3%
+14,Epidemiology In Children > Mortality Risk > Case Fatality Trend,2010,0.4%
+14,Epidemiology In Children > Mortality Risk > Case Fatality Trend,Reason For Decline,Early diagnosis and improved clinical management
+14,Virology,Virus,Dengue virus (DENV)
+14,Virology,Family,Flaviviridae
+14,Virology,Serotypes 1,DENV-1
+14,Virology,Serotypes 2,DENV-2
+14,Virology,Serotypes 3,DENV-3
+14,Virology,Serotypes 4,DENV-4
+14,Case Definitions > Probable Dengue,Criteria 1,Acute febrile illness (2–7 days)
+14,Case Definitions > Probable Dengue,Criteria 2,"At least two of: headache, retro-orbital pain, myalgia, arthralgia, rash, hemorrhagic manifestations"
+14,Case Definitions > Probable Dengue,Criteria 3,OR positive non-ELISA NS1 / IgM test during outbreak
+14,Case Definitions > Confirmed Dengue,Laboratory Criteria 1,Virus isolation
+14,Case Definitions > Confirmed Dengue,Laboratory Criteria 2,IgM antibody positive by ELISA
+14,Case Definitions > Confirmed Dengue,Laboratory Criteria 3,NS1 antigen positive by ELISA
+14,Case Definitions > Confirmed Dengue,Laboratory Criteria 4,IgG seroconversion with fourfold rise
+14,Case Definitions > Confirmed Dengue,Laboratory Criteria 5,PCR positive for dengue RNA
+14,Case Definitions > Dengue With Warning Signs,Clinical 1,Abdominal pain or tenderness
+14,Case Definitions > Dengue With Warning Signs,Clinical 2,Persistent vomiting
+14,Case Definitions > Dengue With Warning Signs,Clinical 3,Clinical fluid accumulation
+14,Case Definitions > Dengue With Warning Signs,Clinical 4,Mucosal bleeding
+14,Case Definitions > Dengue With Warning Signs,Clinical 5,Lethargy or restlessness
+14,Case Definitions > Dengue With Warning Signs,Clinical 6,Liver enlargement >2 cm
+14,Case Definitions > Dengue With Warning Signs,Laboratory 1,Rising hematocrit with rapid platelet fall
+14,Case Definitions > Severe Dengue,Plasma Leakage 1,Shock (DSS)
+14,Case Definitions > Severe Dengue,Plasma Leakage 2,Fluid accumulation with respiratory distress
+14,Case Definitions > Severe Dengue,Severe Bleeding,As assessed clinically
+14,Case Definitions > Severe Dengue,Severe Organ Involvement 1,Liver: AST or ALT ≥1000 IU
+14,Case Definitions > Severe Dengue,Severe Organ Involvement 2,CNS: impaired consciousness or seizures
+14,Case Definitions > Severe Dengue,Severe Organ Involvement 3,Cardiac involvement
+14,Case Definitions > Severe Dengue,Severe Organ Involvement 4,Other organ dysfunction
+14,Natural History In Children > Phase 1 Febrile,Duration Days,2–5
+14,Natural History In Children > Phase 1 Febrile,Features 1,Continuous or biphasic fever
+14,Natural History In Children > Phase 1 Febrile,Features 2,Child usually febrile throughout
+14,Natural History In Children > Phase 2 Critical,Onset Days,Day 3–4 of illness
+14,Natural History In Children > Phase 2 Critical,Key Events 1,Plasma leakage
+14,Natural History In Children > Phase 2 Critical,Key Events 2,Hemoconcentration
+14,Natural History In Children > Phase 2 Critical,Key Events 3,Hypotensive or compensated shock
+14,Natural History In Children > Phase 2 Critical,Key Events 4,Progressive organ dysfunction
+14,Natural History In Children > Phase 3 Convalescent,Onset,After day 6–7
+14,Natural History In Children > Phase 3 Convalescent,Duration Days,2–3
+14,Natural History In Children > Phase 3 Convalescent,Features 1,Reabsorption of extravascular fluid
+14,Natural History In Children > Phase 3 Convalescent,Features 2,Clinical improvement
+14,Diagnostic Approach > Ns1 Antigen,Appearance,At symptom onset
+14,Diagnostic Approach > Ns1 Antigen,Trend,Declines over next few days
+14,Diagnostic Approach > Ns1 Antigen,Preferred Test,ELISA (higher sensitivity than rapid tests)
+14,Diagnostic Approach > Igm Antibody,Appearance,After day 5
+14,Diagnostic Approach > Igm Antibody > Positivity,Day 10,≈70%
+14,Diagnostic Approach > Igm Antibody > Positivity,Day 14,≈100%
+14,Diagnostic Approach > Igm Antibody,Limitation,Can remain positive up to 1 year
+14,Diagnostic Approach > Igg Antibody,Primary Infection,Appears after 1–2 weeks and persists for life
+14,Diagnostic Approach > Igg Antibody,Secondary Infection,Appears early within first few days
+14,Diagnostic Approach > Molecular Tests,Types 1,Standalone dengue PCR
+14,Diagnostic Approach > Molecular Tests,Types 2,Tropical fever multiplex PCR
+14,Diagnostic Approach > Molecular Tests,Use Case,Early infection
+14,Diagnostic Approach > Molecular Tests,Note,Not superior to NS1 + IgM + IgG combination
+14,Diagnostic Approach,Best Diagnostic Strategy,Simultaneous NS1 + IgM + IgG testing at presentation
+14,Severity Based Management > Group A Outpatient,Criteria 1,No warning signs
+14,Severity Based Management > Group A Outpatient,Criteria 2,Stable vitals
+14,Severity Based Management > Group A Outpatient,Criteria 3,Adequate oral intake
+14,Severity Based Management > Group A Outpatient,Management 1,Paracetamol for fever
+14,Severity Based Management > Group A Outpatient,Management 2,Monitor hydration
+14,Severity Based Management > Group A Outpatient,Management 3,Watch for warning signs
+14,Severity Based Management > Group A Outpatient,Management 4,Monitor for fever defervescence
+14,Severity Based Management > Group A Outpatient,Management 5,CBC when clinically indicated
+14,Severity Based Management > Group B Inpatient,Criteria 1,Any warning sign present
+14,Severity Based Management > Group B Inpatient,Criteria 2,High-risk comorbid conditions
+14,Severity Based Management > Group B Inpatient,Monitoring 1,Strict fluid intake/output
+14,Severity Based Management > Group B Inpatient,Monitoring 2,Vital signs every 4 hours or more
+14,Severity Based Management > Group B Inpatient,Monitoring 3,Serial hematocrit and platelet counts
+14,Severity Based Management > Group C Severe Or Shock,Criteria 1,Hypotensive or compensated shock
+14,Severity Based Management > Group C Severe Or Shock,Criteria 2,Severe plasma leakage
+14,Severity Based Management > Group C Severe Or Shock,Criteria 3,Severe bleeding
+14,Severity Based Management > Group C Severe Or Shock,Criteria 4,Severe organ dysfunction
+14,Severity Based Management > Group C Severe Or Shock,Care Setting,Pediatric Intensive Care Unit (PICU)
+14,Laboratory Monitoring In Hospital > Hematocrit,Significance,Marker of capillary leak
+14,Laboratory Monitoring In Hospital > Hematocrit,Critical Value,≥20% rise from baseline
+14,Laboratory Monitoring In Hospital > Platelets,Trend,Rapid fall during critical phase
+14,Laboratory Monitoring In Hospital > Platelets,Recovery Marker,Rising count indicates improvement
+14,Laboratory Monitoring In Hospital > Wbc,Pattern,Leukopenia with atypical lymphocytes
+14,Laboratory Monitoring In Hospital > Wbc,Recovery Marker,Rise precedes platelet recovery
+14,Laboratory Monitoring In Hospital > Liver Function,Pattern,AST > ALT
+14,Laboratory Monitoring In Hospital > Liver Function,Severe Disease,"Very high transaminases, low albumin"
+14,Laboratory Monitoring In Hospital > Coagulation,Findings 1,Low fibrinogen
+14,Laboratory Monitoring In Hospital > Coagulation,Findings 2,Prolonged PT / PTT
+14,Laboratory Monitoring In Hospital > Ferritin,Finding,Markedly elevated in severe dengue and HLH
+14,Laboratory Monitoring In Hospital > Renal,Findings 1,Elevated creatinine
+14,Laboratory Monitoring In Hospital > Renal,Findings 2,Proteinuria
+14,Laboratory Monitoring In Hospital > Renal,Findings 3,Hyponatremia
+14,Fluid Management Principles,Core Rule,Avoid fluid overload
+14,Fluid Management Principles,Risk,Capillary leak leads to fluid creep and respiratory worsening
+14,Fluid Management Principles > Fluids,Crystalloids 1,Normal saline
+14,Fluid Management Principles > Fluids,Crystalloids 2,Ringer lactate
+14,Fluid Management Principles > Fluids,Colloids 1,Dextran 40
+14,Fluid Management Principles > Fluids,Colloids 2,Polygeline
+14,Fluid Management Principles > Shock Resuscitation,Initial Bolus,10–20 mL/kg over 30 minutes
+14,Fluid Management Principles > Shock Resuscitation,Assessment 1,Hematocrit
+14,Fluid Management Principles > Shock Resuscitation,Assessment 2,Pulse pressure
+14,Fluid Management Principles > Shock Resuscitation,Assessment 3,Urine output
+14,General,Indications For Picu 1,Severe plasma leakage with hypoperfusion
+14,General,Indications For Picu 2,Fluid accumulation with respiratory distress
+14,General,Indications For Picu 3,Severe bleeding
+14,General,Indications For Picu 4,Myocardial dysfunction
+14,General,Indications For Picu 5,Acute kidney injury
+14,General,Indications For Picu 6,CNS dysfunction
+14,General,Indications For Picu 7,ALT or AST >1000 IU
+14,General,Indications For Picu 8,Dengue-associated HLH
+14,Discharge Criteria,Mandatory 1,Afebrile ≥24 hours without antipyretics
+14,Discharge Criteria,Mandatory 2,Improving appetite and general condition
+14,Discharge Criteria,Mandatory 3,Stable hematocrit or baseline value
+14,Discharge Criteria,Mandatory 4,No pleural effusion or ascites
+14,Discharge Criteria,Mandatory 5,Normal organ function tests
+14,Discharge Criteria,Mandatory 6,"Platelet count >50,000/mm³"
+14,Discharge Criteria,Mandatory 7,No complications
+14,General,Key Pediatric Chatbot Rules 1,Critical phase often begins when fever subsides
+14,General,Key Pediatric Chatbot Rules 2,Rising hematocrit with falling platelets is an emergency
+14,General,Key Pediatric Chatbot Rules 3,Children deteriorate rapidly—continuous monitoring is essential
+14,General,Key Pediatric Chatbot Rules 4,Avoid fluid overload at all costs
+14,General,Key Pediatric Chatbot Rules 5,Paracetamol only; NSAIDs are contraindicated
+15,Metadata,Document Type,Training Presentation
+15,Metadata,Topic,Dengue Fever
+15,Metadata,Year,2016
+15,Metadata,Intended Audience 1,Medical Officers
+15,Metadata,Intended Audience 2,Primary Health Care Staff
+15,Metadata,Intended Audience 3,Nursing Staff
+15,Metadata,Intended Audience 4,Public Health Workers
+15,Metadata,Data Source,ppt2016a.pdf
+15,Disease Identity,Name,Dengue Fever
+15,Disease Identity,Virus Family,Flaviviridae
+15,Disease Identity,Virus Genus,Flavivirus
+15,Disease Identity,Serotypes 1,DEN-1
+15,Disease Identity,Serotypes 2,DEN-2
+15,Disease Identity,Serotypes 3,DEN-3
+15,Disease Identity,Serotypes 4,DEN-4
+15,Disease Identity > Genotypes,Den-1,3
+15,Disease Identity > Genotypes,Den-2,2
+15,Disease Identity > Genotypes,Den-3,4
+15,Disease Identity > Genotypes,Den-4,4
+15,Clinical Course,Phases 1,Febrile phase
+15,Clinical Course,Phases 2,Critical phase
+15,Clinical Course,Phases 3,Convalescent phase
+15,Clinical Criteria > Dengue Fever,Definition,Acute febrile illness of 2–7 days duration
+15,Clinical Criteria > Dengue Fever,Required Features 1,Headache
+15,Clinical Criteria > Dengue Fever,Required Features 2,Retro-orbital pain
+15,Clinical Criteria > Dengue Fever,Required Features 3,Myalgia
+15,Clinical Criteria > Dengue Fever,Required Features 4,Arthralgia
+15,Clinical Criteria > Dengue Fever,Required Features 5,Rash
+15,Clinical Criteria > Dengue Fever,Required Features 6,Hemorrhagic manifestations
+15,Clinical Criteria > Dengue Fever,Minimum Required,Any two or more
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Criteria 1,Meets Dengue Fever criteria
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Criteria 2,Hemorrhagic manifestations
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Criteria 3,Platelet count <100000/cumm
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Criteria 4,Evidence of plasma leakage
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Plasma Leakage Indicators 1,≥20% rise in hematocrit
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Plasma Leakage Indicators 2,>20% fall in hematocrit after fluid replacement
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Plasma Leakage Indicators 3,Pleural effusion
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Plasma Leakage Indicators 4,Ascites
+15,Clinical Criteria > Dengue Hemorrhagic Fever,Plasma Leakage Indicators 5,Hypoproteinemia
+15,Clinical Criteria > Dengue Shock Syndrome,Definition,DHF with circulatory failure
+15,Clinical Criteria > Dengue Shock Syndrome,Shock Indicators 1,Rapid weak pulse
+15,Clinical Criteria > Dengue Shock Syndrome,Shock Indicators 2,Narrow pulse pressure ≤20 mmHg
+15,Clinical Criteria > Dengue Shock Syndrome,Shock Indicators 3,Hypotension for age
+15,Clinical Criteria > Dengue Shock Syndrome,Shock Indicators 4,Cold clammy skin
+15,Clinical Criteria > Dengue Shock Syndrome,Shock Indicators 5,Restlessness
+15,Expanded Dengue Syndrome,Description,Unusual or atypical organ involvement in DF/DHF
+15,Expanded Dengue Syndrome > Organ Involvement,Central Nervous System 1,Encephalopathy
+15,Expanded Dengue Syndrome > Organ Involvement,Central Nervous System 2,Encephalitis
+15,Expanded Dengue Syndrome > Organ Involvement,Central Nervous System 3,Febrile seizures
+15,Expanded Dengue Syndrome > Organ Involvement,Central Nervous System 4,Intracranial bleed
+15,Expanded Dengue Syndrome > Organ Involvement,Gastrointestinal 1,Acute hepatitis
+15,Expanded Dengue Syndrome > Organ Involvement,Gastrointestinal 2,Fulminant hepatic failure
+15,Expanded Dengue Syndrome > Organ Involvement,Gastrointestinal 3,Cholecystitis
+15,Expanded Dengue Syndrome > Organ Involvement,Gastrointestinal 4,Cholangitis
+15,Expanded Dengue Syndrome > Organ Involvement,Gastrointestinal 5,Acute pancreatitis
+15,Expanded Dengue Syndrome > Organ Involvement,Renal 1,Acute renal failure
+15,Expanded Dengue Syndrome > Organ Involvement,Renal 2,Hemolytic uremic syndrome
+15,Expanded Dengue Syndrome > Organ Involvement,Renal 3,Acute tubular necrosis
+15,Expanded Dengue Syndrome > Organ Involvement,Cardiac 1,Arrhythmia
+15,Expanded Dengue Syndrome > Organ Involvement,Cardiac 2,Cardiomyopathy
+15,Expanded Dengue Syndrome > Organ Involvement,Cardiac 3,Myocarditis
+15,Expanded Dengue Syndrome > Organ Involvement,Cardiac 4,Pericardial effusion
+15,Expanded Dengue Syndrome > Organ Involvement,Respiratory 1,Pulmonary edema
+15,Expanded Dengue Syndrome > Organ Involvement,Respiratory 2,ARDS
+15,Expanded Dengue Syndrome > Organ Involvement,Respiratory 3,Pulmonary hemorrhage
+15,Expanded Dengue Syndrome > Organ Involvement,Respiratory 4,Pleural effusion
+15,Expanded Dengue Syndrome > Organ Involvement,Ocular 1,Conjunctival bleed
+15,Expanded Dengue Syndrome > Organ Involvement,Ocular 2,Macular hemorrhage
+15,Expanded Dengue Syndrome > Organ Involvement,Ocular 3,Visual impairment
+15,Expanded Dengue Syndrome > Organ Involvement,Ocular 4,Optic neuritis
+15,Case Definition > Probable Case,Definition,Clinical dengue criteria met
+15,Case Definition > Probable Case,Note,Rapid Diagnostic Test (RDT) positive cases are considered probable due to low reliability
+15,Case Definition > Confirmed Case,Laboratory Confirmation 1,Virus isolation
+15,Case Definition > Confirmed Case,Laboratory Confirmation 2,IgM ELISA positive
+15,Case Definition > Confirmed Case,Laboratory Confirmation 3,NS1 antigen ELISA positive
+15,Case Definition > Confirmed Case,Laboratory Confirmation 4,Four-fold rise in IgG
+15,Case Definition > Confirmed Case,Laboratory Confirmation 5,PCR positive
+15,Diagnostic Testing > Early Phase,Days,1–5
+15,Diagnostic Testing > Early Phase,Tests 1,NS1 ELISA
+15,Diagnostic Testing > Late Phase,Day,≥5
+15,Diagnostic Testing > Late Phase,Tests 1,IgM MAC-ELISA
+15,Diagnostic Testing > Rdt Policy,Status,Not reliable
+15,Diagnostic Testing > Rdt Policy,Reason 1,High false positivity
+15,Diagnostic Testing > Rdt Policy,Reason 2,Variable sensitivity and specificity
+15,Diagnostic Testing > Rdt Policy,Reason 3,Batch-to-batch variation
+15,Case Classification > Mild Dengue,Management,Home management
+15,Case Classification > Mild Dengue,Features 1,No plasma leakage
+15,Case Classification > Mild Dengue,Features 2,Stable vitals
+15,Case Classification > Mild Dengue,Features 3,No organ involvement
+15,Case Classification > Moderate Dengue,Features 1,Warning signs
+15,Case Classification > Moderate Dengue,Features 2,Recurrent vomiting
+15,Case Classification > Moderate Dengue,Features 3,Abdominal pain
+15,Case Classification > Moderate Dengue,Features 4,Minor bleeding
+15,Case Classification > Moderate Dengue,Features 5,Pleural effusion or ascites
+15,Case Classification > Moderate Dengue,Management,Close monitoring / possible hospitalization
+15,Case Classification > Severe Dengue,Features 1,Significant hemorrhage
+15,Case Classification > Severe Dengue,Features 2,DHF III or IV
+15,Case Classification > Severe Dengue,Features 3,Shock
+15,Case Classification > Severe Dengue,Features 4,Severe organ involvement
+15,Case Classification > Severe Dengue,Features 5,Metabolic or electrolyte abnormalities
+15,Case Classification > Severe Dengue,Management,Tertiary level care
+15,General,Warning Signs 1,High grade fever
+15,General,Warning Signs 2,Severe abdominal pain
+15,General,Warning Signs 3,Persistent vomiting
+15,General,Warning Signs 4,Bleeding from any site
+15,General,Warning Signs 5,Decreased urine output
+15,General,Warning Signs 6,Respiratory distress
+15,General,Warning Signs 7,Convulsions or encephalopathy
+15,General,Warning Signs 8,Fluid overload
+15,General,Warning Signs 9,Plasma leakage
+15,General,Warning Signs 10,Shock or impending shock
+15,Treatment Principles,General 1,Adequate fluids
+15,Treatment Principles,General 2,Rest
+15,Treatment Principles,General 3,Paracetamol only
+15,Treatment Principles,Contraindicated 1,Aspirin
+15,Treatment Principles,Contraindicated 2,NSAIDs
+15,Treatment Principles,Monitoring 1,Blood pressure
+15,Treatment Principles,Monitoring 2,Hematocrit
+15,Treatment Principles,Monitoring 3,Platelet count
+15,Treatment Principles,Monitoring 4,Level of consciousness
+15,Severe Bleeding Management,Actions 1,Control bleeding immediately
+15,Severe Bleeding Management,Actions 2,Suspect internal bleeding
+15,Severe Bleeding Management,Actions 3,Urgent blood transfusion if needed
+15,Severe Bleeding Management,Platelet Transfusion Indications 1,Platelet count <10000/cumm without bleeding
+15,Severe Bleeding Management,Platelet Transfusion Indications 2,Thrombocytopenia with active bleeding
+15,Severe Bleeding Management,Platelet Transfusion Indications 3,Coagulopathy with prolonged shock
+15,Severe Bleeding Management,Important Note,Whole blood has no role in treating thrombocytopenia alone
+15,General,Discharge Criteria 1,Afebrile for ≥24 hours
+15,General,Discharge Criteria 2,No respiratory distress
+15,General,Discharge Criteria 3,Platelet count >50000/cumm
+15,General,Discharge Criteria 4,Good urine output
+15,General,Discharge Criteria 5,Return of appetite
+15,General,Discharge Criteria 6,Clinical improvement
+15,General,Discharge Criteria 7,At least 2–3 days after recovery from shock
+15,Follow Up,Home Managed Patients 1,Educate about danger signs
+15,Follow Up,Home Managed Patients 2,Review after 24 hours
+15,Follow Up,Hospitalized Patients 1,Daily hematocrit and platelet monitoring
+15,Follow Up,Hospitalized Patients 2,Repeat samples if tested within first 5 days
+15,General,Core Chatbot Rules 1,Critical phase often begins after fever subsides
+15,General,Core Chatbot Rules 2,Rising hematocrit + falling platelets = danger
+15,General,Core Chatbot Rules 3,Avoid aspirin and NSAIDs completely
+15,General,Core Chatbot Rules 4,Most dengue patients do NOT need platelet transfusion
+15,General,Core Chatbot Rules 5,Timely fluid management prevents death
+16,Metadata,Document Title,Dengue Fever – Epidemic Control Toolkit (Response Managers)
+16,Metadata,Last Update,2022-06-28
+16,Metadata,Issuing Context,Public Health / Humanitarian Response
+16,Metadata,Primary Users 1,Response managers
+16,Metadata,Primary Users 2,Public health officials
+16,Metadata,Primary Users 3,Red Cross / Red Crescent volunteers
+16,Metadata,Primary Users 4,Outbreak response teams
+16,Metadata,Scope 1,Case definitions
+16,Metadata,Scope 2,Epidemic thresholds
+16,Metadata,Scope 3,Risk factors
+16,Metadata,Scope 4,Transmission
+16,Metadata,Scope 5,Clinical features
+16,Metadata,Scope 6,Diagnosis
+16,Metadata,Scope 7,Treatment principles
+16,Metadata,Scope 8,Prevention and control
+16,Metadata,Scope 9,Community engagement
+16,Metadata,Scope 10,Monitoring and indicators
+16,Metadata,Scope 11,Cross-sector impact
+16,Key Facts,Annual Global Infections,390000000
+16,Key Facts,Annual Clinical Cases,96000000
+16,Key Facts,Annual Severe Cases,500000
+16,Key Facts,Case Fatality Rate Severe Percent,2.5
+16,Key Facts,High Burden Regions 1,Asia
+16,Key Facts,High Burden Regions 2,Latin America
+16,Key Facts,Epidemic Risk Condition,Presence of Aedes mosquito vector
+16,Infectious Agent,Name,Dengue virus
+16,Infectious Agent,Type,Virus
+16,Infectious Agent,Serotypes 1,DENV-1
+16,Infectious Agent,Serotypes 2,DENV-2
+16,Infectious Agent,Serotypes 3,DENV-3
+16,Infectious Agent,Serotypes 4,DENV-4
+16,Infectious Agent,Vector 1,Aedes aegypti
+16,Infectious Agent,Vector 2,Aedes albopictus
+16,Infectious Agent,Reservoir,Humans
+16,Transmission,Primary Mode,Vector-borne (mosquito bite)
+16,Transmission > Vector Behavior,Biting Time 1,Early morning
+16,Transmission > Vector Behavior,Biting Time 2,Evening before sunset
+16,Transmission > Vector Behavior,Feeding Pattern,Daytime feeder
+16,Transmission,Additional Modes 1,Congenital transmission (mother to child)
+16,Transmission,Additional Modes 2,Blood transfusion
+16,Transmission,Additional Modes 3,Organ transplantation
+16,Incubation And Infectiousness > Incubation Period Days,Typical,4–7
+16,Incubation And Infectiousness > Incubation Period Days,Range,3–10
+16,Incubation And Infectiousness > Infectious Period Human,Start,After first symptoms
+16,Incubation And Infectiousness > Infectious Period Human,Duration Days,4–5
+16,Incubation And Infectiousness > Infectious Period Human,Maximum Days,12
+16,Incubation And Infectiousness > Infectious Period Human,Mechanism,Transmission to mosquitoes during this period
+16,Case Definitions > Probable Dengue,Criteria 1,Fever
+16,Case Definitions > Probable Dengue,Criteria 2,"At least two of: nausea/vomiting, rash, aches and pains, positive tourniquet test, leukopenia, or warning signs"
+16,Case Definitions,Warning Signs 1,Abdominal pain or tenderness
+16,Case Definitions,Warning Signs 2,Persistent vomiting
+16,Case Definitions,Warning Signs 3,Clinical fluid accumulation
+16,Case Definitions,Warning Signs 4,Mucosal bleeding
+16,Case Definitions,Warning Signs 5,Lethargy
+16,Case Definitions,Warning Signs 6,Restlessness
+16,Case Definitions,Warning Signs 7,Liver enlargement >2 cm
+16,Case Definitions,Warning Signs 8,Laboratory: rising hematocrit with rapid platelet decrease
+16,Case Definitions > Confirmed Case,Definition,Probable case with laboratory confirmation
+16,Case Definitions,Community Case Definition Note,Broad simplified definitions recommended for community surveillance to maximize case detection
+16,Epidemic Thresholds,Local Level,Single dengue case may trigger action
+16,Epidemic Thresholds,Subnational Level 1,Increase above historical baseline
+16,Epidemic Thresholds,Subnational Level 2,Rising vector density
+16,Epidemic Thresholds,National Level Signals 1,Change in circulating serotype or genotype
+16,Epidemic Thresholds,National Level Signals 2,Increase in clinical severity
+16,Epidemic Thresholds,National Level Signals 3,Increase in seropositivity rate
+16,Epidemic Thresholds,National Level Signals 4,Introduction of vector into new ecological niche
+16,Risk Factors,Environmental 1,Rainfall
+16,Risk Factors,Environmental 2,High temperature
+16,Risk Factors,Environmental 3,High humidity
+16,Risk Factors,Environmental 4,Unplanned urbanization
+16,Risk Factors,Housing And Wash 1,Poor water supply
+16,Risk Factors,Housing And Wash 2,Inadequate waste management
+16,Risk Factors,Housing And Wash 3,Standing water in containers
+16,Risk Factors,Population Risks 1,Children
+16,Risk Factors,Population Risks 2,Elderly
+16,Risk Factors,Population Risks 3,People sleeping outdoors during daytime
+16,Risk Factors,Population Risks 4,Pregnant women
+16,Risk Factors,Population Risks 5,People requiring blood transfusion or organ transplant
+16,Risk Factors,Overcrowding,Increases outbreak risk
+16,Attack Rate,Typical Outbreak Percent,40–50%
+16,Attack Rate,Maximum Reported Percent,80–90%
+16,Attack Rate,Note,Varies by outbreak and population susceptibility
+16,Clinical Spectrum,Asymptomatic Percent,75
+16,Clinical Spectrum,Symptomatic Percent,25
+16,Clinical Spectrum > Typical Course > Stage 1,Description,Sudden onset fever with muscle and joint pain
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 1,Severe headache
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 2,Retro-orbital pain
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 3,Nausea
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 4,Vomiting
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 5,Swollen glands
+16,Clinical Spectrum > Typical Course > Stage 1,Additional Symptoms 6,Rash
+16,Clinical Spectrum > Typical Course > Stage 2,Timing Days,After 3–5 days
+16,Clinical Spectrum > Typical Course > Stage 2,Features 1,Second fever spike
+16,Clinical Spectrum > Typical Course > Stage 2,Features 2,Possible rash
+16,Clinical Spectrum > Severe Dengue,Percent,1–2%
+16,Clinical Spectrum > Severe Dengue,Features 1,Severe abdominal pain
+16,Clinical Spectrum > Severe Dengue,Features 2,Difficulty breathing
+16,Clinical Spectrum > Severe Dengue,Features 3,Life-threatening bleeding
+16,Clinical Spectrum > Severe Dengue,Highest Risk Scenario,Second infection with a different serotype
+16,General,Differential Diagnosis 1,Zika
+16,General,Differential Diagnosis 2,Chikungunya
+16,General,Differential Diagnosis 3,Yellow fever
+16,General,Differential Diagnosis 4,Lassa fever
+16,General,Differential Diagnosis 5,Crimean-Congo hemorrhagic fever
+16,General,Differential Diagnosis 6,Ebola
+16,General,Differential Diagnosis 7,Marburg
+16,General,Differential Diagnosis 8,Hantavirus pulmonary syndrome
+16,General,Differential Diagnosis 9,Malaria
+16,General,Differential Diagnosis 10,Typhoid fever
+16,Diagnosis,Molecular Tests 1,Nucleic acid amplification tests (NAATs)
+16,Diagnosis > Serology > Igm,Use,Important diagnostic tool
+16,Diagnosis > Serology > Igm,Limitation,Cross-reactivity with other flaviviruses
+16,Treatment And Care,Specific Treatment,None (no cure)
+16,Treatment And Care,Core Principles 1,Supportive care
+16,Treatment And Care,Core Principles 2,Early detection of severe cases
+16,Treatment And Care,Core Principles 3,Careful fluid management
+16,Treatment And Care,Medications To Avoid 1,Aspirin
+16,Treatment And Care,Medications To Avoid 2,Ibuprofen
+16,Treatment And Care,Medications To Avoid 3,Other NSAIDs
+16,Treatment And Care > Severe Dengue Outcome,Mortality Without Proper Care Percent,>20%
+16,Treatment And Care > Severe Dengue Outcome,Mortality With Good Care Percent,<1%
+16,Vaccination,Availability,True
+16,Vaccination,Schedule,"3 doses, 6 months apart"
+16,Vaccination,Age Group,9–45 years
+16,Vaccination,Safety Note,Risk in seronegative individuals
+16,Vaccination,Who Recommendation,Pre-vaccination screening strategy
+16,Vaccination,Integration Rule,Vaccination should complement vector control and clinical care
+16,Immunity > After Natural Infection,Same Serotype,Lifelong immunity
+16,Immunity > After Natural Infection,Other Serotypes,Partial and transient protection
+16,Immunity > Vaccine Efficacy,Overall Dengue Percent,59
+16,Immunity > Vaccine Efficacy,Severe Dengue Percent,79
+16,Prevention And Control,Most Effective Strategy,Elimination of mosquito breeding sites
+16,Prevention And Control,Environmental Measures 1,Cover water containers
+16,Prevention And Control,Environmental Measures 2,Empty and clean containers regularly
+16,Prevention And Control,Environmental Measures 3,Remove standing water in flowerpots
+16,Prevention And Control,Environmental Measures 4,Clean up used tyres
+16,Prevention And Control,Environmental Measures 5,Community clean-up campaigns
+16,Prevention And Control,Environmental Measures 6,Proper garbage disposal
+16,Prevention And Control,Personal Protection 1,Clothing that covers skin
+16,Prevention And Control,Personal Protection 2,Window and door screens
+16,Prevention And Control,Personal Protection 3,DEET-based repellents
+16,Prevention And Control,Personal Protection 4,Indoor residual spraying
+16,Prevention And Control,Personal Protection 5,Outdoor space spraying
+16,Prevention And Control > Larviciding,Use Case,Fixed and identifiable water bodies
+16,Prevention And Control > Larviciding,Limitation,Costly and less effective in scattered habitats
+16,General,Interventions Not Recommended 1,Night-time bednets (unless daytime sleepers or hospitalized patients)
+16,General,Interventions Not Recommended 2,Mosquito coils
+16,General,Interventions Not Recommended 3,Aerosol bug sprays
+16,Community And Risk Communication,Core Objectives 1,Promote preventive behaviors
+16,Community And Risk Communication,Core Objectives 2,Counter rumors and misinformation
+16,Community And Risk Communication,Core Objectives 3,Build trust in response activities
+16,Community And Risk Communication,Communication Channels 1,Social media
+16,Community And Risk Communication,Communication Channels 2,Face-to-face interactions
+16,Community And Risk Communication,Communication Channels 3,Community meetings
+16,Monitoring And Indicators,Epidemic Tracking 1,Weekly dengue cases
+16,Monitoring And Indicators,Epidemic Tracking 2,Weekly dengue hemorrhagic fever cases
+16,Monitoring And Indicators,Epidemic Tracking 3,Case fatality rate
+16,Monitoring And Indicators,Program Indicators 1,Number of volunteers trained
+16,Monitoring And Indicators,Program Indicators 2,Healthcare-seeking behavior for suspected dengue
+16,Monitoring And Indicators,Program Indicators 3,"Population knowledge of cause, symptoms, prevention"
+16,Monitoring And Indicators,Program Indicators 4,Vaccination coverage (if applicable)
+16,Cross Sector Impacts,Wash,Poor water and waste management increase breeding sites
+16,Cross Sector Impacts,Nutrition,Malnutrition increases severe dengue risk
+16,Cross Sector Impacts,Shelter,Outdoor daytime sleeping increases exposure
+16,Cross Sector Impacts,Mental Health 1,Anxiety
+16,Cross Sector Impacts,Mental Health 2,Fear of stigma
+16,Cross Sector Impacts,Mental Health 3,Stress during pregnancy
+16,Cross Sector Impacts > Gender,Children,Female children may experience more severe disease
+16,Cross Sector Impacts > Gender,Women,Risk of severe vaginal bleeding during menstruation or pregnancy
+16,Cross Sector Impacts > Gender,Programming Note,Gender-sensitive vector control approaches needed
+16,Cross Sector Impacts,Education 1,Schools without screens or covered containers increase risk
+16,Cross Sector Impacts,Education 2,Schools are key venues for health education
+16,Cross Sector Impacts,Livelihoods 1,Reduced productivity
+16,Cross Sector Impacts,Livelihoods 2,Loss of income due to illness
+16,General,Core Chatbot Rules 1,Single dengue case can trigger outbreak action
+16,General,Core Chatbot Rules 2,Second infection is the highest risk for severe dengue
+16,General,Core Chatbot Rules 3,Avoid NSAIDs and aspirin
+16,General,Core Chatbot Rules 4,Vector control is the most effective prevention
+16,General,Core Chatbot Rules 5,Early supportive care dramatically reduces mortality
+17,Metadata,Title,Dengue fever: a Wikipedia clinical review
+17,Metadata,Authors 1,James M. Heilman
+17,Metadata,Authors 2,Jacob De Wolff
+17,Metadata,Authors 3,Graham M. Beards
+17,Metadata,Authors 4,Brian J. Basden
+17,Metadata,Journal,Open Medicine
+17,Metadata,Year,2014
+17,Metadata,Volume,8
+17,Metadata,Issue,4
+17,Metadata,Pages,e105–e115
+17,Metadata,Article Type,Peer-reviewed clinical review
+17,Metadata,License,CC BY-SA 2.5
+17,Metadata,Intended Chatbot Use 1,Clinical education
+17,Metadata,Intended Chatbot Use 2,Public health
+17,Metadata,Intended Chatbot Use 3,Symptom triage
+17,Metadata,Intended Chatbot Use 4,Research assistance
+17,Disease Identity,Name,Dengue fever
+17,Disease Identity,Alternate Names 1,Break-bone fever
+17,Disease Identity,Alternate Names 2,Dandy fever
+17,Disease Identity,Category,Mosquito-borne viral disease
+17,Disease Identity,Neglected Tropical Disease,True
+17,Global Burden,Endemic Countries,>110
+17,Global Burden > Annual Infections Estimated,Min,50000000
+17,Global Burden > Annual Infections Estimated,Max,528000000
+17,Global Burden,Annual Hospitalizations,500000
+17,Global Burden,Annual Deaths,25000
+17,Global Burden,Population At Risk,≈2.5 billion
+17,Global Burden,Highest Burden Regions 1,South-East Asia
+17,Global Burden,Highest Burden Regions 2,Western Pacific
+17,Global Burden,Highest Burden Regions 3,Americas
+17,Global Burden,Highest Burden Regions 4,Africa
+17,Global Burden,Trend,30-fold increase since 1960
+17,Global Burden,Drivers 1,Urbanization
+17,Global Burden,Drivers 2,Population growth
+17,Global Burden,Drivers 3,International travel
+17,Global Burden,Drivers 4,Climate change
+17,Virology,Virus Name,Dengue virus (DENV)
+17,Virology,Family,Flaviviridae
+17,Virology,Genus,Flavivirus
+17,Virology > Genome,Type,Positive-sense single-stranded RNA
+17,Virology > Genome,Length Nucleotides,~11000
+17,Virology > Genome,Expression,Single polyprotein
+17,Virology > Proteins,Structural 1,Capsid (C)
+17,Virology > Proteins,Structural 2,pre-Membrane (prM)
+17,Virology > Proteins,Structural 3,Envelope (E)
+17,Virology > Proteins,Non Structural 1,NS1
+17,Virology > Proteins,Non Structural 2,NS2A
+17,Virology > Proteins,Non Structural 3,NS2B
+17,Virology > Proteins,Non Structural 4,NS3
+17,Virology > Proteins,Non Structural 5,NS4A
+17,Virology > Proteins,Non Structural 6,NS4B
+17,Virology > Proteins,Non Structural 7,NS5
+17,Virology,Serotypes 1,DENV-1
+17,Virology,Serotypes 2,DENV-2
+17,Virology,Serotypes 3,DENV-3
+17,Virology,Serotypes 4,DENV-4
+17,Virology,Serotypes 5,DENV-5 (reported 2013)
+17,Immunity And Risk > Primary Infection,Immunity,Lifelong to same serotype
+17,Immunity And Risk > Primary Infection,Severity,Usually mild or asymptomatic
+17,Immunity And Risk > Secondary Infection,Risk,High risk of severe dengue
+17,Immunity And Risk > Secondary Infection,Mechanism,Antibody-dependent enhancement (ADE)
+17,Immunity And Risk,Risk Factors For Severe Disease 1,Secondary infection
+17,Immunity And Risk,Risk Factors For Severe Disease 2,Female sex
+17,Immunity And Risk,Risk Factors For Severe Disease 3,High body mass index
+17,Immunity And Risk,Risk Factors For Severe Disease 4,High viral load
+17,Immunity And Risk,Risk Factors For Severe Disease 5,Young age (children)
+17,Immunity And Risk,Risk Factors For Severe Disease 6,"Chronic disease (diabetes, asthma)"
+17,Immunity And Risk,Risk Factors For Severe Disease 7,Certain genetic polymorphisms
+17,Immunity And Risk,Risk Factors For Severe Disease 8,G6PD deficiency
+17,Vectors And Transmission,Primary Vector,Aedes aegypti
+17,Vectors And Transmission,Secondary Vectors 1,Aedes albopictus
+17,Vectors And Transmission,Secondary Vectors 2,Aedes polynesiensis
+17,Vectors And Transmission,Secondary Vectors 3,Aedes scutellaris
+17,Vectors And Transmission,Vector Behavior 1,Daytime biting
+17,Vectors And Transmission,Vector Behavior 2,Peak activity early morning and evening
+17,Vectors And Transmission,Vector Behavior 3,Prefers human hosts
+17,Vectors And Transmission,Vector Behavior 4,Breeds in artificial water containers
+17,Vectors And Transmission > Geographic Range,Latitude,35°N–35°S
+17,Vectors And Transmission > Geographic Range,Altitude,<1000 meters
+17,Vectors And Transmission,Additional Transmission Routes 1,Blood transfusion
+17,Vectors And Transmission,Additional Transmission Routes 2,Organ transplantation
+17,Vectors And Transmission,Additional Transmission Routes 3,Vertical transmission (mother to child)
+17,Incubation And Course > Incubation Period Days,Range,3–14
+17,Incubation And Course > Incubation Period Days,Most Common,4–7
+17,Incubation And Course > Clinical Outcomes Distribution,Asymptomatic,≈80%
+17,Incubation And Course > Clinical Outcomes Distribution,Mild To Moderate,≈15%
+17,Incubation And Course > Clinical Outcomes Distribution,Severe,<5%
+17,Incubation And Course > Clinical Outcomes Distribution,Fatal,<1% with proper care
+17,Clinical Phases > Febrile Phase,Duration Days,2–7
+17,Clinical Phases > Febrile Phase,Features 1,High fever (>40°C)
+17,Clinical Phases > Febrile Phase,Features 2,Severe headache
+17,Clinical Phases > Febrile Phase,Features 3,Retro-orbital pain
+17,Clinical Phases > Febrile Phase,Features 4,Myalgia
+17,Clinical Phases > Febrile Phase,Features 5,Arthralgia
+17,Clinical Phases > Febrile Phase,Features 6,Nausea
+17,Clinical Phases > Febrile Phase,Features 7,Vomiting
+17,Clinical Phases > Febrile Phase,Features 8,Early rash
+17,Clinical Phases > Febrile Phase,Features 9,Leukopenia
+17,Clinical Phases > Critical Phase,Timing,As fever subsides
+17,Clinical Phases > Critical Phase,Duration Days,1–2
+17,Clinical Phases > Critical Phase,Hallmark,Plasma leakage
+17,Clinical Phases > Critical Phase,Features 1,Rising hematocrit
+17,Clinical Phases > Critical Phase,Features 2,Rapid platelet fall
+17,Clinical Phases > Critical Phase,Features 3,Pleural effusion
+17,Clinical Phases > Critical Phase,Features 4,Ascites
+17,Clinical Phases > Critical Phase,Features 5,Shock
+17,Clinical Phases > Critical Phase,Features 6,Severe bleeding
+17,Clinical Phases > Critical Phase,Features 7,Organ dysfunction
+17,Clinical Phases > Recovery Phase,Duration Days,2–3
+17,Clinical Phases > Recovery Phase,Features 1,Fluid reabsorption
+17,Clinical Phases > Recovery Phase,Features 2,Hemodynamic stabilization
+17,Clinical Phases > Recovery Phase,Features 3,Bradycardia
+17,Clinical Phases > Recovery Phase,Features 4,Severe itching
+17,Clinical Phases > Recovery Phase,Features 5,Convalescent rash
+17,Clinical Phases > Recovery Phase,Features 6,Fatigue (weeks in adults)
+17,General,Warning Signs 1,Worsening abdominal pain
+17,General,Warning Signs 2,Persistent vomiting
+17,General,Warning Signs 3,Mucosal bleeding
+17,General,Warning Signs 4,Lethargy or restlessness
+17,General,Warning Signs 5,Liver enlargement
+17,General,Warning Signs 6,Serosal effusion
+17,General,Warning Signs 7,High hematocrit with low platelets
+17,Complications,Hematologic 1,Severe thrombocytopenia
+17,Complications,Hematologic 2,Disseminated bleeding
+17,Complications,Neurologic 1,Encephalitis
+17,Complications,Neurologic 2,Encephalopathy
+17,Complications,Neurologic 3,Guillain–Barré syndrome
+17,Complications,Neurologic 4,Transverse myelitis
+17,Complications,Neurologic 5,Seizures
+17,Complications,Cardiac 1,Myocarditis
+17,Complications,Hepatic 1,Acute liver failure
+17,Complications,Renal 1,Acute kidney injury
+17,Pathophysiology,Initial Infection 1,Virus enters via mosquito saliva
+17,Pathophysiology,Initial Infection 2,Infects dendritic cells (Langerhans cells)
+17,Pathophysiology,Viral Entry Receptors 1,DC-SIGN
+17,Pathophysiology,Viral Entry Receptors 2,Mannose receptor
+17,Pathophysiology,Viral Entry Receptors 3,CLEC5A
+17,Pathophysiology,Severe Disease Mechanisms 1,Endothelial dysfunction
+17,Pathophysiology,Severe Disease Mechanisms 2,Capillary leakage
+17,Pathophysiology,Severe Disease Mechanisms 3,Bone marrow suppression
+17,Pathophysiology,Severe Disease Mechanisms 4,Immune-mediated coagulopathy
+17,Pathophysiology,Severe Disease Mechanisms 5,Cytokine storm
+17,Diagnosis,Clinical Criteria 1,"Fever plus two of: nausea/vomiting, rash, aches, leukopenia, positive tourniquet test, warning signs"
+17,Diagnosis,Laboratory Findings 1,Leukopenia (early)
+17,Diagnosis,Laboratory Findings 2,Thrombocytopenia
+17,Diagnosis,Laboratory Findings 3,Elevated AST/ALT
+17,Diagnosis,Laboratory Findings 4,Hemoconcentration
+17,Diagnosis,Laboratory Findings 5,Hypoalbuminemia
+17,Diagnosis > Confirmatory Tests,Early Phase 1,RT-PCR
+17,Diagnosis > Confirmatory Tests,Early Phase 2,Virus isolation
+17,Diagnosis > Confirmatory Tests,Early Phase 3,NS1 antigen detection
+17,Diagnosis > Confirmatory Tests,Late Phase 1,IgM ELISA
+17,Diagnosis > Confirmatory Tests,Late Phase 2,IgG serology (paired samples)
+17,Diagnosis > Test Performance Notes,Ns1 Sensitivity Primary,>90%
+17,Diagnosis > Test Performance Notes,Ns1 Sensitivity Secondary,60–80%
+17,Diagnosis > Test Performance Notes,Cross Reactivity,Possible with other flaviviruses
+17,Classification Systems > Who 2009,Uncomplicated Dengue,True
+17,Classification Systems > Who 2009,Severe Dengue 1,Severe plasma leakage
+17,Classification Systems > Who 2009,Severe Dengue 2,Severe bleeding
+17,Classification Systems > Who 2009,Severe Dengue 3,Severe organ involvement
+17,Classification Systems > Who 1997 Legacy,Grades 1,Grade I
+17,Classification Systems > Who 1997 Legacy,Grades 2,Grade II
+17,Classification Systems > Who 1997 Legacy,Grades 3,Grade III (shock)
+17,Classification Systems > Who 1997 Legacy,Grades 4,Grade IV (undetectable BP)
+17,Classification Systems > Who 1997 Legacy,Dengue Shock Syndrome 1,Grade III
+17,Classification Systems > Who 1997 Legacy,Dengue Shock Syndrome 2,Grade IV
+17,Treatment And Management,Antiviral Status,No specific antiviral therapy
+17,Treatment And Management,General Principles 1,Supportive care
+17,Treatment And Management,General Principles 2,Careful fluid management
+17,Treatment And Management,General Principles 3,Early detection of severe cases
+17,Treatment And Management,Home Management 1,Oral rehydration
+17,Treatment And Management,Home Management 2,Daily follow-up
+17,Treatment And Management,Home Management 3,Paracetamol only
+17,Treatment And Management,Hospital Management 1,IV fluids (minimal effective volume)
+17,Treatment And Management,Hospital Management 2,Monitor urine output (0.5–1 mL/kg/hr)
+17,Treatment And Management,Hospital Management 3,Monitor hematocrit and vitals
+17,Treatment And Management,Severe Dengue Management 1,ICU care
+17,Treatment And Management,Severe Dengue Management 2,Early blood transfusion if unstable
+17,Treatment And Management,Severe Dengue Management 3,Avoid invasive procedures
+17,Treatment And Management,Contraindicated 1,Aspirin
+17,Treatment And Management,Contraindicated 2,Ibuprofen
+17,Treatment And Management,Contraindicated 3,NSAIDs
+17,Treatment And Management,Contraindicated 4,Intramuscular injections
+17,Prognosis,Overall Recovery,Most recover fully
+17,Prognosis,Mortality Severe,1–5%
+17,Prognosis,Mortality Shock Without Care,Up to 26%
+17,Prognosis,Long Term Effects 1,Prolonged fatigue
+17,Prognosis,Long Term Effects 2,Cognitive complaints (rare)
+17,Prevention And Control,Vaccine Status 2014,No approved vaccine
+17,Prevention And Control,Primary Strategy,Vector control
+17,Prevention And Control,Vector Control Measures 1,Eliminate standing water
+17,Prevention And Control,Vector Control Measures 2,Environmental modification
+17,Prevention And Control,Vector Control Measures 3,"Biological control (fish, copepods)"
+17,Prevention And Control,Vector Control Measures 4,Wolbachia-based mosquito control
+17,Prevention And Control,Personal Protection 1,Protective clothing
+17,Prevention And Control,Personal Protection 2,Repellents
+17,Prevention And Control,Personal Protection 3,Screens
+17,Prevention And Control,Personal Protection 4,Air-conditioned or netted rooms
+17,Prevention And Control,Spraying Note,Generalized insecticide spraying has limited effectiveness
+17,Public Health Notes,Urban Association,True
+17,Public Health Notes,Traveler Risk,Second most common cause of fever after malaria
+17,Public Health Notes,Surveillance Importance,True
+17,General,Core Chatbot Rules 1,Most dengue infections are asymptomatic
+17,General,Core Chatbot Rules 2,Warning signs appear as fever subsides
+17,General,Core Chatbot Rules 3,Secondary infection carries highest risk
+17,General,Core Chatbot Rules 4,Avoid NSAIDs and aspirin
+17,General,Core Chatbot Rules 5,Early fluid management saves lives
+17,General,Core Chatbot Rules 6,Vector control is the cornerstone of prevention
+18,Metadata,Document Title,Guideline for the Management of Dengue Fever in Children
+18,Metadata,Country,Maldives
+18,Metadata,Year,2022
+18,Metadata,Issuing Authority,"Ministry of Health, Republic of Maldives"
+18,Metadata,Document Number,MOH-QA/G/22/117-0
+18,Metadata,Primary Focus,Pediatric dengue management
+18,Metadata,Target Users 1,Doctors
+18,Metadata,Target Users 2,Nurses
+18,Metadata,Target Users 3,Peripheral health centers
+18,Metadata,Target Users 4,Referral hospitals
+18,Metadata,Target Users 5,Clinical decision-support systems
+18,Epidemiological Context,Endemic Status,Highly endemic
+18,Epidemiological Context > Major Outbreaks 1,Year,2011
+18,Epidemiological Context > Major Outbreaks 1,Note,Largest epidemic
+18,Epidemiological Context > Major Outbreaks 2,Year,2015
+18,Epidemiological Context > Major Outbreaks 2,Deaths,8
+18,Epidemiological Context > Major Outbreaks 3,Year,2016
+18,Epidemiological Context > Major Outbreaks 3,Deaths,4
+18,Epidemiological Context,Notable Case,Congenital dengue death reported in 2017
+18,Epidemiological Context,Seasonality,Increases after rainy season
+18,Virology,Virus Family,Flaviviridae
+18,Virology,Genome,Single-stranded RNA
+18,Virology,Serotypes 1,DENV-1
+18,Virology,Serotypes 2,DENV-2
+18,Virology,Serotypes 3,DENV-3
+18,Virology,Serotypes 4,DENV-4
+18,Virology > Immunity,Same Serotype,Lifelong
+18,Virology > Immunity,Other Serotypes,Short-term partial immunity
+18,Virology > Immunity,Maximum Lifetime Infections,4
+18,Vector Characteristics,Primary Vectors 1,Aedes aegypti
+18,Vector Characteristics,Primary Vectors 2,Aedes albopictus
+18,Vector Characteristics > Behavior,Biting Time 1,Sunrise
+18,Vector Characteristics > Behavior,Biting Time 2,Early evening
+18,Vector Characteristics > Behavior,Feeding Pattern,Multiple humans in a single feed
+18,Vector Characteristics > Behavior,Resting Sites 1,Under tables
+18,Vector Characteristics > Behavior,Resting Sites 2,Shoes
+18,Vector Characteristics > Behavior,Resting Sites 3,Dark clothes
+18,Vector Characteristics > Behavior,Resting Sites 4,Damp indoor areas
+18,Vector Characteristics > Behavior > Flight Range Meters,Typical,100
+18,Vector Characteristics > Behavior > Flight Range Meters,Maximum,200
+18,Vector Characteristics > Breeding,Water Type,Clean stagnant water
+18,Vector Characteristics > Breeding,Egg Survival,Up to 1 year in dry conditions
+18,Vector Characteristics > Breeding,Hatching Time Days,7
+18,Natural History,Phases 1,Febrile
+18,Natural History,Phases 2,Critical
+18,Natural History,Phases 3,Recovery
+18,Natural History,Key Principle,Incorrect fluid management during critical phase causes mortality
+18,Clinical Phases > Febrile Phase,Duration Days,2–7
+18,Clinical Phases > Febrile Phase,Features 1,High fever (may be biphasic)
+18,Clinical Phases > Febrile Phase,Features 2,Myalgia
+18,Clinical Phases > Febrile Phase,Features 3,Headache
+18,Clinical Phases > Febrile Phase,Features 4,Retro-orbital pain
+18,Clinical Phases > Febrile Phase,Features 5,Arthralgia
+18,Clinical Phases > Febrile Phase,Features 6,Maculopapular rash
+18,Clinical Phases > Febrile Phase,Features 7,Epistaxis
+18,Clinical Phases > Febrile Phase,Features 8,Pharyngitis
+18,Clinical Phases > Febrile Phase,Features 9,Febrile seizures
+18,Clinical Phases > Febrile Phase,Laboratory Trend,WBC drops before platelets
+18,Clinical Phases > Critical Phase,Timing,At fever defervescence
+18,Clinical Phases > Critical Phase,Duration Hours,24–48
+18,Clinical Phases > Critical Phase,Hallmark,Plasma leakage
+18,Clinical Phases > Critical Phase,Signs 1,Pleural effusion
+18,Clinical Phases > Critical Phase,Signs 2,Ascites
+18,Clinical Phases > Critical Phase,Signs 3,Periorbital edema
+18,Clinical Phases > Critical Phase,Signs 4,Rising hematocrit >20%
+18,Clinical Phases > Critical Phase,Signs 5,Narrow pulse pressure <20 mmHg
+18,Clinical Phases > Critical Phase,Shock Note,Child may appear well despite compensated shock
+18,Clinical Phases > Recovery Phase,Duration Days,2–3
+18,Clinical Phases > Recovery Phase,Features 1,Improving appetite
+18,Clinical Phases > Recovery Phase,Features 2,Diuresis
+18,Clinical Phases > Recovery Phase,Features 3,Falling hematocrit
+18,Clinical Phases > Recovery Phase,Features 4,Rising platelets
+18,Clinical Phases > Recovery Phase,Features 5,Severe itching (palms and soles)
+18,Clinical Phases > Recovery Phase,Features 6,Bradycardia
+18,Clinical Phases > Recovery Phase,Risk,Fluid overload if IV fluids not reduced
+18,Severity Classification > Dengue Without Danger Signs,Features 1,High fever 39–40°C
+18,Severity Classification > Dengue Without Danger Signs,Features 2,Headache
+18,Severity Classification > Dengue Without Danger Signs,Features 3,Retro-orbital pain
+18,Severity Classification > Dengue Without Danger Signs,Features 4,Myalgia
+18,Severity Classification > Dengue Without Danger Signs,Features 5,Rash
+18,Severity Classification > Dengue Without Danger Signs,Features 6,Biphasic fever
+18,Severity Classification > Dengue Without Danger Signs,Note,Fever >6 days suggests alternate diagnosis
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 1,Persistent vomiting
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 2,Severe abdominal pain
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 3,Unable to take orally
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 4,Bleeding from any site
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 5,Severe lethargy
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 6,Restlessness
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 7,Pleural effusion
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 8,Ascites
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 9,Tender hepatomegaly
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 10,Rapid platelet fall
+18,Severity Classification > Dengue With Danger Signs,Danger Signs 11,Rising hematocrit
+18,Severity Classification > Severe Dengue,Criteria 1,Severe plasma leakage
+18,Severity Classification > Severe Dengue,Criteria 2,Severe bleeding
+18,Severity Classification > Severe Dengue,Criteria 3,Severe organ involvement
+18,Shock Definition > Compensated Shock,Features 1,Tachycardia
+18,Shock Definition > Compensated Shock,Features 2,Pulse pressure <20 mmHg
+18,Shock Definition > Compensated Shock,Features 3,Normal systolic BP
+18,Shock Definition > Decompensated Shock,Features 1,Hypotension
+18,Shock Definition > Decompensated Shock,Features 2,Cold peripheries
+18,Shock Definition > Decompensated Shock,Features 3,Altered sensorium
+18,Shock Definition > Decompensated Shock,Features 4,Prolonged CRT
+18,General,High Risk Groups 1,Infants
+18,General,High Risk Groups 2,Elderly
+18,General,High Risk Groups 3,Pregnant patients
+18,General,High Risk Groups 4,Expatriate workers
+18,General,High Risk Groups 5,G6PD deficiency
+18,General,High Risk Groups 6,Obesity
+18,General,High Risk Groups 7,Beta thalassemia major
+18,General,High Risk Groups 8,Congenital heart disease
+18,General,High Risk Groups 9,Chronic kidney disease
+18,General,High Risk Groups 10,Diabetes mellitus
+18,General,High Risk Groups 11,Patients on NSAIDs or steroids
+18,Diagnosis,Clinical Basis,Diagnosis can be made without serology
+18,Diagnosis,Initial Investigations 1,CBC
+18,Diagnosis,Initial Investigations 2,Platelet count
+18,Diagnosis,Initial Investigations 3,Hematocrit
+18,Diagnosis > Laboratory Trends,Leukopenia,Appears first
+18,Diagnosis > Laboratory Trends,Thrombocytopenia,Falls after afebrile phase
+18,Diagnosis > Laboratory Trends > Hematocrit,Increase,Plasma leakage
+18,Diagnosis > Laboratory Trends > Hematocrit,Decrease,Bleeding
+18,Diagnosis,Imaging 1,Right lateral decubitus chest X-ray
+18,Diagnosis,Imaging 2,"Abdominal ultrasound (gall bladder edema, ascites)"
+18,Diagnosis > Serology Notes,Ns1,"Early positive, reduced in secondary infection"
+18,Diagnosis > Serology Notes,Igm,May be absent in 20% of secondary infections
+18,Diagnosis > Serology Notes,Igg,Rises rapidly in secondary infection
+18,Diagnosis > Serology Notes,Warning,Do not rely solely on serology
+18,Home Management,Allowed,Only if no danger signs
+18,Home Management,Instructions 1,Adequate rest
+18,Home Management,Instructions 2,Paracetamol only (no NSAIDs)
+18,Home Management,Instructions 3,ORS preferred fluid
+18,Home Management,Instructions 4,Avoid dark/red fluids if vomiting
+18,Home Management,Instructions 5,Return immediately if danger signs appear
+18,Home Management,Instructions 6,Review if fever >3 days
+18,Fluid Management Principles,Preferred Fluids,Isotonic crystalloids
+18,Fluid Management Principles,Infant Exception,0.45% DNS for <6 months
+18,Fluid Management Principles,Bolus Response,Most shock responds to 10 ml/kg NS
+18,Fluid Management Principles > Max Iv Duration Post Afebrile,Shock,≤48 hours
+18,Fluid Management Principles > Max Iv Duration Post Afebrile,Non Shock,≤72 hours
+18,Fluid Management Principles,Platelet Transfusion,Not routinely recommended
+18,Shock Management,Initial Bolus,10–20 ml/kg normal saline
+18,Shock Management > Third Bolus,Type,Dextran 40
+18,Shock Management > Third Bolus,Dose,10 ml/kg
+18,Shock Management > Third Bolus,Max Frequency,3 times per 24 hours
+18,Shock Management > Bleeding Management,Indication,Falling HCT with shock
+18,Shock Management > Bleeding Management,Treatment,Packed cells or whole blood 10 ml/kg
+18,Organ Involvement Management,Encephalopathy 1,Head elevation 30°
+18,Organ Involvement Management,Encephalopathy 2,Early intubation
+18,Organ Involvement Management,Encephalopathy 3,Minimal IV fluids (<80% maintenance)
+18,Organ Involvement Management,Encephalopathy 4,Dexamethasone
+18,Organ Involvement Management,Encephalopathy 5,Anticonvulsants
+18,Organ Involvement Management,Encephalopathy 6,Lactulose if ammonia elevated
+18,Organ Involvement Management,Renal Failure,Early renal replacement if needed
+18,Organ Involvement Management,Hepatic Failure,Monitor AST/ALT (>1000 severe)
+18,Fluid Overload,Early Signs 1,Puffy eyelids
+18,Fluid Overload,Early Signs 2,Ascites
+18,Fluid Overload,Early Signs 3,Dyspnea
+18,Fluid Overload,Management 1,Reduce fluids
+18,Fluid Overload,Management 2,Frusemide 0.5–1 mg/kg
+18,Fluid Overload,Management 3,Colloids preferred if shock persists
+18,General,Discharge Criteria 1,Afebrile >24 hours
+18,General,Discharge Criteria 2,Improved appetite
+18,General,Discharge Criteria 3,Good urine output
+18,General,Discharge Criteria 4,No respiratory distress
+18,General,Discharge Criteria 5,"Platelets >50,000/mm3"
+18,General,Discharge Criteria 6,≥2–3 days post-shock recovery
+18,General,Common Misconceptions 1,Platelet count predicts bleeding severity
+18,General,Common Misconceptions 2,Serology mandatory for diagnosis
+18,General,Common Misconceptions 3,NSAIDs are safe in dengue
+18,General,Common Misconceptions 4,Hematocrit is less important than platelets
+18,General,Common Misconceptions 5,More fluids always improve outcomes
+18,Referral Rules,Must Refer 1,Severe dengue
+18,Referral Rules,Must Refer 2,High-risk patients needing special care
+18,Referral Rules,Transport Requirements 1,Stabilize before transfer
+18,Referral Rules,Transport Requirements 2,IV fluids running
+18,Referral Rules,Transport Requirements 3,Continuous monitoring
+18,Referral Rules,Transport Requirements 4,Trained escort
+18,Referral Rules,Transport Requirements 5,Complete documentation
+18,General,Core Chatbot Rules 1,Critical phase starts when fever subsides
+18,General,Core Chatbot Rules 2,Pulse pressure <20 mmHg is an emergency
+18,General,Core Chatbot Rules 3,Paracetamol is the only antipyretic
+18,General,Core Chatbot Rules 4,Hematocrit guides fluid vs blood decisions
+18,General,Core Chatbot Rules 5,Overhydration kills as often as underhydration
+18,General,Core Chatbot Rules 6,Most pediatric dengue deaths are preventable
+19,Metadata,Title,"Dengue: Guidelines for Diagnosis, Treatment, Prevention and Control"
+19,Metadata,Edition,New edition
+19,Metadata,Year,2009
+19,Metadata,Publisher,World Health Organization
+19,Metadata,Isbn,978-92-4-154787-1
+19,Metadata,Expiry Note,"Expected validity until 2014, subject to new evidence"
+19,Metadata,Document Scope 1,Epidemiology
+19,Metadata,Document Scope 2,Clinical management
+19,Metadata,Document Scope 3,Vector control
+19,Metadata,Document Scope 4,Laboratory diagnosis
+19,Metadata,Document Scope 5,Surveillance and outbreak response
+19,Metadata,Document Scope 6,Vaccines and antivirals
+19,Metadata,Intended Users 1,Clinicians
+19,Metadata,Intended Users 2,Laboratory personnel
+19,Metadata,Intended Users 3,Vector control staff
+19,Metadata,Intended Users 4,Public health officials
+19,Metadata,Intended Users 5,Researchers
+19,Metadata,Intended Users 6,National guideline developers
+19,Disease Identity,Name,Dengue
+19,Disease Identity,Category,Arthropod-borne viral disease
+19,Disease Identity,Family,Flaviviridae
+19,Disease Identity,Genus,Flavivirus
+19,Disease Identity,Serotypes 1,DENV-1
+19,Disease Identity,Serotypes 2,DENV-2
+19,Disease Identity,Serotypes 3,DENV-3
+19,Disease Identity,Serotypes 4,DENV-4
+19,Disease Identity,Main Vector,Aedes aegypti
+19,Global Epidemiology,Trend,Most rapidly spreading mosquito-borne viral disease
+19,Global Epidemiology,Incidence Increase,≈30-fold increase in last 50 years
+19,Global Epidemiology,Annual Infections Estimate,50000000
+19,Global Epidemiology,Population At Risk,2500000000
+19,Global Epidemiology,Endemic Regions 1,South-East Asia
+19,Global Epidemiology,Endemic Regions 2,Western Pacific
+19,Global Epidemiology,Endemic Regions 3,Americas
+19,Global Epidemiology,Endemic Regions 4,Africa
+19,Global Epidemiology,Endemic Regions 5,Eastern Mediterranean
+19,Global Epidemiology,Non Endemic Region,Europe (imported cases only)
+19,Global Epidemiology,Urban Rural Shift,Expansion from urban to rural areas
+19,Global Epidemiology,Epidemic Pattern,Cyclical outbreaks every 3–5 years
+19,Burden Of Disease,Dalys Global 2001,528
+19,Burden Of Disease,Children Risk,Higher risk of severe dengue
+19,Burden Of Disease > Case Fatality Rate,With Proper Management,<1%
+19,Burden Of Disease > Case Fatality Rate,Poor Access To Care,3–5% in focal outbreaks
+19,Burden Of Disease > Economic Costs,Ambulatory Case Usd,514
+19,Burden Of Disease > Economic Costs,Hospitalized Case Usd,1491
+19,Burden Of Disease > Economic Costs,Average Case Cost Usd,828
+19,Burden Of Disease > Economic Costs,Estimated Annual Reported Cost Usd,440000000
+19,Burden Of Disease,Underreporting,Major limitation in burden estimation
+19,Virus Characteristics,Genome,Positive-sense single-stranded RNA
+19,Virus Characteristics,Particle Size Nm,50
+19,Virus Characteristics,Structural Proteins 1,Capsid (C)
+19,Virus Characteristics,Structural Proteins 2,prM/M
+19,Virus Characteristics,Structural Proteins 3,Envelope (E)
+19,Virus Characteristics,Non Structural Proteins 1,NS1
+19,Virus Characteristics,Non Structural Proteins 2,NS2A
+19,Virus Characteristics,Non Structural Proteins 3,NS2B
+19,Virus Characteristics,Non Structural Proteins 4,NS3
+19,Virus Characteristics,Non Structural Proteins 5,NS4A
+19,Virus Characteristics,Non Structural Proteins 6,NS4B
+19,Virus Characteristics,Non Structural Proteins 7,NS5
+19,Virus Characteristics,Genetic Variability,Multiple genotypes within each serotype
+19,Virus Characteristics,High Risk Genotypes 1,Asian genotype DENV-2
+19,Virus Characteristics,High Risk Genotypes 2,Asian genotype DENV-3
+19,Transmission Cycle,Primary Host,Humans
+19,Transmission Cycle,Vector,Female Aedes mosquitoes
+19,Transmission Cycle,Extrinsic Incubation Days,8–12
+19,Transmission Cycle,Intrinsic Incubation Days,4–10
+19,Transmission Cycle,Vector Behavior 1,Highly anthropophilic
+19,Transmission Cycle,Vector Behavior 2,Multiple bites per feeding cycle
+19,Transmission Cycle,Vector Behavior 3,Indoor resting
+19,Transmission Cycle,Vector Behavior 4,Daytime biting
+19,Transmission Cycle,Vertical Transmission,"Rare, limited epidemiological significance"
+19,Transmission Cycle,Sylvatic Cycle,Exists in parts of Africa and Asia
+19,Host And Immunity > Primary Infection,Outcome,Often asymptomatic or mild
+19,Host And Immunity > Primary Infection,Immunity,Lifelong to same serotype
+19,Host And Immunity > Secondary Infection,Risk,Major risk factor for severe dengue
+19,Host And Immunity > Secondary Infection,Mechanism,Antibody-dependent enhancement (ADE)
+19,Host And Immunity,Infant Risk,Severe dengue in infants born to immune mothers
+19,Host And Immunity,Host Risk Factors 1,Secondary infection
+19,Host And Immunity,Host Risk Factors 2,Young age
+19,Host And Immunity,Host Risk Factors 3,"Chronic diseases (asthma, diabetes, sickle cell disease)"
+19,Host And Immunity,Host Risk Factors 4,Genetic background
+19,Pathophysiology,Key Mechanisms 1,High viral load
+19,Pathophysiology,Key Mechanisms 2,Immune activation
+19,Pathophysiology,Key Mechanisms 3,Cytokine and chemokine imbalance
+19,Pathophysiology,Key Mechanisms 4,Endothelial dysfunction
+19,Pathophysiology,Plasma Leakage,"Functional, reversible endothelial changes"
+19,Pathophysiology,Thrombocytopenia Causes 1,Bone marrow suppression
+19,Pathophysiology,Thrombocytopenia Causes 2,Platelet destruction
+19,Pathophysiology,Thrombocytopenia Causes 3,Peripheral consumption
+19,Pathophysiology,Severe Outcomes 1,Shock
+19,Pathophysiology,Severe Outcomes 2,Severe bleeding
+19,Pathophysiology,Severe Outcomes 3,Organ impairment
+19,Clinical Spectrum,Asymptomatic,Majority of infections
+19,Clinical Spectrum,Non Severe Dengue,Self-limiting febrile illness
+19,Clinical Spectrum,Severe Dengue,"Plasma leakage, bleeding, or organ failure"
+19,Who 2009 Case Classification > Probable Dengue,Criteria 1,Residence or travel to endemic area
+19,Who 2009 Case Classification > Probable Dengue,Criteria 2,Fever
+19,Who 2009 Case Classification > Probable Dengue,Criteria 3,At least 2 clinical features
+19,Who 2009 Case Classification > Probable Dengue,Clinical Features 1,Nausea/vomiting
+19,Who 2009 Case Classification > Probable Dengue,Clinical Features 2,Rash
+19,Who 2009 Case Classification > Probable Dengue,Clinical Features 3,Aches and pains
+19,Who 2009 Case Classification > Probable Dengue,Clinical Features 4,Positive tourniquet test
+19,Who 2009 Case Classification > Probable Dengue,Clinical Features 5,Leukopenia
+19,Who 2009 Case Classification,Warning Signs 1,Abdominal pain or tenderness
+19,Who 2009 Case Classification,Warning Signs 2,Persistent vomiting
+19,Who 2009 Case Classification,Warning Signs 3,Clinical fluid accumulation
+19,Who 2009 Case Classification,Warning Signs 4,Mucosal bleeding
+19,Who 2009 Case Classification,Warning Signs 5,Lethargy or restlessness
+19,Who 2009 Case Classification,Warning Signs 6,Liver enlargement >2 cm
+19,Who 2009 Case Classification,Warning Signs 7,Rising hematocrit with rapid platelet drop
+19,Who 2009 Case Classification > Severe Dengue,Criteria 1,Severe plasma leakage leading to shock or respiratory distress
+19,Who 2009 Case Classification > Severe Dengue,Criteria 2,Severe bleeding
+19,Who 2009 Case Classification > Severe Dengue,Criteria 3,Severe organ involvement
+19,Who 2009 Case Classification > Severe Dengue > Organ Involvement Thresholds,Liver,AST or ALT ≥1000
+19,Who 2009 Case Classification > Severe Dengue > Organ Involvement Thresholds,Cns,Impaired consciousness
+19,Who 2009 Case Classification > Severe Dengue > Organ Involvement Thresholds,Heart,Myocardial dysfunction
+19,Clinical Management Principles,Core Strategy,Early recognition and careful fluid management
+19,Clinical Management Principles,Treatment Type,Supportive care only
+19,Clinical Management Principles,Key Message,Incorrect fluid therapy is a major cause of death
+19,Fluid Management,Therapy Of Choice,Isotonic crystalloid solutions
+19,Fluid Management,Shock Management,Prompt IV fluid resuscitation
+19,Fluid Management,Monitoring Parameters 1,Hematocrit
+19,Fluid Management,Monitoring Parameters 2,Urine output
+19,Fluid Management,Monitoring Parameters 3,Vital signs
+19,Fluid Management,Monitoring Parameters 4,Pulse pressure
+19,Fluid Management,Overhydration Risk,High during recovery phase
+19,Laboratory Diagnosis,Early Phase Tests 1,Virus isolation
+19,Laboratory Diagnosis,Early Phase Tests 2,RT-PCR
+19,Laboratory Diagnosis,Early Phase Tests 3,NS1 antigen detection
+19,Laboratory Diagnosis,Late Phase Tests 1,IgM ELISA
+19,Laboratory Diagnosis,Late Phase Tests 2,IgG serology (paired samples)
+19,Laboratory Diagnosis,Hematological Findings 1,Leukopenia
+19,Laboratory Diagnosis,Hematological Findings 2,Thrombocytopenia
+19,Laboratory Diagnosis,Hematological Findings 3,Hemoconcentration
+19,Laboratory Diagnosis,Diagnostic Note,Laboratory confirmation not always required for clinical management
+19,Vector Control,Core Strategy,Integrated Vector Management (IVM)
+19,Vector Control,Methods 1,Source reduction
+19,Vector Control,Methods 2,Environmental management
+19,Vector Control,Methods 3,Biological control
+19,Vector Control,Methods 4,Chemical control
+19,Vector Control,Methods 5,Personal protection
+19,Vector Control,Key Limitation,Insecticide spraying alone is insufficient
+19,Vector Control,Community Role,Essential for sustainable control
+19,Surveillance And Response,Surveillance Types 1,Epidemiological
+19,Surveillance And Response,Surveillance Types 2,Entomological
+19,Surveillance And Response,Surveillance Types 3,Virological
+19,Surveillance And Response,Outbreak Response 1,Early detection
+19,Surveillance And Response,Outbreak Response 2,Rapid case management scale-up
+19,Surveillance And Response,Outbreak Response 3,Intensified vector control
+19,Surveillance And Response,Outbreak Response 4,Risk communication
+19,Surveillance And Response,International Health Regulations,Dengue may constitute a public health emergency of international concern
+19,Vaccines And Antivirals > Status 2009,Licensed Vaccine,None
+19,Vaccines And Antivirals > Status 2009,Licensed Antiviral,None
+19,Vaccines And Antivirals,Research Focus 1,Live attenuated vaccines
+19,Vaccines And Antivirals,Research Focus 2,Tetravalent vaccine formulations
+19,Vaccines And Antivirals,Research Focus 3,Antiviral drug development
+19,General,Core Chatbot Rules 1,Dengue is one disease with variable severity
+19,General,Core Chatbot Rules 2,Warning signs appear near fever defervescence
+19,General,Core Chatbot Rules 3,Secondary infection increases severity risk
+19,General,Core Chatbot Rules 4,Early IV fluids reduce mortality dramatically
+19,General,Core Chatbot Rules 5,Overhydration is as dangerous as underhydration
+19,General,Core Chatbot Rules 6,Vector control is the foundation of prevention
+20,Metadata > Sources 1,Title,Dengue Fever
+20,Metadata > Sources 1,Journal,Journal of Islamabad Medical & Dental College
+20,Metadata > Sources 1,Year,2012
+20,Metadata > Sources 1,Pages,41–47
+20,Metadata > Sources 1,Article Type,Review article
+20,Metadata > Sources 1,Geographic Focus,Pakistan
+20,Metadata > Sources 2,Title,"Dengue infection: global importance, immunopathology and management"
+20,Metadata > Sources 2,Journal,Clinical Medicine (Royal College of Physicians)
+20,Metadata > Sources 2,Year,2022
+20,Metadata > Sources 2,Volume Issue,22(1)
+20,Metadata > Sources 2,Pages,9–13
+20,Metadata > Sources 2,Article Type,CME review
+20,Metadata > Sources 2,Geographic Focus,Global
+20,Metadata,Intended Chatbot Use 1,Clinical education
+20,Metadata,Intended Chatbot Use 2,Symptom triage
+20,Metadata,Intended Chatbot Use 3,Disease explanation
+20,Metadata,Intended Chatbot Use 4,Decision-support
+20,Disease Identity,Name,Dengue fever
+20,Disease Identity,Alternate Names 1,Breakbone fever
+20,Disease Identity,Alternate Names 2,Dandy fever
+20,Disease Identity,Disease Type,Arboviral infection
+20,Disease Identity,Family,Flaviviridae
+20,Disease Identity,Genus,Flavivirus
+20,Global And Regional Burden,Global Status,Hyperendemic in tropical and subtropical regions
+20,Global And Regional Burden,Annual Infections Estimate,100–400 million
+20,Global And Regional Burden,Population At Risk,Nearly 50% of world population
+20,Global And Regional Burden,Countries Endemic,>110
+20,Global And Regional Burden,Annual Deaths Estimate,"12,500–25,000"
+20,Global And Regional Burden,Trend,≈30-fold increase from 1960 to 2010
+20,Global And Regional Burden > Pakistan Context,First Dhf Outbreak,1994
+20,Global And Regional Burden > Pakistan Context,Major Outbreaks 1,2006
+20,Global And Regional Burden > Pakistan Context,Major Outbreaks 2,2011
+20,Global And Regional Burden > Pakistan Context,Peak Season,Post-monsoon
+20,Global And Regional Burden > Pakistan Context,Dominant Serotypes 1,DENV-2
+20,Global And Regional Burden > Pakistan Context,Dominant Serotypes 2,DENV-3
+20,Virology,Virus Name,Dengue virus (DENV)
+20,Virology > Genome,Type,Single-stranded positive-sense RNA
+20,Virology > Genome,Length Bases,"≈10,700"
+20,Virology,Serotypes 1,DENV-1
+20,Virology,Serotypes 2,DENV-2
+20,Virology,Serotypes 3,DENV-3
+20,Virology,Serotypes 4,DENV-4
+20,Virology > Proteins,Structural 1,Capsid (C)
+20,Virology > Proteins,Structural 2,prM/M
+20,Virology > Proteins,Structural 3,Envelope (E)
+20,Virology > Proteins,Non Structural 1,NS1
+20,Virology > Proteins,Non Structural 2,NS2A
+20,Virology > Proteins,Non Structural 3,NS2B
+20,Virology > Proteins,Non Structural 4,NS3
+20,Virology > Proteins,Non Structural 5,NS4A
+20,Virology > Proteins,Non Structural 6,NS4B
+20,Virology > Proteins,Non Structural 7,NS5
+20,Virology > Immunity,Same Serotype,Lifelong immunity
+20,Virology > Immunity,Other Serotypes,Temporary partial protection
+20,Virology > Immunity,Secondary Infection Risk,High risk of severe dengue
+20,Vectors And Transmission,Primary Vector,Aedes aegypti
+20,Vectors And Transmission,Secondary Vector,Aedes albopictus
+20,Vectors And Transmission,Vector Characteristics 1,Daytime biter
+20,Vectors And Transmission,Vector Characteristics 2,Highly domestic
+20,Vectors And Transmission,Vector Characteristics 3,Breeds in clean stagnant water
+20,Vectors And Transmission,Vector Characteristics 4,Eggs survive months in dry conditions
+20,Vectors And Transmission,Transmission Cycles 1,Urban/epidemic cycle
+20,Vectors And Transmission,Transmission Cycles 2,Rural/endemic cycle
+20,Vectors And Transmission,Transmission Cycles 3,Sylvatic (forest) cycle
+20,Vectors And Transmission > Human Viremia,Starts,2 days before fever
+20,Vectors And Transmission > Human Viremia,Duration Days,5–7 after fever onset
+20,Incubation And Natural History > Incubation Period Days,Range,3–14
+20,Incubation And Natural History > Incubation Period Days,Typical,3–7
+20,Incubation And Natural History,Infection Outcomes 1,Asymptomatic
+20,Incubation And Natural History,Infection Outcomes 2,Undifferentiated febrile illness
+20,Incubation And Natural History,Infection Outcomes 3,Dengue fever (DF)
+20,Incubation And Natural History,Infection Outcomes 4,Dengue hemorrhagic fever (DHF)
+20,Incubation And Natural History,Infection Outcomes 5,Dengue shock syndrome (DSS)
+20,Incubation And Natural History,Infection Outcomes 6,Expanded dengue syndrome
+20,Clinical Phases > Febrile Phase,Duration Days,3–7
+20,Clinical Phases > Febrile Phase,Features 1,High spiking fever
+20,Clinical Phases > Febrile Phase,Features 2,Headache
+20,Clinical Phases > Febrile Phase,Features 3,Retro-orbital pain
+20,Clinical Phases > Febrile Phase,Features 4,Myalgia
+20,Clinical Phases > Febrile Phase,Features 5,Arthralgia
+20,Clinical Phases > Febrile Phase,Features 6,Backache
+20,Clinical Phases > Febrile Phase,Features 7,Anorexia
+20,Clinical Phases > Febrile Phase,Features 8,Nausea
+20,Clinical Phases > Febrile Phase,Features 9,Skin flushing
+20,Clinical Phases > Febrile Phase,Features 10,Morbilliform rash
+20,Clinical Phases > Febrile Phase,Features 11,Leukopenia
+20,Clinical Phases > Critical Phase,Timing,At defervescence
+20,Clinical Phases > Critical Phase,Duration Hours,24–48
+20,Clinical Phases > Critical Phase,Hallmark,Plasma leakage
+20,Clinical Phases > Critical Phase,Features 1,Rising hematocrit (>20%)
+20,Clinical Phases > Critical Phase,Features 2,Rapid platelet fall
+20,Clinical Phases > Critical Phase,Features 3,Narrow pulse pressure
+20,Clinical Phases > Critical Phase,Features 4,Pleural effusion
+20,Clinical Phases > Critical Phase,Features 5,Ascites
+20,Clinical Phases > Critical Phase,Features 6,Shock
+20,Clinical Phases > Critical Phase,Note,Patient may worsen when fever subsides
+20,Clinical Phases > Recovery Phase,Features 1,Reabsorption of extravascular fluid
+20,Clinical Phases > Recovery Phase,Features 2,Improving appetite
+20,Clinical Phases > Recovery Phase,Features 3,Polyuria
+20,Clinical Phases > Recovery Phase,Features 4,Itchy rash
+20,Clinical Phases > Recovery Phase,Features 5,Bradycardia
+20,Clinical Phases > Recovery Phase,Features 6,Rising WBC then platelets
+20,Clinical Phases > Recovery Phase,Risk,Fluid overload if IV fluids continued
+20,General,Warning Signs 1,Severe abdominal pain
+20,General,Warning Signs 2,Persistent vomiting
+20,General,Warning Signs 3,Bleeding from mucosa
+20,General,Warning Signs 4,Restlessness or lethargy
+20,General,Warning Signs 5,Hepatomegaly
+20,General,Warning Signs 6,Clinical fluid accumulation
+20,General,Warning Signs 7,Rapid platelet drop with rising hematocrit
+20,Dengue Hemorrhagic Fever,Diagnostic Criteria 1,Fever (2–7 days)
+20,Dengue Hemorrhagic Fever,Diagnostic Criteria 2,Hemorrhagic manifestations
+20,Dengue Hemorrhagic Fever,Diagnostic Criteria 3,Thrombocytopenia
+20,Dengue Hemorrhagic Fever,Diagnostic Criteria 4,Evidence of plasma leakage
+20,Dengue Hemorrhagic Fever > Grading,Grade I–Ii,DHF
+20,Dengue Hemorrhagic Fever > Grading,Grade Iii–Iv,Dengue shock syndrome (DSS)
+20,Expanded Dengue Syndrome,Neurological 1,Encephalitis
+20,Expanded Dengue Syndrome,Neurological 2,Encephalopathy
+20,Expanded Dengue Syndrome,Neurological 3,Guillain–Barré syndrome
+20,Expanded Dengue Syndrome,Hepatic 1,Severe hepatitis
+20,Expanded Dengue Syndrome,Hepatic 2,Fulminant liver failure
+20,Expanded Dengue Syndrome,Renal 1,Nephritis
+20,Expanded Dengue Syndrome,Renal 2,Acute kidney injury
+20,Expanded Dengue Syndrome,Cardiac 1,Myocarditis
+20,Expanded Dengue Syndrome,Cardiac 2,Pericarditis
+20,Expanded Dengue Syndrome,Others 1,Myositis
+20,Expanded Dengue Syndrome,Others 2,Hemophagocytic syndrome
+20,Pathophysiology,Key Mechanisms 1,Antibody-dependent enhancement (ADE)
+20,Pathophysiology,Key Mechanisms 2,Cytokine storm
+20,Pathophysiology,Key Mechanisms 3,Endothelial dysfunction
+20,Pathophysiology,Key Mechanisms 4,Bone marrow suppression
+20,Pathophysiology,Key Mechanisms 5,Platelet destruction
+20,Pathophysiology,Plasma Leak,"Selective, transient, non-inflammatory"
+20,Pathophysiology,Bleeding Causes 1,Vasculopathy
+20,Pathophysiology,Bleeding Causes 2,Thrombocytopenia
+20,Pathophysiology,Bleeding Causes 3,Platelet dysfunction
+20,Pathophysiology,Bleeding Causes 4,Coagulopathy
+20,Laboratory Diagnosis,Early Phase Tests 1,RT-PCR
+20,Laboratory Diagnosis,Early Phase Tests 2,NS1 antigen detection
+20,Laboratory Diagnosis,Late Phase Tests 1,IgM ELISA
+20,Laboratory Diagnosis,Late Phase Tests 2,IgG ELISA
+20,Laboratory Diagnosis,Late Phase Tests 3,IgM/IgG ratio
+20,Laboratory Diagnosis > Interpretation Rules,Primary Infection,IgM/IgG ratio >1.2
+20,Laboratory Diagnosis > Interpretation Rules,Secondary Infection,IgM/IgG ratio <1.2
+20,Laboratory Diagnosis > Typical Lab Findings,Df 1,Leukopenia
+20,Laboratory Diagnosis > Typical Lab Findings,Df 2,Mild thrombocytopenia
+20,Laboratory Diagnosis > Typical Lab Findings,Df 3,Mild AST elevation
+20,Laboratory Diagnosis > Typical Lab Findings,Dhf 1,Marked thrombocytopenia
+20,Laboratory Diagnosis > Typical Lab Findings,Dhf 2,Hemoconcentration
+20,Laboratory Diagnosis > Typical Lab Findings,Dhf 3,Hypoalbuminemia
+20,Laboratory Diagnosis > Typical Lab Findings,Dhf 4,Elevated AST > ALT
+20,Laboratory Diagnosis > Typical Lab Findings,Dhf 5,Coagulation abnormalities
+20,Management Principles,Antiviral,None available
+20,Management Principles,Core Strategy,Early detection and careful fluid management
+20,Management Principles,Allowed Antipyretic,Paracetamol only
+20,Management Principles,Contraindicated 1,Aspirin
+20,Management Principles,Contraindicated 2,NSAIDs
+20,Management Principles,Contraindicated 3,Intramuscular injections
+20,Fluid Management,First Line,Isotonic crystalloids
+20,Fluid Management,Target Urine Output,≥0.5 mL/kg/hour
+20,Fluid Management,Colloids,Second line if crystalloids fail
+20,Fluid Management,Monitoring 1,Vital signs
+20,Fluid Management,Monitoring 2,Hematocrit
+20,Fluid Management,Monitoring 3,Urine output
+20,Fluid Management,Monitoring 4,Pulse pressure
+20,Blood Products,Platelet Transfusion,Only for active severe bleeding
+20,Blood Products,Ffp,For coagulopathy with bleeding
+20,Blood Products,Prophylactic Use,Not recommended
+20,Special Populations,Pregnancy,High-risk; multidisciplinary care required
+20,Special Populations,Infants,Risk due to maternal antibodies
+20,Special Populations,Secondary Infections,Higher severity risk
+20,Prevention And Control,Vector Control 1,Source reduction
+20,Prevention And Control,Vector Control 2,Environmental management
+20,Prevention And Control,Vector Control 3,Personal protection
+20,Prevention And Control,Emerging Strategies 1,Genetically modified mosquitoes
+20,Prevention And Control,Emerging Strategies 2,Wolbachia-infected mosquitoes
+20,Prevention And Control > Vaccine Status,Licensed,Limited and controversial
+20,Prevention And Control > Vaccine Status,Challenge,Need for tetravalent protection
+20,General,Core Chatbot Rules 1,Fever subsidence can mark clinical worsening
+20,General,Core Chatbot Rules 2,Rising hematocrit is more critical than platelet count
+20,General,Core Chatbot Rules 3,Secondary infection increases severity risk
+20,General,Core Chatbot Rules 4,Plasma leakage lasts 24–48 hours
+20,General,Core Chatbot Rules 5,Overhydration is dangerous during recovery
+20,General,Core Chatbot Rules 6,Early fluid management saves lives

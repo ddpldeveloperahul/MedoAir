@@ -3,6 +3,7 @@ Unified Views - All API views consolidated into one file using APIView pattern
 """
 
 from django.shortcuts import get_object_or_404,render
+from django.http import HttpResponse
 
 from rest_framework.views import APIView # type: ignore
 from rest_framework.response import Response # type: ignore
@@ -11,20 +12,426 @@ from rest_framework import status # type: ignore
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken # type: ignore
 from django.utils import timezone
+from django.utils.dateparse import parse_date
 from django.core.mail import send_mail
 from django.conf import settings
 import random
+import re
 import string
 from .models import *
 from .serializers import *
+from .health_tracking_service import health_tracking_ai_service
+from .ml_service import disease_prediction_service
+from .document_reader import document_reader_service
+from .clinical_document_ai import clinical_document_ai_service
+from .weekly_report_pdf import build_weekly_report_pdf
 from django.db.models import Q, Count
+from rest_framework.exceptions import ValidationError
 
 from .permissions import IsSuperAdmin
+from django.views.decorators.csrf import csrf_exempt
 
 
-
+@csrf_exempt
 def home(request):
     return render(request, 'home.html')
+
+
+def _flatten_validation_errors(detail):
+    if isinstance(detail, dict):
+        parts = []
+        for key, value in detail.items():
+            child = _flatten_validation_errors(value)
+            if child:
+                parts.append(f"{key}: {child}")
+        return " | ".join(parts)
+    if isinstance(detail, list):
+        return " ".join(_flatten_validation_errors(item) for item in detail if _flatten_validation_errors(item))
+    return str(detail)
+
+
+@csrf_exempt
+
+def ai_assistant_page(request):
+    return render(request, 'ai_assistant.html')
+
+
+def ai_daily_dashboard_page(request):
+    return render(request, 'ai_daily_dashboard.html')
+
+
+def ai_medicines_page(request):
+    return render(request, 'ai_medicines.html')
+
+
+def ai_weekly_report_page(request):
+    return render(request, 'ai_weekly_report.html')
+
+
+def ai_patient_timeline_page(request):
+    return render(request, 'ai_patient_timeline.html')
+
+
+class DiseasePredictionMetadataAPIView(APIView):
+    permission_classes = [AllowAny]
+    @csrf_exempt
+    def get(self, request):
+        try:
+            return Response({
+                "message": "Disease prediction model metadata fetched successfully",
+                "data": disease_prediction_service.metadata(),
+                "note": "This model provides symptom-based suggestions only and is not a medical diagnosis."
+            }, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class DiseasePredictionAPIView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        try:
+            serializer = DiseasePredictionRequestSerializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+
+            symptoms = serializer.validated_data.get("symptoms") or []
+            symptoms_text = serializer.validated_data.get("symptoms_text", "")
+            top_k = serializer.validated_data.get("top_k", 3)
+
+            if symptoms_text:
+                text_symptoms = [
+                    item.strip()
+                    for item in re.split(r"[\n,]+", symptoms_text)
+                    if item.strip()
+                ]
+                symptoms.extend(text_symptoms)
+
+            result = disease_prediction_service.predict(symptoms=symptoms, top_k=top_k)
+
+            return Response({
+                "message": "Disease prediction generated successfully",
+                "data": result,
+                "note": "This is an AI-based prediction and should not replace professional medical advice."
+            }, status=status.HTTP_200_OK)
+        except ValidationError as e:
+            return Response({
+                "error": _flatten_validation_errors(e.detail),
+                "errors": e.detail,
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except ValueError as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class AIAssistantAPIView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        try:
+            serializer = AIAssistantMessageSerializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            payload = serializer.validated_data
+            attachment = payload.get("attachment")
+            extracted_text = document_reader_service.extract_text(attachment) if attachment else ""
+            attachment_context = document_reader_service.build_attachment_context(attachment, extracted_text) if attachment else {}
+            extracted_medicines = clinical_document_ai_service.extract_prescription_medicines(extracted_text) if extracted_text else []
+            extracted_metrics = clinical_document_ai_service.extract_lab_metrics(extracted_text) if extracted_text else []
+
+            combined_message_parts = [payload.get("message", "")]
+            if extracted_text:
+                combined_message_parts.append(extracted_text)
+
+            combined_message = "\n".join(part for part in combined_message_parts if part).strip()
+            combined_symptoms_text = payload.get("symptoms_text", "")
+            if extracted_text:
+                combined_symptoms_text = "\n".join(part for part in [combined_symptoms_text, extracted_text] if part).strip()
+
+            result = disease_prediction_service.assistant_reply(
+                message=combined_message,
+                symptoms=payload.get("symptoms") or [],
+                symptoms_text=combined_symptoms_text,
+                notes=payload.get("notes", ""),
+                log_date=payload.get("log_date"),
+                food_type=payload.get("food_type", ""),
+                water_intake_glasses=payload.get("water_intake_glasses"),
+                sleep_hours=payload.get("sleep_hours"),
+                sleep_quality=payload.get("sleep_quality", ""),
+                stress_level=payload.get("stress_level", ""),
+                energy_level=payload.get("energy_level", ""),
+                top_k=payload.get("top_k", 3),
+            )
+            analysis_record = AIAnalysisRecord.objects.create(
+                user=request.user if request.user.is_authenticated else None,
+                log_date=payload.get("log_date"),
+                input_message=payload.get("message", ""),
+                symptoms=payload.get("symptoms") or [],
+                symptoms_text=payload.get("symptoms_text", ""),
+                notes=payload.get("notes", ""),
+                food_type=payload.get("food_type", ""),
+                water_intake_glasses=payload.get("water_intake_glasses"),
+                sleep_hours=payload.get("sleep_hours"),
+                sleep_quality=payload.get("sleep_quality", ""),
+                stress_level=payload.get("stress_level", ""),
+                energy_level=payload.get("energy_level", ""),
+                matched_symptoms=result.get("matched_symptoms") or [],
+                detected_problem=result.get("detected_problem") or "",
+                risk_probability=result.get("prediction", {}).get("confidence") or 0,
+                model_name=result.get("prediction", {}).get("model") or "LogisticRegression",
+                top_predictions=result.get("prediction", {}).get("top_predictions") or [],
+                reference_symptoms=result.get("dataset_reference_symptoms") or [],
+                care_guidance=result.get("care_guidance") or [],
+                medicine_guidance=result.get("medicine_guidance") or [],
+                warning_signs=result.get("warning_signs") or [],
+                submitted_context=(result.get("submitted_context") or []) + (
+                    [f"Attachment reviewed: {attachment_context.get('filename')}"] if attachment_context.get("filename") else []
+                ),
+                follow_up_questions=result.get("follow_up_questions") or [],
+                assistant_response=result.get("assistant_response") or "",
+                response_language=result.get("response_language") or "english",
+            )
+
+            result["risk_probability"] = result.get("prediction", {}).get("confidence") or 0
+            result["analysis_record"] = AIAnalysisRecordSerializer(analysis_record).data
+            result["attachment_context"] = attachment_context
+            result["attachment_analysis"] = {
+                "medicines": extracted_medicines,
+                "report_metrics": extracted_metrics,
+            }
+            attachment_read_detail = ""
+            if attachment_context.get("filename"):
+                attachment_read_detail = f" after reading {attachment_context.get('filename')}"
+            result["analysis_steps"] = [
+                {
+                    "step": "User enters symptoms",
+                    "status": "completed",
+                    "detail": payload.get("message") or payload.get("symptoms_text") or attachment_context.get("filename") or "Symptoms received successfully.",
+                },
+                {
+                    "step": "System stores symptom data",
+                    "status": "completed",
+                    "detail": f"Analysis record #{analysis_record.id} saved for future health tracking.",
+                },
+                {
+                    "step": "AI engine analyzes patterns",
+                    "status": "completed",
+                    "detail": f"{result.get('prediction', {}).get('model', 'AI model')} matched symptom patterns from the dataset{attachment_read_detail}.",
+                },
+                {
+                    "step": "Platform provides disease insight and risk probability",
+                    "status": "completed",
+                    "detail": f"{result.get('detected_problem', 'Insight ready')} with {result.get('prediction', {}).get('confidence', 0)}% risk probability.",
+                },
+            ]
+
+            return Response({
+                "message": "AI assistant response generated successfully",
+                "data": result,
+            }, status=status.HTTP_200_OK)
+        except ValidationError as e:
+            return Response({
+                "error": _flatten_validation_errors(e.detail),
+                "errors": e.detail,
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except ValueError as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class AIDailyCheckInAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        requested_date = parse_date(request.GET.get("log_date", "")) or timezone.localdate()
+        dashboard = health_tracking_ai_service.build_daily_dashboard(request.user, requested_date)
+        return Response({
+            "message": "Today's AI health dashboard fetched successfully",
+            "data": dashboard,
+        }, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        requested_date = request.data.get("log_date") or timezone.localdate()
+        existing_log = DailyHealthLog.objects.filter(
+            user=request.user,
+            log_date=requested_date,
+        ).first()
+
+        serializer = DailyHealthLogSerializer(existing_log, data=request.data, partial=bool(existing_log))
+        serializer.is_valid(raise_exception=True)
+        daily_log = serializer.save(user=request.user)
+
+        dashboard = health_tracking_ai_service.build_daily_dashboard(request.user, daily_log.log_date)
+        return Response({
+            "message": "Daily health check-in saved successfully",
+            "data": {
+                "log": DailyHealthLogSerializer(daily_log).data,
+                "dashboard": dashboard,
+            },
+        }, status=status.HTTP_200_OK)
+
+
+class AIMedicationAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        medications = MedicationSchedule.objects.filter(user=request.user).order_by("-created_at")
+        serializer = MedicationScheduleSerializer(medications, many=True)
+        return Response({
+            "message": "Medicine schedules fetched successfully",
+            "data": serializer.data,
+        }, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        serializer = MedicationScheduleSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        medication = serializer.save(user=request.user)
+        return Response({
+            "message": "Medicine schedule created successfully",
+            "data": MedicationScheduleSerializer(medication).data,
+        }, status=status.HTTP_201_CREATED)
+
+
+class AIMedicationPrescriptionExtractAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        serializer = PrescriptionUploadSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        attachment = serializer.validated_data["attachment"]
+        extracted_text = document_reader_service.extract_text(attachment)
+        medicines = clinical_document_ai_service.extract_prescription_medicines(extracted_text)
+
+        return Response({
+            "message": "Prescription analyzed successfully",
+            "data": {
+                "filename": attachment.name,
+                "extracted_text_preview": extracted_text[:500] + ("..." if len(extracted_text) > 500 else ""),
+                "medicines": medicines,
+            },
+        }, status=status.HTTP_200_OK)
+
+
+class AIMedicationPrescriptionSaveAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        serializer = PrescriptionMedicationSaveSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        start_date = serializer.validated_data["start_date"]
+        created = []
+        for item in serializer.validated_data["medicines"]:
+            medication = MedicationSchedule.objects.create(
+                user=request.user,
+                name=item["name"],
+                dose=item.get("dose", ""),
+                duration_days=item.get("duration_days", 5),
+                timings=item.get("timings") or ["morning", "night"],
+                start_date=start_date,
+                instructions=item.get("instructions", ""),
+                source="prescription_upload",
+            )
+            created.append(MedicationScheduleSerializer(medication).data)
+
+        return Response({
+            "message": "Prescription medicines saved successfully",
+            "data": created,
+        }, status=status.HTTP_201_CREATED)
+
+
+class AIMedicationDoseStatusAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, medication_id):
+        medication = get_object_or_404(MedicationSchedule, id=medication_id, user=request.user)
+        serializer = MedicationDoseStatusSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        timing = serializer.validated_data["timing"]
+        if timing not in medication.timings:
+            return Response({
+                "error": "This timing is not configured for the selected medicine."
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        dose_date = serializer.validated_data.get("dose_date") or timezone.localdate()
+        dose_log, _ = MedicationDoseLog.objects.update_or_create(
+            medication=medication,
+            dose_date=dose_date,
+            timing=timing,
+            defaults={
+                "status": serializer.validated_data["status"],
+                "marked_at": timezone.now(),
+            },
+        )
+
+        dashboard = health_tracking_ai_service.build_daily_dashboard(request.user, dose_date)
+        return Response({
+            "message": "Medicine dose updated successfully",
+            "data": {
+                "dose_log": MedicationDoseLogSerializer(dose_log).data,
+                "dashboard": dashboard,
+            },
+        }, status=status.HTTP_200_OK)
+
+
+class AIWeeklyHealthReportAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        requested_end_date = parse_date(request.GET.get("end_date", "")) or timezone.localdate()
+        report = health_tracking_ai_service.build_weekly_report(request.user, requested_end_date)
+        return Response({
+            "message": "Weekly AI health report generated successfully",
+            "data": report,
+        }, status=status.HTTP_200_OK)
+
+
+class AIWeeklyHealthReportPDFAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        requested_end_date = parse_date(request.GET.get("end_date", "")) or timezone.localdate()
+        report = health_tracking_ai_service.build_weekly_report(request.user, requested_end_date)
+        pdf_bytes = build_weekly_report_pdf(
+            report,
+            patient_label=request.user.email,
+            end_date=requested_end_date,
+        )
+        response = HttpResponse(pdf_bytes, content_type="application/pdf")
+        response["Content-Disposition"] = (
+            f'attachment; filename="medoair-weekly-report-{requested_end_date.isoformat()}.pdf"'
+        )
+        return response
+
+
+class AIPatientTimelineAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, patient_id):
+        patient_user = get_object_or_404(User, id=patient_id, role='patient')
+
+        has_access = (
+            request.user.id == patient_user.id
+            or request.user.is_staff
+            or (
+                request.user.role == 'doctor'
+                and Appointment.objects.filter(
+                    doctor=request.user,
+                    patient=patient_user,
+                ).exists()
+            )
+        )
+
+        if not has_access:
+            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+
+        timeline = health_tracking_ai_service.build_doctor_timeline(patient_user)
+        return Response({
+            "message": "Patient AI timeline fetched successfully",
+            "data": timeline,
+        }, status=status.HTTP_200_OK)
 
 # ============== AUTHENTICATION VIEWS ==============
 

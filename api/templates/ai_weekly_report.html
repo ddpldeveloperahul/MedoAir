@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir Weekly Health Report</title>
+    <style>
+        :root { --panel: rgba(255,252,248,0.92); --card: rgba(255,255,255,0.84); --text:#173540; --muted:#6b8188; --line:rgba(23,53,64,0.12); --brand:#0f726d; --brand-deep:#0d4f61; --accent:#de7f57; --shadow:0 24px 52px rgba(13,49,60,0.12); }
+        * { box-sizing:border-box; }
+        body { margin:0; font-family:"Segoe UI Variable Display","Aptos",sans-serif; font-size:15px; color:var(--text); background:linear-gradient(160deg,#f6efe7 0%,#efe4d5 45%,#e9f3ef 100%); }
+        .shell { width:min(1180px,calc(100vw - 20px)); margin:10px auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:14px; }
+        .side,.main { background:var(--panel); border:1px solid rgba(255,255,255,0.55); box-shadow:var(--shadow); backdrop-filter:blur(12px); }
+        .side { border-radius:24px; padding:18px; display:flex; flex-direction:column; gap:14px; }
+        .main { border-radius:26px; overflow:hidden; min-height:calc(100vh - 20px); }
+        .nav { display:flex; flex-wrap:wrap; gap:10px; }
+        .nav a,.ghost,button,input { font:inherit; }
+        .nav a,.ghost { text-decoration:none; color:var(--text); padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.76); border:1px solid var(--line); }
+        .hero { padding:18px 22px; border-bottom:1px solid var(--line); background:linear-gradient(135deg,rgba(255,255,255,0.5),rgba(15,114,109,0.07)); }
+        .hero h1 { margin:0; } .hero p { margin:8px 0 0; color:var(--muted); }
+        .toolbar,.content { padding:16px 22px; }
+        .toolbar { border-bottom:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:center; }
+        .toolbar-actions { display:flex; gap:10px; flex-wrap:wrap; }
+        input { width:100%; border:1px solid var(--line); border-radius:12px; background:white; padding:10px 12px; }
+        .primary { border:0; background:linear-gradient(135deg,var(--brand),var(--brand-deep)); color:white; border-radius:12px; padding:10px 14px; cursor:pointer; font-weight:700; }
+        .content { display:grid; gap:14px; }
+        .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; }
+        .card h3 { margin:0 0 12px; }
+        .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+        .stat { background:white; border:1px solid var(--line); border-radius:14px; padding:13px; }
+        .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; }
+        .value { margin-top:6px; font-size:1.2rem; font-weight:700; }
+        .chips,.list { display:flex; flex-wrap:wrap; gap:10px; }
+        .chip { padding:7px 11px; border-radius:999px; background:rgba(222,127,87,0.12); border:1px solid rgba(222,127,87,0.18); }
+        .row-item { display:flex; justify-content:space-between; gap:10px; padding:10px 12px; border-radius:14px; background:white; border:1px solid var(--line); }
+        .bar { height:10px; border-radius:999px; background:#edf0f1; overflow:hidden; margin-top:8px; }
+        .bar > span { display:block; height:100%; background:linear-gradient(135deg,var(--brand),var(--accent)); border-radius:999px; }
+        .muted { color:var(--muted); }
+        @media (max-width:1000px) { .shell { grid-template-columns:1fr; } }
+        @media (max-width:760px) { .stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .toolbar { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <aside class="side">
+            <div>
+                <h2 style="margin:0;font:700 2.3rem Georgia,serif;">Weekly report.</h2>
+                <p class="muted">Lifestyle summary, trends, issues detected, and actions.</p>
+            </div>
+            <div class="nav">
+                <a href="{% url 'ai-assistant-page' %}">Assistant</a>
+                <a href="{% url 'ai-daily-dashboard-page' %}">Dashboard</a>
+                <a href="{% url 'ai-medicines-page' %}">Medicines</a>
+                <a href="{% url 'ai-weekly-report-page' %}">Weekly report</a>
+                <a href="{% url 'ai-patient-timeline-page' %}">Doctor timeline</a>
+            </div>
+            <div class="card">
+                <label for="tokenInput">JWT Access Token</label>
+                <input id="tokenInput" placeholder="Paste access token">
+                <button class="ghost" id="saveTokenBtn" type="button" style="margin-top:10px;">Save token locally</button>
+            </div>
+            <div class="card">
+                <p class="muted" style="margin:0;">This screen maps closely to the PDF's weekly health summary and trend section.</p>
+            </div>
+        </aside>
+        <section class="main">
+            <div class="hero">
+                <h1>AI Weekly Health Report</h1>
+                <p>One view for issues detected, lifestyle summary, medicine compliance, trends, and recommended actions.</p>
+            </div>
+            <div class="toolbar">
+                <input id="endDateInput" type="date">
+                <div class="toolbar-actions">
+                    <button class="primary" id="loadBtn" type="button">Generate report</button>
+                    <button class="ghost" id="downloadPdfBtn" type="button">Download PDF</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="stats">
+                    <div class="stat"><div class="label">Days logged</div><div class="value" id="daysLogged">--</div></div>
+                    <div class="stat"><div class="label">Junk food</div><div class="value" id="junkCount">--</div></div>
+                    <div class="stat"><div class="label">Outside food</div><div class="value" id="outsideCount">--</div></div>
+                    <div class="stat"><div class="label">Sleep avg</div><div class="value" id="sleepAvg">--</div></div>
+                    <div class="stat"><div class="label">Symptom days</div><div class="value" id="symptomDays">--</div></div>
+                </div>
+                <div class="card">
+                    <h3>Dataset assessment</h3>
+                    <div class="list" id="datasetAssessment" style="display:grid;"></div>
+                </div>
+                <div class="card">
+                    <h3>AI Health Summary</h3>
+                    <div class="list" id="aiSummary" style="display:grid;"></div>
+                </div>
+                <div class="card"><h3>What Is Going Well</h3><div class="chips" id="goodSignals"></div></div>
+                <div class="card"><h3>What Needs Attention</h3><div class="chips" id="attentionSignals"></div></div>
+                <div class="card"><h3>Important Observations</h3><div class="chips" id="importantObservations"></div></div>
+                <div class="card"><h3>What May Happen Next</h3><div class="chips" id="futureRisks"></div></div>
+                <div class="card"><h3>Issues detected</h3><div class="chips" id="issues"></div></div>
+                <div class="card"><h3>Recommended actions</h3><div class="chips" id="actions"></div></div>
+                <div class="card"><h3>Medicine compliance</h3><div class="list" id="compliance" style="display:grid;"></div></div>
+                <div class="card"><h3>Weekly trends</h3><div class="list" id="trends" style="display:grid;"></div></div>
+                <div class="card"><h3>Report metric trends</h3><div class="list" id="metricTrends" style="display:grid;"></div></div>
+                <div class="card"><h3>Report summary</h3><div class="list" id="reports" style="display:grid;"></div></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const tokenInput = document.getElementById("tokenInput");
+        const endDateInput = document.getElementById("endDateInput");
+        tokenInput.value = localStorage.getItem("medoair_access_token") || "";
+        endDateInput.value = new Date().toISOString().slice(0, 10);
+        document.getElementById("saveTokenBtn").addEventListener("click", () => localStorage.setItem("medoair_access_token", tokenInput.value.trim()));
+        document.getElementById("loadBtn").addEventListener("click", loadReport);
+        document.getElementById("downloadPdfBtn").addEventListener("click", downloadPdf);
+        async function apiFetch(url) {
+            const token = tokenInput.value.trim();
+            const response = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+            const payload = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(payload.error || payload.detail || "Request failed");
+            return payload;
+        }
+        async function apiFetchBlob(url) {
+            const token = tokenInput.value.trim();
+            const response = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+            if (!response.ok) {
+                const payload = await response.json().catch(() => ({}));
+                throw new Error(payload.error || payload.detail || "Request failed");
+            }
+            return response;
+        }
+        async function loadReport() {
+            try {
+                const payload = await apiFetch(`/api/ai/weekly-report/?end_date=${encodeURIComponent(endDateInput.value)}`);
+                renderReport(payload.data);
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+        async function downloadPdf() {
+            try {
+                const response = await apiFetchBlob(`/api/ai/weekly-report/pdf/?end_date=${encodeURIComponent(endDateInput.value)}`);
+                const blob = await response.blob();
+                const contentDisposition = response.headers.get("Content-Disposition") || "";
+                const filenameMatch = contentDisposition.match(/filename=\"?([^"]+)\"?/i);
+                const filename = filenameMatch ? filenameMatch[1] : `medoair-weekly-report-${endDateInput.value || "report"}.pdf`;
+                const downloadUrl = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = downloadUrl;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+                URL.revokeObjectURL(downloadUrl);
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+        function renderReport(data) {
+            const aiReport = data.ai_health_report || {};
+            document.getElementById("daysLogged").textContent = data.days_logged ?? "--";
+            document.getElementById("junkCount").textContent = data.lifestyle_summary?.junk_food_count ?? "--";
+            document.getElementById("outsideCount").textContent = data.lifestyle_summary?.outside_food_count ?? "--";
+            document.getElementById("sleepAvg").textContent = data.lifestyle_summary?.sleep_avg_hours ?? "--";
+            document.getElementById("symptomDays").textContent = data.lifestyle_summary?.symptom_days ?? "--";
+            renderRows("datasetAssessment", [data.dataset_assessment || {}], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.possible_issue || "Building weekly insight")}</strong>
+                        <div class="muted">${escapeHtml(item.message || "No dataset assessment available.")}</div>
+                        <div class="muted">Risk probability: ${escapeHtml(item.risk_probability != null ? String(item.risk_probability) + "%" : "--")}</div>
+                    </div>
+                </div>
+            `, "No dataset assessment available.");
+            renderRows("aiSummary", [aiReport], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.current_status || "AI weekly summary is building.")}</strong>
+                        <div class="muted">${escapeHtml(item.summary || "Save 7 full days of data for a stronger summary.")}</div>
+                    </div>
+                    <strong>${escapeHtml(item.attention_level || "--")}</strong>
+                </div>
+            `, "No AI summary available.");
+            renderChips("goodSignals", aiReport.what_is_good || []);
+            renderChips("attentionSignals", aiReport.what_needs_attention || []);
+            renderChips("importantObservations", aiReport.important_observations || []);
+            renderChips("futureRisks", aiReport.what_may_happen_next || []);
+            renderChips("issues", data.issues_detected || []);
+            renderChips("actions", data.recommended_actions || []);
+            renderRows("compliance", data.medicine_compliance || [], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.medicine)}</strong>
+                        <div class="muted">Taken: ${escapeHtml(String(item.taken_doses))} | Missed: ${escapeHtml(String(item.missed_doses))}</div>
+                        <div class="bar"><span style="width:${Math.max(0, Math.min(100, item.compliance_percent || 0))}%"></span></div>
+                    </div>
+                    <strong>${escapeHtml(String(item.compliance_percent))}%</strong>
+                </div>
+            `);
+            renderRows("trends", data.weekly_trends || [], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.label)}</strong>
+                        <div class="muted">Health score: ${escapeHtml(String(item.health_score))} | Symptoms: ${escapeHtml(String(item.symptom_days))} days | Junk food: ${escapeHtml(String(item.junk_food_count))}</div>
+                    </div>
+                </div>
+            `);
+            renderRows("metricTrends", data.report_metric_trends || [], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.parameter)}</strong>
+                        <div class="muted">${escapeHtml(item.values.map((point) => `${point.report_date}: ${point.value}${point.unit ? " " + point.unit : ""}`).join(" | "))}</div>
+                    </div>
+                    <strong>${escapeHtml(item.trend)}</strong>
+                </div>
+            `, "No report metric trends yet.");
+            renderRows("reports", data.report_summary || [], (item) => `
+                <div class="row-item">
+                    <div>
+                        <strong>${escapeHtml(item.title)}</strong>
+                        <div class="muted">${escapeHtml(item.uploaded_at)}</div>
+                        <div class="muted">${escapeHtml((item.metrics || []).map((metric) => `${metric.parameter}: ${metric.value}${metric.unit ? " " + metric.unit : ""} (${metric.status})`).join(" | ") || "No structured metrics found.")}</div>
+                    </div>
+                </div>
+            `, "No uploaded reports yet.");
+        }
+        function renderChips(id, items) {
+            const target = document.getElementById(id);
+            target.innerHTML = "";
+            if (!items.length) { target.innerHTML = '<div class="muted">No data available.</div>'; return; }
+            items.forEach((item) => { const node = document.createElement("div"); node.className = "chip"; node.textContent = item; target.appendChild(node); });
+        }
+        function renderRows(id, items, renderer, emptyText = "No data available.") {
+            const target = document.getElementById(id);
+            target.innerHTML = "";
+            if (!items.length) { target.innerHTML = `<div class="muted">${emptyText}</div>`; return; }
+            items.forEach((item) => { target.innerHTML += renderer(item); });
+        }
+        function escapeHtml(value) { return String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;"); }
+        loadReport();
+    </script>
+</body>
+</html>

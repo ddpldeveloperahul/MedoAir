@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import (
     User, PasswordResetOTP, PatientProfile, DoctorProfile, Department,
-    Appointment, Message, Report, Slot  # Slot add kiya agar use kar rahe ho
+    Appointment, Message, Report, Slot, AIAnalysisRecord,
+    DailyHealthLog, MedicationSchedule, MedicationDoseLog  # Slot add kiya agar use kar rahe ho
 )
 
 # ================= USER =================
@@ -79,3 +80,188 @@ class ReportAdmin(admin.ModelAdmin):
     list_filter = ['uploaded_at']
     search_fields = ['user__email', 'title']
     readonly_fields = ['uploaded_at']
+
+
+# ================= AI ANALYSIS =================
+@admin.register(AIAnalysisRecord)
+class AIAnalysisRecordAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'user',
+        'short_input_message',
+        'short_assistant_response',
+        'detected_problem',
+        'risk_probability',
+        'response_language',
+        'created_at',
+    ]
+    list_display_links = [
+        'id',
+        'user',
+        'short_input_message',
+        'short_assistant_response',
+        'detected_problem',
+        'risk_probability',
+        'response_language',
+        'created_at',
+    ]
+    list_filter = ['response_language', 'detected_problem', 'created_at']
+    search_fields = ['user__email', 'input_message', 'detected_problem', 'assistant_response']
+    readonly_fields = [
+        'user',
+        'log_date',
+        'input_message',
+        'symptoms',
+        'symptoms_text',
+        'notes',
+        'food_type',
+        'water_intake_glasses',
+        'sleep_hours',
+        'sleep_quality',
+        'stress_level',
+        'energy_level',
+        'matched_symptoms',
+        'detected_problem',
+        'risk_probability',
+        'model_name',
+        'top_predictions',
+        'reference_symptoms',
+        'care_guidance',
+        'medicine_guidance',
+        'warning_signs',
+        'submitted_context',
+        'follow_up_questions',
+        'assistant_response',
+        'response_language',
+        'created_at',
+    ]
+    fieldsets = (
+        ('Basic Info', {
+            'fields': ('user', 'log_date', 'created_at', 'response_language')
+        }),
+        ('User Input', {
+            'fields': (
+                'input_message',
+                'symptoms',
+                'symptoms_text',
+                'notes',
+            )
+        }),
+        ('Lifestyle Context', {
+            'fields': (
+                'food_type',
+                'water_intake_glasses',
+                'sleep_hours',
+                'sleep_quality',
+                'stress_level',
+                'energy_level',
+            )
+        }),
+        ('Prediction Output', {
+            'fields': (
+                'detected_problem',
+                'risk_probability',
+                'model_name',
+                'matched_symptoms',
+                'top_predictions',
+                'reference_symptoms',
+            )
+        }),
+        ('Guidance Output', {
+            'fields': (
+                'care_guidance',
+                'medicine_guidance',
+                'warning_signs',
+                'follow_up_questions',
+                'assistant_response',
+                'submitted_context',
+            )
+        }),
+    )
+    ordering = ['-created_at']
+
+    def short_input_message(self, obj):
+        value = (obj.input_message or '').strip()
+        if len(value) <= 50:
+            return value or '-'
+        return f"{value[:50]}..."
+
+    short_input_message.short_description = 'Input Message'
+
+    def short_assistant_response(self, obj):
+        value = (obj.assistant_response or '').strip()
+        if len(value) <= 90:
+            return value or '-'
+        return f"{value[:90]}..."
+
+    short_assistant_response.short_description = 'Output Preview'
+
+
+# ================= DAILY HEALTH LOG =================
+@admin.register(DailyHealthLog)
+class DailyHealthLogAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'user',
+        'log_date',
+        'short_symptoms',
+        'food_type',
+        'water_intake_glasses',
+        'sleep_hours',
+        'stress_level',
+        'energy_level',
+        'updated_at',
+    ]
+    list_filter = ['log_date', 'food_type', 'sleep_quality', 'stress_level', 'energy_level']
+    search_fields = ['user__email', 'symptoms_text', 'notes']
+    readonly_fields = ['created_at', 'updated_at']
+    ordering = ['-log_date', '-updated_at']
+
+    def short_symptoms(self, obj):
+        items = obj.symptoms or []
+        if not items:
+            return '-'
+        text = ", ".join(items[:4])
+        if len(items) > 4:
+            text += "..."
+        return text
+
+    short_symptoms.short_description = 'Symptoms'
+
+
+# ================= MEDICATION SCHEDULE =================
+@admin.register(MedicationSchedule)
+class MedicationScheduleAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'user',
+        'name',
+        'dose',
+        'duration_days',
+        'start_date',
+        'end_date',
+        'source',
+        'is_active',
+        'created_at',
+    ]
+    list_filter = ['source', 'is_active', 'start_date', 'created_at']
+    search_fields = ['user__email', 'name', 'dose', 'instructions']
+    readonly_fields = ['created_at', 'updated_at']
+    ordering = ['-created_at']
+
+
+# ================= MEDICATION DOSE LOG =================
+@admin.register(MedicationDoseLog)
+class MedicationDoseLogAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'medication',
+        'dose_date',
+        'timing',
+        'status',
+        'marked_at',
+    ]
+    list_filter = ['status', 'timing', 'dose_date', 'marked_at']
+    search_fields = ['medication__user__email', 'medication__name', 'medication__dose']
+    readonly_fields = ['marked_at']
+    ordering = ['-dose_date', '-marked_at']

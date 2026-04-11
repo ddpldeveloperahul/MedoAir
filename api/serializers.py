@@ -3,7 +3,21 @@ Unified Serializers - All serializers consolidated into one file
 """
 
 from rest_framework import serializers # type: ignore
-from .models import User, PasswordResetOTP, PatientProfile, DoctorProfile, Department,Appointment, Message, Report
+from decimal import Decimal
+from .models import (
+    User,
+    PasswordResetOTP,
+    PatientProfile,
+    DoctorProfile,
+    Department,
+    Appointment,
+    Message,
+    Report,
+    DailyHealthLog,
+    AIAnalysisRecord,
+    MedicationSchedule,
+    MedicationDoseLog,
+)
 from django.contrib.auth import get_user_model
 import re
 from django.utils import timezone
@@ -637,10 +651,19 @@ class ReportCreateUpdateSerializer(serializers.ModelSerializer):
         fields = ['file', 'title']
 
     def validate_file(self, value):
-        allowed_types = ['application/pdf', 'image/jpeg', 'image/png']
+        allowed_types = {
+            'application/pdf',
+            'image/jpeg',
+            'image/png',
+            'image/jpg',
+            'image/pjpeg',
+            'image/x-png',
+        }
+        content_type = str(getattr(value, 'content_type', '') or '').lower()
+        file_name = str(getattr(value, 'name', '') or '').lower()
 
-        if value.content_type not in allowed_types:
-            raise serializers.ValidationError("Only PDF, JPG, PNG allowed")
+        if content_type not in allowed_types and not file_name.endswith(('.pdf', '.jpg', '.jpeg', '.png')):
+            raise serializers.ValidationError("Only PDF, JPG, JPEG, and PNG files are allowed.")
 
         return value
 
@@ -666,3 +689,257 @@ class CompletedPatientSerializer(serializers.ModelSerializer):
             'last_visit',
             'total_visits'
         ]
+
+
+class DiseasePredictionRequestSerializer(serializers.Serializer):
+    symptoms = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        allow_empty=True
+    )
+    symptoms_text = serializers.CharField(required=False, allow_blank=False)
+    top_k = serializers.IntegerField(required=False, min_value=1, max_value=5, default=3)
+
+    def validate(self, attrs):
+        symptoms = attrs.get('symptoms') or []
+        symptoms_text = attrs.get('symptoms_text', '').strip()
+
+        if not symptoms and not symptoms_text:
+            raise serializers.ValidationError("Provide `symptoms` list or `symptoms_text`.")
+
+        cleaned_symptoms = [item.strip() for item in symptoms if item and item.strip()]
+        if symptoms and not cleaned_symptoms:
+            raise serializers.ValidationError({"symptoms": "At least one valid symptom is required."})
+
+        attrs['symptoms'] = cleaned_symptoms
+        attrs['symptoms_text'] = symptoms_text
+        return attrs
+
+
+class AIAssistantMessageSerializer(serializers.Serializer):
+    message = serializers.CharField(required=False, allow_blank=True)
+    attachment = serializers.FileField(required=False, allow_null=True)
+    log_date = serializers.DateField(required=False)
+    symptoms = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        allow_empty=False
+    )
+    symptoms_text = serializers.CharField(required=False, allow_blank=True)
+    notes = serializers.CharField(required=False, allow_blank=True)
+    food_type = serializers.ChoiceField(required=False, choices=DailyHealthLog.FOOD_CHOICES)
+    water_intake_glasses = serializers.IntegerField(required=False, allow_null=True, min_value=0, max_value=40)
+    sleep_hours = serializers.DecimalField(
+        required=False,
+        allow_null=True,
+        max_digits=4,
+        decimal_places=1,
+        min_value=Decimal("0"),
+        max_value=Decimal("24"),
+    )
+    sleep_quality = serializers.ChoiceField(required=False, choices=DailyHealthLog.SLEEP_QUALITY_CHOICES)
+    stress_level = serializers.ChoiceField(required=False, choices=DailyHealthLog.LEVEL_CHOICES)
+    energy_level = serializers.ChoiceField(required=False, choices=DailyHealthLog.ENERGY_CHOICES)
+    top_k = serializers.IntegerField(required=False, min_value=1, max_value=5, default=3)
+
+    def validate_message(self, value):
+        cleaned_message = value.strip()
+        return cleaned_message
+
+    def validate_attachment(self, value):
+        if value is None:
+            return value
+
+        allowed_types = {
+            'application/pdf',
+            'image/jpeg',
+            'image/png',
+        }
+        content_type = str(getattr(value, 'content_type', '') or '').lower()
+        file_name = str(getattr(value, 'name', '') or '').lower()
+
+        if content_type not in allowed_types and not file_name.endswith(('.pdf', '.jpg', '.jpeg', '.png')):
+            raise serializers.ValidationError("Only PDF, JPG, JPEG, and PNG files are allowed.")
+        return value
+
+    def validate(self, attrs):
+        message = (attrs.get("message") or "").strip()
+        symptoms = attrs.get("symptoms") or []
+        symptoms_text = (attrs.get("symptoms_text") or "").strip()
+        notes = (attrs.get("notes") or "").strip()
+        attachment = attrs.get("attachment")
+
+        cleaned_symptoms = [item.strip() for item in symptoms if item and item.strip()]
+
+        if not any([message, cleaned_symptoms, symptoms_text, notes, attachment]):
+            raise serializers.ValidationError(
+                "Please enter your symptoms, message, upload a report, or add check-in details before analysis."
+            )
+
+        attrs["message"] = message
+        attrs["symptoms"] = cleaned_symptoms
+        attrs["symptoms_text"] = symptoms_text
+        attrs["notes"] = notes
+        return attrs
+
+
+class AIAnalysisRecordSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AIAnalysisRecord
+        fields = [
+            'id',
+            'log_date',
+            'input_message',
+            'symptoms',
+            'symptoms_text',
+            'notes',
+            'food_type',
+            'water_intake_glasses',
+            'sleep_hours',
+            'sleep_quality',
+            'stress_level',
+            'energy_level',
+            'matched_symptoms',
+            'detected_problem',
+            'risk_probability',
+            'model_name',
+            'top_predictions',
+            'reference_symptoms',
+            'care_guidance',
+            'medicine_guidance',
+            'warning_signs',
+            'submitted_context',
+            'follow_up_questions',
+            'assistant_response',
+            'response_language',
+            'created_at',
+        ]
+        read_only_fields = fields
+
+
+class PrescriptionUploadSerializer(serializers.Serializer):
+    attachment = serializers.FileField()
+
+    def validate_attachment(self, value):
+        content_type = str(getattr(value, "content_type", "") or "").lower()
+        file_name = str(getattr(value, "name", "") or "").lower()
+        if content_type != "application/pdf" and not file_name.endswith((".pdf", ".jpg", ".jpeg", ".png")):
+            raise serializers.ValidationError("Only PDF, JPG, JPEG, and PNG files are allowed.")
+        return value
+
+
+class ExtractedMedicationItemSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    dose = serializers.CharField(required=False, allow_blank=True)
+    duration_days = serializers.IntegerField(required=False, min_value=1, max_value=365, default=5)
+    timings = serializers.ListField(
+        child=serializers.ChoiceField(choices=MedicationSchedule.TIMING_CHOICES),
+        required=False,
+        allow_empty=True,
+    )
+    instructions = serializers.CharField(required=False, allow_blank=True)
+
+
+class PrescriptionMedicationSaveSerializer(serializers.Serializer):
+    start_date = serializers.DateField(required=False, default=timezone.localdate)
+    medicines = ExtractedMedicationItemSerializer(many=True)
+
+
+class DailyHealthLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DailyHealthLog
+        fields = [
+            'id',
+            'log_date',
+            'symptoms',
+            'symptoms_text',
+            'food_type',
+            'water_intake_glasses',
+            'sleep_hours',
+            'sleep_quality',
+            'stress_level',
+            'energy_level',
+            'notes',
+            'created_at',
+            'updated_at',
+        ]
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+    def validate_symptoms(self, value):
+        cleaned = []
+        for item in value or []:
+            text = str(item or '').strip()
+            if text:
+                cleaned.append(text)
+        return cleaned
+
+    def validate_water_intake_glasses(self, value):
+        if value < 0 or value > 40:
+            raise serializers.ValidationError("Water intake must be between 0 and 40 glasses.")
+        return value
+
+    def validate_sleep_hours(self, value):
+        if value is not None and (value < 0 or value > 24):
+            raise serializers.ValidationError("Sleep hours must be between 0 and 24.")
+        return value
+
+
+class MedicationScheduleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MedicationSchedule
+        fields = [
+            'id',
+            'name',
+            'dose',
+            'duration_days',
+            'timings',
+            'start_date',
+            'end_date',
+            'source',
+            'instructions',
+            'is_active',
+            'created_at',
+            'updated_at',
+        ]
+        read_only_fields = ['id', 'end_date', 'created_at', 'updated_at']
+
+    def validate_timings(self, value):
+        allowed = {choice[0] for choice in MedicationSchedule.TIMING_CHOICES}
+        cleaned = []
+        for item in value or []:
+            timing = str(item or '').strip().lower()
+            if timing not in allowed:
+                raise serializers.ValidationError(f"Invalid timing `{timing}`.")
+            if timing not in cleaned:
+                cleaned.append(timing)
+
+        if not cleaned:
+            raise serializers.ValidationError("At least one timing is required.")
+
+        return cleaned
+
+    def validate_duration_days(self, value):
+        if value < 1 or value > 365:
+            raise serializers.ValidationError("Duration must be between 1 and 365 days.")
+        return value
+
+
+class MedicationDoseLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MedicationDoseLog
+        fields = [
+            'id',
+            'dose_date',
+            'timing',
+            'status',
+            'marked_at',
+            'created_at',
+            'updated_at',
+        ]
+        read_only_fields = ['id', 'marked_at', 'created_at', 'updated_at']
+
+
+class MedicationDoseStatusSerializer(serializers.Serializer):
+    dose_date = serializers.DateField(required=False)
+    timing = serializers.ChoiceField(choices=MedicationSchedule.TIMING_CHOICES)
+    status = serializers.ChoiceField(choices=MedicationDoseLog.STATUS_CHOICES)
