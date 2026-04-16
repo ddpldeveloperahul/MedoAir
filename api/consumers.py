@@ -160,21 +160,27 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 {
                     "type": "chat_message",
                     "message": msg.message,
-                    "sender": msg.sender.email,
-                    "receiver": msg.receiver.email,
-                    "message_id": msg.id
+                    "sender": msg.sender.username or msg.sender.email,
+                    "sender_id": msg.sender_id,
+                    "receiver": msg.receiver.username or msg.receiver.email,
+                    "receiver_id": msg.receiver_id,
+                    "message_id": msg.id,
                 }
             )
 
         # 🔹 SEEN
         elif data.get("type") == "seen":
-            await self.mark_seen(data["message_id"])
+            message_id = data.get("message_id")
+            if not message_id:
+                return
+
+            await self.mark_seen(message_id)
 
             await self.channel_layer.group_send(
                 self.room_group_name,
                 {
                     "type": "seen_update",
-                    "message_id": data["message_id"]
+                    "message_id": message_id
                 }
             )
 
