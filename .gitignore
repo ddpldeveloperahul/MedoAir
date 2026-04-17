@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*.pyo
 
 # Virtual Environment
 venv/
@@ -25,3 +26,6 @@ Thumbs.db
 
 # Gunicorn socket
 *.sock
+
+# Migrations cache (important)
+*/migrations/__pycache__/
