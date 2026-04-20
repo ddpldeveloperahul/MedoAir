@@ -10,6 +10,8 @@ from .views import (
     # UserDashboardAPIView,
     home,
     ai_assistant_page,
+    login_page,
+    signup_page,
 
     # AI Prediction Views
     AIAssistantAPIView,
@@ -53,6 +55,7 @@ from .views import (
     MessageListAPIView,
     ChatAPIView,
     ChatHistoryAPIView,
+    AppointmentCommunicationStatusAPIView,
     DeleteMessageAPIView,
     
     # Report Views
@@ -72,6 +75,8 @@ from .views import (
 urlpatterns = [
     # ========== HOME/INDEX ==========
     path('index/', home, name='home'),  # API root endpoint for navigation
+    path('login-page/', login_page, name='login-page'),
+    path('signup-page/', signup_page, name='signup-page'),
 
     # ========== AI DISEASE PREDICTION ==========
     path('ai/assistant/message/', AIAssistantAPIView.as_view(), name='ai-assistant-message'),
@@ -118,6 +123,7 @@ urlpatterns = [
     path('api/appointments/<int:appointment_id>/messages/', MessageListAPIView.as_view(), name='message-list'),
     path('chat/<int:appointment_id>/', ChatAPIView.as_view(), name='chat-detail'),
     path('chat2/<int:appointment_id>/', ChatHistoryAPIView.as_view(), name='chat-history'),
+    path('chat-status/<int:appointment_id>/', AppointmentCommunicationStatusAPIView.as_view(), name='chat-status'),
     path('messages/<int:message_id>/', DeleteMessageAPIView.as_view(), name='message-delete'),
     path('video_call/', video_call, name='video_call'),
     

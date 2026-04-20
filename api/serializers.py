@@ -59,18 +59,21 @@ class UserSignupSerializer(serializers.ModelSerializer):
         }
 
     def validate_email(self, value):
-        if User.objects.filter(email=value).exists():
+        normalized_email = value.strip().lower()
+        if User.objects.filter(email__iexact=normalized_email).exists():
             raise serializers.ValidationError("Email already registered")
-        return value
+        return normalized_email
 
     def validate_username(self, value):
-        if len(value.strip()) < 3:
+        cleaned_value = value.strip()
+
+        if len(cleaned_value) < 3:
             raise serializers.ValidationError("Username must be at least 3 characters")
 
-        if User.objects.filter(username=value).exists():
+        if User.objects.filter(username__iexact=cleaned_value).exists():
             raise serializers.ValidationError("Username already taken")
 
-        return value
+        return cleaned_value
 
     def validate(self, data):
         password = data.get('password')
@@ -188,16 +191,19 @@ class DoctorSignupSerializer(serializers.ModelSerializer):
         }
 
     def validate_email(self, value):
-        if User.objects.filter(email=value).exists():
+        normalized_email = value.strip().lower()
+        if User.objects.filter(email__iexact=normalized_email).exists():
             raise serializers.ValidationError("Email already registered")
-        return value
+        return normalized_email
 
     def validate_username(self, value):
-        if User.objects.filter(username=value).exists():
+        cleaned_value = value.strip()
+
+        if User.objects.filter(username__iexact=cleaned_value).exists():
             raise serializers.ValidationError("Username already taken")
-        if len(value) < 3:
+        if len(cleaned_value) < 3:
             raise serializers.ValidationError("Username must be at least 3 characters")
-        return value
+        return cleaned_value
 
     def validate(self, data):
         password = data.get('password')

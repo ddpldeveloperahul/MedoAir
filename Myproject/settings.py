@@ -93,22 +93,22 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'medoair_db',
-        'USER': 'postgres',
-        'PASSWORD': 'rahul',
-        'HOST': 'localhost',  # or your DB server IP
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'medoair_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'rahul',
+#         'HOST': 'localhost',  # or your DB server IP
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -160,6 +160,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
@@ -174,6 +175,9 @@ SIMPLE_JWT = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+LOGIN_URL = "/api/login-page/"
+LOGIN_REDIRECT_URL = "/api/video_call/"
 
 # Email Configuration
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -190,3 +194,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "ddpldeveloperahul@gmail.com"
 EMAIL_HOST_PASSWORD = "ggbp goyi zwlm zwmn"
+
+WEBRTC_STUN_URL = os.getenv("WEBRTC_STUN_URL", "stun:stun.relay.metered.ca:80")
+WEBRTC_TURN_URL_TCP = os.getenv("WEBRTC_TURN_URL_TCP", "turn:global.relay.metered.ca:80")
+WEBRTC_TURN_URL_TLS = os.getenv("WEBRTC_TURN_URL_TLS", "turn:global.relay.metered.ca:443")
+WEBRTC_TURN_USERNAME = os.getenv("WEBRTC_TURN_USERNAME", "")
+WEBRTC_TURN_CREDENTIAL = os.getenv("WEBRTC_TURN_CREDENTIAL", "")

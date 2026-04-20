@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir Login</title>
+    <style>
+        :root {
+            --bg: #f3efe7;
+            --panel: rgba(255, 255, 255, 0.92);
+            --text: #21313d;
+            --muted: #6a7b86;
+            --primary: #0e8d70;
+            --primary-dark: #0a6954;
+            --border: rgba(84, 96, 105, 0.18);
+            --shadow: 0 24px 60px rgba(44, 57, 66, 0.14);
+            --danger: #c94f4f;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(14, 141, 112, 0.18), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(240, 168, 84, 0.16), transparent 28%),
+                var(--bg);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        .auth-shell {
+            width: min(1040px, 100%);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            background: var(--panel);
+            border: 1px solid rgba(120, 93, 67, 0.14);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .hero, .form-panel {
+            padding: 40px;
+        }
+
+        .hero {
+            background:
+                linear-gradient(160deg, rgba(14, 141, 112, 0.96), rgba(8, 105, 84, 0.94)),
+                #0e8d70;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .badge {
+            display: inline-flex;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.02;
+            margin: 18px 0 12px;
+        }
+
+        .hero p {
+            margin: 0;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.84);
+            max-width: 480px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .hero-card {
+            padding: 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .hero-card strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .hero-card span {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.76);
+        }
+
+        .form-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .subtext {
+            margin: 0 0 28px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 14px 16px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus {
+            border-color: rgba(14, 141, 112, 0.5);
+            box-shadow: 0 0 0 4px rgba(14, 141, 112, 0.12);
+        }
+
+        button {
+            width: 100%;
+            border: 0;
+            border-radius: 16px;
+            padding: 14px 18px;
+            background: var(--primary);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+        }
+
+        .status {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .status.success {
+            display: block;
+            background: rgba(14, 141, 112, 0.1);
+            color: var(--primary-dark);
+        }
+
+        .status.error {
+            display: block;
+            background: rgba(201, 79, 79, 0.1);
+            color: var(--danger);
+        }
+
+        .links {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .links a {
+            color: var(--primary-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 920px) {
+            .auth-shell {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-shell">
+        <section class="hero">
+            <div>
+                <span class="badge">MedoAir Access</span>
+                <h1>Secure doctor and patient login</h1>
+                <p>Apne account se sign in kijiye aur appointments, chat, video consultation aur health tools ko ek hi place se access kijiye.</p>
+            </div>
+            <div class="hero-grid">
+                <div class="hero-card">
+                    <strong>Real-time chat</strong>
+                    <span>Doctor aur patient ke beech direct conversation.</span>
+                </div>
+                <div class="hero-card">
+                    <strong>Video consult</strong>
+                    <span>Appointment slot ke dauran secure calling flow.</span>
+                </div>
+                <div class="hero-card">
+                    <strong>JWT login</strong>
+                    <span>Token browser storage mein save hokar APIs ke saath kaam karega.</span>
+                </div>
+                <div class="hero-card">
+                    <strong>Fast access</strong>
+                    <span>Sign in ke turant baad aap dashboard ya video call page open kar sakte ho.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-panel">
+            <div>
+                <h2>Login</h2>
+                <p class="subtext">Aapka email aur password use karke account open kijiye.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter password" required>
+                </div>
+
+                <button type="submit">Sign In</button>
+            </form>
+
+            <div id="status" class="status"></div>
+
+            <div class="links">
+                New here? <a href="/api/signup-page/">Create account</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        const statusBox = document.getElementById("status");
+        const nextUrl = new URLSearchParams(window.location.search).get("next") || "/api/video_call/";
+
+        function setStatus(type, message) {
+            statusBox.className = `status ${type}`;
+            statusBox.textContent = message;
+        }
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const payload = {
+                email: document.getElementById("email").value.trim(),
+                password: document.getElementById("password").value
+            };
+
+            try {
+                const response = await fetch("/api/login/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || "Login failed");
+                }
+
+                localStorage.setItem("medoair_access", data.access || "");
+                localStorage.setItem("medoair_refresh", data.refresh || "");
+                localStorage.setItem("medoair_user", JSON.stringify(data.user || {}));
+
+                setStatus("success", "Login successful. Redirecting...");
+                window.setTimeout(() => {
+                    window.location.href = nextUrl;
+                }, 900);
+            } catch (error) {
+                setStatus("error", error.message || "Unable to login");
+            }
+        });
+    </script>
+</body>
+</html>

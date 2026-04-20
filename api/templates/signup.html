@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedoAir Signup</title>
+    <style>
+        :root {
+            --bg: #f5efe5;
+            --panel: rgba(255, 255, 255, 0.92);
+            --text: #223440;
+            --muted: #657784;
+            --primary: #cb5e38;
+            --primary-dark: #a94c2c;
+            --accent: #0d8f6f;
+            --border: rgba(98, 110, 120, 0.2);
+            --shadow: 0 24px 60px rgba(47, 59, 67, 0.14);
+            --danger: #c94f4f;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top right, rgba(203, 94, 56, 0.16), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(13, 143, 111, 0.16), transparent 28%),
+                var(--bg);
+            padding: 22px;
+        }
+
+        .shell {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            background: var(--panel);
+            border-radius: 30px;
+            border: 1px solid rgba(140, 112, 77, 0.16);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .intro {
+            background:
+                linear-gradient(165deg, #183848, #244b5d 56%, #0d8f6f 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .tag {
+            display: inline-flex;
+            width: fit-content;
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.14);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .intro h1 {
+            margin: 18px 0 12px;
+            font-size: clamp(34px, 4vw, 50px);
+            line-height: 1.04;
+        }
+
+        .intro p {
+            margin: 0;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .feature-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .feature {
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .feature strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .forms {
+            padding: 38px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .subtext {
+            margin: 10px 0 26px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .role-switch {
+            display: inline-grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 8px;
+            border-radius: 18px;
+            background: rgba(203, 94, 56, 0.08);
+            margin-bottom: 22px;
+        }
+
+        .role-switch button {
+            border: 0;
+            border-radius: 14px;
+            padding: 12px 18px;
+            background: transparent;
+            color: var(--muted);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .role-switch button.active {
+            background: white;
+            color: var(--primary-dark);
+            box-shadow: 0 8px 20px rgba(31, 44, 52, 0.08);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        input, select {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 14px 16px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: rgba(203, 94, 56, 0.55);
+            box-shadow: 0 0 0 4px rgba(203, 94, 56, 0.12);
+        }
+
+        .doctor-only {
+            display: none;
+        }
+
+        .doctor-mode .doctor-only {
+            display: block;
+        }
+
+        .submit {
+            margin-top: 8px;
+            border: 0;
+            border-radius: 16px;
+            padding: 14px 18px;
+            background: var(--primary);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .submit:hover {
+            background: var(--primary-dark);
+        }
+
+        .status {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .status.success {
+            display: block;
+            background: rgba(13, 143, 111, 0.1);
+            color: var(--accent);
+        }
+
+        .status.error {
+            display: block;
+            background: rgba(201, 79, 79, 0.1);
+            color: var(--danger);
+        }
+
+        .footer-link {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-link a {
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 960px) {
+            .shell {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .forms, .intro {
+                padding: 24px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <section class="intro">
+            <div>
+                <span class="tag">MedoAir Signup</span>
+                <h1>Create a patient or doctor account</h1>
+                <p>Single signup screen se patient ya doctor profile banaiye. Doctor flow mein department selection bhi available hai.</p>
+            </div>
+
+            <div class="feature-list">
+                <div class="feature">
+                    <strong>Patient registration</strong>
+                    <span>Health tools aur appointment booking ke liye quick onboarding.</span>
+                </div>
+                <div class="feature">
+                    <strong>Doctor registration</strong>
+                    <span>Department-linked professional account create karne ka ready flow.</span>
+                </div>
+                <div class="feature">
+                    <strong>API connected forms</strong>
+                    <span>Existing backend signup endpoints ke saath direct integration.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="forms" id="formsRoot">
+            <h2>Signup</h2>
+            <p class="subtext">Role choose kijiye aur required details fill karke account create kijiye.</p>
+
+            <div class="role-switch">
+                <button id="patientTab" type="button" class="active">Patient</button>
+                <button id="doctorTab" type="button">Doctor</button>
+            </div>
+
+            <form id="signupForm">
+                <div class="grid">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input id="username" placeholder="Choose username" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="At least 6 chars, 1 number" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input id="confirmPassword" type="password" placeholder="Repeat password" required>
+                    </div>
+
+                    <div class="field full doctor-only">
+                        <label for="department">Department</label>
+                        <select id="department">
+                            <option value="">Select department</option>
+                            {% for department in departments %}
+                                <option value="{{ department.id }}">{{ department.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <button class="submit" type="submit">Create Account</button>
+            </form>
+
+            <div id="status" class="status"></div>
+
+            <div class="footer-link">
+                Already have an account? <a href="/api/login-page/">Login here</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const formsRoot = document.getElementById("formsRoot");
+        const patientTab = document.getElementById("patientTab");
+        const doctorTab = document.getElementById("doctorTab");
+        const form = document.getElementById("signupForm");
+        const statusBox = document.getElementById("status");
+        let currentRole = "patient";
+
+        function setStatus(type, message) {
+            statusBox.className = `status ${type}`;
+            statusBox.textContent = message;
+        }
+
+        function setRole(role) {
+            currentRole = role;
+            formsRoot.classList.toggle("doctor-mode", role === "doctor");
+            patientTab.classList.toggle("active", role === "patient");
+            doctorTab.classList.toggle("active", role === "doctor");
+            document.getElementById("department").required = role === "doctor";
+        }
+
+        function buildPayload() {
+            const payload = {
+                username: document.getElementById("username").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                password: document.getElementById("password").value,
+                confirm_password: document.getElementById("confirmPassword").value
+            };
+
+            if (currentRole === "doctor") {
+                payload.department_id = Number(document.getElementById("department").value);
+            }
+
+            return payload;
+        }
+
+        patientTab.addEventListener("click", () => setRole("patient"));
+        doctorTab.addEventListener("click", () => setRole("doctor"));
+        setRole("patient");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const endpoint = currentRole === "doctor" ? "/api/doctor/signup/" : "/api/user/signup/";
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(buildPayload())
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    const errorMessage =
+                        data.error ||
+                        data.message ||
+                        JSON.stringify(data.errors || data);
+                    throw new Error(errorMessage);
+                }
+
+                setStatus("success", `${currentRole === "doctor" ? "Doctor" : "Patient"} signup successful. Redirecting to login page...`);
+                window.setTimeout(() => {
+                    window.location.href = "/api/login-page/";
+                }, 1000);
+            } catch (error) {
+                setStatus("error", error.message || "Signup failed");
+            }
+        });
+    </script>
+</body>
+</html>

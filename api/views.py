@@ -2,14 +2,17 @@
 Unified Views - All API views consolidated into one file using APIView pattern
 """
 
-from django.shortcuts import get_object_or_404,render
+from datetime import datetime
+
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from rest_framework.views import APIView # type: ignore
 from rest_framework.response import Response # type: ignore
 from rest_framework.permissions import IsAuthenticated, AllowAny # type: ignore
 from rest_framework import status # type: ignore
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from rest_framework_simplejwt.tokens import RefreshToken # type: ignore
 from django.utils import timezone
 from django.utils.dateparse import parse_date
@@ -26,6 +29,7 @@ from .document_reader import document_reader_service
 from .clinical_document_ai import clinical_document_ai_service
 from .weekly_report_pdf import build_weekly_report_pdf
 from django.db.models import Q, Count
+from django.db import IntegrityError
 from rest_framework.exceptions import ValidationError
 
 from .permissions import IsSuperAdmin
@@ -34,6 +38,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def home(request):
+    if request.user.is_authenticated:
+        return redirect('/api/video_call/')
     return render(request, 'home.html')
 
 
@@ -48,6 +54,44 @@ def _flatten_validation_errors(detail):
     if isinstance(detail, list):
         return " ".join(_flatten_validation_errors(item) for item in detail if _flatten_validation_errors(item))
     return str(detail)
+
+
+def _get_appointment_slot_status(appointment, now=None):
+    now = now or timezone.localtime()
+    slot_start = timezone.make_aware(
+        datetime.combine(appointment.slot.date, appointment.slot.start_time)
+    )
+    slot_end = timezone.make_aware(
+        datetime.combine(appointment.slot.date, appointment.slot.end_time)
+    )
+
+    is_scheduled = appointment.status == "scheduled"
+    has_started = now >= slot_start
+    has_ended = now >= slot_end
+    is_active = is_scheduled and has_started and not has_ended
+
+    if not is_scheduled:
+        reason = f"Appointment is {appointment.status.replace('_', ' ')}."
+    elif now < slot_start:
+        reason = "Slot has not started yet."
+    elif has_ended:
+        reason = "Slot time has ended."
+    else:
+        reason = "Slot is active."
+
+    return {
+        "is_active": is_active,
+        "has_started": has_started,
+        "has_ended": has_ended,
+        "appointment_status": appointment.status,
+        "reason": reason,
+        "slot_date": appointment.slot.date,
+        "start_time": appointment.slot.start_time,
+        "end_time": appointment.slot.end_time,
+        "server_time": now,
+        "starts_at": slot_start,
+        "ends_at": slot_end,
+    }
 
 
 @csrf_exempt
@@ -70,6 +114,21 @@ def ai_weekly_report_page(request):
 
 def ai_patient_timeline_page(request):
     return render(request, 'ai_patient_timeline.html')
+
+
+def login_page(request):
+    if request.user.is_authenticated:
+        return redirect('/api/video_call/')
+    return render(request, 'login.html')
+
+
+def signup_page(request):
+    if request.user.is_authenticated:
+        return redirect('/api/video_call/')
+    departments = Department.objects.all().order_by("name")
+    return render(request, 'signup.html', {
+        "departments": departments,
+    })
 
 
 class DiseasePredictionMetadataAPIView(APIView):
@@ -443,18 +502,29 @@ class UserSignupAPIView(APIView):
         """Register new user"""
         try:
             serializer = UserSignupSerializer(data=request.data)
-            if serializer.is_valid():
-                user = serializer.save()
-                return Response({
-                    "message": "User registered successfully",
-                    "user": {
-                        "id": user.id,
-                        "name": user.username,
-                        "email": user.email,
-                        "role": user.role
-                    }
-                }, status=status.HTTP_201_CREATED)
-            return Response({"message": "Registration failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+            serializer.is_valid(raise_exception=True)
+            user = serializer.save()
+            return Response({
+                "message": "User registered successfully",
+                "user": {
+                    "id": user.id,
+                    "name": user.username,
+                    "email": user.email,
+                    "role": user.role
+                }
+            }, status=status.HTTP_201_CREATED)
+        except IntegrityError:
+            return Response({
+                "message": "Registration failed",
+                "errors": {
+                    "username": ["Username already taken. Please choose another username."]
+                }
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except ValidationError as e:
+            return Response({
+                "message": "Registration failed",
+                "errors": e.detail
+            }, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -466,21 +536,32 @@ class DoctorSignupAPIView(APIView):
         """Register new doctor"""
         try:
             serializer = DoctorSignupSerializer(data=request.data)
-            if serializer.is_valid():
-                user = serializer.save()
-                doctor = DoctorProfile.objects.get(user=user)
+            serializer.is_valid(raise_exception=True)
+            user = serializer.save()
+            doctor = DoctorProfile.objects.get(user=user)
 
-                return Response({
-                    "message": "Doctor registered successfully",
-                    "user": {
-                        "id": user.id,
-                        "username": user.username,
-                        "email": user.email,
-                        "role": user.role,
-                        "department": doctor.department.name if doctor.department else None
-                    }
-                }, status=status.HTTP_201_CREATED)
-            return Response({"message": "Registration failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({
+                "message": "Doctor registered successfully",
+                "user": {
+                    "id": user.id,
+                    "username": user.username,
+                    "email": user.email,
+                    "role": user.role,
+                    "department": doctor.department.name if doctor.department else None
+                }
+            }, status=status.HTTP_201_CREATED)
+        except IntegrityError:
+            return Response({
+                "message": "Registration failed",
+                "errors": {
+                    "username": ["Username already taken. Please choose another username."]
+                }
+            }, status=status.HTTP_400_BAD_REQUEST)
+        except ValidationError as e:
+            return Response({
+                "message": "Registration failed",
+                "errors": e.detail
+            }, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({"error": f"Failed: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -500,6 +581,7 @@ class LoginAPIView(APIView):
             user = authenticate(email=email, password=password)
 
             if user:
+                login(request, user)
                 refresh = RefreshToken.for_user(user)
                 user_data = UserSerializer(user, context={'request': request}).data
 
@@ -1837,6 +1919,12 @@ class ChatAPIView(APIView):
     def post(self, request, appointment_id):
         try:
             appointment = get_object_or_404(Appointment, id=appointment_id)
+            slot_status = _get_appointment_slot_status(appointment)
+
+            if not slot_status["is_active"]:
+                return Response({
+                    "error": f"Chat is unavailable. {slot_status['reason']}"
+                }, status=400)
 
             if request.user == appointment.patient:
                 sender = appointment.patient
@@ -1948,10 +2036,17 @@ class ChatHistoryAPIView(APIView):
 
         messages = chat.messages.all()
 
+        for message in messages:
+            if message.receiver == request.user and not message.is_read:
+                message.is_read = True
+                message.save(update_fields=["is_read"])
+
         data = [
             {
                 "id": m.id,
+                "sender_id": m.sender_id,
                 "sender": m.sender.username,
+                "receiver_id": m.receiver_id,
                 "receiver": m.receiver.username,
                 "message": m.message,
                 "is_read": m.is_read,
@@ -1961,6 +2056,25 @@ class ChatHistoryAPIView(APIView):
         ]
 
         return Response({"messages": data})
+
+
+class AppointmentCommunicationStatusAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, appointment_id):
+        appointment = get_object_or_404(Appointment, id=appointment_id)
+
+        if request.user not in [appointment.patient, appointment.doctor]:
+            return Response({"error": "Not allowed"}, status=status.HTTP_403_FORBIDDEN)
+
+        slot_status = _get_appointment_slot_status(appointment)
+        return Response({
+            "appointment_id": appointment.id,
+            "chat_enabled": slot_status["is_active"],
+            "audio_enabled": slot_status["is_active"],
+            "video_enabled": slot_status["is_active"],
+            "slot_status": slot_status,
+        }, status=status.HTTP_200_OK)
 
 
 from .pagination import StandardPagination
@@ -1998,8 +2112,38 @@ class CompletedPatientsView(APIView):
         return paginator.get_paginated_response(serializer.data)
 
 
+@login_required
 def video_call(request):
-    return render(request, 'chat.html')
+    appointment_id = request.GET.get("appointment_id", "")
+    stun_url = getattr(settings, "WEBRTC_STUN_URL", "stun:stun.relay.metered.ca:80")
+    turn_url_tcp = getattr(settings, "WEBRTC_TURN_URL_TCP", "turn:global.relay.metered.ca:80")
+    turn_url_tls = getattr(settings, "WEBRTC_TURN_URL_TLS", "turn:global.relay.metered.ca:443")
+    turn_username = getattr(settings, "WEBRTC_TURN_USERNAME", "")
+    turn_credential = getattr(settings, "WEBRTC_TURN_CREDENTIAL", "")
+    ice_servers = [{"urls": stun_url}]
+
+    if turn_username and turn_credential:
+        ice_servers.extend([
+            {
+                "urls": turn_url_tcp,
+                "username": turn_username,
+                "credential": turn_credential,
+            },
+            {
+                "urls": turn_url_tls,
+                "username": turn_username,
+                "credential": turn_credential,
+            },
+        ])
+
+    return render(request, 'chat2.html', {
+        "current_user_id": request.user.id,
+        "current_username": request.user.username,
+        "prefill_appointment_id": appointment_id,
+        "turn_config": {
+            "iceServers": ice_servers
+        }
+    })
 
 
 
