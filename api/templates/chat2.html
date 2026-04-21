@@ -506,6 +506,8 @@
         let localStream;
         let incomingOffer = null;
         let callType = "video";
+        let callState = "idle";
+        let activeCallType = null;
         let pendingCandidates = [];
         const renderedMessageIds = new Set();
         let slotMonitor = null;
@@ -556,11 +558,23 @@
             presence.innerHTML = `<span class="presence-dot"></span>${connected ? "Connected" : "Offline"}`;
         }
 
-        function setControlsEnabled(enabled) {
-            document.getElementById("msg").disabled = !enabled;
-            document.getElementById("sendBtn").disabled = !enabled;
-            document.getElementById("startVideoBtn").disabled = !enabled;
-            document.getElementById("startAudioBtn").disabled = !enabled;
+        function syncControlState() {
+            document.getElementById("msg").disabled = !slotAccess.chat_enabled;
+            document.getElementById("sendBtn").disabled = !slotAccess.chat_enabled;
+            const videoButton = document.getElementById("startVideoBtn");
+            const audioButton = document.getElementById("startAudioBtn");
+            const callNegotiating = callState === "calling" || callState === "incoming";
+            const videoConnected = callState === "connected" && activeCallType === "video";
+            const audioConnected = callState === "connected" && activeCallType === "audio";
+
+            videoButton.disabled = !slotAccess.video_enabled || callNegotiating || videoConnected;
+            audioButton.disabled = !slotAccess.audio_enabled || callNegotiating || audioConnected;
+        }
+
+        function setCallState(nextState, nextCallType = activeCallType) {
+            callState = nextState;
+            activeCallType = nextCallType;
+            syncControlState();
         }
 
         function formatSlotDateTime(value) {
@@ -587,7 +601,7 @@
             const slotStatus = slotAccess.slot_status || {};
             const enabled = Boolean(slotAccess.chat_enabled);
 
-            setControlsEnabled(enabled);
+            syncControlState();
 
             if (enabled) {
                 setStatus(
@@ -888,6 +902,7 @@
                     if (data.type === "offer") {
                         incomingOffer = data.offer;
                         callType = data.call_type;
+                        setCallState("incoming", data.call_type);
                         document.getElementById("incoming").style.display = "block";
                         const incomingText = callType === "audio" ? "Incoming audio call..." : "Incoming video call...";
                         document.querySelector("#incoming p").textContent = incomingText;
@@ -896,6 +911,7 @@
 
                     if (data.type === "answer" && pc) {
                         await pc.setRemoteDescription(data.answer);
+                        setCallState("connected", callType);
                         setStatus("Call connected", "Remote user ne aapki call accept kar li.");
                     }
 
@@ -909,6 +925,14 @@
 
                     if (data.type === "end_call") {
                         endCall(false);
+                    }
+
+                    if (data.type === "call_busy") {
+                        endCall(false, data.message || "Call already active hai, isliye nayi request send nahi hui.");
+                    }
+
+                    if (data.type === "call_rejected") {
+                        endCall(false, data.message || "Doosre user ne call reject kar di.");
                     }
                 };
             });
@@ -962,8 +986,20 @@
         }
 
         async function startCall(video) {
-            if (!slotAccess.chat_enabled) {
+            const requestedCallType = video ? "video" : "audio";
+
+            if (!(video ? slotAccess.video_enabled : slotAccess.audio_enabled)) {
                 setStatus("Call disabled", "Slot active hone par hi audio ya video call start hogi.");
+                return;
+            }
+
+            if (callState === "calling" || callState === "incoming") {
+                setStatus("Call in progress", "Current call request complete hone tak nayi request send nahi hogi.");
+                return;
+            }
+
+            if (callState === "connected" && activeCallType === requestedCallType) {
+                setStatus("Call already active", `${requestedCallType === "video" ? "Video" : "Audio"} call already connected hai.`);
                 return;
             }
 
@@ -975,6 +1011,7 @@
             }
 
             try {
+                callType = requestedCallType;
                 localStream = await navigator.mediaDevices.getUserMedia({
                     video: video,
                     audio: true
@@ -990,10 +1027,12 @@
                 socket.send(JSON.stringify({
                     type: "offer",
                     offer,
-                    call_type: video ? "video" : "audio"
+                    call_type: requestedCallType
                 }));
+                setCallState("calling", requestedCallType);
                 setStatus("Calling", `${video ? "Video" : "Audio"} call request doosre user ko bhej di gayi hai.`);
             } catch (error) {
+                setCallState("idle", null);
                 setStatus("Call failed", error.message || "Audio/video call start nahi ho paayi.");
             }
         }
@@ -1019,6 +1058,7 @@
                 type: "answer",
                 answer
             }));
+            setCallState("connected", callType);
 
             for (const candidate of pendingCandidates) {
                 await pc.addIceCandidate(candidate);
@@ -1028,9 +1068,17 @@
 
         function rejectCall() {
             document.getElementById("incoming").style.display = "none";
+            incomingOffer = null;
+            setCallState("idle", null);
+
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({ type: "reject_call" }));
+            }
+
+            setStatus("Call rejected", "Incoming call request reject kar di gayi hai.");
         }
 
-        function endCall(send = true) {
+        function endCall(send = true, statusMessage = "Call session close ho gayi.") {
             if (pc) {
                 pc.close();
                 pc = null;
@@ -1044,13 +1092,15 @@
             document.getElementById("localVideo").srcObject = null;
             document.getElementById("remoteVideo").srcObject = null;
             document.getElementById("incoming").style.display = "none";
+            incomingOffer = null;
             pendingCandidates = [];
+            setCallState("idle", null);
 
             if (send && socket && socket.readyState === WebSocket.OPEN) {
                 socket.send(JSON.stringify({ type: "end_call" }));
             }
 
-            setStatus("Call ended", "Call session close ho gayi.");
+            setStatus("Call ended", statusMessage);
         }
 
         function createPC() {

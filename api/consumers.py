@@ -239,6 +239,7 @@
 
 
 
+import asyncio
 import json
 from datetime import datetime
 
@@ -250,6 +251,8 @@ from django.utils import timezone
 from .models import Appointment, Chat, Message
 
 User = get_user_model()
+CALL_STATE_LOCK = asyncio.Lock()
+APPOINTMENT_CALL_STATES = {}
 
 
 def _appointment_slot_is_active(appointment):
@@ -287,6 +290,20 @@ class ChatConsumer(AsyncWebsocketConsumer):
         await self.accept()
 
     async def disconnect(self, close_code):
+        call_was_active = await self.clear_call_state_for_current_channel()
+        if call_was_active:
+            await self.channel_layer.group_send(
+                self.room_group_name,
+                {
+                    "type": "webrtc_signal",
+                    "data": {
+                        "type": "end_call",
+                        "message": "Call ended because one participant disconnected."
+                    },
+                    "sender_channel": self.channel_name
+                }
+            )
+
         await self.channel_layer.group_discard(
             self.room_group_name,
             self.channel_name
@@ -297,7 +314,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         data = json.loads(text_data)
         slot_active = await self.is_slot_active()
 
-        if data.get("type") in ["message", "seen", "offer", "answer", "candidate", "end_call"] and not slot_active:
+        if data.get("type") in ["message", "seen", "offer", "answer", "candidate", "end_call", "reject_call"] and not slot_active:
             await self.send(text_data=json.dumps({
                 "type": "slot_expired",
                 "message": "Slot time has ended. Chat, audio, and video are disabled now."
@@ -339,7 +356,64 @@ class ChatConsumer(AsyncWebsocketConsumer):
             )
 
         # ================= WEBRTC =================
-        elif data.get("type") in ["offer", "answer", "candidate", "end_call"]:
+        elif data.get("type") == "offer":
+            offer_registered = await self.register_call_offer(data.get("call_type"))
+            if not offer_registered:
+                await self.send(text_data=json.dumps({
+                    "type": "call_busy",
+                    "message": "Call already pending or connected for this appointment."
+                }))
+                return
+
+            await self.channel_layer.group_send(
+                self.room_group_name,
+                {
+                    "type": "webrtc_signal",
+                    "data": data,
+                    "sender_channel": self.channel_name
+                }
+            )
+
+        elif data.get("type") == "answer":
+            await self.mark_call_connected()
+            await self.channel_layer.group_send(
+                self.room_group_name,
+                {
+                    "type": "webrtc_signal",
+                    "data": data,
+                    "sender_channel": self.channel_name
+                }
+            )
+
+        elif data.get("type") == "reject_call":
+            call_cleared = await self.clear_call_state()
+            if not call_cleared:
+                return
+
+            await self.channel_layer.group_send(
+                self.room_group_name,
+                {
+                    "type": "webrtc_signal",
+                    "data": {
+                        "type": "call_rejected",
+                        "message": "Remote user rejected the call."
+                    },
+                    "sender_channel": self.channel_name
+                }
+            )
+
+        elif data.get("type") == "end_call":
+            await self.clear_call_state()
+            await self.channel_layer.group_send(
+                self.room_group_name,
+                {
+                    "type": "webrtc_signal",
+                    "data": data,
+                    "sender_channel": self.channel_name
+                }
+            )
+
+        elif data.get("type") == "candidate":
             await self.channel_layer.group_send(
                 self.room_group_name,
                 {
@@ -360,6 +434,56 @@ class ChatConsumer(AsyncWebsocketConsumer):
         # prevent sending back to self
         if self.channel_name != event["sender_channel"]:
             await self.send(text_data=json.dumps(event["data"]))
+
+    async def register_call_offer(self, call_type):
+        async with CALL_STATE_LOCK:
+            existing_state = APPOINTMENT_CALL_STATES.get(self.appointment_id)
+            if existing_state:
+                existing_status = existing_state.get("status")
+                existing_call_type = existing_state.get("call_type")
+
+                # Allow connected audio<->video switch requests, but still block
+                # duplicate requests for the same call type or any parallel ringing state.
+                if existing_status == "ringing":
+                    return False
+
+                if existing_status == "connected" and existing_call_type == call_type:
+                    return False
+
+            APPOINTMENT_CALL_STATES[self.appointment_id] = {
+                "status": "ringing",
+                "call_type": call_type,
+                "participant_channels": {self.channel_name},
+            }
+            return True
+
+    async def mark_call_connected(self):
+        async with CALL_STATE_LOCK:
+            state = APPOINTMENT_CALL_STATES.get(self.appointment_id)
+            if not state:
+                return False
+
+            state["status"] = "connected"
+            participant_channels = state.setdefault("participant_channels", set())
+            participant_channels.add(self.channel_name)
+            return True
+
+    async def clear_call_state(self):
+        async with CALL_STATE_LOCK:
+            return APPOINTMENT_CALL_STATES.pop(self.appointment_id, None) is not None
+
+    async def clear_call_state_for_current_channel(self):
+        async with CALL_STATE_LOCK:
+            state = APPOINTMENT_CALL_STATES.get(self.appointment_id)
+            if not state:
+                return False
+
+            participant_channels = state.get("participant_channels", set())
+            if self.channel_name not in participant_channels:
+                return False
+
+            APPOINTMENT_CALL_STATES.pop(self.appointment_id, None)
+            return True
 
     # ================= DB =================
     @sync_to_async
